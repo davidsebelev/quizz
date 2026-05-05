@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HOME -->
+  <div id="screen-home" class="screen active">
+    <header class="hero">
+      <div class="hero-icon">🌐</div>
+      <h1 id="app-title">Quiz App</h1>
+      <div class="hero-tabs" id="hero-tabs"></div>
+      <p class="hero-subtitle">Select a topic to practice</p>
+    </header>
+    <main class="topics-grid" id="topics-grid">
+      <div class="loading">Loading topics…</div>
+    </main>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="screen-quiz" class="screen">
+    <nav class="quiz-nav">
+      <button class="btn-back" onclick="goHome()">← Home</button>
+      <span class="quiz-nav-title" id="quiz-nav-title"></span>
+      <span class="quiz-attempts">1 / 1</span>
+    </nav>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="quiz-meta" id="quiz-meta">Question 1 of 10</div>
+
+    <div class="quiz-card" id="quiz-card">
+      <div class="q-header">
+        <p class="q-text" id="q-text"></p>
+        <span class="multi-hint" id="multi-hint" style="display:none"></span>
+      </div>
+      <div class="options" id="options"></div>
+
+      <div class="feedback-block" id="feedback-block" style="display:none">
+        <div class="feedback-verdict" id="feedback-verdict"></div>
+        <div class="feedback-ref" id="feedback-ref"></div>
+        <p class="feedback-label">EXPLANATION:</p>
+        <p class="feedback-explanation" id="feedback-explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button class="btn-confirm" id="btn-confirm" style="display:none">Confirm answers</button>
+      <button class="btn-next" id="btn-next" onclick="nextQuestion()" style="display:none">Next →</button>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="screen-result" class="screen">
+    <nav class="quiz-nav">
+      <button class="btn-back" onclick="goHome()">← Home</button>
+      <span class="quiz-nav-title">Results</span>
+      <span></span>
+    </nav>
+    <div class="result-container">
+      <div class="result-header">
+        <div class="result-score-ring" id="result-ring"><span id="result-pct">0%</span></div>
+        <h2>Quiz Complete!</h2>
+      </div>
+      <div class="result-stats">
+        <div class="stat-card green"><div class="stat-val" id="stat-correct">0</div><div class="stat-label">Correct</div></div>
+        <div class="stat-card red"><div class="stat-val" id="stat-wrong">0</div><div class="stat-label">Wrong</div></div>
+        <div class="stat-card"><div class="stat-val" id="stat-total">0</div><div class="stat-label">Total</div></div>
+      </div>
+      <div class="result-list" id="result-list"></div>
+      <button class="btn-restart" onclick="restartQuiz()">Try Again</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

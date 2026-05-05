@@ -1,0 +1,120 @@
+{
+  "topics": [
+    {
+      "id": "topic1",
+      "title": "Intro to Networks",
+      "icon": "🌐",
+      "lecture": "Lecture 1",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is a group of web pages that groups of individuals can edit and view together called?",
+          "options": ["Podcasting", "Wiki", "Weblog (blog)", "Instant messaging"],
+          "answer": [1],
+          "slide": null,
+          "reference": "",
+          "explanation": "Podcasting and blogs allow the one-way dissemination of information. Instant messaging allows the synchronous communication between individuals. A wiki allows groups of individuals to view and edit web pages collaboratively."
+        },
+        {
+          "id": 2,
+          "question": "Which of the following are disadvantages of peer-to-peer networking? (Choose two.)",
+          "options": ["No centralized administration", "Expensive to set up and maintain", "Complex configuration", "Scalability"],
+          "answer": [0, 3],
+          "slide": null,
+          "reference": "",
+          "explanation": "Peer-to-peer networks are inexpensive and easy to configure but lack any centralized management and do not scale well. The two disadvantages are: No centralized administration and Scalability."
+        },
+        {
+          "id": 3,
+          "question": "Which devices would be considered end devices on a network? (Choose four.)",
+          "options": ["Switch", "Printer", "IP phone", "Server", "Tablet computer", "Wireless access point"],
+          "answer": [1, 2, 3, 4],
+          "slide": null,
+          "reference": "",
+          "explanation": "End devices form the interface between users and the underlying network. Printer, IP phone, Server, and Tablet computer are end devices. Switch and Wireless access point are intermediate/infrastructure devices."
+        },
+        {
+          "id": 4,
+          "question": "What type of information would be found on a logical topology diagram?",
+          "options": ["Location of department printer", "Length and type of all cable runs", "IP addressing scheme", "Location of departmental switch"],
+          "answer": [2],
+          "slide": null,
+          "reference": "",
+          "explanation": "Logical topology diagrams identify devices, ports, and IP addressing schemes. Physical topology diagrams identify the physical location of intermediate devices, configured ports, and cable installations."
+        },
+        {
+          "id": 5,
+          "question": "What is a network infrastructure that provides access to other networks over a wide geographic area?",
+          "options": ["LAN", "WLAN", "MAN", "WAN", "SAN"],
+          "answer": [3],
+          "slide": null,
+          "reference": "",
+          "explanation": "A wide-area network (WAN) provides access to other networks over a wide geographic area. A MAN spans an area larger than a LAN. A WLAN is similar to a LAN, and a SAN is designed for data storage."
+        },
+        {
+          "id": 6,
+          "question": "Which of the following are business-class Internet connection technologies normally supplied by a service provider? (Choose two.)",
+          "options": ["Leased lines", "Broadband cable", "Metro Ethernet", "Mobile services", "Cellular"],
+          "answer": [0, 2],
+          "slide": null,
+          "reference": "",
+          "explanation": "Leased lines and Metro Ethernet are considered business-class Internet connection technologies. Mobile services and broadband cable are technologies used to connect remote users."
+        },
+        {
+          "id": 7,
+          "question": "Which technology would be best to provide a home user with a high-speed, always-on Internet connection?",
+          "options": ["Dialup", "DSL", "Satellite", "Cellular"],
+          "answer": [1],
+          "slide": null,
+          "reference": "",
+          "explanation": "DSL is an always-on technology that offers good bandwidth at reasonable cost. Dialup and cellular are not always-on. Satellite and cellular are also relatively expensive."
+        },
+        {
+          "id": 8,
+          "question": "What is a converged network?",
+          "options": ["A network that makes use of both fiber-optic and copper connections.", "A network where voice, video, and data move over the same infrastructure.", "A network that makes use of both wired and wireless technology.", "A network that makes use of both satellite and terrestrial connections to move data."],
+          "answer": [1],
+          "slide": null,
+          "reference": "",
+          "explanation": "A converged network is where voice, video, and data move over the same infrastructure. The underlying infrastructure can be wired or wireless."
+        },
+        {
+          "id": 9,
+          "question": "What is a fault-tolerant network?",
+          "options": ["A network that can provide priority treatment of voice and video traffic", "A network that offers secure transactions", "A network that can reroute traffic in case of device failure", "A network that is incapable of failing"],
+          "answer": [2],
+          "slide": null,
+          "reference": "",
+          "explanation": "A fault-tolerant network can continue to function if an intermediate device or path fails. It can still fail if a sufficient number of intermediate devices and/or paths fail."
+        },
+        {
+          "id": 10,
+          "question": "Which type of traffic must receive the highest priority from QoS?",
+          "options": ["Web traffic", "Email", "VoIP", "Order processing"],
+          "answer": [2],
+          "slide": null,
+          "reference": "",
+          "explanation": "QoS prioritizes data based on sensitivity to network delay. VoIP is very sensitive to network delay and must receive priority treatment."
+        },
+        {
+          "id": 11,
+          "question": "What is true of Tier 3 ISPs?",
+          "options": ["They act as local providers of service directly to end users.", "They connect directly to Tier 1 ISPs.", "They interconnect with other Tier 1 ISPs.", "They provide high-speed redundant services to other ISPs."],
+          "answer": [0],
+          "slide": null,
+          "reference": "",
+          "explanation": "Tier 3 ISPs are the local providers of service to end users. They normally connect to Tier 2 providers for Internet access."
+        },
+        {
+          "id": 12,
+          "question": "What are the primary requirements of information security? (Choose three.)",
+          "options": ["Confidentiality", "Integrity", "Availability", "QoS", "Scalability"],
+          "answer": [0, 1, 2],
+          "slide": null,
+          "reference": "",
+          "explanation": "Information security requires: Confidentiality (only intended recipients access data), Integrity (data not altered in transit), and Availability (information accessible in a timely manner). QoS and Scalability are not primary requirements."
+        }
+      ]
+    }
+  ]
+}
