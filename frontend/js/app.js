@@ -6,7 +6,11 @@ let currentQuestions = [];
 let currentIndex = 0;
 let score = 0;
 let answers = [];
+let mistakeQuestions = [];
 let selectedIndices = new Set();
+let selectedSingleIndex = null;
+let matchingSelections = new Map();
+let isMistakeReview = false;
 
 window.addEventListener('DOMContentLoaded', () => { loadHome(); });
 
@@ -63,8 +67,8 @@ async function startTopic(topicId) {
   try {
     const res = await fetch(`${API}/topics/${topicId}`);
     currentTopic = await res.json();
-    currentQuestions = shuffle([...currentTopic.questions]);
-    currentIndex = 0; score = 0; answers = [];
+    currentQuestions = prepareQuestions(currentTopic.questions);
+    currentIndex = 0; score = 0; answers = []; mistakeQuestions = []; isMistakeReview = false;
     document.getElementById('quiz-nav-title').textContent = currentTopic.title;
     showScreen('screen-quiz');
     loadQuestion();
@@ -73,30 +77,57 @@ async function startTopic(topicId) {
 
 function loadQuestion() {
   selectedIndices = new Set();
+  selectedSingleIndex = null;
+  matchingSelections = new Map();
   const q = currentQuestions[currentIndex];
   const total = currentQuestions.length;
-  const isMulti = q.answer.length > 1;
+  const isMatch = q.type === 'match';
+  const isFillBlank = q.type === 'fill_blank';
+  const answerIndexes = Array.isArray(q.answer) ? q.answer : [];
+  const isMulti = !isMatch && !isFillBlank && answerIndexes.length > 1;
 
   document.getElementById('quiz-meta').textContent = `Question ${currentIndex + 1} of ${total}`;
   document.getElementById('progress-fill').style.width = `${(currentIndex / total) * 100}%`;
   document.getElementById('q-text').textContent = q.question;
+  renderQuestionImage(q);
   document.getElementById('feedback-block').style.display = 'none';
   document.getElementById('btn-next').style.display = 'none';
 
   const hintEl = document.getElementById('multi-hint');
-  hintEl.style.display = isMulti ? 'inline-block' : 'none';
-  if (isMulti) hintEl.textContent = `Select ${q.answer.length} answers`;
+  hintEl.style.display = (isMulti || isMatch || isFillBlank) ? 'inline-block' : 'none';
+  if (isMulti) hintEl.textContent = `Select ${answerIndexes.length} answers`;
+  if (isMatch) hintEl.textContent = 'Match each item';
+  if (isFillBlank) hintEl.textContent = 'Type the missing answer';
 
   const confirmBtn = document.getElementById('btn-confirm');
-  confirmBtn.style.display = isMulti ? 'inline-flex' : 'none';
-  if (isMulti) {
-    confirmBtn.disabled = true;
-    confirmBtn.textContent = `Confirm (${q.answer.length} required)`;
+  confirmBtn.style.display = 'inline-flex';
+  confirmBtn.disabled = true;
+  if (isMatch) {
+    confirmBtn.textContent = 'Confirm matches';
+    confirmBtn.onclick = () => confirmMatching(q);
+  } else if (isFillBlank) {
+    confirmBtn.textContent = 'Confirm answer';
+    confirmBtn.onclick = () => confirmFillBlank(q);
+  } else if (isMulti) {
+    confirmBtn.textContent = `Confirm (${answerIndexes.length} required)`;
     confirmBtn.onclick = () => confirmMulti(q);
+  } else {
+    confirmBtn.textContent = 'Confirm answer';
+    confirmBtn.onclick = () => confirmSingle(q);
   }
 
   const optDiv = document.getElementById('options');
   optDiv.innerHTML = '';
+  optDiv.className = 'options';
+  if (isMatch) {
+    renderMatchingOptions(q, optDiv);
+    return;
+  }
+  if (isFillBlank) {
+    renderFillBlankOption(q, optDiv);
+    return;
+  }
+
   q.options.forEach((optText, i) => {
     const btn = document.createElement('button');
     btn.className = 'option';
@@ -106,14 +137,177 @@ function loadQuestion() {
       btn.onclick = () => toggleOption(i, q, btn);
     } else {
       btn.innerHTML = `<span class="opt-letter">${'ABCDEF'[i]}</span>${optText}`;
-      btn.onclick = () => selectSingle(i, q);
+      btn.onclick = () => selectSingle(i, btn);
     }
     optDiv.appendChild(btn);
   });
 }
 
-function selectSingle(chosenIdx, q) {
+function renderQuestionImage(q) {
+  const media = document.getElementById('q-media');
+  const image = document.getElementById('q-image');
+  const caption = document.getElementById('q-image-caption');
+  const imageSrc = q.image || q.imageUrl;
+
+  if (!imageSrc) {
+    media.style.display = 'none';
+    image.removeAttribute('src');
+    image.alt = '';
+    caption.textContent = '';
+    return;
+  }
+
+  image.src = imageSrc;
+  image.alt = q.imageAlt || q.question;
+  caption.textContent = q.imageCaption || '';
+  caption.style.display = q.imageCaption ? 'block' : 'none';
+  media.style.display = 'block';
+}
+
+function renderMatchingOptions(q, optDiv) {
+  const pairs = q.pairs || [];
+  const rightOptions = getMatchingChoices(q);
+
+  optDiv.className = 'options matching-options';
+  pairs.forEach((pair, i) => {
+    const row = document.createElement('div');
+    row.className = 'match-row';
+    row.dataset.idx = i;
+
+    const left = document.createElement('div');
+    left.className = 'match-left';
+    left.textContent = pair.left;
+
+    const select = document.createElement('select');
+    select.className = 'match-select';
+    select.dataset.idx = i;
+    select.innerHTML = '<option value="">Choose match</option>';
+    rightOptions.forEach(rightText => {
+      const option = document.createElement('option');
+      option.value = rightText;
+      option.textContent = rightText;
+      select.appendChild(option);
+    });
+    select.onchange = () => updateMatchingSelection(i, select.value, pairs.length);
+
+    row.append(left, select);
+    optDiv.appendChild(row);
+  });
+}
+
+function getMatchingChoices(q) {
+  const correctChoices = (q.pairs || []).map(pair => pair.right);
+  const sourceChoices = Array.isArray(q.matchOptions) && q.matchOptions.length
+    ? q.matchOptions
+    : Array.isArray(q.options) && q.options.length ? q.options : correctChoices;
+  return shuffle([...new Set([...sourceChoices, ...correctChoices])]);
+}
+
+function renderFillBlankOption(q, optDiv) {
+  optDiv.className = 'options fill-options';
+
+  const wrapper = document.createElement('label');
+  wrapper.className = 'fill-field';
+
+  const label = document.createElement('span');
+  label.className = 'fill-label';
+  label.textContent = q.blankLabel || 'Your answer';
+
+  const input = document.createElement('input');
+  input.className = 'fill-input';
+  input.id = 'fill-answer';
+  input.type = 'text';
+  input.autocomplete = 'off';
+  input.placeholder = q.placeholder || 'Type here';
+  input.oninput = () => {
+    document.getElementById('btn-confirm').disabled = normalizeAnswer(input.value) === '';
+  };
+  input.onkeydown = event => {
+    if (event.key === 'Enter' && normalizeAnswer(input.value) !== '') confirmFillBlank(q);
+  };
+
+  wrapper.append(label, input);
+  optDiv.appendChild(wrapper);
+  input.focus();
+}
+
+function confirmFillBlank(q) {
+  const input = document.getElementById('fill-answer');
+  const userAnswer = input.value;
+  const acceptableAnswers = getFillAnswers(q);
+  const normalizedUserAnswer = normalizeAnswer(userAnswer);
+  const correct = acceptableAnswers.some(answer => normalizeAnswer(answer) === normalizedUserAnswer);
+
+  input.disabled = true;
+  input.parentElement.classList.add(correct ? 'correct' : 'wrong');
+  document.getElementById('btn-confirm').style.display = 'none';
+  if (correct) score++;
+
+  answers.push({
+    question: q,
+    q: q.question,
+    correct,
+    correctTexts: acceptableAnswers,
+  });
+  showFeedback(q, correct);
+  document.getElementById('btn-next').style.display = 'inline-flex';
+}
+
+function getFillAnswers(q) {
+  if (Array.isArray(q.answers)) return q.answers;
+  if (Array.isArray(q.answer)) return q.answer;
+  if (typeof q.answer === 'string') return [q.answer];
+  return [];
+}
+
+function normalizeAnswer(value) {
+  return String(value).trim().replace(/\s+/g, ' ').toLowerCase();
+}
+
+function updateMatchingSelection(idx, value, total) {
+  if (value) matchingSelections.set(idx, value);
+  else matchingSelections.delete(idx);
+  document.getElementById('btn-confirm').disabled = matchingSelections.size !== total;
+}
+
+function confirmMatching(q) {
+  const pairs = q.pairs || [];
+  document.querySelectorAll('.match-select').forEach(select => select.disabled = true);
+  document.getElementById('btn-confirm').style.display = 'none';
+
+  let correctCount = 0;
+  pairs.forEach((pair, i) => {
+    const row = document.querySelector(`.match-row[data-idx="${i}"]`);
+    const selected = matchingSelections.get(i);
+    const isCorrect = selected === pair.right;
+    if (isCorrect) correctCount++;
+    row.classList.add(isCorrect ? 'correct' : 'wrong');
+  });
+
+  const correct = correctCount === pairs.length;
+  if (correct) score++;
+  answers.push({
+    question: q,
+    q: q.question,
+    correct,
+    correctTexts: pairs.map(pair => `${pair.left} → ${pair.right}`),
+  });
+  showFeedback(q, correct);
+  document.getElementById('btn-next').style.display = 'inline-flex';
+}
+
+function selectSingle(chosenIdx, btn) {
+  selectedSingleIndex = chosenIdx;
+  document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+  btn.classList.add('selected');
+  document.getElementById('btn-confirm').disabled = false;
+}
+
+function confirmSingle(q) {
+  const chosenIdx = selectedSingleIndex;
+  if (chosenIdx === null) return;
   document.querySelectorAll('.option').forEach(o => o.classList.add('disabled'));
+  document.getElementById('btn-confirm').style.display = 'none';
   const correct = chosenIdx === q.answer[0];
   if (correct) score++;
   document.querySelectorAll('.option').forEach(o => {
@@ -121,7 +315,7 @@ function selectSingle(chosenIdx, q) {
     if (idx === q.answer[0]) o.classList.add('correct');
     else if (idx === chosenIdx && !correct) o.classList.add('wrong');
   });
-  answers.push({ q: q.question, correct, correctTexts: q.answer.map(i => q.options[i]) });
+  answers.push({ question: q, q: q.question, correct, correctTexts: q.answer.map(i => q.options[i]) });
   showFeedback(q, correct);
   document.getElementById('btn-next').style.display = 'inline-flex';
 }
@@ -158,7 +352,7 @@ function confirmMulti(q) {
     if (correctSet.has(idx)) o.classList.add('correct');
     else if (selectedIndices.has(idx)) o.classList.add('wrong');
   });
-  answers.push({ q: q.question, correct, correctTexts: q.answer.map(i => q.options[i]) });
+  answers.push({ question: q, q: q.question, correct, correctTexts: q.answer.map(i => q.options[i]) });
   showFeedback(q, correct);
   document.getElementById('btn-next').style.display = 'inline-flex';
 }
@@ -184,25 +378,43 @@ function goHome() { loadHome(); }
 function showResults() {
   const total = currentQuestions.length;
   const pct = Math.round((score / total) * 100);
+  mistakeQuestions = answers.filter(a => !a.correct).map(a => a.question);
   document.getElementById('result-pct').textContent = pct + '%';
   document.getElementById('stat-correct').textContent = score;
   document.getElementById('stat-wrong').textContent = total - score;
   document.getElementById('stat-total').textContent = total;
+  document.querySelector('#screen-result .quiz-nav-title').textContent = isMistakeReview ? 'Работа над ошибками' : 'Results';
+  document.querySelector('#screen-result .result-header h2').textContent = isMistakeReview ? 'Ошибки разобраны!' : 'Quiz Complete!';
   document.getElementById('result-ring').style.borderColor =
     pct >= 70 ? 'var(--green)' : pct >= 40 ? '#f59e0b' : 'var(--red)';
   document.getElementById('result-list').innerHTML = answers.map(a => `
     <div class="result-item">
       <div class="result-dot ${a.correct ? 'ok' : 'no'}">${a.correct ? '✓' : '✗'}</div>
       <div>
-        <div class="result-q">${a.q}</div>
-        <div class="result-a">Correct: ${a.correctTexts.join(' / ')}</div>
+        <div class="result-q">${escapeHTML(a.q)}</div>
+        <div class="result-a">Correct: ${a.correctTexts.map(escapeHTML).join(' / ')}</div>
       </div>
     </div>
   `).join('');
+  const mistakesBtn = document.getElementById('btn-mistakes');
+  mistakesBtn.style.display = mistakeQuestions.length ? 'block' : 'none';
+  mistakesBtn.textContent = `Работа над ошибками (${mistakeQuestions.length})`;
   showScreen('screen-result');
 }
 
 function restartQuiz() { startTopic(currentTopic.id); }
+
+function startMistakeReview() {
+  if (!mistakeQuestions.length) return;
+  currentQuestions = shuffle([...mistakeQuestions]);
+  currentIndex = 0;
+  score = 0;
+  answers = [];
+  isMistakeReview = true;
+  document.getElementById('quiz-nav-title').textContent = 'Работа над ошибками';
+  showScreen('screen-quiz');
+  loadQuestion();
+}
 
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -216,4 +428,20 @@ function shuffle(arr) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
+}
+
+function prepareQuestions(questions) {
+  const pinned = questions.filter(q => q.pinToStart);
+  const regular = questions.filter(q => !q.pinToStart);
+  return [...pinned, ...shuffle([...regular])];
+}
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  }[char]));
 }

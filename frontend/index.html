@@ -36,6 +36,10 @@
     <div class="quiz-card" id="quiz-card">
       <div class="q-header">
         <p class="q-text" id="q-text"></p>
+        <figure class="q-media" id="q-media" style="display:none">
+          <img id="q-image" alt="" />
+          <figcaption id="q-image-caption"></figcaption>
+        </figure>
         <span class="multi-hint" id="multi-hint" style="display:none"></span>
       </div>
       <div class="options" id="options"></div>
@@ -72,6 +76,7 @@
         <div class="stat-card"><div class="stat-val" id="stat-total">0</div><div class="stat-label">Total</div></div>
       </div>
       <div class="result-list" id="result-list"></div>
+      <button class="btn-mistakes" id="btn-mistakes" onclick="startMistakeReview()" style="display:none">Работа над ошибками</button>
       <button class="btn-restart" onclick="restartQuiz()">Try Again</button>
     </div>
   </div>

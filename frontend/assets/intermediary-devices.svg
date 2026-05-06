@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+  <title id="title">Network devices labeled A through J</title>
+  <desc id="desc">A network diagram with intermediary devices A, B, D, G and end devices C, E, F, H, I, J.</desc>
+  <rect width="980" height="520" fill="#0b1020"/>
+  <g fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round">
+    <path d="M490 260H240M490 260h250M490 260V115M490 260v145"/>
+    <path d="M240 260V115M240 260v145M740 260V115M740 260v145"/>
+    <path d="M490 115h250"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle" font-size="20" fill="#e6edf3">
+    <g transform="translate(490 260)">
+      <rect x="-72" y="-34" width="144" height="68" rx="10" fill="#161b22" stroke="#22c55e" stroke-width="3"/>
+      <circle cx="-38" cy="0" r="6" fill="#22c55e"/>
+      <circle cx="-12" cy="0" r="6" fill="#22c55e"/>
+      <circle cx="14" cy="0" r="6" fill="#22c55e"/>
+      <circle cx="40" cy="0" r="6" fill="#22c55e"/>
+      <text y="-50" font-weight="700">A</text>
+      <text y="62">Switch</text>
+    </g>
+    <g transform="translate(490 115)">
+      <rect x="-74" y="-38" width="148" height="76" rx="12" fill="#161b22" stroke="#22c55e" stroke-width="3"/>
+      <path d="M-42 0h84M22 -20l20 20-20 20M-22 -20-42 0l20 20" stroke="#22c55e" stroke-width="5" fill="none"/>
+      <text y="-54" font-weight="700">B</text>
+      <text y="66">Router</text>
+    </g>
+    <g transform="translate(240 115)">
+      <rect x="-54" y="-38" width="108" height="76" rx="8" fill="#1c2128" stroke="#8b949e" stroke-width="3"/>
+      <rect x="-40" y="-24" width="80" height="42" rx="4" fill="#0d1117"/>
+      <text y="-56" font-weight="700">C</text>
+      <text y="66">PC</text>
+    </g>
+    <g transform="translate(740 115)">
+      <rect x="-70" y="-34" width="140" height="68" rx="10" fill="#161b22" stroke="#22c55e" stroke-width="3"/>
+      <path d="M-32 -8c20 -20 44 -20 64 0M-18 10c12 -12 24 -12 36 0" stroke="#22c55e" stroke-width="5" fill="none"/>
+      <text y="-50" font-weight="700">D</text>
+      <text y="62">Wireless router</text>
+    </g>
+    <g transform="translate(240 260)">
+      <rect x="-48" y="-34" width="96" height="68" rx="8" fill="#1c2128" stroke="#8b949e" stroke-width="3"/>
+      <rect x="-34" y="4" width="68" height="44" rx="6" fill="#161b22" stroke="#8b949e" stroke-width="3"/>
+      <text y="-52" font-weight="700">E</text>
+      <text y="78">Printer</text>
+    </g>
+    <g transform="translate(240 405)">
+      <rect x="-54" y="-42" width="108" height="84" rx="10" fill="#1c2128" stroke="#8b949e" stroke-width="3"/>
+      <line x1="-30" y1="-14" x2="30" y2="-14" stroke="#3b82f6" stroke-width="5"/>
+      <line x1="-30" y1="10" x2="30" y2="10" stroke="#3b82f6" stroke-width="5"/>
+      <text y="-60" font-weight="700">F</text>
+      <text y="72">Server</text>
+    </g>
+    <g transform="translate(740 260)">
+      <rect x="-58" y="-42" width="116" height="84" rx="10" fill="#161b22" stroke="#22c55e" stroke-width="3"/>
+      <path d="M-30 -10h60M-30 10h60M0 -28v56" stroke="#22c55e" stroke-width="5"/>
+      <text y="-60" font-weight="700">G</text>
+      <text y="72">Firewall</text>
+    </g>
+    <g transform="translate(740 405)">
+      <rect x="-54" y="-34" width="108" height="68" rx="8" fill="#1c2128" stroke="#8b949e" stroke-width="3"/>
+      <rect x="-42" y="-24" width="84" height="42" rx="4" fill="#0d1117"/>
+      <path d="M-58 40h116" stroke="#8b949e" stroke-width="4"/>
+      <text y="-52" font-weight="700">H</text>
+      <text y="78">Laptop</text>
+    </g>
+    <g transform="translate(490 405)">
+      <rect x="-30" y="-52" width="60" height="104" rx="14" fill="#1c2128" stroke="#8b949e" stroke-width="3"/>
+      <circle cy="30" r="5" fill="#3b82f6"/>
+      <text y="-70" font-weight="700">I</text>
+      <text y="82">IP phone</text>
+    </g>
+    <g transform="translate(120 260)">
+      <rect x="-40" y="-56" width="80" height="112" rx="14" fill="#1c2128" stroke="#8b949e" stroke-width="3"/>
+      <rect x="-27" y="-38" width="54" height="70" rx="5" fill="#0d1117"/>
+      <text y="-74" font-weight="700">J</text>
+      <text y="86">Tablet</text>
+    </g>
+  </g>
+</svg>

@@ -9,6 +9,9 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../frontend')));
+app.use('/photo', express.static(path.join(__dirname, '../photo')));
+app.use('/photoNew', express.static(path.join(__dirname, '../photoNew')));
+app.use('/photoLec3', express.static(path.join(__dirname, '../photoLec3')));
 
 const DATA_FILE = path.join(__dirname, '../data/questions.json');
 

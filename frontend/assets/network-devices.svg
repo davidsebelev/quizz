@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-labelledby="title desc">
+  <title id="title">Simple network diagram</title>
+  <desc id="desc">A server, switch, printer, IP phone, tablet, and access point connected in a small network.</desc>
+  <rect width="900" height="430" fill="#0b1020"/>
+  <g fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round">
+    <path d="M450 205H190M450 205h260M450 205V95M450 205v110"/>
+    <path d="M190 205v80M710 205v80"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <g transform="translate(450 205)">
+      <rect x="-78" y="-38" width="156" height="76" rx="14" fill="#161b22" stroke="#3b82f6" stroke-width="3"/>
+      <circle cx="-42" cy="0" r="7" fill="#22c55e"/>
+      <circle cx="-14" cy="0" r="7" fill="#22c55e"/>
+      <circle cx="14" cy="0" r="7" fill="#22c55e"/>
+      <circle cx="42" cy="0" r="7" fill="#22c55e"/>
+      <text y="70" fill="#e6edf3" font-size="24" font-weight="700">Switch</text>
+    </g>
+    <g transform="translate(450 72)">
+      <rect x="-58" y="-42" width="116" height="84" rx="10" fill="#1c2128" stroke="#8b949e" stroke-width="3"/>
+      <line x1="-32" y1="-16" x2="32" y2="-16" stroke="#3b82f6" stroke-width="5"/>
+      <line x1="-32" y1="8" x2="32" y2="8" stroke="#3b82f6" stroke-width="5"/>
+      <text y="-58" fill="#e6edf3" font-size="24" font-weight="700">Server</text>
+    </g>
+    <g transform="translate(175 205)">
+      <rect x="-54" y="-36" width="108" height="72" rx="10" fill="#1c2128" stroke="#8b949e" stroke-width="3"/>
+      <rect x="-36" y="0" width="72" height="54" rx="6" fill="#161b22" stroke="#8b949e" stroke-width="3"/>
+      <text y="-54" fill="#e6edf3" font-size="24" font-weight="700">Printer</text>
+    </g>
+    <g transform="translate(175 330)">
+      <rect x="-34" y="-56" width="68" height="112" rx="16" fill="#1c2128" stroke="#8b949e" stroke-width="3"/>
+      <circle cy="34" r="5" fill="#3b82f6"/>
+      <text y="86" fill="#e6edf3" font-size="24" font-weight="700">IP phone</text>
+    </g>
+    <g transform="translate(710 205)">
+      <rect x="-45" y="-58" width="90" height="116" rx="16" fill="#1c2128" stroke="#8b949e" stroke-width="3"/>
+      <rect x="-30" y="-38" width="60" height="72" rx="6" fill="#0d1117"/>
+      <text y="-78" fill="#e6edf3" font-size="24" font-weight="700">Tablet</text>
+    </g>
+    <g transform="translate(710 330)">
+      <rect x="-62" y="-32" width="124" height="64" rx="12" fill="#1c2128" stroke="#8b949e" stroke-width="3"/>
+      <path d="M-32 -6c20 -22 44 -22 64 0" fill="none" stroke="#22c55e" stroke-width="5" stroke-linecap="round"/>
+      <path d="M-18 10c12 -13 24 -13 36 0" fill="none" stroke="#22c55e" stroke-width="5" stroke-linecap="round"/>
+      <text y="66" fill="#e6edf3" font-size="24" font-weight="700">Access point</text>
+    </g>
+  </g>
+</svg>

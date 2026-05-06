@@ -9,8 +9,15 @@
         {
           "id": 1,
           "question": "What is a group of web pages that groups of individuals can edit and view together called?",
-          "options": ["Podcasting", "Wiki", "Weblog (blog)", "Instant messaging"],
-          "answer": [1],
+          "options": [
+            "Podcasting",
+            "Wiki",
+            "Weblog (blog)",
+            "Instant messaging"
+          ],
+          "answer": [
+            1
+          ],
           "slide": null,
           "reference": "",
           "explanation": "Podcasting and blogs allow the one-way dissemination of information. Instant messaging allows the synchronous communication between individuals. A wiki allows groups of individuals to view and edit web pages collaboratively."
@@ -18,8 +25,16 @@
         {
           "id": 2,
           "question": "Which of the following are disadvantages of peer-to-peer networking? (Choose two.)",
-          "options": ["No centralized administration", "Expensive to set up and maintain", "Complex configuration", "Scalability"],
-          "answer": [0, 3],
+          "options": [
+            "No centralized administration",
+            "Expensive to set up and maintain",
+            "Complex configuration",
+            "Scalability"
+          ],
+          "answer": [
+            0,
+            3
+          ],
           "slide": null,
           "reference": "",
           "explanation": "Peer-to-peer networks are inexpensive and easy to configure but lack any centralized management and do not scale well. The two disadvantages are: No centralized administration and Scalability."
@@ -27,8 +42,23 @@
         {
           "id": 3,
           "question": "Which devices would be considered end devices on a network? (Choose four.)",
-          "options": ["Switch", "Printer", "IP phone", "Server", "Tablet computer", "Wireless access point"],
-          "answer": [1, 2, 3, 4],
+          "image": "assets/network-devices.svg",
+          "imageAlt": "A network diagram with a switch, printer, IP phone, server, tablet, and wireless access point.",
+          "imageCaption": "Use the diagram to identify end devices.",
+          "options": [
+            "Switch",
+            "Printer",
+            "IP phone",
+            "Server",
+            "Tablet computer",
+            "Wireless access point"
+          ],
+          "answer": [
+            1,
+            2,
+            3,
+            4
+          ],
           "slide": null,
           "reference": "",
           "explanation": "End devices form the interface between users and the underlying network. Printer, IP phone, Server, and Tablet computer are end devices. Switch and Wireless access point are intermediate/infrastructure devices."
@@ -36,8 +66,15 @@
         {
           "id": 4,
           "question": "What type of information would be found on a logical topology diagram?",
-          "options": ["Location of department printer", "Length and type of all cable runs", "IP addressing scheme", "Location of departmental switch"],
-          "answer": [2],
+          "options": [
+            "Location of department printer",
+            "Length and type of all cable runs",
+            "IP addressing scheme",
+            "Location of departmental switch"
+          ],
+          "answer": [
+            2
+          ],
           "slide": null,
           "reference": "",
           "explanation": "Logical topology diagrams identify devices, ports, and IP addressing schemes. Physical topology diagrams identify the physical location of intermediate devices, configured ports, and cable installations."
@@ -45,8 +82,16 @@
         {
           "id": 5,
           "question": "What is a network infrastructure that provides access to other networks over a wide geographic area?",
-          "options": ["LAN", "WLAN", "MAN", "WAN", "SAN"],
-          "answer": [3],
+          "options": [
+            "LAN",
+            "WLAN",
+            "MAN",
+            "WAN",
+            "SAN"
+          ],
+          "answer": [
+            3
+          ],
           "slide": null,
           "reference": "",
           "explanation": "A wide-area network (WAN) provides access to other networks over a wide geographic area. A MAN spans an area larger than a LAN. A WLAN is similar to a LAN, and a SAN is designed for data storage."
@@ -54,8 +99,17 @@
         {
           "id": 6,
           "question": "Which of the following are business-class Internet connection technologies normally supplied by a service provider? (Choose two.)",
-          "options": ["Leased lines", "Broadband cable", "Metro Ethernet", "Mobile services", "Cellular"],
-          "answer": [0, 2],
+          "options": [
+            "Leased lines",
+            "Broadband cable",
+            "Metro Ethernet",
+            "Mobile services",
+            "Cellular"
+          ],
+          "answer": [
+            0,
+            2
+          ],
           "slide": null,
           "reference": "",
           "explanation": "Leased lines and Metro Ethernet are considered business-class Internet connection technologies. Mobile services and broadband cable are technologies used to connect remote users."
@@ -63,8 +117,15 @@
         {
           "id": 7,
           "question": "Which technology would be best to provide a home user with a high-speed, always-on Internet connection?",
-          "options": ["Dialup", "DSL", "Satellite", "Cellular"],
-          "answer": [1],
+          "options": [
+            "Dialup",
+            "DSL",
+            "Satellite",
+            "Cellular"
+          ],
+          "answer": [
+            1
+          ],
           "slide": null,
           "reference": "",
           "explanation": "DSL is an always-on technology that offers good bandwidth at reasonable cost. Dialup and cellular are not always-on. Satellite and cellular are also relatively expensive."
@@ -72,8 +133,15 @@
         {
           "id": 8,
           "question": "What is a converged network?",
-          "options": ["A network that makes use of both fiber-optic and copper connections.", "A network where voice, video, and data move over the same infrastructure.", "A network that makes use of both wired and wireless technology.", "A network that makes use of both satellite and terrestrial connections to move data."],
-          "answer": [1],
+          "options": [
+            "A network that makes use of both fiber-optic and copper connections.",
+            "A network where voice, video, and data move over the same infrastructure.",
+            "A network that makes use of both wired and wireless technology.",
+            "A network that makes use of both satellite and terrestrial connections to move data."
+          ],
+          "answer": [
+            1
+          ],
           "slide": null,
           "reference": "",
           "explanation": "A converged network is where voice, video, and data move over the same infrastructure. The underlying infrastructure can be wired or wireless."
@@ -81,8 +149,15 @@
         {
           "id": 9,
           "question": "What is a fault-tolerant network?",
-          "options": ["A network that can provide priority treatment of voice and video traffic", "A network that offers secure transactions", "A network that can reroute traffic in case of device failure", "A network that is incapable of failing"],
-          "answer": [2],
+          "options": [
+            "A network that can provide priority treatment of voice and video traffic",
+            "A network that offers secure transactions",
+            "A network that can reroute traffic in case of device failure",
+            "A network that is incapable of failing"
+          ],
+          "answer": [
+            2
+          ],
           "slide": null,
           "reference": "",
           "explanation": "A fault-tolerant network can continue to function if an intermediate device or path fails. It can still fail if a sufficient number of intermediate devices and/or paths fail."
@@ -90,8 +165,15 @@
         {
           "id": 10,
           "question": "Which type of traffic must receive the highest priority from QoS?",
-          "options": ["Web traffic", "Email", "VoIP", "Order processing"],
-          "answer": [2],
+          "options": [
+            "Web traffic",
+            "Email",
+            "VoIP",
+            "Order processing"
+          ],
+          "answer": [
+            2
+          ],
           "slide": null,
           "reference": "",
           "explanation": "QoS prioritizes data based on sensitivity to network delay. VoIP is very sensitive to network delay and must receive priority treatment."
@@ -99,8 +181,15 @@
         {
           "id": 11,
           "question": "What is true of Tier 3 ISPs?",
-          "options": ["They act as local providers of service directly to end users.", "They connect directly to Tier 1 ISPs.", "They interconnect with other Tier 1 ISPs.", "They provide high-speed redundant services to other ISPs."],
-          "answer": [0],
+          "options": [
+            "They act as local providers of service directly to end users.",
+            "They connect directly to Tier 1 ISPs.",
+            "They interconnect with other Tier 1 ISPs.",
+            "They provide high-speed redundant services to other ISPs."
+          ],
+          "answer": [
+            0
+          ],
           "slide": null,
           "reference": "",
           "explanation": "Tier 3 ISPs are the local providers of service to end users. They normally connect to Tier 2 providers for Internet access."
@@ -108,11 +197,2578 @@
         {
           "id": 12,
           "question": "What are the primary requirements of information security? (Choose three.)",
-          "options": ["Confidentiality", "Integrity", "Availability", "QoS", "Scalability"],
-          "answer": [0, 1, 2],
+          "options": [
+            "Confidentiality",
+            "Integrity",
+            "Availability",
+            "QoS",
+            "Scalability"
+          ],
+          "answer": [
+            0,
+            1,
+            2
+          ],
           "slide": null,
           "reference": "",
           "explanation": "Information security requires: Confidentiality (only intended recipients access data), Integrity (data not altered in transit), and Availability (information accessible in a timely manner). QoS and Scalability are not primary requirements."
+        },
+        {
+          "id": 13,
+          "type": "match",
+          "question": "Match each network type with its description.",
+          "pairs": [
+            {
+              "left": "LAN",
+              "right": "A network in a limited local area"
+            },
+            {
+              "left": "WAN",
+              "right": "A network over a wide geographic area"
+            },
+            {
+              "left": "WLAN",
+              "right": "A local network that uses wireless access"
+            },
+            {
+              "left": "SAN",
+              "right": "A network designed for data storage"
+            }
+          ],
+          "matchOptions": [
+            "A network in a limited local area",
+            "A network over a wide geographic area",
+            "A local network that uses wireless access",
+            "A network designed for data storage",
+            "A private network for employees inside an organization",
+            "A network that provides controlled access to business partners",
+            "A global public network made of interconnected networks"
+          ],
+          "slide": null,
+          "reference": "",
+          "explanation": "LANs cover local areas, WANs connect wide areas, WLANs provide wireless local access, and SANs are specialized for storage traffic."
+        },
+        {
+          "id": 14,
+          "type": "fill_blank",
+          "question": "A wide-area network is abbreviated as ____.",
+          "answers": [
+            "WAN",
+            "wide-area network",
+            "wide area network"
+          ],
+          "blankLabel": "Missing term",
+          "placeholder": "Enter the abbreviation or term",
+          "slide": null,
+          "reference": "",
+          "explanation": "WAN stands for wide-area network, which provides access over a wide geographic area."
+        },
+        {
+          "id": 15,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "A company is contemplating whether to use a client/server or a peer-to-peer network. What are three characteristics of a peer-to-peer network? (Choose three.)",
+          "options": [
+            "Better security",
+            "Easy to create",
+            "Better device performance when acting as both client and server",
+            "Lacks centralized administration",
+            "Less cost to implement",
+            "Scalable"
+          ],
+          "answer": [
+            1,
+            3,
+            4
+          ],
+          "explanation": "Peer-to-peer networks are easy to create and have lower costs because network devices and dedicated servers are not required. They also lack centralized administration and are less secure and less scalable than client/server networks."
+        },
+        {
+          "id": 16,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which device performs the function of determining the path that messages should take through internetworks?",
+          "options": [
+            "A router",
+            "A firewall",
+            "A web server",
+            "A DSL modem"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "A router determines the path that messages should take through an internetwork. A firewall filters traffic, and a DSL modem provides Internet connectivity."
+        },
+        {
+          "id": 17,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "What two criteria are used to help select a network medium from various network media? (Choose two.)",
+          "options": [
+            "The types of data that need to be prioritized",
+            "The cost of the end devices utilized in the network",
+            "The distance the selected medium can successfully carry a signal",
+            "The number of intermediary devices installed in the network",
+            "The environment where the selected medium is to be installed"
+          ],
+          "answer": [
+            2,
+            4
+          ],
+          "explanation": "Media selection depends on factors such as distance, installation environment, required throughput, and the cost of the medium and installation."
+        },
+        {
+          "id": 18,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which two statements describe intermediary devices? (Choose two.)",
+          "options": [
+            "Intermediary devices generate data content.",
+            "Intermediary devices alter data content.",
+            "Intermediary devices direct the path of the data.",
+            "Intermediary devices connect individual hosts to the network.",
+            "Intermediary devices initiate the encapsulation process."
+          ],
+          "answer": [
+            2,
+            3
+          ],
+          "explanation": "Intermediary devices connect hosts to the network and direct data through the network. End-device applications generate and alter data content and initiate encapsulation."
+        },
+        {
+          "id": 19,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "What are two functions of end devices on a network? (Choose two.)",
+          "options": [
+            "They originate the data that flows through the network.",
+            "They direct data over alternate paths in the event of link failures.",
+            "They filter the flow of data to enhance security.",
+            "They are the interface between humans and the communication network.",
+            "They provide the channel over which the network message travels."
+          ],
+          "answer": [
+            0,
+            3
+          ],
+          "explanation": "End devices originate network data and are the interface between users and the communication network. Intermediary devices direct and filter traffic, while media carry the signal."
+        },
+        {
+          "id": 20,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which area of the network would a college IT staff most likely have to redesign as a direct result of many students bringing their own tablets and smartphones to school to access school resources?",
+          "options": [
+            "Extranet",
+            "Intranet",
+            "Wired LAN",
+            "Wireless LAN",
+            "Wireless WAN"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Student tablets and smartphones most commonly access school resources through the campus wireless LAN, so that is the area most likely to need redesign."
+        },
+        {
+          "id": 21,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "An employee at a branch office is creating a quote for a customer and needs to access confidential pricing information from internal servers at the Head Office. What type of network would the employee access?",
+          "options": [
+            "An intranet",
+            "The Internet",
+            "An extranet",
+            "A local area network"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "An intranet is a private organizational network that is accessible only to authorized members, employees, or other approved users."
+        },
+        {
+          "id": 22,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which two connection options provide an always-on, high-bandwidth Internet connection to computers in a home office? (Choose two.)",
+          "options": [
+            "Cellular",
+            "DSL",
+            "Satellite",
+            "Cable",
+            "Dial-up telephone"
+          ],
+          "answer": [
+            1,
+            3
+          ],
+          "explanation": "Cable and DSL both provide high-bandwidth, always-on Internet connections to a host computer or home LAN."
+        },
+        {
+          "id": 23,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which two Internet connection options do not require that physical cables be run to the building? (Choose two.)",
+          "options": [
+            "DSL",
+            "Cellular",
+            "Satellite",
+            "Dialup",
+            "Dedicated leased line"
+          ],
+          "answer": [
+            1,
+            2
+          ],
+          "explanation": "Cellular uses the mobile network, and satellite is often used where physical cabling is not available."
+        },
+        {
+          "id": 24,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which term describes the state of a network when the demand on the network resources exceeds the available capacity?",
+          "options": [
+            "Convergence",
+            "Congestion",
+            "Optimization",
+            "Synchronization"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Congestion occurs when demand on network resources exceeds available capacity."
+        },
+        {
+          "id": 25,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which expression accurately defines the term bandwidth?",
+          "options": [
+            "A method of limiting the impact of a hardware or software failure on the network",
+            "A measure of the data carrying capacity of the media",
+            "A state where the demand on the network resources exceeds the available capacity",
+            "A set of techniques to manage the utilization of network resources"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Bandwidth is a measure of the data carrying capacity of the media."
+        },
+        {
+          "id": 26,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which networking trend involves the use of personal tools and devices for accessing resources on a business or campus network?",
+          "options": [
+            "Video conferencing",
+            "Cloud computing",
+            "BYOD",
+            "Powerline networking"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "BYOD, or bring your own device, allows users to use personal devices and tools on business and campus networks."
+        },
+        {
+          "id": 27,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "What is a characteristic of a converged network?",
+          "options": [
+            "It provides only one path between the source and destination of a message.",
+            "It limits the impact of a failure by minimizing the number of devices affected.",
+            "It delivers data, voice, and video over the same network infrastructure.",
+            "It requires a separate network infrastructure for each type of communication technology."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "A converged network carries multiple services, such as data, voice, and video, over the same infrastructure."
+        },
+        {
+          "id": 28,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which statement describes a characteristic of cloud computing?",
+          "options": [
+            "A business can connect directly to the Internet without the use of an ISP.",
+            "Applications can be accessed over the Internet by individual users or businesses using any device, anywhere in the world.",
+            "Devices can connect to the Internet through existing electrical wiring.",
+            "Investment in new infrastructure is required in order to access the cloud."
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Cloud computing lets users access applications and resources over the Internet from many device types and locations."
+        },
+        {
+          "id": 29,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which statement describes the use of powerline networking technology?",
+          "options": [
+            "New smart electrical cabling is used to extend an existing home LAN.",
+            "A home LAN is installed without the use of physical cabling.",
+            "A device connects to an existing home LAN using an adapter and an existing electrical outlet.",
+            "Wireless access points use powerline adapters to distribute data through the home LAN."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Powerline networking uses adapters and existing electrical outlets to connect devices to a home LAN."
+        },
+        {
+          "id": 30,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "What security violation would cause the most amount of damage to the life of a home user?",
+          "options": [
+            "Denial of service to your email server",
+            "Replication of worms and viruses in your computer",
+            "Capturing of personal data that leads to identity theft",
+            "Spyware that leads to spam emails"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Identity theft caused by captured personal data can be more damaging to a home user than spam, malware replication, or denial of service."
+        },
+        {
+          "id": 31,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "A user is implementing security on a small office network. Which two actions would provide the minimum security requirements for this network? (Choose two.)",
+          "options": [
+            "Implementing a firewall",
+            "Installing a wireless network",
+            "Installing antivirus software",
+            "Implementing an intrusion detection system",
+            "Adding a dedicated intrusion prevention device"
+          ],
+          "answer": [
+            0,
+            2
+          ],
+          "explanation": "A firewall and antivirus or antimalware software are common minimum security requirements for small or home networks."
+        },
+        {
+          "id": 32,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "type": "fill_blank",
+          "question": "A converged network is capable of delivering voice, video, text, and graphics over the same ____.",
+          "answers": [
+            "communication channels",
+            "channels"
+          ],
+          "blankLabel": "Missing term",
+          "placeholder": "Enter the missing term",
+          "explanation": "A converged network carries different communication forms over the same communication channels."
+        },
+        {
+          "id": 33,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "type": "fill_blank",
+          "question": "The acronym ____ refers to the policy that allows employees to use their personal devices in the business office to access the network and other resources.",
+          "answers": [
+            "BYOD",
+            "bring your own device"
+          ],
+          "blankLabel": "Acronym",
+          "placeholder": "Enter the acronym",
+          "explanation": "BYOD stands for bring your own device."
+        },
+        {
+          "id": 34,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "What are two functions of intermediary devices on a network? (Choose two.)",
+          "options": [
+            "They are the primary source and providers of information and services to end devices.",
+            "They run applications that support collaboration for business.",
+            "They form the interface between the human network and the underlying communication network.",
+            "They direct data along alternate pathways when there is a link failure.",
+            "They filter the flow of data, based on security settings."
+          ],
+          "answer": [
+            3,
+            4
+          ],
+          "explanation": "Intermediary devices can direct data along alternate paths and filter data flows based on security settings."
+        },
+        {
+          "id": 35,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "type": "match",
+          "question": "Match the description to the form of network communication.",
+          "pairs": [
+            {
+              "left": "An audio-based medium that allows people to deliver recordings to a wide audience",
+              "right": "Podcast"
+            },
+            {
+              "left": "Interactive websites where people create and share user-generated content with friends and family",
+              "right": "Social media"
+            },
+            {
+              "left": "Web pages that groups of people can edit and view together",
+              "right": "Wiki"
+            },
+            {
+              "left": "Real-time communication between two or more people",
+              "right": "Instant messaging"
+            }
+          ],
+          "matchOptions": [
+            "Podcast",
+            "Social media",
+            "Wiki",
+            "Instant messaging",
+            "Weblog",
+            "Email",
+            "TelePresence"
+          ],
+          "explanation": "Podcast, social media, wiki, and instant messaging are different forms of network communication."
+        },
+        {
+          "id": 36,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "type": "match",
+          "question": "Match each characteristic to its corresponding Internet connectivity type.",
+          "pairs": [
+            {
+              "left": "High bandwidth connection that runs over telephone line",
+              "right": "DSL"
+            },
+            {
+              "left": "Typically has very low bandwidth",
+              "right": "Dial-up telephone"
+            },
+            {
+              "left": "Not suited for heavily wooded areas",
+              "right": "Satellite"
+            },
+            {
+              "left": "Uses coaxial cable as a medium",
+              "right": "Cable"
+            }
+          ],
+          "matchOptions": [
+            "DSL",
+            "Dial-up telephone",
+            "Satellite",
+            "Cable",
+            "Cellular",
+            "Dedicated leased line",
+            "Metro Ethernet"
+          ],
+          "explanation": "DSL uses telephone lines, dial-up is low bandwidth, satellite needs a clear line of sight, and cable uses coaxial cable."
+        },
+        {
+          "id": 37,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "What is the Internet?",
+          "options": [
+            "It is a network based on Ethernet technology.",
+            "It provides network access for mobile devices.",
+            "It provides connections through interconnected global networks.",
+            "It is a private network for an organization with LAN and WAN connections."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The Internet is a global system of interconnected networks that enables many types of networked devices to communicate."
+        },
+        {
+          "id": 38,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "type": "match",
+          "question": "Match the definition to the security goal.",
+          "pairs": [
+            {
+              "left": "Ensuring confidentiality",
+              "right": "Only the intended recipients can access and read the data"
+            },
+            {
+              "left": "Maintaining integrity",
+              "right": "The assurance that the information has not been altered during transmission"
+            },
+            {
+              "left": "Ensuring availability",
+              "right": "The assurance of timely and reliable access to data"
+            }
+          ],
+          "matchOptions": [
+            "Only the intended recipients can access and read the data",
+            "The assurance that the information has not been altered during transmission",
+            "The assurance of timely and reliable access to data",
+            "The ability of a network to grow without affecting users",
+            "The ability to reroute traffic after a failure",
+            "The prioritization of delay-sensitive traffic"
+          ],
+          "explanation": "Confidentiality controls access, integrity protects data from unauthorized alteration, and availability ensures timely reliable access."
+        },
+        {
+          "id": 39,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "What type of network must a home user access in order to do online shopping?",
+          "options": [
+            "An intranet",
+            "The Internet",
+            "An extranet",
+            "A local area network"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Online shopping requires access to the Internet."
+        },
+        {
+          "id": 40,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "What type of network traffic requires QoS?",
+          "options": [
+            "Email",
+            "Online purchasing",
+            "Video conferencing",
+            "Wiki"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Video conferencing is sensitive to delay and jitter, so it benefits from QoS treatment."
+        },
+        {
+          "id": 41,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "A network administrator is implementing a policy that requires strong, complex passwords. Which data protection goal does this policy support?",
+          "options": [
+            "Data integrity",
+            "Data quality",
+            "Data confidentiality",
+            "Data redundancy"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Strong passwords help ensure that only authorized users can access data, supporting confidentiality."
+        },
+        {
+          "id": 42,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "What are two characteristics of a scalable network? (Choose two.)",
+          "options": [
+            "Easily overloaded with increased traffic",
+            "Grows in size without impacting existing users",
+            "Is not as reliable as a small network",
+            "Suitable for modular devices that allow for expansion",
+            "Offers limited number of applications"
+          ],
+          "answer": [
+            1,
+            3
+          ],
+          "explanation": "A scalable network can grow with limited impact on existing users and often uses modular devices that allow expansion."
+        },
+        {
+          "id": 43,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Refer to the exhibit. Which set of devices contains only intermediary devices?",
+          "image": "assets/intermediary-devices.svg",
+          "imageAlt": "Network diagram with devices labeled A through J.",
+          "imageCaption": "Identify the set that contains only intermediary devices.",
+          "options": [
+            "A, B, D, G",
+            "A, B, E, F",
+            "C, D, G, I",
+            "G, H, I, J"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The set A, B, D, G contains intermediary network devices such as switching, routing, wireless routing, and firewall devices."
+        },
+        {
+          "id": 44,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which two statements about the relationship between LANs and WANs are true? (Choose two.)",
+          "options": [
+            "Both LANs and WANs connect end devices.",
+            "WANs connect LANs at slower speed bandwidth than LANs connect their internal end devices.",
+            "LANs connect multiple WANs together.",
+            "WANs must be publicly-owned, but LANs can be owned by either public or private entities.",
+            "WANs are typically operated through multiple ISPs, but LANs are typically operated by single organizations or individuals."
+          ],
+          "answer": [
+            1,
+            4
+          ],
+          "explanation": "WANs commonly connect LANs over lower-speed links and are often operated through multiple service providers, while LANs are usually operated by a single organization or individual."
+        },
+        {
+          "id": 45,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which statement describes a network that supports QoS?",
+          "options": [
+            "The fewest possible devices are affected by a failure.",
+            "The network should be able to expand to keep up with user demand.",
+            "The network provides predictable levels of service to different types of traffic.",
+            "Data sent over the network is not altered in transmission."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "QoS provides predictable service levels to different traffic types by managing network resource use."
+        },
+        {
+          "id": 46,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "What is a characteristic of circuit-switched networks?",
+          "options": [
+            "If all circuits are busy, a new call cannot be placed.",
+            "If a circuit fails, the call will be forwarded on a new path.",
+            "Circuit-switched networks can dynamically learn and use redundant circuits.",
+            "A single message can be broken into multiple message blocks that are transmitted through multiple circuits simultaneously."
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "In circuit-switched networks, a dedicated circuit is required. If all circuits are busy, a new call cannot be placed."
+        },
+        {
+          "id": 47,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which expression accurately defines the term congestion?",
+          "options": [
+            "A method of limiting the impact of a hardware or software failure on the network",
+            "A measure of the data carrying capacity of the network",
+            "A state where the demand on the network resources exceeds the available capacity",
+            "A set of techniques to manage the utilization of network resources"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Congestion is the condition where network resource demand exceeds available capacity."
+        },
+        {
+          "id": 48,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which tool provides real-time video and audio communication over the Internet so that businesses can conduct corporate meetings with participants from several remote locations?",
+          "options": [
+            "Wiki",
+            "Weblog",
+            "TelePresence",
+            "Instant messaging"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "TelePresence provides real-time video and audio communication for remote meetings."
+        },
+        {
+          "id": 49,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Requiring strong, complex passwords is a practice that supports which network security goal?",
+          "options": [
+            "Maintaining communication integrity",
+            "Ensuring reliability of access",
+            "Ensuring data confidentiality",
+            "Ensuring redundancy"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Strong complex passwords help restrict access to authorized users and support data confidentiality."
+        },
+        {
+          "id": 50,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "Which three network tools provide the minimum required security protection for home users? (Choose three.)",
+          "options": [
+            "An intrusion prevention system",
+            "Antivirus software",
+            "Antispyware software",
+            "Access control lists",
+            "A firewall",
+            "Powerline networking"
+          ],
+          "answer": [
+            1,
+            2,
+            4
+          ],
+          "explanation": "Home users should at minimum use antivirus software, antispyware software, and a firewall."
+        },
+        {
+          "id": 51,
+          "slide": null,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 1",
+          "question": "A college is building a new dormitory on its campus. A worker accidentally damages a fiber optic cable that connects two existing dormitories to the campus data center. Although the cable has been cut, students in the dormitories only experience a very short interruption of network services. What characteristic of the network is shown here?",
+          "options": [
+            "Quality of service (QoS)",
+            "Scalability",
+            "Security",
+            "Fault tolerance",
+            "Integrity"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Fault tolerance allows the network to continue operating or recover quickly when a link or device fails."
+        }
+      ]
+    },
+    {
+      "id": "topic2",
+      "title": "Configure a Network Operating System",
+      "icon": "🖥️",
+      "lecture": "Lecture 2",
+      "questions": [
+        {
+          "id": 190,
+          "pinToStart": true,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Which two characters are allowed as part of the hostname of a Cisco device? (Choose two.)",
+          "options": [
+            "numbers",
+            "question mark",
+            "space",
+            "tab",
+            "dash"
+          ],
+          "answer": [
+            0,
+            4
+          ],
+          "explanation": "Cisco IOS hostnames may include letters, numbers, and dashes. Question marks, spaces, and tabs are not valid hostname characters."
+        },
+        {
+          "id": 191,
+          "pinToStart": true,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Refer to the exhibit. A network administrator is configuring the MOTD on switch SW1. What is the purpose of this command?",
+          "image": "/photoNew/Screenshot%202026-05-06%20at%2016.43.01.png",
+          "imageAlt": "Cisco IOS banner motd command configured on switch SW1.",
+          "imageCaption": "Use the exhibit to answer the question.",
+          "options": [
+            "to display a message when a user accesses the switch",
+            "to configure switch SW1 so that only the users in the Admin group can telnet into SW1",
+            "to force users of the Admin group to enter a password for authentication",
+            "to configure switch SW1 so that the message will display when a user enters the enable command"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The banner motd command displays a message of the day when a user accesses the device."
+        },
+        {
+          "id": 192,
+          "pinToStart": true,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Refer to the exhibit. Based on the test results, which device has connectivity and which device does not have connectivity? (Choose two.)",
+          "image": "/photoNew/Screenshot%202026-05-06%20at%2016.42.47.png",
+          "imageAlt": "Network diagram and ping output showing results for 192.168.1.2 and 192.168.1.21.",
+          "imageCaption": "Use the exhibit to identify the successful and failed connectivity tests.",
+          "options": [
+            "connectivity: switch 2",
+            "connectivity: PC-D",
+            "connectivity: PC-B",
+            "no connectivity: switch 1",
+            "no connectivity: switch 2",
+            "no connectivity: PC-C"
+          ],
+          "answer": [
+            0,
+            5
+          ],
+          "explanation": "The ping to 192.168.1.2, which is switch 2, receives replies. The ping to 192.168.1.21, which is PC-C, times out."
+        },
+        {
+          "id": 193,
+          "pinToStart": true,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Refer to the exhibit. What three facts can be determined from the show ip interface brief output? (Choose three.)",
+          "image": "/photoNew/Screenshot%202026-05-06%20at%2016.42.35.png",
+          "imageAlt": "show ip interface brief output with FastEthernet and VLAN 1 status.",
+          "imageCaption": "Use the visible command output to select three facts.",
+          "options": [
+            "Two physical interfaces have been configured.",
+            "The switch can be remotely managed.",
+            "One device is attached to a physical interface.",
+            "Passwords have been configured on the switch.",
+            "Two devices are attached to the switch.",
+            "The default SVI has been configured."
+          ],
+          "answer": [
+            1,
+            2,
+            5
+          ],
+          "explanation": "VLAN 1 has an IP address and is up/up, so the switch can be managed remotely. FastEthernet0/1 is up/up, indicating one active physical connection. The default SVI, VLAN 1, is configured."
+        },
+        {
+          "id": 194,
+          "pinToStart": true,
+          "type": "match",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "An administrator is configuring a switch console port with a password. Match the IOS modes in the order the administrator reaches them.",
+          "image": "/photo/Screenshot%202026-05-06%20at%2016.32.49.png",
+          "imageAlt": "IOS mode order question for configuring the switch console port.",
+          "imageCaption": "Match each step with the correct IOS mode.",
+          "pairs": [
+            {
+              "left": "first mode",
+              "right": "user EXEC mode"
+            },
+            {
+              "left": "second mode",
+              "right": "privileged EXEC mode"
+            },
+            {
+              "left": "third mode",
+              "right": "global configuration mode"
+            },
+            {
+              "left": "final mode",
+              "right": "line configuration mode"
+            }
+          ],
+          "matchOptions": [
+            "user EXEC mode",
+            "privileged EXEC mode",
+            "global configuration mode",
+            "line configuration mode"
+          ],
+          "explanation": "The order is user EXEC mode, privileged EXEC mode, global configuration mode, and then line configuration mode for line console configuration."
+        },
+        {
+          "id": 195,
+          "pinToStart": true,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Refer to the exhibit. A ping to the default gateway was not successful, but other switches in the same network can ping this gateway. What is a possible reason?",
+          "image": "/photoNew/Screenshot%202026-05-06%20at%2016.42.01.png",
+          "imageAlt": "Switch VLAN 1 and default gateway configuration with failed ping output.",
+          "imageCaption": "Use the configuration and ping output to identify the issue.",
+          "options": [
+            "The VLAN IP address and the default gateway IP address are not in the same network.",
+            "The local DNS server is not functioning correctly.",
+            "The no shutdown command was not issued for VLAN 1.",
+            "The ip default-gateway command has to be issued in the VLAN interface configuration mode.",
+            "The default gateway address must be 192.168.10.1."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The SVI was assigned an IP address, but the exhibit does not show the no shutdown command. If VLAN 1 is administratively down, the switch cannot ping the default gateway."
+        },
+        {
+          "id": 196,
+          "pinToStart": true,
+          "type": "match",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Match the description to the common IOS CLI access method.",
+          "image": "/photoNew/Screenshot%202026-05-06%20at%2016.41.07.png",
+          "imageAlt": "Common IOS CLI access methods: console port, virtual interface, and AUX port.",
+          "imageCaption": "Match each description with the access method.",
+          "pairs": [
+            {
+              "left": "It displays startup, debugging, and error messages by default.",
+              "right": "Console port"
+            },
+            {
+              "left": "It can be used to restore an out-of-box configuration on a switch or router.",
+              "right": "Console port"
+            },
+            {
+              "left": "It allows access through use of Telnet or SSH protocols.",
+              "right": "Virtual interface"
+            },
+            {
+              "left": "It requires an active network connection.",
+              "right": "Virtual interface"
+            },
+            {
+              "left": "It connects through dialup connections.",
+              "right": "AUX port"
+            },
+            {
+              "left": "It is not supported on Catalyst switch devices.",
+              "right": "AUX port"
+            }
+          ],
+          "matchOptions": [
+            "Console port",
+            "Virtual interface",
+            "AUX port"
+          ],
+          "explanation": "Console access is local and useful for initial or recovery configuration. Virtual interface access uses the network with Telnet or SSH. AUX access is modem/dialup based and is not supported on Catalyst switches."
+        },
+        {
+          "id": 201,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "Which two functions are provided by a network operating system? (Choose two.)",
+          "options": [
+            "Provides a command-line interface",
+            "Physically forwards bits over copper media",
+            "Controls access to device resources",
+            "Creates all network cabling standards",
+            "Replaces the need for IP addressing"
+          ],
+          "answer": [
+            0,
+            2
+          ],
+          "explanation": "A network operating system provides interfaces such as CLI and controls access to device hardware and software resources."
+        },
+        {
+          "id": 202,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "Which access method requires a direct physical connection to the device management port?",
+          "options": [
+            "SSH",
+            "Telnet",
+            "Console",
+            "Web browser"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Console access uses a direct physical connection to the console port and is commonly used for initial device configuration."
+        },
+        {
+          "id": 203,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "What is the purpose of assigning a hostname to a network device?",
+          "options": [
+            "To identify the device in prompts, logs, and documentation",
+            "To encrypt all remote management traffic",
+            "To automatically configure all interfaces",
+            "To replace the device IP address"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "A hostname makes the device easier to identify when administering, documenting, and troubleshooting the network."
+        },
+        {
+          "id": 204,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "Which command protects privileged EXEC mode on a Cisco IOS device?",
+          "options": [
+            "line console 0",
+            "enable secret",
+            "banner motd",
+            "service password-encryption"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "The enable secret command sets an encrypted password for access to privileged EXEC mode."
+        },
+        {
+          "id": 205,
+          "type": "match",
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "Match each Cisco IOS mode with its prompt.",
+          "pairs": [
+            {
+              "left": "User EXEC mode",
+              "right": "Switch>"
+            },
+            {
+              "left": "Privileged EXEC mode",
+              "right": "Switch#"
+            },
+            {
+              "left": "Global configuration mode",
+              "right": "Switch(config)#"
+            },
+            {
+              "left": "Line configuration mode",
+              "right": "Switch(config-line)#"
+            }
+          ],
+          "matchOptions": [
+            "Switch>",
+            "Switch#",
+            "Switch(config)#",
+            "Switch(config-line)#",
+            "Switch(config-if)#",
+            "Router(config-router)#"
+          ],
+          "explanation": "Cisco IOS prompts change to show the current command mode."
+        },
+        {
+          "id": 206,
+          "type": "fill_blank",
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "The command ____ saves the running configuration to the startup configuration.",
+          "answers": [
+            "copy running-config startup-config",
+            "copy run start",
+            "copy running-config startup",
+            "copy run startup-config"
+          ],
+          "blankLabel": "Command",
+          "placeholder": "Enter the IOS command",
+          "explanation": "The running configuration is stored in RAM. Copying it to startup configuration preserves it for the next reload."
+        },
+        {
+          "id": 207,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "Which two protocols can provide remote access to the CLI of a Cisco device? (Choose two.)",
+          "options": [
+            "SSH",
+            "HTTP",
+            "Telnet",
+            "DHCP",
+            "DNS"
+          ],
+          "answer": [
+            0,
+            2
+          ],
+          "explanation": "SSH and Telnet can be used for remote CLI access. SSH is preferred because it encrypts the session."
+        },
+        {
+          "id": 208,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "Why should SSH be used instead of Telnet for remote device management?",
+          "options": [
+            "SSH encrypts the remote management session.",
+            "SSH requires no username or password.",
+            "SSH works only over a console cable.",
+            "SSH automatically saves the configuration."
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "SSH encrypts remote management traffic, while Telnet sends data in plaintext."
+        },
+        {
+          "id": 209,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "What is the Cisco IOS?",
+          "options": [
+            "The memory for the Cisco network device",
+            "The configuration for the Cisco network device",
+            "The operating system for the Cisco network device",
+            "The CPU for the Cisco network device"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The Cisco IOS (Internetworking Operating System) is the operating system used in most Cisco network devices."
+        },
+        {
+          "id": 210,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "What type of connection to a Cisco IOS switch is used to make the initial configuration?",
+          "options": [
+            "AUX port",
+            "Console port",
+            "SSH",
+            "Telnet",
+            "Web interface"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "The initial configuration of Cisco IOS devices is accomplished through the CLI on the console connection."
+        },
+        {
+          "id": 211,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "What command will display a list of keywords available for viewing the status of an IOS switch?",
+          "options": [
+            "Switch#sh?",
+            "Switch#help",
+            "Switch#show ?",
+            "Switch#status ?"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Entering a question mark (?) after a command will show all additional commands and keywords to be used in the command sequence."
+        },
+        {
+          "id": 212,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "How is the Cisco IOS generally accessed and navigated?",
+          "options": [
+            "Through the CLI using a terminal emulator",
+            "Using a web browser",
+            "With a Cisco-proprietary application",
+            "By the use of a custom GUI"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "While there are some GUI interfaces available on Cisco IOS-based devices, the current practice is to use the CLI for device configuration and troubleshooting."
+        },
+        {
+          "id": 213,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "What is initially entered at the CLI of the Cisco IOS when typing a command sequence?",
+          "options": [
+            "Argument",
+            "A space",
+            "Command",
+            "Keyword"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The IOS command parser inspects the first entries of a command sequence, expecting to identify a known command."
+        },
+        {
+          "id": 214,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "When the command \"Switch(config)#hostname EASt-2+56\" is entered in a Cisco IOS device using the CLI, what will be returned in the CLI?",
+          "options": [
+            "Switch(config)#",
+            "% Invalid input detected",
+            "EASt-2+56(config)#",
+            "EaSt-58(config)#",
+            "East-2+56(config)#",
+            "Switch EASt-2+56(config)#"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "When the device's host name is configured, this name is used verbatim in the CLI prompt."
+        },
+        {
+          "id": 215,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "What is the primary defense against unauthorized remote access to network devices?",
+          "options": [
+            "Configuring a default gateway",
+            "Configuring an IP address",
+            "Configuring a VTY password",
+            "Configuring a console password"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Forcing authentication for remote access by requiring a password to remotely connect to a network is a basic security measure. In practice, stronger authentication should be required."
+        },
+        {
+          "id": 216,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "Where is the configuration used during startup on Cisco IOS devices located?",
+          "options": [
+            "Running config",
+            "NVRAM",
+            "Startup config",
+            "Terminal emulator"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "The startup configuration provides the configuration for the operation of the IOS device during startup and is stored in NVRAM."
+        },
+        {
+          "id": 217,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "What is the purpose of the following switch configuration?\n\ns1(config)# interface vlan 1\ns1(config-if)# ip address 192.168.122.222 255.255.255.0\ns1(config-if)# no shutdown\ns1(config-if)# exit",
+          "options": [
+            "Allows communication to manage the switch",
+            "Allows the switch to forward traffic",
+            "Allows the switch to provide name resolution",
+            "Allows dynamic host configuration"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "This configuration provides management connectivity to the switch. A switch can forward traffic without this configuration, and name resolution or dynamic host configuration are not provided by these commands."
+        },
+        {
+          "id": 218,
+          "reference": "CCNA 1 Lecture 2 practice",
+          "question": "From the CLI of a switch with an address of 192.168.1.44, what command would be used to verify end-to-end connectivity to another host?",
+          "options": [
+            "show ip interface brief",
+            "ping 127.0.0.1",
+            "ping 192.168.1.44",
+            "ping 192.168.1.43"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "This provides a ping to a remote host. The show ip interface brief command does not verify connectivity, ping 127.0.0.1 verifies the logical IP stack, and ping 192.168.1.44 verifies the local host configuration."
+        },
+        {
+          "id": 219,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "In an operating system, which component allocates hardware resources for software processes?",
+          "options": [
+            "Shell",
+            "Kernel",
+            "Terminal emulator",
+            "Startup configuration"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "The kernel manages hardware resources and makes them available to software. The shell is the user-facing interface."
+        },
+        {
+          "id": 220,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Which IOS command moves the user back one level in the command hierarchy?",
+          "options": [
+            "exit",
+            "end",
+            "Ctrl-Z",
+            "Ctrl-C"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The exit command returns to the previous IOS mode. The end command and Ctrl-Z return to privileged EXEC mode."
+        },
+        {
+          "id": 221,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "A router has a valid IOS image and a saved configuration in NVRAM, but no console password is configured. Which mode appears after boot?",
+          "options": [
+            "Setup mode",
+            "User EXEC mode",
+            "Privileged EXEC mode",
+            "Global configuration mode"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "With a valid IOS and startup configuration, the device boots to user EXEC mode. Privileged EXEC still requires the enable password or secret."
+        },
+        {
+          "id": 222,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Which two tasks are supported by IOS context-sensitive help? (Choose two.)",
+          "options": [
+            "Showing available commands in the current mode",
+            "Selecting the best command automatically",
+            "Showing valid keywords or arguments for a command",
+            "Encrypting entered passwords",
+            "Saving the running configuration"
+          ],
+          "answer": [
+            0,
+            2
+          ],
+          "explanation": "Context-sensitive help lists commands, keywords, and arguments that are valid from the current prompt or command position."
+        },
+        {
+          "id": 223,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "What information is shown by the show startup-config command?",
+          "options": [
+            "The IOS image loaded in RAM",
+            "The bootstrap code stored in ROM",
+            "The active configuration stored in RAM",
+            "The saved configuration stored in NVRAM"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "show startup-config displays the saved startup configuration in NVRAM. show running-config displays the active configuration in RAM."
+        },
+        {
+          "id": 224,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Which two hostnames follow Cisco IOS naming guidelines? (Choose two.)",
+          "options": [
+            "Branch2!",
+            "RM-3-Switch-2A4",
+            "Floor(15)",
+            "HO Floor 17",
+            "SwBranch799"
+          ],
+          "answer": [
+            1,
+            4
+          ],
+          "explanation": "Cisco device hostnames should start with a letter, contain no spaces, use letters, digits, and hyphens, and end with a letter or digit."
+        },
+        {
+          "id": 225,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "What does the service password-encryption command do on a Cisco IOS device?",
+          "options": [
+            "Encrypts passwords stored in the configuration file",
+            "Encrypts all packets sent through the device",
+            "Requires users to type encrypted text at login",
+            "Enables SSH on all VTY lines"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The command hides plaintext passwords in the configuration by storing them in an encrypted form."
+        },
+        {
+          "id": 226,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "A technician made unsaved configuration changes that did not fix a problem. What is the cleanest way to discard those running-config changes and return to the saved startup configuration?",
+          "options": [
+            "Reload the device without saving",
+            "Delete the vlan.dat file",
+            "Restart the terminal emulator",
+            "Use copy startup-config running-config"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Reloading without saving discards unsaved running-config changes. Copying startup-config to running-config merges settings and may not remove all changes."
+        },
+        {
+          "id": 227,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Which statement best describes the running configuration on a Cisco IOS device?",
+          "options": [
+            "Changes to it affect device operation immediately",
+            "It is stored permanently in NVRAM",
+            "It is removed with erase running-config",
+            "It is saved automatically on every reload"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Commands entered into the running configuration take effect immediately. They must be saved separately to survive a reload."
+        },
+        {
+          "id": 228,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Which two statements about RAM on Cisco devices are true? (Choose two.)",
+          "options": [
+            "RAM is nonvolatile storage",
+            "The active running configuration is stored in RAM",
+            "RAM contents are lost after a power cycle",
+            "RAM exists only in switches, not routers",
+            "RAM stores multiple IOS images permanently"
+          ],
+          "answer": [
+            1,
+            2
+          ],
+          "explanation": "RAM stores active operational data such as the running configuration and is volatile, so its contents are lost when power is removed."
+        },
+        {
+          "id": 229,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Which interface is used to remotely manage a Layer 2 switch through an IP address?",
+          "options": [
+            "AUX interface",
+            "Console interface",
+            "Switch virtual interface",
+            "First Ethernet interface"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "A Layer 2 switch uses a switch virtual interface, or SVI, for IP-based remote management."
+        },
+        {
+          "id": 230,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Which SVI exists by default on a Cisco switch?",
+          "options": [
+            "FastEthernet 0/1",
+            "GigabitEthernet 0/1",
+            "VLAN 1",
+            "VLAN 99"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "VLAN 1 is the default switch virtual interface. Ethernet interfaces are physical ports, and VLAN 99 must be created or configured."
+        },
+        {
+          "id": 231,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Why is an IP address configured on a Layer 2 switch?",
+          "options": [
+            "To let the switch send broadcasts",
+            "To make the switch a default gateway",
+            "To allow remote management",
+            "To let the switch receive Ethernet frames"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Layer 2 switching does not require an IP address, but remote management through the network does."
+        },
+        {
+          "id": 232,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Which Windows command displays the current IP configuration of a PC?",
+          "options": [
+            "ping",
+            "ipconfig",
+            "show interfaces",
+            "show ip interface brief"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "ipconfig displays IP addressing information on Windows. The show commands are Cisco IOS commands."
+        },
+        {
+          "id": 233,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "A newly connected PC reaches the network without manual IP settings. What is the most likely reason?",
+          "options": [
+            "The PC does not need IP addressing",
+            "The factory permanently assigned the correct LAN address",
+            "The PC is configured to use DHCP",
+            "DNS automatically assigned the IP address"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "A DHCP client can automatically receive an IP address, subnet mask, gateway, and other settings from a DHCP server."
+        },
+        {
+          "id": 234,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "What is a user testing by pinging a remote IP address such as 10.1.1.1?",
+          "options": [
+            "Whether the local TCP/IP stack works without network traffic",
+            "Whether the destination can be reached",
+            "Which exact path packets take",
+            "What hardware model exists at the destination"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "A ping to a destination address tests basic IP connectivity to that destination."
+        },
+        {
+          "id": 235,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Before selecting IOS images for upgrades, which three details should an administrator verify? (Choose three.)",
+          "options": [
+            "Whether all devices are on the same LAN",
+            "The router and switch models",
+            "The installed router and switch ports",
+            "Available RAM and flash memory",
+            "Required IOS features",
+            "Whether every device has the same hostname"
+          ],
+          "answer": [
+            1,
+            3,
+            4
+          ],
+          "explanation": "IOS image selection depends on device model, hardware resources such as RAM and flash, and the feature set required."
+        },
+        {
+          "id": 237,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "After service password-encryption is enabled, what changes when the configuration is viewed?",
+          "options": [
+            "Banner text is encrypted",
+            "Plaintext passwords are no longer displayed as clear text",
+            "Only the enable secret is removed",
+            "Users must enter encrypted strings to log in"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "The command obfuscates plaintext passwords in the displayed configuration so they are not shown directly."
+        },
+        {
+          "id": 238,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "What is a quick way to test whether an MOTD banner is displayed correctly?",
+          "options": [
+            "Reboot the device",
+            "Press Ctrl-Z at privileged EXEC mode",
+            "Leave privileged EXEC mode and press Enter",
+            "Power cycle the device"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The MOTD banner is shown when a user accesses the device. Exiting the session context and pressing Enter can trigger the login/banner display without a reboot."
+        },
+        {
+          "id": 239,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Which three IOS access areas can commonly be protected with passwords? (Choose three.)",
+          "options": [
+            "VTY lines",
+            "Console line",
+            "Ethernet interface",
+            "Boot IOS mode",
+            "Privileged EXEC mode",
+            "Router configuration mode"
+          ],
+          "answer": [
+            0,
+            1,
+            4
+          ],
+          "explanation": "Passwords are commonly applied to console access, VTY remote access, and privileged EXEC access."
+        },
+        {
+          "id": 240,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "What benefit does DHCP provide for hosts on a network?",
+          "options": [
+            "Hosts always keep the same address",
+            "Users can browse by name instead of IP address",
+            "Hosts can receive IP settings automatically",
+            "Duplicate addresses become impossible"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "DHCP automatically assigns IP configuration to hosts. It does not guarantee the same address forever or replace DNS."
+        },
+        {
+          "id": 241,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "When designing IPv4 addressing for end devices, which rule must be followed?",
+          "options": [
+            "Each address must match a DNS-assigned value",
+            "Each address must be unique in the local network",
+            "Each address must be compatible with the MAC address",
+            "Each host must use a different network portion"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Host IP addresses must be unique within the local network. They are independent of MAC addresses and are not assigned by DNS."
+        },
+        {
+          "id": 242,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Which two statements describe flash memory on Cisco devices? (Choose two.)",
+          "options": [
+            "Flash receives a copy of IOS from RAM at boot",
+            "Flash is nonvolatile storage",
+            "Flash contents can be overwritten",
+            "Flash exists only in switches",
+            "Flash contents are lost at each power cycle"
+          ],
+          "answer": [
+            1,
+            2
+          ],
+          "explanation": "Flash is nonvolatile memory and can store IOS images or other files that may be overwritten."
+        },
+        {
+          "id": 243,
+          "type": "match",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Match each IOS shortcut with its function.",
+          "pairs": [
+            {
+              "left": "Tab",
+              "right": "Completes an abbreviated command or keyword"
+            },
+            {
+              "left": "Space bar",
+              "right": "Displays the next screen of output"
+            },
+            {
+              "left": "?",
+              "right": "Shows context-sensitive help"
+            },
+            {
+              "left": "Up Arrow",
+              "right": "Scrolls backward through command history"
+            },
+            {
+              "left": "Ctrl-Shift-6",
+              "right": "Interrupts a process such as ping or traceroute"
+            }
+          ],
+          "matchOptions": [
+            "Completes an abbreviated command or keyword",
+            "Displays the next screen of output",
+            "Shows context-sensitive help",
+            "Scrolls backward through command history",
+            "Interrupts a process such as ping or traceroute",
+            "Saves the running configuration"
+          ],
+          "explanation": "IOS includes editing and help shortcuts that make command entry and output navigation faster."
+        },
+        {
+          "id": 244,
+          "type": "match",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Match each IOS access method with its description.",
+          "pairs": [
+            {
+              "left": "Console port",
+              "right": "Local access that displays startup, debugging, and error messages by default"
+            },
+            {
+              "left": "Virtual interface",
+              "right": "Remote access through protocols such as Telnet or SSH"
+            },
+            {
+              "left": "AUX port",
+              "right": "Access method associated with dialup connections and not supported on Catalyst switches"
+            }
+          ],
+          "matchOptions": [
+            "Local access that displays startup, debugging, and error messages by default",
+            "Remote access through protocols such as Telnet or SSH",
+            "Access method associated with dialup connections and not supported on Catalyst switches",
+            "Physical interface used only for Ethernet frame forwarding",
+            "Protocol used to automatically assign IP addresses"
+          ],
+          "explanation": "Console, virtual terminal, and AUX access methods are used for different local or remote management scenarios."
+        },
+        {
+          "id": 245,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "A remote worker logs in with credentials, uses video conferencing, and an ISP failure is hidden by a backup link. Which three network characteristics are shown? (Choose three.)",
+          "options": [
+            "Security",
+            "Quality of service",
+            "Scalability",
+            "Powerline networking",
+            "Integrity",
+            "Fault tolerance"
+          ],
+          "answer": [
+            0,
+            1,
+            5
+          ],
+          "explanation": "Credentials relate to security, good video experience relates to QoS, and backup connectivity relates to fault tolerance."
+        },
+        {
+          "id": 246,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "What happens after ipv6 unicast-routing is configured globally on an IPv6-capable router?",
+          "options": [
+            "All router interfaces are automatically enabled",
+            "IPv6-enabled interfaces can send ICMPv6 Router Advertisement messages",
+            "Every interface receives a global unicast address automatically",
+            "A static global IPv6 address is created on the router"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "The ipv6 unicast-routing command enables IPv6 routing behavior, including router advertisements on IPv6-enabled interfaces."
+        },
+        {
+          "id": 247,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Which two ICMPv6 message types are additions compared with ICMP for IPv4? (Choose two.)",
+          "options": [
+            "Neighbor Solicitation",
+            "Destination Unreachable",
+            "Host Confirmation",
+            "Time Exceeded",
+            "Router Advertisement",
+            "Route Redirection"
+          ],
+          "answer": [
+            0,
+            4
+          ],
+          "explanation": "ICMPv6 includes Neighbor Solicitation and Router Advertisement messages used by IPv6 neighbor discovery and router discovery."
+        },
+        {
+          "id": 248,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "Which two details appear in show ip interface brief output? (Choose two.)",
+          "options": [
+            "IP addresses",
+            "Interface descriptions",
+            "MAC addresses",
+            "Next-hop addresses",
+            "Layer 1 interface status",
+            "Speed and duplex settings"
+          ],
+          "answer": [
+            0,
+            4
+          ],
+          "explanation": "show ip interface brief lists interface IP addresses and interface status information, including physical layer status."
+        },
+        {
+          "id": 249,
+          "reference": "ITexamanswers.net CCNA 1 Chapter 2",
+          "question": "A packet sent to a server uses destination TCP port 80. Which service is being requested?",
+          "options": [
+            "DHCP",
+            "SMTP",
+            "DNS",
+            "HTTP"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "TCP port 80 is the well-known port for HTTP web traffic."
+        }
+      ]
+    },
+    {
+      "id": "topic3",
+      "title": "Physical Layer/ Data link Layer",
+      "icon": "🔌",
+      "lecture": "Lecture 3",
+      "questions": [
+        {
+          "id": 301,
+          "reference": "CCNA 1 v6.0 Chapter 4: Network Access",
+          "question": "What are the purpose and functions of the physical layer in data networks? (Choose two.)",
+          "options": [
+            "Controls how the data is transmitted onto the physical media",
+            "Encodes the data into signals",
+            "Provides logical addressing",
+            "Packages bits into data units",
+            "Controls media access"
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "explanation": "The physical layer controls data transmitted onto the media and provides encoding of the bits. Logical addressing is provided by Layer 3. Packaging bits into data units and media access control are provided by the data link layer."
+        },
+        {
+          "id": 302,
+          "reference": "CCNA 1 v6.0 Chapter 4: Network Access",
+          "question": "Which of these statements regarding UTP network cabling are true? (Choose two.)",
+          "options": [
+            "Uses light to transmit data",
+            "Susceptible to EMI and RFI",
+            "Commonly used between buildings",
+            "Most difficult type of networking cable to install",
+            "Most commonly used type of networking cable"
+          ],
+          "answer": [
+            1,
+            4
+          ],
+          "explanation": "UTP cabling uses twisted copper pairs. The twists provide some rejection of stray electrical and magnetic signals, but UTP is still susceptible to EMI and RFI. Because of its relatively low cost and good performance, UTP is the most common networking media in use."
+        },
+        {
+          "id": 303,
+          "reference": "CCNA 1 v6.0 Chapter 4: Network Access",
+          "question": "What is the purpose of cladding in fiber-optic cables?",
+          "options": [
+            "Cable grounding",
+            "Noise cancellation",
+            "Prevention of light loss",
+            "EMI protection"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Cladding is the glass that surrounds the fiber core and reflects light pulses back into the core. This keeps the light contained in the fiber through total internal reflection."
+        },
+        {
+          "id": 304,
+          "type": "match",
+          "reference": "CCNA 1 v6.0 Chapter 4: Network Access",
+          "question": "Identify the wire colors associated with the pins when building a 568B network cable.",
+          "pairs": [
+            {
+              "left": "Pin 1",
+              "right": "Orange-white"
+            },
+            {
+              "left": "Pin 2",
+              "right": "Orange"
+            },
+            {
+              "left": "Pin 3",
+              "right": "Green-white"
+            },
+            {
+              "left": "Pin 4",
+              "right": "Blue"
+            },
+            {
+              "left": "Pin 5",
+              "right": "Blue-white"
+            },
+            {
+              "left": "Pin 6",
+              "right": "Green"
+            },
+            {
+              "left": "Pin 7",
+              "right": "Brown-white"
+            },
+            {
+              "left": "Pin 8",
+              "right": "Brown"
+            }
+          ],
+          "matchOptions": [
+            "Orange-white",
+            "Orange",
+            "Green-white",
+            "Blue",
+            "Blue-white",
+            "Green",
+            "Brown-white",
+            "Brown"
+          ],
+          "explanation": "The 568B pinout from pin 1 to pin 8 is orange-white, orange, green-white, blue, blue-white, green, brown-white, and brown."
+        },
+        {
+          "id": 305,
+          "reference": "CCNA 1 v6.0 Chapter 4: Network Access",
+          "question": "What are the advantages of using fiber-optic cable over copper cable? (Choose three.)",
+          "options": [
+            "Copper is more expensive.",
+            "Immunity to electromagnetic interference.",
+            "Careful cable handling.",
+            "Longer maximum cable length.",
+            "Efficient electrical current transfer.",
+            "Greater bandwidth potential."
+          ],
+          "answer": [
+            1,
+            3,
+            5
+          ],
+          "explanation": "Fiber-optic cable can transmit signals with less attenuation than copper, is immune to EMI and RFI, supports longer cable runs, and has greater bandwidth potential."
+        },
+        {
+          "id": 306,
+          "reference": "CCNA 1 v6.0 Chapter 4: Network Access",
+          "question": "What occurs when another wireless device connects to a wireless access point (WAP)?",
+          "options": [
+            "The WAP adds an additional channel to support the new client.",
+            "The WAP throughput for all the connected clients decreases.",
+            "The WAP decreases the radio coverage area.",
+            "The WAP will change frequencies to reduce interference caused by the new client."
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Wireless devices share access to the same airwaves when connecting to a WAP. As more wireless devices access the network at the same time, throughput available to clients can decrease."
+        },
+        {
+          "id": 307,
+          "reference": "CCNA 1 v6.0 Chapter 4: Network Access",
+          "question": "If a node receives a frame and the calculated CRC does not match the CRC in the FCS, what action will the node take?",
+          "options": [
+            "Drop the frame",
+            "Reconstruct the frame from the CRC",
+            "Forward the frame as it is to the next host",
+            "Disable the interface on which the frame arrives"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The receiving node calculates its own CRC and compares it with the CRC in the FCS. If the values do not match, the frame is considered corrupted and is discarded."
+        },
+        {
+          "id": 308,
+          "reference": "CCNA 1 v6.0 Chapter 4: Network Access",
+          "question": "What are the contents of the data field in a frame?",
+          "options": [
+            "A CRC",
+            "The network layer PDU",
+            "The Layer 2 source address",
+            "The length of the frame"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "The Layer 3 PDU is encapsulated with a Layer 2 header and trailer to form the Layer 2 frame. The frame data field contains the network layer PDU."
+        },
+        {
+          "id": 309,
+          "reference": "CCNA 1 v6.0 Chapter 4: Network Access",
+          "question": "Which of the following is true about the logical topology of a network?",
+          "options": [
+            "Is always multiaccess",
+            "Provides the physical addressing",
+            "Is determined by how the nodes in the network are connected",
+            "Defines how frames are transferred from one node to the next"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Logical topology describes how a network transfers frames from one node to the next. It is about the data path, not necessarily the physical layout."
+        },
+        {
+          "id": 310,
+          "reference": "CCNA 1 v6.0 Chapter 4: Network Access",
+          "question": "Which of the following is a characteristic of contention-based MAC?",
+          "options": [
+            "Used in point-to-point topologies.",
+            "Nodes compete for the use of the medium.",
+            "Leaves MAC to the upper layer.",
+            "Each node has a specific time to use the medium."
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "In contention-based access, all nodes compete for use of the medium and follow rules for handling collisions or contention."
+        },
+        {
+          "id": 311,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What are two reasons physical layer protocols use frame encoding techniques? (Choose two.)",
+          "options": [
+            "To reduce collisions on the media",
+            "To provide better media error correction",
+            "To identify where a frame starts and ends",
+            "To increase media throughput",
+            "To distinguish data information from control information"
+          ],
+          "answer": [
+            2,
+            4
+          ],
+          "explanation": "Encoding uses predefined signal patterns that help receivers recognize frame boundaries and distinguish data information from control information."
+        },
+        {
+          "id": 312,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What does throughput indicate?",
+          "options": [
+            "The guaranteed rate offered by an ISP",
+            "The capacity of a medium to carry data",
+            "The usable application data transferred across the media",
+            "The bits transferred across the media over a given period of time",
+            "The time needed for a message to reach the destination"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Throughput measures the actual transfer of bits across the media during a period of time. Goodput is the portion of throughput that is usable application data."
+        },
+        {
+          "id": 313,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "New Ethernet cabling near fluorescent lights and electrical equipment carries corrupted data. Which two factors can interfere with copper cabling? (Choose two.)",
+          "options": [
+            "EMI",
+            "Crosstalk",
+            "RFI",
+            "Signal attenuation",
+            "Extended cable length"
+          ],
+          "answer": [
+            0,
+            2
+          ],
+          "explanation": "Electromagnetic interference and radio frequency interference can distort copper cable signals. Crosstalk comes from adjacent wires, and attenuation is signal weakening over distance."
+        },
+        {
+          "id": 314,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Which characteristic describes crosstalk?",
+          "options": [
+            "Distortion caused by fluorescent lighting",
+            "Distortion caused by signals carried in adjacent wires",
+            "Weakening of a signal over long cable lengths",
+            "Loss of wireless signal because of distance from an access point"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Crosstalk is interference caused when the electric or magnetic field of a signal on one wire affects a signal on an adjacent wire."
+        },
+        {
+          "id": 315,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What UTP cable technique helps protect against crosstalk?",
+          "options": [
+            "Twisting wires together into pairs",
+            "Wrapping foil around the wire pairs",
+            "Using a flexible plastic sheath",
+            "Terminating the cable with grounded connectors"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "UTP pairs are twisted so the magnetic fields generated by the wires tend to cancel each other, reducing crosstalk."
+        },
+        {
+          "id": 316,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Refer to the exhibit. The PC is connected to the switch console port. All other links are FastEthernet. Which UTP cable types connect the devices?",
+          "image": "/photoLec3/Screenshot%202026-05-07%20at%2001.51.02.png",
+          "imageAlt": "A PC connected to a switch, then to a router, then to another router, with links labeled 1, 2, and 3.",
+          "imageCaption": "Identify the cable type for each numbered link.",
+          "options": [
+            "1 - rollover, 2 - crossover, 3 - straight-through",
+            "1 - rollover, 2 - straight-through, 3 - crossover",
+            "1 - crossover, 2 - straight-through, 3 - rollover",
+            "1 - crossover, 2 - rollover, 3 - straight-through"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "A rollover cable is used for console access. Straight-through cable is used between unlike Ethernet devices such as switch to router. Crossover cable is used between similar devices such as router to router."
+        },
+        {
+          "id": 317,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Refer to the exhibit. What is wrong with the displayed cable termination?",
+          "image": "/photoLec3/Screenshot%202026-05-07%20at%2001.50.50.png",
+          "imageAlt": "An RJ-45 termination with too much untwisted wire visible before the connector.",
+          "imageCaption": "Inspect the termination shown in the exhibit.",
+          "options": [
+            "The woven copper braid should not have been removed.",
+            "The wrong type of connector is being used.",
+            "The untwisted length of each wire is too long.",
+            "The wires are too thick for the connector."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "When terminating an RJ-45 connector, the untwisted wire length should be kept short and the cable jacket should be crimped by the connector."
+        },
+        {
+          "id": 318,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Which connector type is used by a typical Ethernet network interface card?",
+          "options": [
+            "DIN",
+            "PS-2",
+            "RJ-11",
+            "RJ-45"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Ethernet NICs commonly use RJ-45 connectors for twisted-pair copper cabling."
+        },
+        {
+          "id": 319,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What is one advantage of fiber-optic cabling over copper cabling?",
+          "options": [
+            "It is usually cheaper than copper cabling.",
+            "It can be installed around sharp bends.",
+            "It is easier to terminate and install than copper cabling.",
+            "It can carry signals much farther than copper cabling."
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Fiber-optic cable generally supports longer distances than copper cable and is also immune to EMI and RFI."
+        },
+        {
+          "id": 320,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Why are two strands of fiber used for a single fiber-optic connection?",
+          "options": [
+            "To allow data to travel longer distances without degrading",
+            "To prevent crosstalk",
+            "To increase the speed of light in the fiber",
+            "To allow full-duplex connectivity"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Light travels in one direction through a fiber strand, so two strands are used to support simultaneous sending and receiving."
+        },
+        {
+          "id": 321,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Which three areas should be considered when designing a wireless network? (Choose three.)",
+          "options": [
+            "Mobility options",
+            "Security",
+            "Interference",
+            "Coverage area",
+            "Extensive cabling",
+            "Packet collision"
+          ],
+          "answer": [
+            1,
+            2,
+            3
+          ],
+          "explanation": "Wireless design must account for coverage, interference sources, and security. Extensive cabling is not a primary wireless design concern."
+        },
+        {
+          "id": 322,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Which OSI layer specifies the encapsulation method used for different media types?",
+          "options": [
+            "Application",
+            "Transport",
+            "Data link",
+            "Physical"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The data link layer defines framing and encapsulation for different physical media types."
+        },
+        {
+          "id": 323,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What are two services performed by the OSI data link layer? (Choose two.)",
+          "options": [
+            "Encrypts data packets",
+            "Determines the path for forwarding packets",
+            "Accepts Layer 3 packets and encapsulates them into frames",
+            "Provides media access control and error detection",
+            "Builds a MAC address table for all Layer 2 communication"
+          ],
+          "answer": [
+            2,
+            3
+          ],
+          "explanation": "The data link layer encapsulates Layer 3 packets into frames and provides media access control and error detection over the local media."
+        },
+        {
+          "id": 324,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Which statement is true about physical and logical topologies?",
+          "options": [
+            "The logical topology is always the same as the physical topology.",
+            "Physical topologies describe how frames are transferred.",
+            "Physical topologies display the IP addressing scheme.",
+            "Logical topologies describe how data transfers between devices."
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Physical topology shows device interconnection. Logical topology describes the path and method used to transfer data between nodes."
+        },
+        {
+          "id": 325,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Which data transfer method allows information to be sent and received at the same time?",
+          "options": [
+            "Full duplex",
+            "Half duplex",
+            "Multiplex",
+            "Simplex"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Full-duplex communication allows both devices to transmit and receive simultaneously."
+        },
+        {
+          "id": 326,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Which statement describes an extended star topology?",
+          "options": [
+            "End devices connect to a central device, which connects to other central devices.",
+            "End devices are connected on a bus and each bus connects to a central device.",
+            "Each end system connects to a neighbor through an intermediate device.",
+            "All devices are connected in a single chain."
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "In an extended star, central intermediate devices connect multiple star topologies together."
+        },
+        {
+          "id": 327,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Refer to the exhibit. Which statement describes the media access control methods used by the networks?",
+          "image": "/photoLec3/Screenshot%202026-05-07%20at%2001.50.37.png",
+          "imageAlt": "A diagram with Network 1 as an Ethernet LAN, Network 2 as a point-to-point link, and Network 3 as a wireless LAN.",
+          "imageCaption": "Compare the access methods used by the three networks.",
+          "options": [
+            "All three networks use CSMA/CA.",
+            "None of the networks require media access control.",
+            "Network 1 uses CSMA/CD and Network 3 uses CSMA/CA.",
+            "Network 1 uses CSMA/CA and Network 2 uses CSMA/CD.",
+            "Network 2 uses CSMA/CA and Network 3 uses CSMA/CD."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The wired Ethernet LAN uses CSMA/CD, the point-to-point WAN does not require contention-based access, and the WLAN uses CSMA/CA."
+        },
+        {
+          "id": 328,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What is contained in the trailer of a data-link frame?",
+          "options": [
+            "Logical address",
+            "Physical address",
+            "Data",
+            "Error detection"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "The frame trailer contains error detection information, commonly in the FCS field."
+        },
+        {
+          "id": 329,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "As data travels on media as 1s and 0s, how does a receiving node identify the beginning and end of a frame?",
+          "options": [
+            "The transmitting node inserts start and stop indicators into the frame.",
+            "The transmitting node sends a beacon before every frame.",
+            "The receiving node identifies the frame by seeing a physical address first.",
+            "The transmitting node sends an out-of-band signal to mark the frame."
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The framing process inserts start and stop indicators so the receiver can detect frame boundaries."
+        },
+        {
+          "id": 330,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What is a role of the Logical Link Control sublayer?",
+          "options": [
+            "Provides data link layer addressing",
+            "Provides access to Layer 1 network technologies",
+            "Defines media access processes performed by hardware",
+            "Marks frames to identify the network layer protocol being carried"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "LLC communicates with the network layer and identifies which Layer 3 protocol is encapsulated in a frame."
+        },
+        {
+          "id": 331,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What is the definition of bandwidth?",
+          "options": [
+            "The usable data transferred over a given period",
+            "The speed at which bits travel on a network",
+            "The measured bits transferred across the media during a period",
+            "The amount of data that can flow from one place to another in a given time"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Bandwidth is the capacity of a medium to carry data between two points during a specific amount of time."
+        },
+        {
+          "id": 332,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What is the function of the CRC value in the FCS field of a frame?",
+          "options": [
+            "To verify the integrity of the received frame",
+            "To verify the physical address in the frame",
+            "To verify the logical address in the frame",
+            "To compute the checksum header for the data field"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The receiver compares the CRC in the FCS with its own computed CRC. If they differ, the frame is discarded."
+        },
+        {
+          "id": 333,
+          "type": "fill_blank",
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "The term ____ indicates the capacity of a medium to carry data and is typically measured in kb/s or Mb/s.",
+          "answers": [
+            "bandwidth"
+          ],
+          "blankLabel": "Missing term",
+          "placeholder": "Enter the term",
+          "explanation": "Bandwidth is the data-carrying capacity of a medium, usually measured in bits per second and its multiples."
+        },
+        {
+          "id": 334,
+          "type": "fill_blank",
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What acronym identifies the data link sublayer that identifies the network layer protocol encapsulated in a frame?",
+          "answers": [
+            "LLC",
+            "logical link control"
+          ],
+          "blankLabel": "Acronym",
+          "placeholder": "Enter the acronym",
+          "explanation": "Logical Link Control, or LLC, places information in the frame to identify the encapsulated network layer protocol."
+        },
+        {
+          "id": 335,
+          "type": "match",
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Match each characteristic to the correct fiber type.",
+          "image": "/photoLec3/Screenshot%202026-05-07%20at%2001.50.00.png",
+          "imageAlt": "Fiber type matching exhibit with multimode and single-mode fiber targets.",
+          "imageCaption": "Not every visible option is used.",
+          "pairs": [
+            {
+              "left": "LED as light source",
+              "right": "Multimode Fiber"
+            },
+            {
+              "left": "Several paths of light into the fiber",
+              "right": "Multimode Fiber"
+            },
+            {
+              "left": "Generally used with LANs",
+              "right": "Multimode Fiber"
+            },
+            {
+              "left": "Only one ray of light into the fiber",
+              "right": "Single-mode Fiber"
+            },
+            {
+              "left": "Generally used for campus backbone",
+              "right": "Single-mode Fiber"
+            },
+            {
+              "left": "Laser as light source",
+              "right": "Single-mode Fiber"
+            }
+          ],
+          "matchOptions": [
+            "Multimode Fiber",
+            "Single-mode Fiber"
+          ],
+          "explanation": "Multimode fiber uses LEDs, supports multiple light paths, and is common in LANs. Single-mode fiber uses laser light, has one primary light path, and is common for campus backbone links."
+        },
+        {
+          "id": 336,
+          "type": "fill_blank",
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "A physical topology that combines point-to-point, hub-and-spoke, or mesh designs is commonly known as a ____ topology.",
+          "answers": [
+            "hybrid"
+          ],
+          "blankLabel": "Topology type",
+          "placeholder": "Enter the topology type",
+          "explanation": "A hybrid topology is a variation or combination of other topology types, such as partial mesh or extended star."
+        },
+        {
+          "id": 337,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What are two examples of hybrid topologies? (Choose two.)",
+          "options": [
+            "Point-to-point",
+            "Partial mesh",
+            "Extended star",
+            "Hub and spoke",
+            "Full mesh"
+          ],
+          "answer": [
+            1,
+            2
+          ],
+          "explanation": "Partial mesh and extended star are hybrid topologies because they combine or vary other topology patterns."
+        },
+        {
+          "id": 338,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Which statement correctly describes signaling at the physical layer?",
+          "options": [
+            "Asynchronous signals are transmitted without a clock signal.",
+            "A 1 always means voltage and a 0 always means no voltage.",
+            "Wireless encoding sends clicks to delimit frames.",
+            "Signaling converts a stream of data into a predefined code."
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Asynchronous signaling does not use a shared clock signal. Converting data into predefined code patterns describes encoding."
+        },
+        {
+          "id": 339,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "A FastEthernet network has 80 Mb/s throughput and 15 Mb/s of overhead. What is the goodput?",
+          "options": [
+            "15 Mb/s",
+            "95 Mb/s",
+            "55 Mb/s",
+            "65 Mb/s",
+            "80 Mb/s"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Goodput is throughput minus overhead. 80 Mb/s minus 15 Mb/s equals 65 Mb/s."
+        },
+        {
+          "id": 340,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "How is the magnetic field cancellation effect enhanced in UTP cables?",
+          "options": [
+            "By increasing the PVC sheath thickness",
+            "By increasing and varying the number of twists in each wire pair",
+            "By increasing copper wire thickness",
+            "By decreasing the number of wires used to carry data"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Different twist rates in UTP pairs improve cancellation of magnetic fields and reduce crosstalk."
+        },
+        {
+          "id": 341,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Which statement is correct about multimode fiber?",
+          "options": [
+            "It carries signals from multiple connected sending devices.",
+            "It commonly uses a laser as a light source.",
+            "SC-SC patch cords can be used with multimode fiber cables.",
+            "It has a thinner core than single-mode fiber."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Multimode fiber commonly uses LED light and has a larger core than single-mode fiber. SC connectors can be used on multimode fiber patch cords."
+        },
+        {
+          "id": 342,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "A network administrator must upgrade wireless access to support up to 1.3 Gb/s while remaining backward compatible. Which wireless standard should be implemented?",
+          "options": [
+            "802.11n",
+            "802.11ac",
+            "802.11g",
+            "802.11b"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "802.11ac supports data rates up to the gigabit range, including 1.3 Gb/s, and remains backward compatible with earlier Wi-Fi standards in supported bands."
+        },
+        {
+          "id": 343,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What is one main characteristic of the data link layer?",
+          "options": [
+            "It generates electrical or optical signals for 1s and 0s.",
+            "It converts data bits into predefined code.",
+            "It shields upper layer protocols from the physical medium details.",
+            "It accepts Layer 3 packets and decides the path to remote networks."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The data link layer allows upper layers to operate without needing to know the details of the physical medium being used."
+        },
+        {
+          "id": 344,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What are two characteristics of 802.11 wireless networks? (Choose two.)",
+          "options": [
+            "They use CSMA/CA technology.",
+            "They use CSMA/CD technology.",
+            "They are collision-free networks.",
+            "Stations can transmit at any time.",
+            "Collisions can exist in the networks."
+          ],
+          "answer": [
+            0,
+            4
+          ],
+          "explanation": "802.11 wireless networks use CSMA/CA to reduce collisions, but collisions can still occur because wireless stations share the medium."
+        },
+        {
+          "id": 345,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "What is the purpose of the FCS field in a frame?",
+          "options": [
+            "To obtain the MAC address of the sender",
+            "To verify the logical address of the sender",
+            "To compute the CRC header for the data field",
+            "To determine whether errors occurred during transmission and reception"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "The FCS stores error detection information used by the receiver to determine whether the frame was corrupted."
+        },
+        {
+          "id": 346,
+          "type": "fill_blank",
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "10,000,000,000 b/s can also be written as ____ Gb/s.",
+          "answers": [
+            "10",
+            "10 Gb/s",
+            "10 Gbps"
+          ],
+          "blankLabel": "Number",
+          "placeholder": "Enter the number",
+          "explanation": "One gigabit per second equals one billion bits per second, so 10,000,000,000 b/s equals 10 Gb/s."
+        },
+        {
+          "id": 347,
+          "type": "match",
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Match the steps to the physical layer operations that occur when data is sent from one node and received at another.",
+          "image": "/photoLec3/Screenshot%202026-05-07%20at%2001.50.11.png",
+          "imageAlt": "Physical layer operation sequence matching exhibit.",
+          "imageCaption": "Match each step with the correct operation.",
+          "pairs": [
+            {
+              "left": "Step 1",
+              "right": "The physical layer encodes the frames."
+            },
+            {
+              "left": "Step 2",
+              "right": "The physical layer creates the signals that represent the bits in each frame."
+            },
+            {
+              "left": "Step 3",
+              "right": "The signals are sent on the media one at a time."
+            },
+            {
+              "left": "Step 4",
+              "right": "The physical layer retrieves the individual signals from the media."
+            },
+            {
+              "left": "Step 5",
+              "right": "The physical layer restores the individual signals to their bit representations."
+            }
+          ],
+          "matchOptions": [
+            "The physical layer encodes the frames.",
+            "The physical layer creates the signals that represent the bits in each frame.",
+            "The signals are sent on the media one at a time.",
+            "The physical layer retrieves the individual signals from the media.",
+            "The physical layer restores the individual signals to their bit representations.",
+            "The physical layer passes the packets up to the internet layer."
+          ],
+          "explanation": "The physical layer encodes frames, creates signals, transmits them over the media, retrieves the signals at the receiver, and restores them to bit representations."
+        },
+        {
+          "id": 348,
+          "reference": "ITexamanswers.net CCNA 1 v5.1/v6.0 Chapter 4 Exam",
+          "question": "Refer to the exhibit. Which statement describes the media access control methods used by the networks?",
+          "image": "/photoLec3/Screenshot%202026-05-07%20at%2001.50.37.png",
+          "imageAlt": "A diagram with Network 1 as an Ethernet LAN, Network 2 as a point-to-point link, and Network 3 as a wireless LAN.",
+          "imageCaption": "Compare the access methods used by the three networks.",
+          "options": [
+            "All three networks use CSMA/CA.",
+            "None of the networks require media access control.",
+            "Network 1 uses CSMA/CD and Network 3 uses CSMA/CA.",
+            "Network 1 uses CSMA/CA and Network 2 uses CSMA/CD.",
+            "Network 2 uses CSMA/CA and Network 3 uses CSMA/CD."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Network 1 is wired Ethernet and uses CSMA/CD. Network 2 is point-to-point. Network 3 is wireless and uses CSMA/CA."
         }
       ]
     }
