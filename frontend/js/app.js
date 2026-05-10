@@ -14,6 +14,69 @@ let isMistakeReview = false;
 
 window.addEventListener('DOMContentLoaded', () => { loadHome(); });
 
+const vlsmPractices = [
+  {
+    id: 'campus',
+    title: 'Practice 8 — Campus Network',
+    network: '192.168.0.0/20',
+    ipv6Base: '2001:db8:acad',
+    vlans: [
+      { id: 10, name: 'Engineering', hosts: 450, routerInterface: 'G0/0.10', pcInterface: 'NIC' },
+      { id: 20, name: 'Marketing', hosts: 100, routerInterface: 'G0/0.20', pcInterface: 'NIC' },
+      { id: 30, name: 'Printers', hosts: 25, routerInterface: 'G0/1.30', pcInterface: 'NIC' },
+    ],
+  },
+  {
+    id: 'branch',
+    title: 'Practice 9 — Branch Office',
+    network: '10.10.0.0/21',
+    ipv6Base: '2001:db8:acad',
+    vlans: [
+      { id: 110, name: 'Staff', hosts: 700, routerInterface: 'G0/0.110', pcInterface: 'NIC' },
+      { id: 120, name: 'Sales', hosts: 220, routerInterface: 'G0/0.120', pcInterface: 'NIC' },
+      { id: 130, name: 'Voice', hosts: 60, routerInterface: 'G0/1.130', pcInterface: 'NIC' },
+      { id: 140, name: 'Management', hosts: 14, routerInterface: 'G0/1.140', pcInterface: 'NIC' },
+    ],
+  },
+  {
+    id: 'datacenter',
+    title: 'Practice 10 — Data Center Edge',
+    network: '172.16.32.0/20',
+    ipv6Base: '2001:db8:dc',
+    vlans: [
+      { id: 210, name: 'Servers', hosts: 900, routerInterface: 'G0/0.210', pcInterface: 'NIC' },
+      { id: 220, name: 'Developers', hosts: 400, routerInterface: 'G0/0.220', pcInterface: 'NIC' },
+      { id: 230, name: 'QA Lab', hosts: 120, routerInterface: 'G0/1.230', pcInterface: 'NIC' },
+      { id: 240, name: 'Monitoring', hosts: 50, routerInterface: 'G0/1.240', pcInterface: 'NIC' },
+    ],
+  },
+  {
+    id: 'school',
+    title: 'Practice 11 — School Network',
+    network: '192.168.48.0/22',
+    ipv6Base: '2001:db8:5c00',
+    vlans: [
+      { id: 310, name: 'Students', hosts: 250, routerInterface: 'G0/0.310', pcInterface: 'NIC' },
+      { id: 320, name: 'Teachers', hosts: 120, routerInterface: 'G0/0.320', pcInterface: 'NIC' },
+      { id: 330, name: 'Library', hosts: 58, routerInterface: 'G0/1.330', pcInterface: 'NIC' },
+      { id: 340, name: 'Office', hosts: 26, routerInterface: 'G0/1.340', pcInterface: 'NIC' },
+    ],
+  },
+  {
+    id: 'enterprise',
+    title: 'Practice 12 — Enterprise HQ',
+    network: '10.50.0.0/20',
+    ipv6Base: '2001:db8:5000',
+    vlans: [
+      { id: 410, name: 'Operations', hosts: 1000, routerInterface: 'G0/0.410', pcInterface: 'NIC' },
+      { id: 420, name: 'Finance', hosts: 500, routerInterface: 'G0/0.420', pcInterface: 'NIC' },
+      { id: 430, name: 'Support', hosts: 250, routerInterface: 'G0/1.430', pcInterface: 'NIC' },
+      { id: 440, name: 'Guest', hosts: 110, routerInterface: 'G0/1.440', pcInterface: 'NIC' },
+      { id: 450, name: 'Printers', hosts: 28, routerInterface: 'G0/1.450', pcInterface: 'NIC' },
+    ],
+  },
+];
+
 async function loadHome() {
   showScreen('screen-home');
   const grid = document.getElementById('topics-grid');
@@ -39,12 +102,424 @@ function renderTabs(topics) {
     btn.onclick = () => filterTopics(l, btn);
     container.appendChild(btn);
   });
+  const vlsmBtn = document.createElement('button');
+  vlsmBtn.className = 'hero-tab vlsm-tab';
+  vlsmBtn.textContent = 'VLSM';
+  vlsmBtn.onclick = () => openVlsmPractice(vlsmBtn);
+  container.appendChild(vlsmBtn);
 }
 
 function filterTopics(lecture, btn) {
   document.querySelectorAll('.hero-tab').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   renderTopics(lecture ? allTopics.filter(t => t.lecture === lecture) : allTopics);
+}
+
+function openVlsmPractice(btn) {
+  document.querySelectorAll('.hero-tab').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderVlsmPractice();
+  showScreen('screen-vlsm');
+}
+
+function renderVlsmPractice() {
+  const list = document.getElementById('vlsm-list');
+  list.innerHTML = vlsmPractices.map((practice, index) => renderVlsmCard(practice, index)).join('');
+}
+
+function renderVlsmCard(practice, index) {
+  const allocations = buildVlsmAllocations(practice);
+  const isOpen = false;
+  return `
+    <section class="vlsm-panel ${isOpen ? 'open' : ''}" data-practice="${practice.id}">
+      <button class="vlsm-summary" type="button" onclick="toggleVlsmPractice('${practice.id}')">
+        <span class="vlsm-summary-main">
+          <span class="vlsm-title-row">
+            <span class="vlsm-card-title">${escapeHTML(practice.title)}</span>
+            <span class="vlsm-badge">HARD</span>
+          </span>
+          <span class="vlsm-main-network">Main network: <strong>${escapeHTML(practice.network)}</strong></span>
+          <span class="vlsm-vlans">
+            ${practice.vlans.map((vlan, vlanIndex) => `<span class="vlan-chip ${getVlanColor(vlanIndex)}">VLAN ${vlan.id} ${escapeHTML(vlan.name)} — ${vlan.hosts} hosts</span>`).join('')}
+          </span>
+        </span>
+        <span class="vlsm-chevron">›</span>
+      </button>
+      <div class="vlsm-body">
+        <section class="vlsm-section">
+          <h3>Topology</h3>
+          ${renderTopology(practice)}
+        </section>
+
+        <section class="vlsm-section">
+          <h3>Instructions</h3>
+          <ul class="vlsm-instructions">
+            <li>Use VLSM: sort VLANs by host count from largest to smallest.</li>
+            <li>Choose the smallest prefix that supports each VLAN including network and broadcast addresses.</li>
+            <li>Allocate subnets sequentially inside ${escapeHTML(practice.network)} without overlap.</li>
+            <li>Use the first usable IPv4 as the router sub-interface and the last usable IPv4 as the PC.</li>
+            <li>Use /64 IPv6 networks with the router at ::1 and the PC at ::10.</li>
+          </ul>
+        </section>
+
+        <section class="vlsm-section">
+          <h3>VLSM Subnet Table</h3>
+          ${renderSubnetTable(practice.id, allocations)}
+        </section>
+
+        <section class="vlsm-section">
+          <h3>IPv4 Address Table</h3>
+          ${renderAddressTable(practice.id, 'ipv4', buildIpv4AddressRows(allocations))}
+        </section>
+
+        <section class="vlsm-section">
+          <h3>IPv6 Address Table</h3>
+          ${renderAddressTable(practice.id, 'ipv6', buildIpv6AddressRows(practice))}
+        </section>
+
+        <div class="vlsm-actions">
+          <button class="btn-confirm" onclick="checkVlsmPractice('${practice.id}')">Check all</button>
+          <button class="btn-next" onclick="showVlsmAnswers('${practice.id}')">Show all</button>
+          <button class="vlsm-reset" onclick="resetVlsmPractice('${practice.id}')">Reset</button>
+        </div>
+        <div class="vlsm-feedback" id="vlsm-feedback-${practice.id}" aria-live="polite"></div>
+      </div>
+    </section>
+  `;
+}
+
+function toggleVlsmPractice(practiceId) {
+  document.querySelector(`[data-practice="${practiceId}"]`).classList.toggle('open');
+}
+
+function renderTopology(practice) {
+  const vlans = practice.vlans;
+  return `
+    <div class="topology-board" aria-label="${escapeHTML(practice.title)} topology">
+      <div class="line line-eng"></div>
+      <div class="line line-marketing"></div>
+      <div class="line line-core"></div>
+      <div class="line line-printers"></div>
+      <div class="topology-device pc eng-pc">
+        <div class="pc-screen ${getVlanColor(0)}"></div>
+        <span>${escapeHTML(vlans[0].name)} PC</span>
+        <small>VLAN ${vlans[0].id}</small>
+      </div>
+      <div class="topology-device pc marketing-pc">
+        <div class="pc-screen ${getVlanColor(1)}"></div>
+        <span>${escapeHTML(vlans[1].name)} PC</span>
+        <small>VLAN ${vlans[1].id}</small>
+      </div>
+      <div class="switch switch-left"><div class="switch-lights"></div><span>Switch0</span></div>
+      <div class="router-node">
+        <div class="router-shape">↔</div>
+        <span>Router</span>
+        <small class="router-if left">G0/0</small>
+        <small class="router-if right">G0/1</small>
+      </div>
+      <div class="switch switch-right"><div class="switch-lights"></div><span>Switch1</span></div>
+      <div class="topology-device pc printers-pc">
+        <div class="pc-screen ${getVlanColor(2)}"></div>
+        <span>${escapeHTML(vlans[2].name)} PC</span>
+        <small>VLAN ${vlans[2].id}</small>
+      </div>
+    </div>
+  `;
+}
+
+function renderSubnetTable(practiceId, rows) {
+  return `
+    <div class="vlsm-table-wrap">
+      <table class="vlsm-table vlsm-subnet-table">
+        <thead>
+          <tr>
+            <th>VLAN</th>
+            <th>Hosts</th>
+            <th>Network</th>
+            <th>First Host</th>
+            <th>Last Host</th>
+            <th>Broadcast</th>
+            <th>Next Subnet</th>
+            <th>Show</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rows.map((row, rowIndex) => `
+            <tr>
+              <td>VLAN ${row.vlan.id} ${escapeHTML(row.vlan.name)}</td>
+              <td>${row.vlan.hosts}</td>
+              ${['network', 'firstHost', 'lastHost', 'broadcast', 'nextSubnet'].map(field => `
+                <td>
+                  <input data-vlsm="${practiceId}" data-table="subnet" data-row="${rowIndex}" data-field="${field}" placeholder="x.x.x.x${field === 'network' ? '/xx' : ''}" />
+                  <div class="field-explanation"></div>
+                </td>
+              `).join('')}
+              <td><button class="vlsm-show" onclick="showVlsmRow('${practiceId}', 'subnet', ${rowIndex})">Show</button></td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function renderAddressTable(practiceId, tableType, rows) {
+  const isIpv4 = tableType === 'ipv4';
+  return `
+    <div class="vlsm-table-wrap">
+      <table class="vlsm-table">
+        <thead>
+          <tr>
+            <th>Device</th>
+            <th>Interface</th>
+            <th>VLAN</th>
+            <th>${isIpv4 ? 'IP Address/Prefix' : 'IPv6 Address/Prefix'}</th>
+            ${isIpv4 ? '<th>Subnet Mask</th>' : ''}
+            <th>Default Gateway</th>
+            <th>Show</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rows.map((row, rowIndex) => `
+            <tr>
+              <td>${escapeHTML(row.device)}</td>
+              <td>${escapeHTML(row.iface)}</td>
+              <td>${escapeHTML(row.vlan)}</td>
+              <td>
+                <input data-vlsm="${practiceId}" data-table="${tableType}" data-row="${rowIndex}" data-field="ip" placeholder="${isIpv4 ? 'x.x.x.x/xx' : '2001:db8::/64'}" />
+                <div class="field-explanation"></div>
+              </td>
+              ${isIpv4 ? `
+                <td>
+                  <input data-vlsm="${practiceId}" data-table="${tableType}" data-row="${rowIndex}" data-field="mask" placeholder="255.x.x.x" />
+                  <div class="field-explanation"></div>
+                </td>` : ''}
+              <td>
+                <input data-vlsm="${practiceId}" data-table="${tableType}" data-row="${rowIndex}" data-field="gateway" placeholder="x.x.x.x or N/A" />
+                <div class="field-explanation"></div>
+              </td>
+              <td><button class="vlsm-show" onclick="showVlsmRow('${practiceId}', '${tableType}', ${rowIndex})">Show</button></td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function checkVlsmPractice(practiceId) {
+  const rows = getVlsmExpectedRows(practiceId);
+  let correct = 0;
+  let total = 0;
+  Object.keys(rows).forEach(table => {
+    rows[table].forEach((row, rowIndex) => {
+      Object.keys(row.answers).forEach(field => {
+        total++;
+        if (checkVlsmField(practiceId, table, rowIndex, field, row.answers[field], row.explanations[field])) correct++;
+      });
+    });
+  });
+  const feedback = document.getElementById(`vlsm-feedback-${practiceId}`);
+  feedback.className = `vlsm-feedback ${correct === total ? 'correct' : 'wrong'}`;
+  feedback.textContent = correct === total
+    ? `All correct: ${correct} / ${total}`
+    : `${correct} / ${total} fields correct. Wrong fields keep your answer and show explanations.`;
+}
+
+function checkVlsmField(practiceId, table, rowIndex, field, expected, explanation) {
+  const input = getVlsmInput(practiceId, table, rowIndex, field);
+  const helper = input.nextElementSibling;
+  const isCorrect = normalizeVlsmValue(input.value) === normalizeVlsmValue(expected);
+  input.classList.toggle('correct', isCorrect);
+  input.classList.toggle('wrong', !isCorrect);
+  helper.textContent = isCorrect ? '' : `Explanation: ${explanation} Correct answer: ${expected}`;
+  return isCorrect;
+}
+
+function showVlsmAnswers(practiceId) {
+  const rows = getVlsmExpectedRows(practiceId);
+  Object.keys(rows).forEach(table => {
+    rows[table].forEach((row, rowIndex) => {
+      Object.keys(row.answers).forEach(field => {
+        getVlsmInput(practiceId, table, rowIndex, field).value = row.answers[field];
+      });
+    });
+  });
+  checkVlsmPractice(practiceId);
+}
+
+function showVlsmRow(practiceId, table, rowIndex) {
+  const row = getVlsmExpectedRows(practiceId)[table][rowIndex];
+  Object.keys(row.answers).forEach(field => {
+    getVlsmInput(practiceId, table, rowIndex, field).value = row.answers[field];
+    checkVlsmField(practiceId, table, rowIndex, field, row.answers[field], row.explanations[field]);
+  });
+}
+
+function resetVlsmPractice(practiceId) {
+  document.querySelectorAll(`[data-vlsm="${practiceId}"]`).forEach(input => {
+    input.value = '';
+    input.classList.remove('correct', 'wrong');
+    input.nextElementSibling.textContent = '';
+  });
+  const feedback = document.getElementById(`vlsm-feedback-${practiceId}`);
+  feedback.className = 'vlsm-feedback';
+  feedback.textContent = '';
+}
+
+function getVlsmInput(practiceId, table, rowIndex, field) {
+  return document.querySelector(`[data-vlsm="${practiceId}"][data-table="${table}"][data-row="${rowIndex}"][data-field="${field}"]`);
+}
+
+function getVlsmExpectedRows(practiceId) {
+  const practice = vlsmPractices.find(item => item.id === practiceId);
+  const allocations = buildVlsmAllocations(practice);
+  return {
+    subnet: allocations.map(allocation => ({
+      answers: {
+        network: `${allocation.network}/${allocation.prefix}`,
+        firstHost: allocation.firstHost,
+        lastHost: allocation.lastHost,
+        broadcast: allocation.broadcast,
+        nextSubnet: allocation.nextSubnet,
+      },
+      explanations: buildSubnetExplanations(allocation),
+    })),
+    ipv4: buildIpv4AddressRows(allocations).map(row => ({
+      answers: { ip: row.ip, mask: row.mask, gateway: row.gateway },
+      explanations: {
+        ip: row.ipExplanation,
+        mask: row.maskExplanation,
+        gateway: row.gatewayExplanation,
+      },
+    })),
+    ipv6: buildIpv6AddressRows(practice).map(row => ({
+      answers: { ip: row.ip, gateway: row.gateway },
+      explanations: {
+        ip: row.ipExplanation,
+        gateway: row.gatewayExplanation,
+      },
+    })),
+  };
+}
+
+function buildVlsmAllocations(practice) {
+  let cursor = ipToNumber(practice.network.split('/')[0]);
+  return [...practice.vlans]
+    .sort((a, b) => b.hosts - a.hosts)
+    .map(vlan => {
+      const prefix = prefixForHosts(vlan.hosts);
+      const blockSize = 2 ** (32 - prefix);
+      const networkNum = cursor;
+      const broadcastNum = networkNum + blockSize - 1;
+      const allocation = {
+        vlan,
+        prefix,
+        mask: prefixToMask(prefix),
+        network: numberToIp(networkNum),
+        firstHost: numberToIp(networkNum + 1),
+        lastHost: numberToIp(broadcastNum - 1),
+        broadcast: numberToIp(broadcastNum),
+        nextSubnet: numberToIp(networkNum + blockSize),
+        usableHosts: blockSize - 2,
+      };
+      cursor += blockSize;
+      return allocation;
+    });
+}
+
+function buildSubnetExplanations(allocation) {
+  const rule = `VLAN ${allocation.vlan.id} needs ${allocation.vlan.hosts} hosts, so /${allocation.prefix} gives ${allocation.usableHosts} usable addresses.`;
+  return {
+    network: `${rule} This subnet starts at ${allocation.network}.`,
+    firstHost: `First usable address is one more than the network address ${allocation.network}.`,
+    lastHost: `Last usable address is one less than broadcast ${allocation.broadcast}.`,
+    broadcast: `Broadcast is the last address in the /${allocation.prefix} block.`,
+    nextSubnet: `Next subnet starts immediately after broadcast ${allocation.broadcast}.`,
+  };
+}
+
+function buildIpv4AddressRows(allocations) {
+  const rows = [];
+  allocations.forEach(allocation => {
+    const vlanText = `VLAN ${allocation.vlan.id}`;
+    rows.push({
+      device: 'Router',
+      iface: allocation.vlan.routerInterface,
+      vlan: vlanText,
+      ip: `${allocation.firstHost}/${allocation.prefix}`,
+      mask: allocation.mask,
+      gateway: 'N/A',
+      ipExplanation: `Router uses the first usable IPv4 address in ${allocation.network}/${allocation.prefix}.`,
+      maskExplanation: `/${allocation.prefix} equals ${allocation.mask}.`,
+      gatewayExplanation: 'Router interfaces do not use a default gateway in this table.',
+    });
+    rows.push({
+      device: `${allocation.vlan.name} PC`,
+      iface: allocation.vlan.pcInterface,
+      vlan: vlanText,
+      ip: `${allocation.lastHost}/${allocation.prefix}`,
+      mask: allocation.mask,
+      gateway: allocation.firstHost,
+      ipExplanation: `PC uses the last usable IPv4 address before broadcast ${allocation.broadcast}.`,
+      maskExplanation: `The PC is in the same /${allocation.prefix} subnet, so the mask is ${allocation.mask}.`,
+      gatewayExplanation: `Default gateway is the router first usable address: ${allocation.firstHost}.`,
+    });
+  });
+  return rows;
+}
+
+function buildIpv6AddressRows(practice) {
+  const rows = [];
+  practice.vlans.forEach(vlan => {
+    const prefix = `${practice.ipv6Base}:${vlan.id}`;
+    rows.push({
+      device: 'Router',
+      iface: vlan.routerInterface,
+      vlan: `VLAN ${vlan.id}`,
+      ip: `${prefix}::1/64`,
+      gateway: 'N/A',
+      ipExplanation: `Router IPv6 address uses VLAN ${vlan.id}'s /64 and host ::1.`,
+      gatewayExplanation: 'Router interfaces do not use a default gateway in this table.',
+    });
+    rows.push({
+      device: `${vlan.name} PC`,
+      iface: vlan.pcInterface,
+      vlan: `VLAN ${vlan.id}`,
+      ip: `${prefix}::10/64`,
+      gateway: `${prefix}::1`,
+      ipExplanation: `PC IPv6 address uses VLAN ${vlan.id}'s /64 and host ::10.`,
+      gatewayExplanation: `IPv6 default gateway is the router address ${prefix}::1.`,
+    });
+  });
+  return rows;
+}
+
+function prefixForHosts(hosts) {
+  let hostBits = 0;
+  while ((2 ** hostBits) - 2 < hosts) hostBits++;
+  return 32 - hostBits;
+}
+
+function ipToNumber(ip) {
+  return ip.split('.').reduce((total, octet) => ((total << 8) + Number(octet)) >>> 0, 0);
+}
+
+function numberToIp(number) {
+  return [24, 16, 8, 0].map(shift => (number >>> shift) & 255).join('.');
+}
+
+function prefixToMask(prefix) {
+  const mask = prefix === 0 ? 0 : (0xffffffff << (32 - prefix)) >>> 0;
+  return numberToIp(mask);
+}
+
+function getVlanColor(index) {
+  return ['blue', 'green', 'orange', 'purple', 'red'][index % 5];
+}
+
+function normalizeVlsmValue(value) {
+  return String(value).trim().replace(/\s+/g, '').toLowerCase();
 }
 
 function renderTopics(topics) {

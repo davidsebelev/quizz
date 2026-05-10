@@ -2771,6 +2771,1948 @@
           "explanation": "Network 1 is wired Ethernet and uses CSMA/CD. Network 2 is point-to-point. Network 3 is wireless and uses CSMA/CA."
         }
       ]
+    },
+    {
+      "id": "topic4",
+      "title": "VLAN's",
+      "icon": "🔀",
+      "lecture": "Lecture 4",
+      "questions": [
+        {
+          "id": 349,
+          "question": "What happens to a port that is associated with VLAN 10 when the administrator deletes VLAN 10 from the switch?",
+          "options": [
+            "The port creates the VLAN again.",
+            "The port goes back to the default VLAN.",
+            "The port automatically associates itself with the native VLAN.",
+            "The port becomes inactive."
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "If the VLAN that is associated with a port is deleted, the port becomes inactive and cannot communicate with the network any more. To verify that a port is in an inactive state, use the show interfaces switchport command."
+        },
+        {
+          "id": 350,
+          "question": "In which memory location are the VLAN configurations of normal range VLANs stored on a Catalyst switch?",
+          "options": [
+            "flash",
+            "ROM",
+            "RAM",
+            "NVRAM"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "When a normal range VLAN is created the configuration information of the VLAN is stored in flash in the vlan.dat file."
+        },
+        {
+          "id": 351,
+          "question": "An administrator is investigating a failure on a trunk link between a Cisco switch and a switch from another vendor. After a few show commands, the administrator notices that the switches are not negotiating a trunk. What is a probable cause for this issue?",
+          "options": [
+            "Both switches are in nonegotiate mode.",
+            "Switches from other vendors do not support DTP.",
+            "Both switches are in trunk mode.",
+            "DTP frames are flooding the entire network."
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "DTP is a Cisco proprietary protocol. Non-Cisco switches do not support DTP."
+        },
+        {
+          "id": 352,
+          "question": "What is the purpose of the vlan.dat file on a switch?",
+          "options": [
+            "It holds the VLAN database.",
+            "It holds the running configuration.",
+            "It holds the operating system.",
+            "It holds the saved configuration."
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "The VLAN database (vlan.dat) contains information about normal range VLANs such as the VLAN number, name, and VTP mode."
+        },
+        {
+          "id": 353,
+          "question": "What is the purpose of setting the native VLAN separate from data VLANs?",
+          "options": [
+            "A separate VLAN should be used to carry uncommon untagged frames to avoid bandwidth contention on data VLANS.",
+            "The security of management frames that are carried in the native VLAN can be enhanced.",
+            "The native VLAN is for carrying VLAN management traffic only.",
+            "The native VLAN is for routers and switches to exchange their management information, so it should be different from data VLANS."
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "When a Cisco switch trunk port receives untagged frames, it forwards these frames to the native VLAN. When the native VLAN is moved away from data VLANs, those untagged frames will not compete for bandwidth in the data VLANs. The native VLAN is not designed for carrying management traffic, but rather is for backward compatibility with legacy LAN scenarios."
+        },
+        {
+          "id": 354,
+          "question": "When a Cisco switch receives untagged frames on a 802.1Q trunk port, which VLAN ID is the traffic switched to by default?",
+          "options": [
+            "management VLAN ID",
+            "data VLAN ID",
+            "native VLAN ID",
+            "unused VLAN ID"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "A native VLAN is used to forward untagged frames that are received on a Cisco switch 802.1Q trunk port. Untagged frames that are received on a trunk port are not forwarded to any other VLAN except the native VLAN."
+        },
+        {
+          "id": 355,
+          "question": "A network administrator is determining the best placement of VLAN trunk links. Which two types of point-to-point connections utilize VLAN trunking?",
+          "options": [
+            "between two switches that utilize multiple VLANs",
+            "between a switch and a server that has an 802.1Q NIC",
+            "between a switch and a network printer",
+            "between two switches that share a common VLAN",
+            "between a switch and a client PC"
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "VLAN trunk links are used to allow VLAN traffic to propagate between devices such as switches, routers, and servers that support 802.1Q tagging."
+        },
+        {
+          "id": 356,
+          "question": "What are three primary benefits of using VLANs?",
+          "options": [
+            "security",
+            "a reduction in the number of trunk links",
+            "cost reduction",
+            "end user satisfaction",
+            "improved IT staff efficiency",
+            "no required configuration"
+          ],
+          "answer": [
+            0,
+            2,
+            4
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "Security, cost reduction, and improved IT staff efficiency are benefits of using VLANs, along with higher performance, broadcast storm mitigation, and simpler project and application management."
+        },
+        {
+          "id": 357,
+          "question": "On a Cisco switch, where is extended range VLAN information stored?",
+          "options": [
+            "running configuration file",
+            "NVRAM",
+            "flash",
+            "startup configuration file"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "Extended range VLANs, 1006 through 4094, are not written to the vlan.dat file but are saved in the running configuration file."
+        },
+        {
+          "id": 358,
+          "question": "In which location are the normal range VLANs stored on a Cisco switch by default?",
+          "options": [
+            "RAM",
+            "flash memory",
+            "startup-config",
+            "running-config"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "Normal range VLANs are stored in a file called vlan.dat and located in the flash memory."
+        },
+        {
+          "id": 359,
+          "question": "Which distinct type of VLAN is used by an administrator to access and configure a switch?",
+          "options": [
+            "data VLAN",
+            "default VLAN",
+            "native VLAN",
+            "management VLAN"
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "A management VLAN is used to remotely access and configure a switch."
+        },
+        {
+          "id": 360,
+          "question": "For what reason would a network administrator use the show interfaces trunk command on a switch?",
+          "options": [
+            "to view the native VLAN",
+            "to examine DTP negotiation as it occurs",
+            "to display an IP address for any existing VLAN",
+            "to verify port association with a particular VLAN"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "The show interfaces trunk command displays trunk ports, trunking mode, encapsulation type, trunk status, native VLAN, and allowed VLANs on the link."
+        },
+        {
+          "id": 361,
+          "question": "Where is the vlan.dat file stored on a switch?",
+          "options": [
+            "in NVRAM",
+            "in flash memory",
+            "in RAM",
+            "on the externally attached storage media or internal hard drive"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "Normal range VLAN configurations are stored within a VLAN database file, called vlan.dat, which is located in the flash memory of the switch."
+        },
+        {
+          "id": 362,
+          "question": "If an organization is changing to include Cisco IP phones in its network, what design feature must be considered to ensure voice quality?",
+          "options": [
+            "Voice traffic needs to be tagged with the native VLAN.",
+            "A separate VLAN is needed for voice traffic.",
+            "Voice traffic and data traffic require separate trunk links between switches.",
+            "Additional switch ports that are dedicated to Cisco IP phones are required."
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "Voice traffic cannot tolerate much packet delay, so it needs to be in a separate VLAN. The voice VLAN can be configured to provide QoS."
+        },
+        {
+          "id": 363,
+          "question": "A Cisco switch currently allows traffic tagged with VLANs 10 and 20 across trunk port Fa0/5. What is the effect of issuing a switchport trunk allowed vlan 30 command on Fa0/5?",
+          "options": [
+            "It allows a native VLAN of 30 to be implemented on Fa0/5.",
+            "It allows VLANs 10, 20, and 30 on Fa0/5.",
+            "It allows only VLAN 30 on Fa0/5.",
+            "It allows VLANs 1 to 30 on Fa0/5."
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "The switchport trunk allowed vlan 30 command allows only traffic tagged with VLAN 30 across the trunk port. Any VLAN that is not specified in this command will not be allowed on this trunk port."
+        },
+        {
+          "id": 364,
+          "question": "Which three statements accurately describe VLAN types?",
+          "options": [
+            "A data VLAN is used to carry VLAN management data and user-generated traffic.",
+            "A management VLAN is any VLAN that is configured to access management features of the switch.",
+            "After the initial boot of an unconfigured switch, all ports are members of the default VLAN.",
+            "An 802.1Q trunk port, with a native VLAN assigned, supports both tagged and untagged traffic.",
+            "Voice VLANs are used to support user phone and email traffic on a network.",
+            "VLAN 1 is always used as the management VLAN."
+          ],
+          "answer": [
+            1,
+            2,
+            3
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "A management VLAN is configured to manage features of the switch. By default, all ports are members of the default VLAN. An 802.1Q trunk port supports both tagged and untagged traffic."
+        },
+        {
+          "id": 365,
+          "question": "Which type of VLAN is used to designate which traffic is untagged when crossing a trunk port?",
+          "options": [
+            "Data",
+            "Default",
+            "Native",
+            "Management",
+            "VLAN 1"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "A native VLAN is the VLAN that does not receive a VLAN tag in the IEEE 802.1Q frame header."
+        },
+        {
+          "id": 366,
+          "question": "What are two primary benefits of using VLANs?",
+          "options": [
+            "A reduction in the number of trunk links",
+            "Cost reduction",
+            "Improved IT staff efficiency",
+            "No required configuration",
+            "Reduced security"
+          ],
+          "answer": [
+            1,
+            2
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "Cost reduction and improved IT staff efficiency are benefits of using VLANs, along with higher performance, broadcast storm mitigation, and simpler project and application management."
+        },
+        {
+          "id": 367,
+          "question": "Which command displays the encapsulation type, the voice VLAN ID, and the access mode VLAN for the Fa0/1 interface?",
+          "options": [
+            "show interfaces Fa0/1 switchport",
+            "show interfaces trunk",
+            "show mac address-table interface Fa0/1",
+            "show vlan brief"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "The show interfaces switchport command displays switchport mode, trunking encapsulation, access mode VLAN, native VLAN, and voice VLAN information."
+        },
+        {
+          "id": 368,
+          "question": "What must the network administrator do to remove FastEthernet 0/1 from VLAN 2 and assign it to VLAN 3?",
+          "options": [
+            "Enter the no shutdown interface config command on Fa0/1.",
+            "Enter the no vlan 2 and the vlan 3 global config commands.",
+            "Enter the switchport access vlan 3 interface config command on Fa0/1.",
+            "Enter the switchport trunk native vlan 3 interface config command on Fa0/1."
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "Entering the switchport access vlan 3 interface configuration command on Fa0/1 replaces the current port VLAN assignment from VLAN 2 to VLAN 3."
+        },
+        {
+          "id": 369,
+          "question": "A Cisco Catalyst switch has been added to support the use of multiple VLANs as part of an enterprise network. The network technician finds it necessary to clear all VLAN information from the switch in order to incorporate a new network design. What should the technician do to accomplish this task?",
+          "options": [
+            "Delete the IP address that is assigned to the management VLAN and reboot the switch.",
+            "Delete the startup configuration and the vlan.dat file in the flash memory of the switch and reboot the switch.",
+            "Erase the running configuration and reboot the switch.",
+            "Erase the startup configuration and reboot the switch."
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "To restore a Catalyst switch to factory default condition, erase the startup configuration, delete vlan.dat, and reboot the switch."
+        },
+        {
+          "id": 370,
+          "question": "Which two characteristics match extended range VLANs?",
+          "options": [
+            "CDP can be used to learn and store these VLANs.",
+            "They are commonly used in small networks.",
+            "They are saved in the running-config file by default.",
+            "VLAN IDs exist between 1006 to 4094.",
+            "VLANs are initialized from flash memory."
+          ],
+          "answer": [
+            2,
+            3
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "Extended range VLANs are stored in the running configuration file by default and use VLAN IDs from 1006 to 4094."
+        },
+        {
+          "id": 371,
+          "question": "What happens to switch ports after the VLAN to which they are assigned is deleted?",
+          "options": [
+            "The ports are assigned to VLAN 1, the default VLAN.",
+            "The ports are disabled and must be re-enabled using the no shutdown command.",
+            "The ports are placed in trunk mode.",
+            "The ports stop communicating with the attached devices."
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "Any ports that are not moved to an active VLAN cannot communicate with other hosts after the VLAN is deleted. They must be assigned to an active VLAN or their VLAN must be recreated."
+        },
+        {
+          "id": 372,
+          "question": "You must configure a trunk link between a Cisco Catalyst 2960 switch and another vendor Layer 2 switch. Which two commands should be configured to enable the trunk link?",
+          "options": [
+            "switchport mode access",
+            "switchport mode dynamic auto",
+            "switchport mode dynamic desirable",
+            "switchport mode trunk",
+            "switchport nonegotiate"
+          ],
+          "answer": [
+            3,
+            4
+          ],
+          "slide": null,
+          "reference": "VLANs",
+          "explanation": "To enable trunking from a Cisco switch to a device that does not support DTP, use switchport mode trunk and switchport nonegotiate. This makes the interface a trunk and prevents DTP frames."
+        }
+      ]
+    },
+    {
+      "id": "topic5",
+      "title": "Inter-VLAN Routing",
+      "icon": "🧭",
+      "lecture": "Lecture 4",
+      "questions": [
+        {
+          "id": 373,
+          "question": "A PC is to access a web server on another network. Which inter-VLAN method will provide the highest bandwidth at Layer 3 and also provide a default gateway for the PC?",
+          "options": [
+            "multilayer switch with routing enabled",
+            "router on a stick",
+            "trunked interface between the router and the switch",
+            "multiple physical interfaces on the router, all connected to a Layer 2 switch"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "A router-on-a-stick design is the same as having a trunked interface between the router and the switch. It works, but does not scale well because all VLANs traverse one connection. Multiple router interfaces can be faster, but routers have limited physical interfaces. Layer 3 switches with routing enabled have more Ethernet ports and can route in hardware."
+        },
+        {
+          "id": 374,
+          "question": "Which scalable method must be implemented in order to provide inter-VLAN routing on a switched network with more than 1000 VLANs?",
+          "options": [
+            "routing traffic internally to a Layer 3 switch device",
+            "configuring static routes on a Layer 2 switch device",
+            "connecting a router interface to a switch port that is configured in trunk mode to route packets between VLANs, with each VLAN assigned to a router subinterface",
+            "connecting each physical router interface to a different physical switch port, with each switch port assigned to a different VLAN"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "Multilayer switching is the most scalable inter-VLAN routing method because traffic is routed internally by the switch device. Router-on-a-stick and legacy inter-VLAN routing do not scale well for very large numbers of VLANs."
+        },
+        {
+          "id": 375,
+          "question": "When configuring a router as part of a router-on-a-stick inter-VLAN routing topology, where should the IP address be assigned?",
+          "options": [
+            "to the subinterface",
+            "to the interface",
+            "to the SVI",
+            "to the VLAN"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "The IP address and encapsulation type should be assigned to each router subinterface in a router-on-a-stick inter-VLAN topology."
+        },
+        {
+          "id": 376,
+          "question": "A small college uses VLAN 10 for the classroom network and VLAN 20 for the office network. What is needed to enable communication between these two VLANs while using legacy inter-VLAN routing?",
+          "options": [
+            "Two groups of switches are needed, each with ports that are configured for one VLAN.",
+            "A router with at least two LAN interfaces should be used.",
+            "A router with one VLAN interface is needed to connect to the SVI on a switch.",
+            "A switch with a port that is configured as trunk is needed to connect to a router."
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "With legacy inter-VLAN routing, different physical router interfaces connect to different physical switch ports. The switch ports connected to the router are access ports, each assigned to a different VLAN."
+        },
+        {
+          "id": 377,
+          "question": "What is a disadvantage of using multilayer switches for inter-VLAN routing?",
+          "options": [
+            "Multilayer switches are more expensive than router-on-a-stick implementations.",
+            "Multilayer switches have higher latency for Layer 3 routing.",
+            "Spanning tree must be disabled in order to implement routing on a multilayer switch.",
+            "Multilayer switches are limited to using trunk links for Layer 3 routing."
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "The main disadvantage of multilayer switches is higher cost. Because both routing and switching are done in hardware, multilayer switches are faster than router-on-a-stick."
+        },
+        {
+          "id": 378,
+          "question": "Which type of inter-VLAN communication design requires the configuration of multiple subinterfaces?",
+          "options": [
+            "router on a stick",
+            "routing for the management VLAN",
+            "routing via a multilayer switch",
+            "legacy inter-VLAN routing"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "The router-on-a-stick design uses subinterfaces on a router. A multilayer switch uses SVIs instead, and legacy inter-VLAN routing uses physical router interfaces."
+        },
+        {
+          "id": 379,
+          "question": "What is a disadvantage of using router-on-a-stick inter-VLAN routing?",
+          "options": [
+            "does not scale well beyond 50 VLANs",
+            "requires the use of more physical interfaces than legacy inter-VLAN routing",
+            "requires the use of multiple router interfaces configured to operate as access links",
+            "does not support VLAN-tagged packets"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "Router-on-a-stick inter-VLAN routing does not scale well beyond about 50 VLANs. It uses one router interface as a trunk link and supports VLAN-tagged packets."
+        },
+        {
+          "id": 380,
+          "question": "What is the meaning of the number 10 in the encapsulation dot1Q 10 native router subinterface command?",
+          "options": [
+            "the subinterface number",
+            "the interface number",
+            "the VLAN ID",
+            "the subnet number"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "The encapsulation command specifies the encapsulation type, the VLAN ID, and optionally the native VLAN. In this command, 10 is the VLAN ID."
+        },
+        {
+          "id": 381,
+          "question": "While configuring inter-VLAN routing on a multilayer switch, a network administrator issues the no switchport command on an interface that is connected to another switch. What is the purpose of this command?",
+          "options": [
+            "to create a switched virtual interface",
+            "to create a routed port for a single network",
+            "to provide a static trunk link",
+            "to provide an access link that tags VLAN traffic"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "When a Layer 2 interface on a multilayer switch is configured with no switchport, it becomes a routed port. A routed port can be configured with an IP address for a specific subnet."
+        },
+        {
+          "id": 382,
+          "question": "A network administrator enters the following command sequence on a Cisco 3560 switch. What is the purpose of these commands?\n\nSwitch(config)# interface gigabitethernet 0/1\nSwitch(config-if)# no switchport",
+          "options": [
+            "to enable the Gi0/1 port as a switch virtual interface",
+            "to enable the Gi0/1 port as a bridge virtual interface",
+            "to make the Gi0/1 port a routed port",
+            "to shut down the Gi0/1 port"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "By default, physical ports on a 3560 switch are Layer 2 interfaces. The no switchport command changes the port into a routed Layer 3 port."
+        },
+        {
+          "id": 383,
+          "question": "What operational mode should be used on a switch port to connect it to a router for router-on-a-stick inter-VLAN routing?",
+          "options": [
+            "dynamic auto",
+            "trunk",
+            "access",
+            "dynamic desirable"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "For router-on-a-stick, the switch port connected to the router must operate as a trunk. Routers do not support DTP, and access mode is used to connect hosts."
+        },
+        {
+          "id": 384,
+          "question": "Which sentence correctly describes the SVI inter-VLAN routing method?",
+          "options": [
+            "Subinterfaces have to be created.",
+            "A physical interface is needed for every VLAN that is created.",
+            "An SVI is needed for each VLAN.",
+            "The encapsulation type must be configured on the SVI."
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "To create SVI inter-VLAN routing on a Layer 3 switch, the VLAN must exist in the database and an SVI must be explicitly created for each VLAN."
+        },
+        {
+          "id": 385,
+          "question": "How is traffic routed between multiple VLANs on a multilayer switch?",
+          "options": [
+            "Traffic is routed via internal VLAN interfaces.",
+            "Traffic is routed via subinterfaces.",
+            "Traffic is routed via physical interfaces.",
+            "Traffic is broadcast out all physical interfaces."
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "Multilayer switches perform inter-VLAN routing by using internal VLAN interfaces. Subinterfaces are used on routers, not on multilayer switches for inter-VLAN routing."
+        },
+        {
+          "id": 386,
+          "question": "What is required to perform router-on-a-stick inter-VLAN routing?",
+          "options": [
+            "a multilayer switch",
+            "a router that is configured with multiple subinterfaces",
+            "a router with multiple physical interfaces",
+            "a Layer 2 switch that is configured with multiple trunk ports"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "Router-on-a-stick uses a single physical router interface configured with multiple subinterfaces, one for each VLAN that will be routed."
+        },
+        {
+          "id": 387,
+          "question": "An administrator was troubleshooting a router-on-a-stick topology and concluded that the problem was related to the configuration of VLANs on the router subinterfaces. Which two commands can the administrator use in the router to identify the problem?",
+          "options": [
+            "show ip interface",
+            "show ip protocols",
+            "show controllers",
+            "show running-config",
+            "show vlan"
+          ],
+          "answer": [
+            0,
+            3
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "The show ip interface and show running-config commands can help troubleshoot router subinterface issues such as incorrect VLAN IDs. The other commands do not display the needed subinterface VLAN information."
+        },
+        {
+          "id": 388,
+          "question": "A router has two FastEthernet interfaces and needs to connect to four VLANs in the local network. How can this be accomplished using the fewest number of physical interfaces without unnecessarily decreasing network performance?",
+          "options": [
+            "Add a second router to handle the inter-VLAN traffic.",
+            "Implement a router-on-a-stick configuration.",
+            "Interconnect the VLANs via the two additional FastEthernet interfaces.",
+            "Use a hub to connect the four VLANS with a FastEthernet interface on the router."
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "Legacy inter-VLAN routing for four VLANs would require four physical interfaces. The best router-based solution using the fewest physical interfaces is router-on-a-stick."
+        },
+        {
+          "id": 389,
+          "question": "What distinguishes traditional legacy inter-VLAN routing from router-on-a-stick?",
+          "options": [
+            "Traditional routing is able to use only a single switch interface, whereas a router-on-a-stick can use multiple switch interfaces.",
+            "Traditional routing requires a routing protocol, whereas a router-on-a-stick only needs to route directly connected networks.",
+            "Traditional routing uses one port per logical network, whereas a router-on-a-stick uses subinterfaces to connect multiple logical networks to a single router port.",
+            "Traditional routing uses multiple paths to the router and therefore requires STP, whereas router-on-a-stick does not provide multiple connections and therefore eliminates the need for STP."
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "Traditional inter-VLAN routing uses one physical router port per VLAN. Router-on-a-stick uses subinterfaces to connect multiple logical networks to a single physical router port."
+        },
+        {
+          "id": 390,
+          "question": "Subinterface G0/1.10 on R1 must be configured as the default gateway for the VLAN 10 192.168.10.0/24 network. Which command should be configured on the subinterface to enable inter-VLAN routing for VLAN 10?",
+          "options": [
+            "encapsulation dot1q 10",
+            "encapsulation vlan 10",
+            "switchport mode access",
+            "switchport mode trunk"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "The subinterface must be assigned to VLAN 10 using the encapsulation dot1q 10 command. The switchport commands are switch configuration commands, and encapsulation vlan 10 is not valid."
+        },
+        {
+          "id": 391,
+          "question": "What is important to consider while configuring the subinterfaces of a router when implementing inter-VLAN routing?",
+          "options": [
+            "The IP address of each subinterface must be the default gateway address for each VLAN subnet.",
+            "The no shutdown command must be given on each subinterface.",
+            "The physical interface must have an IP address configured.",
+            "The subinterface numbers must match the VLAN ID number."
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "Hosts in each VLAN need a default gateway. The router subinterface IP address should be configured as the default gateway address for that VLAN subnet."
+        },
+        {
+          "id": 392,
+          "question": "What are the steps that must be completed in order to enable inter-VLAN routing using router-on-a-stick?",
+          "options": [
+            "Configure the physical interfaces on the router and enable a routing protocol.",
+            "Create the VLANs on the router and define the port membership assignments on the switch.",
+            "Create the VLANs on the switch to include port membership assignment and enable a routing protocol on the router.",
+            "Create the VLANs on the switch to include port membership assignment and configure subinterfaces on the router matching the VLANs."
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "For router-on-a-stick, create the VLANs and port memberships on the switch, configure the switch port to the router as a trunk, and configure router subinterfaces that match the VLANs."
+        },
+        {
+          "id": 393,
+          "question": "What two statements are true regarding the use of subinterfaces for inter-VLAN routing?",
+          "options": [
+            "Fewer router Ethernet ports required than in traditional inter-VLAN routing",
+            "Less complex physical connection than in traditional inter-VLAN routing",
+            "More switch ports required than in traditional inter-VLAN routing",
+            "Simpler Layer 3 troubleshooting than with traditional inter-VLAN routing",
+            "Subinterfaces have no contention for bandwidth"
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "Traditional inter-VLAN routing requires more physical ports and connections. Router-on-a-stick with subinterfaces requires fewer router Ethernet ports and has a less complex physical connection."
+        },
+        {
+          "id": 394,
+          "question": "Which router-on-a-stick command and prompt on R1 correctly encapsulates 802.1Q traffic for VLAN 20?",
+          "options": [
+            "R1(config-if)# encapsulation 802.1q 20",
+            "R1(config-if)# encapsulation dot1q 20",
+            "R1(config-subif)# encapsulation 802.1q 20",
+            "R1(config-subif)# encapsulation dot1q 20"
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "The encapsulation dot1q vlan_id [native] command is configured in subinterface configuration mode. Therefore the correct prompt and command are R1(config-subif)# encapsulation dot1q 20."
+        },
+        {
+          "id": 395,
+          "question": "What are two disadvantages of using the router-on-a-stick inter-VLAN routing method in a large network?",
+          "options": [
+            "A dedicated router is required.",
+            "It does not scale well.",
+            "It requires multiple physical interfaces on a router.",
+            "It requires subinterfaces to be configured on the same subnets.",
+            "Multiple SVIs are needed."
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "Router-on-a-stick requires a router to route traffic between VLANs and does not scale easily in large networks. Multiple subinterfaces can also affect traffic flow speed, so large networks typically use Layer 3 switches."
+        },
+        {
+          "id": 396,
+          "question": "What is a characteristic of a routed port on a Layer 3 switch?",
+          "options": [
+            "It requires the switchport mode access interface config command.",
+            "It requires the no switchport interface config command.",
+            "It requires the switchport access vlan vlan-id interface config command.",
+            "It supports trunking."
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "A routed port is created on a Layer 3 switch by disabling Layer 2 switchport behavior with the no switchport command. Routed ports can then be configured with an IPv4 address and do not support Layer 2 trunking or access VLAN assignment."
+        },
+        {
+          "id": 397,
+          "question": "What are two advantages of using a Layer 3 switch with SVIs for inter-VLAN routing?",
+          "options": [
+            "A router is not required.",
+            "It switches packets faster than using the router-on-a-stick method.",
+            "SVIs can be bundled into EtherChannels.",
+            "SVIs can be divided using subinterfaces.",
+            "SVIs eliminate the need for a default gateway in the hosts."
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "slide": null,
+          "reference": "Inter-VLAN Routing",
+          "explanation": "Layer 3 switches provide inter-VLAN routing without requiring a separate router and use hardware-based switching for higher packet processing rates than router-on-a-stick."
+        }
+      ]
+    },
+    {
+      "id": "topic6",
+      "title": "EtherChannel",
+      "icon": "🔗",
+      "lecture": "Lecture 4",
+      "questions": [
+        {
+          "id": 398,
+          "question": "An EtherChannel link using LACP was formed between two switches, S1 and S2. While verifying the configuration, which mode combination could be utilized on both switches?",
+          "options": [
+            "S1-passive and S2-passive",
+            "S1-on and S2-active",
+            "S1-on and S2-passive",
+            "S1-passive and S2-active"
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "An EtherChannel link using LACP forms when both sides are active, or when one side is active and the other is passive. Passive/passive will not initiate negotiation, and on mode does not use LACP."
+        },
+        {
+          "id": 399,
+          "question": "When a range of ports is being configured for EtherChannel, which mode will configure PAgP so that it initiates the EtherChannel negotiation?",
+          "options": [
+            "active",
+            "desirable",
+            "passive",
+            "auto"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "The channel-group mode desirable command enables PAgP unconditionally and initiates negotiation. Auto waits to receive PAgP packets. Active and passive are LACP modes."
+        },
+        {
+          "id": 400,
+          "question": "Which three interface parameters must match for an EtherChannel to form?",
+          "options": [
+            "PortFast mode",
+            "spanning-tree state",
+            "allowed VLANs",
+            "native VLAN",
+            "EtherChannel mode",
+            "trunking mode"
+          ],
+          "answer": [
+            2,
+            3,
+            5
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "For EtherChannel, trunking mode, native VLAN, and allowed VLANs must match. Some negotiation modes can be different and still form a channel, such as active/passive or desirable/auto."
+        },
+        {
+          "id": 401,
+          "question": "What are three advantages of using EtherChannel technology?",
+          "options": [
+            "Configuration tasks can be done on the EtherChannel interface.",
+            "A spanning tree recalculation is not required when a single link within the channel goes down.",
+            "The Spanning Tree Protocol shuts down the unused interfaces in the bundle to avoid loops.",
+            "There is no need to upgrade links to faster connections to increase bandwidth.",
+            "EtherChannel uses multiple logical links to provide redundancy.",
+            "Load balancing is not needed with EtherChannel."
+          ],
+          "answer": [
+            0,
+            1,
+            3
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "Configuration can be applied to the EtherChannel interface, existing ports can be bundled to increase bandwidth, and STP does not recalculate if only one member link fails. EtherChannel is one logical link and supports load balancing."
+        },
+        {
+          "id": 402,
+          "question": "A network administrator is configuring an EtherChannel link between two physical ports on a switch. Which statement describes the result when one of the physical ports fails?",
+          "options": [
+            "An STP recalculation is needed.",
+            "The EtherChannel link fails.",
+            "The EtherChannel stops transmitting data until it is restarted.",
+            "The EtherChannel continues transmitting data with reduced bandwidth."
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "EtherChannel is seen as one logical connection. If one member link fails, the channel remains functional but has reduced bandwidth, and STP recalculation is not required."
+        },
+        {
+          "id": 403,
+          "question": "When EtherChannel is implemented, multiple physical interfaces are bundled into which type of logical connection?",
+          "options": [
+            "port channel",
+            "loopback",
+            "VLAN interface",
+            "interface range"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "EtherChannel bundles physical interfaces into a logical port-channel interface."
+        },
+        {
+          "id": 404,
+          "question": "When a range of ports is being configured for EtherChannel by the use of PAgP, which mode will form the bundled channel only if the port receives PAgP packets from another device?",
+          "options": [
+            "desirable",
+            "active",
+            "auto",
+            "passive"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "The channel-group mode auto command enables PAgP only if the port receives a PAgP packet. Desirable actively initiates PAgP. Active and passive are LACP modes."
+        },
+        {
+          "id": 405,
+          "question": "Which two load balancing methods can be implemented with EtherChannel technology?",
+          "options": [
+            "source IP to destination IP",
+            "source MAC to destination MAC",
+            "destination IP to destination MAC",
+            "destination MAC to source MAC",
+            "destination IP to source IP",
+            "destination MAC to destination IP"
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "Source MAC to destination MAC and source IP to destination IP are two load balancing methods used with EtherChannel."
+        },
+        {
+          "id": 406,
+          "question": "Which function is provided by EtherChannel?",
+          "options": [
+            "enabling traffic from multiple VLANs to travel over a single Layer 2 link",
+            "spreading traffic across multiple physical WAN links",
+            "dividing the bandwidth of a single link into separate time slots",
+            "creating one logical link by using multiple physical links between two LAN switches"
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "EtherChannel groups several Fast Ethernet or Gigabit switch ports into one logical channel."
+        },
+        {
+          "id": 407,
+          "question": "Which statement is true about EtherChannel technology?",
+          "options": [
+            "All configuration tasks must be done on the individual ports in the EtherChannel link.",
+            "STP does not run on redundant EtherChannel links.",
+            "EtherChannel uses existing switch ports.",
+            "Links must be upgraded to support EtherChannel."
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "EtherChannel uses existing switch ports, so links do not have to be upgraded. STP still operates on EtherChannel, and configuration may be done on member ports or on the port-channel interface depending on the task."
+        },
+        {
+          "id": 408,
+          "question": "Which two mode combinations would result in the successful negotiation of an EtherChannel?",
+          "options": [
+            "active; on",
+            "passive; auto",
+            "desirable; desirable",
+            "desirable; active",
+            "active; passive",
+            "auto; auto"
+          ],
+          "answer": [
+            2,
+            4
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "Valid EtherChannel combinations include on/on, active/passive, active/active, desirable/auto, and desirable/desirable."
+        },
+        {
+          "id": 409,
+          "question": "Which two protocols are link aggregation protocols?",
+          "options": [
+            "EtherChannel",
+            "STP",
+            "PAgP",
+            "802.3ad",
+            "RSTP"
+          ],
+          "answer": [
+            2,
+            3
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "PAgP and LACP, also known as IEEE 802.3ad, can be used to form EtherChannel. STP and RSTP prevent Layer 2 loops."
+        },
+        {
+          "id": 410,
+          "question": "When a range of ports is being configured for EtherChannel, which mode will configure LACP so that it initiates the EtherChannel negotiation?",
+          "options": [
+            "active",
+            "auto",
+            "desirable",
+            "passive"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "The channel-group mode active command enables LACP unconditionally and initiates negotiation. Passive waits for LACP packets. Desirable and auto are PAgP modes."
+        },
+        {
+          "id": 411,
+          "question": "What will happen if a network administrator puts a port that is part of an EtherChannel bundle into a different VLAN than the other ports in that bundle?",
+          "options": [
+            "The EtherChannel will fail.",
+            "The EtherChannel bundle will stay up if the ports were configured with no negotiation between the switches to form the EtherChannel.",
+            "The EtherChannel bundle will stay up if either PAgP or LACP is used.",
+            "The EtherChannel bundle will stay up only if LACP is used.",
+            "The EtherChannel bundle will stay up only if PAgP is used."
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "All ports in an EtherChannel bundle must either be trunk ports or be access ports in the same VLAN. If VLAN settings do not match, the EtherChannel fails."
+        },
+        {
+          "id": 412,
+          "question": "When a range of ports is being configured for EtherChannel, which mode will configure LACP on a port only if the port receives LACP packets from another device?",
+          "options": [
+            "auto",
+            "passive",
+            "desirable",
+            "active"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "The channel-group mode passive command enables LACP only if the port receives an LACP packet from another device."
+        },
+        {
+          "id": 413,
+          "question": "There has been an increase in network traffic between two Catalyst 2960 switches, and their FastEthernet trunk link has reached its capacity. How can traffic flow be improved?",
+          "options": [
+            "Add routers between the switches to create additional broadcast domains.",
+            "Bundle physical ports using EtherChannel.",
+            "Configure smaller VLANs to decrease the size of the collision domain.",
+            "Increase the speed of the ports using the bandwidth command."
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "Bundling physical ports with EtherChannel increases available bandwidth between switches. Adding VLANs or routers does not solve trunk congestion, and the bandwidth command does not increase physical port speed."
+        },
+        {
+          "id": 414,
+          "question": "Which statement is true regarding the use of PAgP to create EtherChannels?",
+          "options": [
+            "It increases the number of ports that are participating in spanning tree.",
+            "It is Cisco proprietary.",
+            "It mandates that an even number of ports (2, 4, 6, etc.) be used for aggregation.",
+            "It requires full duplex.",
+            "It requires more physical links than LACP does"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "PAgP is Cisco proprietary and automatically aggregates ports into an EtherChannel between Cisco devices. LACP can be used with Cisco and non-Cisco devices."
+        },
+        {
+          "id": 415,
+          "question": "Which combination of channel-group modes will establish an EtherChannel?",
+          "options": [
+            "Switch 1 set to auto; switch 2 set to auto.",
+            "Switch 1 set to auto; switch 2 set to on.",
+            "Switch 1 set to desirable; switch 2 set to desirable.",
+            "Switch 1 set to on; switch 2 set to desirable."
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "Desirable/desirable forms an EtherChannel because both sides actively negotiate. On mode does not negotiate, and auto/auto does not initiate negotiation."
+        },
+        {
+          "id": 416,
+          "question": "Which interface configuration command will enable the port to initiate an LACP EtherChannel?",
+          "options": [
+            "channel-group mode active",
+            "channel-group mode auto",
+            "channel-group mode desirable",
+            "channel-group mode on",
+            "channel-group mode passive"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "The channel-group mode active command enables LACP unconditionally and initiates negotiation. Passive waits for LACP packets."
+        },
+        {
+          "id": 417,
+          "question": "Which interface configuration command will enable the port to establish an EtherChannel only if it receives PAgP packets from the other switch?",
+          "options": [
+            "channel-group mode active",
+            "channel-group mode auto",
+            "channel-group mode desirable",
+            "channel-group mode on",
+            "channel-group mode passive"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "The channel-group mode auto command enables PAgP only if the port receives a PAgP packet from another device."
+        },
+        {
+          "id": 418,
+          "question": "Which statement describes a characteristic of EtherChannel?",
+          "options": [
+            "It can combine up to a maximum of 4 physical links.",
+            "It can bundle mixed types of 100 Mbps and 1 Gbps Ethernet links.",
+            "It consists of multiple parallel links between a switch and a router.",
+            "It is made by combining multiple physical links that are seen as one link between two switches."
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "EtherChannel combines multiple compatible Ethernet physical links so they are seen and configured as one logical link. Each EtherChannel can commonly include up to eight compatible Ethernet ports."
+        },
+        {
+          "id": 419,
+          "question": "What are two advantages of using LACP?",
+          "options": [
+            "LACP allows automatic formation of EtherChannel links.",
+            "LACP allows use of multivendor devices.",
+            "LACP decreases the amount of configuration that is needed on a switch for EtherChannel.",
+            "LACP eliminates the need for the Spanning Tree Protocol.",
+            "LACP increases redundancy to Layer 3 devices.",
+            "LACP provides a simulated environment for testing link aggregation."
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "LACP is part of IEEE 802.3ad and allows automatic EtherChannel negotiation by sending LACP packets. Because it is standards-based, it can be used in multivendor environments."
+        },
+        {
+          "id": 420,
+          "question": "Which three settings must match in order for switch ports to form an EtherChannel?",
+          "options": [
+            "Non-trunk ports must belong to the same VLAN.",
+            "Port security violation settings on interconnecting ports must match.",
+            "The duplex settings on interconnecting ports must match.",
+            "The port channel group number on interconnecting switches must match.",
+            "The SNMP community strings must match.",
+            "The speed settings on interconnecting ports must match."
+          ],
+          "answer": [
+            0,
+            2,
+            5
+          ],
+          "slide": null,
+          "reference": "EtherChannel",
+          "explanation": "All interfaces in an EtherChannel must have matching speed and duplex settings. If they are not trunks, they must belong to the same VLAN. SNMP strings and port security settings are not relevant to EtherChannel formation."
+        }
+      ]
+    },
+    {
+      "id": "topic7",
+      "title": "Switching Ports",
+      "icon": "🔌",
+      "lecture": "Lecture 5",
+      "questions": [
+        {
+          "id": 421,
+          "question": "Which statement is true about broadcast and collision domains?",
+          "options": [
+            "The size of the collision domain can be reduced by adding hubs to a network.",
+            "Adding a switch to a network will increase the size of the broadcast domain.",
+            "Adding a router to a network will increase the size of the collision domain.",
+            "The more interfaces a router has the larger the resulting broadcast domain."
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "A switch forwards broadcast frames out all other interfaces, including interfaces connected to other switches. Adding more switches can increase the size of the broadcast domain."
+        },
+        {
+          "id": 422,
+          "question": "What is one function of a Layer 2 switch?",
+          "options": [
+            "forwards data based on logical addressing",
+            "determines which interface is used to forward a frame based on the destination MAC address",
+            "duplicates the electrical signal of each frame to every port",
+            "learns the port assigned to a host by examining the destination MAC address"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "A Layer 2 switch uses the destination MAC address to look up the associated port in the MAC address table and forwards the frame to that port. It learns MAC addresses by examining source MAC addresses in inbound frames."
+        },
+        {
+          "id": 423,
+          "question": "What is the significant difference between a hub and a Layer 2 LAN switch?",
+          "options": [
+            "A hub divides collision domains, and a switch divides broadcast domains.",
+            "Each port of a hub is a collision domain, and each port of a switch is a broadcast domain.",
+            "A switch creates many smaller collision domains, and a hub increases the size of a single collision domain.",
+            "A hub forwards frames, and a switch forwards only packets."
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "Hubs operate at the physical layer and extend a single collision domain. Switches forward frames at Layer 2, and each switch port is a separate collision domain."
+        },
+        {
+          "id": 424,
+          "question": "What will a Cisco LAN switch do if it receives an incoming frame and the destination MAC address is not listed in the MAC address table?",
+          "options": [
+            "Send the frame to the default gateway address.",
+            "Use ARP to resolve the port that is related to the frame.",
+            "Drop the frame.",
+            "Forward the frame out all ports except the port where the frame is received."
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "When the destination MAC address is unknown, a switch floods the frame out all ports except the ingress port. When the destination device replies, the switch learns its source MAC address and port."
+        },
+        {
+          "id": 425,
+          "question": "Which switch characteristic helps alleviate network congestion when a 10 Gbps port is forwarding data to a 1 Gbps port?",
+          "options": [
+            "high port density",
+            "fast port speed",
+            "fast internal switching",
+            "frame buffering"
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "Frame buffers store ingress traffic until the slower egress port can transmit it. This helps reduce dropped frames and alleviate congestion."
+        },
+        {
+          "id": 426,
+          "question": "Which switching method makes use of the FCS value?",
+          "options": [
+            "broadcast",
+            "large frame buffer",
+            "store-and-forward",
+            "cut-through"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "Store-and-forward switching receives the entire frame and checks the frame-check sequence (FCS) before forwarding."
+        },
+        {
+          "id": 427,
+          "question": "What does the term “port density” represent for an Ethernet switch?",
+          "options": [
+            "the memory space that is allocated to each switch port",
+            "the number of available ports",
+            "the speed of each port",
+            "the numbers of hosts that are connected to each switch port"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "Port density is the number of ports available on a switch."
+        },
+        {
+          "id": 428,
+          "question": "Which information does a switch use to keep the MAC address table information current?",
+          "options": [
+            "the source MAC address and the incoming port",
+            "the source and destination MAC addresses and the incoming port",
+            "the source and destination MAC addresses and the outgoing port",
+            "the destination MAC address and the incoming port",
+            "the source MAC address and the outgoing port",
+            "the destination MAC address and the outgoing port"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "A switch maintains its MAC address table by using the source MAC address of incoming frames and the port on which those frames arrive."
+        },
+        {
+          "id": 429,
+          "question": "Which two statements are true about half-duplex and full-duplex communications?",
+          "options": [
+            "Half duplex has only one channel.",
+            "Full duplex increases the effective bandwidth.",
+            "Full duplex allows both ends to transmit and receive simultaneously.",
+            "Full duplex offers 100 percent potential use of the bandwidth.",
+            "All modern NICS support both half-duplex and full-duplex communication."
+          ],
+          "answer": [
+            1,
+            2
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "Full-duplex communication allows both ends to transmit and receive simultaneously, increasing effective bandwidth. Gigabit Ethernet and 10 Gb/s NICs require full duplex and do not support half-duplex operation."
+        },
+        {
+          "id": 430,
+          "question": "Which type of address does a switch use to build the MAC address table?",
+          "options": [
+            "source IP address",
+            "source MAC address",
+            "destination MAC address",
+            "destination IP address"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "A switch builds the MAC address table from the source MAC address in received frames and associates that address with the ingress port."
+        },
+        {
+          "id": 431,
+          "question": "Which option correctly describes a switching method?",
+          "options": [
+            "cut-through: makes a forwarding decision after receiving the entire frame",
+            "cut-through: provides the flexibility to support any mix of Ethernet speeds",
+            "store-and-forward: forwards the frame immediately after examining its destination MAC address",
+            "store-and-forward: ensures that the frame is free of physical and data-link errors"
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "Store-and-forward switching receives the entire frame and performs error checking before forwarding. Cut-through switching begins forwarding after reading the destination MAC address."
+        },
+        {
+          "id": 432,
+          "question": "Which network device can serve as a boundary to divide a Layer 2 broadcast domain?",
+          "options": [
+            "router",
+            "Ethernet hub",
+            "access point",
+            "Ethernet bridge"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "Only a Layer 3 device, such as a router, can divide a Layer 2 broadcast domain."
+        },
+        {
+          "id": 433,
+          "question": "What is the purpose of frame buffers on a switch?",
+          "options": [
+            "They execute checksum values before transmission.",
+            "They provide temporary storage of the frame checksum.",
+            "They hold traffic, thus alleviating network congestion.",
+            "They provide a basic security scan on received frames."
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "Frame buffers store traffic waiting to be transmitted, which helps prevent drops when traffic arrives faster than it can leave."
+        },
+        {
+          "id": 434,
+          "question": "Which network device can be used to eliminate collisions on an Ethernet network?",
+          "options": [
+            "hub",
+            "firewall",
+            "switch",
+            "router"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "A switch provides microsegmentation. Each switch port is its own collision domain, eliminating collisions between devices on different switch ports."
+        },
+        {
+          "id": 435,
+          "question": "What criteria is used by a Cisco LAN switch to decide how to forward Ethernet frames?",
+          "options": [
+            "Destination IP address",
+            "Destination MAC address",
+            "Egress port",
+            "Path cost"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "Cisco LAN switches use the destination MAC address and the MAC address table to make Ethernet frame forwarding decisions."
+        },
+        {
+          "id": 436,
+          "question": "What are two reasons a network administrator would segment a network with a Layer 2 switch?",
+          "options": [
+            "To create fewer collision domains",
+            "To create more broadcast domains",
+            "To eliminate virtual circuits",
+            "To enhance user bandwidth",
+            "To isolate ARP request messages from the rest of the network",
+            "To isolate traffic between segments"
+          ],
+          "answer": [
+            3,
+            5
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "Layer 2 switching creates microsegmented connections that can give devices full-bandwidth, full-duplex connectivity during transmission and can isolate traffic between segments. Layer 2 switches do not isolate broadcasts such as ARP requests."
+        },
+        {
+          "id": 437,
+          "question": "A switch has received a frame on an ingress port. What will the switch do if the unicast destination MAC address is in the MAC address table?",
+          "options": [
+            "It will drop the frame.",
+            "It will forward the frame out all ports.",
+            "It will forward the frame out all ports except the incoming port.",
+            "It will forward the frame out of the specified port in the MAC address table."
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "If the destination MAC address is in the MAC address table, the switch forwards the frame out of the specified port."
+        },
+        {
+          "id": 438,
+          "question": "A switch has received a frame on an ingress port. What will the switch do if the unicast destination MAC address is not in the MAC address table?",
+          "options": [
+            "It will drop the frame.",
+            "It will forward the frame out all ports.",
+            "It will forward the frame out all ports except the incoming port.",
+            "It will forward the frame out of the specified port in the MAC address table."
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "If the unicast destination MAC address is unknown, the switch floods the frame out all ports except the incoming port. This is called unknown unicast flooding."
+        },
+        {
+          "id": 439,
+          "question": "A switch has received a frame on an ingress port. What will the switch do if the destination MAC address is a broadcast address?",
+          "options": [
+            "It will drop the frame.",
+            "It will forward the frame out all ports.",
+            "It will forward the frame out all ports except the incoming port.",
+            "It will forward the frame out of the specified port in the MAC address table."
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "If the destination MAC address is broadcast or multicast, the switch floods the frame out all ports except the incoming port."
+        },
+        {
+          "id": 440,
+          "question": "Which switching method forwards the frame immediately after examining the destination MAC address?",
+          "options": [
+            "Broadcast",
+            "Cut-though",
+            "Large frame buffer",
+            "Store-and-forward"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "Cut-through switching can make a forwarding decision as soon as it reads and looks up the destination MAC address in the MAC address table."
+        },
+        {
+          "id": 441,
+          "question": "Which statement about half-duplex and full-duplex communication is true?",
+          "options": [
+            "Gigabit Ethernet and 10 Gb/s NICs can operate in full-duplex or half-duplex.",
+            "Full-duplex communication is bidirectional.",
+            "Half-duplex communication allows both ends to transmit and receive simultaneously.",
+            "Half-duplex communication is unidirectional, or one direction at a time."
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "Switching Ports",
+          "explanation": "Full-duplex communication allows simultaneous sending and receiving. Half-duplex communication is one direction at a time. Gigabit Ethernet and 10 Gb/s NICs require full duplex and do not support half-duplex operation."
+        }
+      ]
+    },
+    {
+      "id": "topic8",
+      "title": "STP",
+      "icon": "🌳",
+      "lecture": "Lecture 5",
+      "questions": [
+        {
+          "id": 442,
+          "question": "Which port state will switch ports immediately transition to when configured for PortFast?",
+          "options": [
+            "forwarding",
+            "blocking",
+            "listening",
+            "learning"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "PortFast allows a switch port to bypass the listening and learning states and transition immediately to the forwarding state."
+        },
+        {
+          "id": 443,
+          "question": "After the election of the root bridge has been completed, how will switches find the best paths to the root bridge?",
+          "options": [
+            "Each switch will analyze the port states of all neighbors and use the designated ports to forward traffic to the root.",
+            "Each switch will analyze the sum of all port costs to reach the root and use the path with the lowest cost.",
+            "Each switch will analyze the sum of the hops to reach the root and use the path with the fewest hops.",
+            "Each switch will analyze the BID of all neighbors to reach the root and use the path through the lowest BID neighbors."
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "After the root bridge is elected, each switch determines the best path to the root bridge by summing the individual port costs along each path. The path with the lowest total cost is selected."
+        },
+        {
+          "id": 444,
+          "question": "Which is the default STP operation mode on Cisco Catalyst switches?",
+          "options": [
+            "MST",
+            "PVST+",
+            "Rapid PVST+",
+            "MSTP",
+            "RSTP"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "Cisco switches running IOS 15.0 or later run PVST+ by default. Cisco Catalyst switches support PVST+, Rapid PVST+, and MSTP, but only one mode can be active at a time."
+        },
+        {
+          "id": 445,
+          "question": "What value determines the root bridge when all switches connected by trunk links have default STP configurations?",
+          "options": [
+            "VLAN ID",
+            "MAC address",
+            "extended system ID",
+            "bridge priority"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "When all switches use the same default bridge priority, the MAC address becomes the deciding factor in the root bridge election. For a given VLAN, the extended system ID is also the same across the switches."
+        },
+        {
+          "id": 446,
+          "question": "During the implementation of Spanning Tree Protocol, all switches are rebooted by the network administrator. What is the first step of the spanning-tree election process?",
+          "options": [
+            "All the switches send out BPDUs advertising themselves as the root bridge.",
+            "Each switch determines the best path to forward traffic.",
+            "Each switch determines what port to block to prevent a loop from occurring.",
+            "Each switch with a lower root ID than its neighbor will not send BPDUs."
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "After a Cisco switch boots, it sends BPDUs containing its own BID and initially advertises itself as the root bridge. After the root bridge is elected, paths and port states are selected."
+        },
+        {
+          "id": 447,
+          "question": "Which two concepts relate to a switch port that is intended to have only end devices attached and intended never to be used to connect to another switch? (Choose two.)",
+          "options": [
+            "bridge ID",
+            "PortFast",
+            "edge port",
+            "extended system ID",
+            "PVST+"
+          ],
+          "answer": [
+            1,
+            2
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "The RSTP edge port concept corresponds to the Cisco PVST+ PortFast feature. An edge port connects to an end station and should immediately transition to forwarding."
+        },
+        {
+          "id": 448,
+          "question": "Which three port states are used by Rapid PVST+? (Choose three.)",
+          "options": [
+            "listening",
+            "blocking",
+            "trunking",
+            "learning",
+            "forwarding",
+            "discarding"
+          ],
+          "answer": [
+            3,
+            4,
+            5
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "Rapid PVST+ uses the discarding, learning, and forwarding port states."
+        },
+        {
+          "id": 449,
+          "question": "When PVST is running over a switched network, which port state can participate in BPDU frame forwarding based on BPDUs received, but does not forward data frames?",
+          "options": [
+            "disabled",
+            "forwarding",
+            "listening",
+            "blocking"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "Ports in the listening state can participate in BPDU frame forwarding based on received BPDUs, but they do not forward data frames."
+        },
+        {
+          "id": 450,
+          "question": "Which STP port role is adopted by a switch port if there is no other port with a lower cost to the root bridge?",
+          "options": [
+            "designated port",
+            "alternate",
+            "disabled port",
+            "root port"
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "The root port is the port on a non-root switch with the lowest path cost to reach the root bridge."
+        },
+        {
+          "id": 451,
+          "question": "Which two statements describe a switch port that is configured with PortFast? (Choose two.)",
+          "options": [
+            "The switch port immediately transitions from the listening to the forwarding state.",
+            "The switch port immediately transitions from blocking to the forwarding state.",
+            "The switch port sends DHCP requests before transitioning to the forwarding state.",
+            "The switch port immediately processes any BPDUs before transitioning to the forwarding state.",
+            "The switch port should never receive BPDUs."
+          ],
+          "answer": [
+            1,
+            4
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "A PortFast port immediately transitions from blocking to forwarding. PortFast should only be configured on ports connected to end devices, so the port should never receive BPDUs."
+        },
+        {
+          "id": 452,
+          "question": "What is one way to correct a spanning tree failure?",
+          "options": [
+            "Replace the cables on failed STP links.",
+            "Manually remove redundant links in the switched network.",
+            "Insert redundant links to replace the failed STP links.",
+            "Replace all instances of STP with RSTP."
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "When a spanning tree failure creates Layer 2 loops, removing redundant links in the failed segment can normalize traffic and CPU load while the STP issue is investigated."
+        },
+        {
+          "id": 453,
+          "question": "What additional information is contained in the 12-bit extended system ID of a BPDU?",
+          "options": [
+            "port ID",
+            "MAC address",
+            "IP address",
+            "VLAN ID"
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "The extended system ID is a 12-bit field in the bridge ID that identifies the VLAN ID."
+        },
+        {
+          "id": 454,
+          "question": "An administrator is troubleshooting a switch and wants to verify if it is a root bridge. What command can be used to do this?",
+          "options": [
+            "show spanning-tree",
+            "show running-config",
+            "show vlan",
+            "show startup-config"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "The show spanning-tree command displays STP information, including root bridge details."
+        },
+        {
+          "id": 455,
+          "question": "What is an accurate description of redundancy?",
+          "options": [
+            "designing a network to use multiple virtual devices to ensure that all traffic uses the best path through the internetwork",
+            "configuring a router with a complete MAC address database to ensure that all frames can be forwarded to the correct destination",
+            "designing a network to use multiple paths between switches to ensure there is no single point of failure",
+            "configuring a switch with proper security to ensure that all traffic forwarded through an interface is filtered"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "Redundancy removes single points of failure by using multiple physical paths between switches in the network."
+        },
+        {
+          "id": 456,
+          "question": "Which three components are combined to form a bridge ID? (Choose three.)",
+          "options": [
+            "Bridge priority",
+            "Cost",
+            "Extended system ID",
+            "IP address",
+            "MAC address",
+            "Port ID"
+          ],
+          "answer": [
+            0,
+            2,
+            4
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "The bridge ID consists of the bridge priority, extended system ID, and MAC address."
+        },
+        {
+          "id": 457,
+          "question": "What is an advantage of PVST+?",
+          "options": [
+            "PVST+ optimizes performance on the network through automatic selection of the root bridge.",
+            "PVST+ optimizes performance on the network through load sharing using multiple root bridges.",
+            "PVST+ reduces bandwidth consumption compared to traditional implementations of STP that use CST.",
+            "PVST+ requires fewer CPU cycles for all the switches in the network."
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "PVST+ can optimize load sharing by allowing different VLANs to use different root bridges. This requires manual configuration; root bridges are not automatically selected for load sharing."
+        },
+        {
+          "id": 458,
+          "question": "In which two port states does a switch learn MAC addresses and process BPDUs in a PVST network? (Choose two.)",
+          "options": [
+            "Blocking",
+            "Disabled",
+            "Forwarding",
+            "Learning",
+            "Listening"
+          ],
+          "answer": [
+            2,
+            3
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "Switches learn MAC addresses in the learning and forwarding states. They process BPDUs in the blocking, listening, learning, and forwarding states."
+        },
+        {
+          "id": 459,
+          "question": "What two features does Spanning Tree Protocol (STP) provide to ensure proper network operations? (Choose two.)",
+          "options": [
+            "Implementing VLANs to contain broadcasts",
+            "Link-state dynamic routing that provides redundant routes",
+            "Redundant links between Layer 2 switches",
+            "Removing single points of failure with multiple Layer 2 switches",
+            "Static default routes"
+          ],
+          "answer": [
+            2,
+            3
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "STP supports correct operation when a network has multiple interconnected Layer 2 switches and redundant links that remove single points of failure."
+        },
+        {
+          "id": 460,
+          "question": "Which PVST+ feature ensures that configured switch edge ports do not cause Layer 2 loops if a port is mistakenly connected to another switch?",
+          "options": [
+            "BPDU guard",
+            "Extended system ID",
+            "PortFast",
+            "PVST+"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "BPDU guard places an edge port into an error-disabled state if the port receives a BPDU. This helps prevent Layer 2 loops when a PortFast edge port is connected incorrectly."
+        },
+        {
+          "id": 461,
+          "question": "What is an advantage of using STP in a LAN?",
+          "options": [
+            "It combines multiple switch trunk links into a logical port channel link to increase bandwidth.",
+            "It decreases the size of the failure domain.",
+            "It provides firewall services to protect the LAN.",
+            "It temporarily disables redundant paths to stop Layer 2 loops."
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "STP allows redundant physical connections between Layer 2 devices without creating Layer 2 loops by temporarily disabling ports that could create a loop."
+        },
+        {
+          "id": 462,
+          "question": "Which two statements regarding a PortFast enabled switch port are true? (Choose two.)",
+          "options": [
+            "The port immediately transitions from blocking to forwarding state.",
+            "The port immediately transitions from listening to forwarding state.",
+            "The port immediately processes any BPDUs before transitioning to the forwarding state.",
+            "The port sends DHCP requests before transitioning to the forwarding state.",
+            "The port should never receive BPDUs."
+          ],
+          "answer": [
+            0,
+            4
+          ],
+          "slide": null,
+          "reference": "STP",
+          "explanation": "PortFast-enabled ports immediately transition from blocking to forwarding and should only be used on access ports connected to end devices. Such ports should never receive BPDUs."
+        }
+      ]
     }
   ]
 }
