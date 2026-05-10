@@ -79,6 +79,8 @@ const vlsmPractices = [
 
 async function loadHome() {
   showScreen('screen-home');
+  document.getElementById('app-title').textContent = 'Quiz App';
+  document.querySelector('.hero-subtitle').textContent = 'Select a topic to practice';
   const grid = document.getElementById('topics-grid');
   grid.innerHTML = '<div class="loading">Loading topics…</div>';
   try {
