@@ -7909,6 +7909,398 @@
           ]
         }
       ]
+    },
+    {
+      "id": "topic11-nat",
+      "title": "NAT",
+      "icon": "🔁",
+      "lecture": "Lecture 11",
+      "questions": [
+        {
+          "slide": null,
+          "id": 677,
+          "sourceNumber": 1,
+          "question": "Which two statements accurately describe an advantage or a disadvantage when deploying NAT for IPv4 in a network? (Choose two.)",
+          "reference": "Lecture 11 NAT",
+          "explanation": "Network Address Translation (NAT) is a technology that is implemented within IPv4 networks. One application of NAT is to use private IP addresses inside a network and use NAT to share a few public IP addresses for many internal hosts. In this way it provides a solution to slow down the IPv4 address depletion. However, since NAT hides the actual IP addresses that are used by end devices, it may cause problems for some applications that require end-to-end connectivity.",
+          "options": [
+            "NAT adds authentication capability to IPv4.",
+            "NAT introduces problems for some applications that require end-to-end connectivity.",
+            "NAT provides a solution to slow down the IPv4 address depletion.",
+            "NAT causes routing tables to include more information.",
+            "NAT improves packet handling.",
+            "NAT will impact negatively on switch performance."
+          ],
+          "answer": [
+            1,
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 678,
+          "sourceNumber": 2,
+          "question": "A network administrator wants to examine the active NAT translations on a border router. Which command would perform the task?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "The clear ip nat translations command clears all dynamic address translation entries from the NAT translation table. The debug ip nat command is used to verify the operation of NAT. The show ip nat statistics command displays information about the total number of active translations, NAT configuration parameters, the number of addresses in the pool, and the number that have been allocated. The show ip nat translations command displays the active NAT translations.",
+          "options": [
+            "Router# clear ip nat translations",
+            "Router# show ip nat translations",
+            "Router# debug ip nat translations",
+            "Router# show ip nat statistics"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 679,
+          "sourceNumber": 3,
+          "question": "What are two tasks to perform when configuring static NAT? (Choose two.)",
+          "reference": "Lecture 11 NAT",
+          "explanation": "There is no server involved when using NAT. The outside global address will change for each destination the inside host will try to reach. A NAT pool is only configured for dynamic NAT implementations.",
+          "options": [
+            "Configure a NAT pool.",
+            "Identify the participating interfaces as inside or outside interfaces.",
+            "Define the outside global address.",
+            "Define the inside global address on the server",
+            "Create a mapping between the inside local and inside global addresses."
+          ],
+          "answer": [
+            1,
+            4
+          ]
+        },
+        {
+          "slide": null,
+          "id": 680,
+          "sourceNumber": 4,
+          "question": "What is a disadvantage of NAT?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "Many Internet protocols and applications depend on end-to-end addressing from the source to the destination. Because parts of the header of the IP packets are modified, the router needs to alter the checksum of the IPv4 packets. Using a single public IP address allows for the conservation of legally registered IP addressing schemes. If an addressing scheme needs to be modified, it is cheaper to use private IP addresses.",
+          "options": [
+            "The router does not need to alter the checksum of the IPv4 packets.",
+            "There is no end-to-end addressing.",
+            "The costs of readdressing hosts can be significant for a publicly addressed network.",
+            "The internal hosts have to use a single public IPv4 address for external communication."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 681,
+          "sourceNumber": 5,
+          "question": "What is one advantage of using NAT at the edge of the network?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "When NAT is used, the inside network can be addressed with RFC 1918 private addresses and the outside address is provided by the ISP. When changing to a new ISP, the hosts on the inside network do not have to have their addresses changed. NAT prevents end-to-end IPv4 traceability, making troubleshooting more difficult. Performance can be adversely affected with NAT, as the router needs to change the IP, and possibly TCP/UDP headers on each packet. Dynamic NAT does not allow outside devices to easily initiate connections to inside devices unless an outbound connection has already been made.",
+          "options": [
+            "Changing ISPs is simpler because the devices on the inside network do not have to be configured with new addresses when the outside address changes.",
+            "Dynamic NAT allows devices from outside the local network to easily initiate TCP connections to inside hosts.",
+            "NAT enables end-to-end IPv4 traceability, making troubleshooting easier.",
+            "Performance is significantly increased because the router does not have to perform as many route lookups."
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 682,
+          "sourceNumber": 6,
+          "question": "What benefit does NAT64 provide?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "NAT64 is a temporary IPv6 transition strategy that allows sites to use IPv6 addresses and still be able to connect to IPv4 networks. This is accomplished by translating the IPv6 addresses into IPv4 addresses before sending the packets onto the IPv4 network.",
+          "options": [
+            "It allows sites to use private IPv6 addresses and translates them to global IPv6 addresses.",
+            "It allows sites to use private IPv4 addresses, and thus hides the internal addressing structure from hosts on public IPv4 networks.",
+            "It allows sites to connect multiple IPv4 hosts to the Internet via the use of a single public IPv4 address.",
+            "It allows sites to connect IPv6 hosts to an IPv4 network by translating the IPv6 addresses to IPv4 addresses."
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 683,
+          "sourceNumber": 7,
+          "question": "What address translation is performed by static NAT?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "There are four terms to describe NAT addresses: inside local, inside global, outside local, and outside global. Static NAT will perform a one-to-one translation of an inside local address to an inside global address.",
+          "options": [
+            "An inside local address is translated to a specified outside local address.",
+            "An inside local address is translated to a specified inside global address.",
+            "An inside local address is translated to a specified outside global address.",
+            "An outside local address is translated to a specified outside global address."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 684,
+          "sourceNumber": 8,
+          "question": "Using NAT terminology, what is the address of the source host on a private network as seen from inside the network?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "There are four types of NAT addresses. In NAT terminology these are applied from the perspective of the host that has the address being translated. Inside local address is the address of the source host as seen from inside the network. Inside global address is the address of the source host as seen from the Internet. Outside local address is the address of Internet hosts as seen from inside the network. Outside global address is the address of Internet hosts as seen from outside the network.",
+          "options": [
+            "inside local",
+            "outside global",
+            "outside local",
+            "inside global"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 685,
+          "sourceNumber": 9,
+          "question": "Which statement accurately describes dynamic NAT?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "Dynamic NAT provides a dynamic mapping of inside local to inside global IP addresses. NAT is merely the one-to-one mapping of one address to another address without taking into account whether the address is public or private. DHCP is automatic assignment of IP addresses to hosts. DNS is mapping host names to IP addresses.",
+          "options": [
+            "It always maps a private IP address to a public IP address.",
+            "It provides an automated mapping of inside local to inside global IP addresses.",
+            "It dynamically provides IP addressing to internal hosts.",
+            "It provides a mapping of internal host names to IP addresses."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 686,
+          "sourceNumber": 10,
+          "question": "Why is NAT not needed in IPv6?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "The large number of public IPv6 addresses eliminates the need for NAT. Sites from the largest enterprises to single households can get public IPv6 network addresses. This avoids some of the NAT-induced application problems that are experienced by applications that require end-to-end connectivity.",
+          "options": [
+            "The end-to-end connectivity problems that are caused by NAT are solved because the number of routes increases with the number of nodes that are connected to the Internet.",
+            "Because IPv6 has integrated security, there is no need to hide the IPv6 addresses of internal networks.",
+            "The problems that are induced by NAT applications are solved because the IPv6 header improves packet handling by intermediate routers.",
+            "Any host or user can get a public IPv6 network address because the number of available IPv6 addresses is extremely large."
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 687,
+          "sourceNumber": 11,
+          "question": "A company designs its network so that the PCs in the internal network are assigned IP addresses from DHCP servers, and the packets that are sent to the Internet are translated through a NAT-enabled router. What type of NAT enables the router to populate the translation table from a pool of unique public addresses, as the PCs send packets through the router to the Internet?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "ARP is the address resolution protocol and is used to obtain the MAC address of the destination device. Static NAT is a one-to-one mapping between the local and global addresses of a device. PAT, otherwise known as NAT overload, maps multiple private IP addresses to a singular public address or group of addresses. Dynamic NAT uses a pool of public IP addresses and assigns them to requesting devices on a first-come, first-served basis. In the case of dynamic NAT, each device would have a unique public IP address from the pool of public IP addresses as the source IP address in the packets that they send.",
+          "options": [
+            "ARP",
+            "dynamic NAT",
+            "static NAT",
+            "PAT"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 688,
+          "sourceNumber": 12,
+          "question": "What is a security feature of using NAT on a network?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "Network Address Translation (NAT) translates private addresses into public addresses for use on public networks. This feature prevents outside devices from seeing the actual IP addresses that are used by the internal hosts.",
+          "options": [
+            "denies all internal hosts from communicating outside their own network",
+            "allows internal IP addresses to be concealed from external users",
+            "denies all packets that originate from private IP addresses",
+            "allows external IP addresses to be concealed from internal users"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 689,
+          "sourceNumber": 13,
+          "question": "When dynamic NAT without overloading is being used, what happens if seven users attempt to access a public server on the Internet when only six addresses are available in the NAT pool?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "If all the addresses in the NAT pool have been used, a device must wait for an available address before it can access the outside network.",
+          "options": [
+            "The first user gets disconnected when the seventh user makes the request.",
+            "All users can access the server.",
+            "The request to the server for the seventh user fails.",
+            "No users can access the server."
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 690,
+          "sourceNumber": 14,
+          "question": "A company has been assigned the 203.0.113.0/27 block of IP addresses by the ISP. The company has over 6000 internal devices. What type of NAT would be most appropriate for the employee workstations of the company?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "Static NAT is used by companies that have end devices such as servers that need an external public IP address. Dynamic NAT is used by companies that own a block of public IP addresses. Port forwarding is not a type of NAT. Instead, port forwarding is a technique that is used to reach a private IP address from an external network. PAT is commonly used by home networks and small businesses. PAT or overloading can also be done by using a pool of addresses.",
+          "options": [
+            "static NAT",
+            "port forwarding",
+            "dynamic NAT",
+            "PAT off the external router interface",
+            "dynamic NAT overload using the pool of addresses"
+          ],
+          "answer": [
+            4
+          ]
+        },
+        {
+          "slide": null,
+          "id": 691,
+          "sourceNumber": 15,
+          "question": "Which version of NAT allows many hosts inside a private network to simultaneously use a single inside global address for connecting to the Internet?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "PAT allows many hosts on a private network to share one single public address by mapping sessions to TCP/UDP port numbers.",
+          "options": [
+            "port forwarding",
+            "PAT",
+            "dynamic NAT",
+            "static NAT"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 692,
+          "sourceNumber": 16,
+          "question": "Typically, which network device would be used to perform NAT for a corporate environment?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "Typically, the translation from private IPv4 addresses to public IPv4 addresses is performed on routers in corporate environments. In a home environment, this device might be an access point that has routing capability or a DSL or cable router.",
+          "options": [
+            "DHCP server",
+            "Host device",
+            "Router",
+            "Server",
+            "Switch"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 693,
+          "sourceNumber": 17,
+          "question": "When NAT is used in a small office, which address type or types are typically used for hosts on the local LAN?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "It is common practice to configure addresses from the 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16 ranges.",
+          "options": [
+            "Both private and public IPv4 addresses",
+            "Global public IPv4 addresses",
+            "Internet-routable addresses",
+            "Private IPv4 addresses"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 694,
+          "sourceNumber": 18,
+          "question": "Which type of NAT maps a single inside local address to a single inside global address?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "A one-to-one mapping of an inside local address to an inside global address is accomplished through static NAT.",
+          "options": [
+            "Dynamic NAT",
+            "NAT overloading",
+            "Port Address Translation",
+            "Static NAT"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 695,
+          "sourceNumber": 19,
+          "question": "A network administrator configures the border router with the ip nat inside source list 4 pool NAT-POOL global configuration command. What is required to be configured in order for this particular command to be functional?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "In order for the ip nat inside source list 4 pool NAT-POOL command to work, the following procedure needs to occur: 1. Create an access list that defines the private IPv4 addresses affected by NAT. 2. Establish a NAT pool of starting and ending public IPv4 addresses by using the ip nat pool command. 3. Use the ip nat inside source list command to associate the access list with the NAT pool. 4. Apply NAT to internal and external interfaces by using the ip nat inside and ip nat outside commands.",
+          "options": [
+            "A NAT pool named NAT-POOL that defines the starting and ending public IPv4 addresses",
+            "A VLAN named NAT-POOL that is enabled and active and routed by R1",
+            "An access list named NAT-POOL that defines the private addresses that are affected by NAT",
+            "An access list numbered 4 that defines the starting and ending public IPv4 addresses",
+            "ip nat outside enabled on the interface that connects to the LAN affected by NAT"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 696,
+          "sourceNumber": 20,
+          "question": "Which configuration would be appropriate for a small business that has the public IPv4 address 209.165.200.225/30 assigned to the external interface on the router that connects to the internet?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "With the ip nat inside source list 1 interface serial 0/0/0 overload command, the router is configured to translate internal private IPv4 addresses in the range 10.0.0.0/8 to a single public IPv4 address, 209.165.200.225/30. The other options will not work because the IPv4 addresses defined in the pool, 192.168.2.0/28, are not routable on the internet.",
+          "options": [
+            "access-list 1 permit 10.0.0.0 0.255.255.255\nip nat pool NAT-POOL 192.168.2.1 192.168.2.8 netmask 255.255.255.240\nip nat inside source list 1 pool NAT-POOL",
+            "access-list 1 permit 10.0.0.0 0.255.255.255\nip nat pool NAT-POOL 192.168.2.1 192.168.2.8 netmask 255.255.255.240\nip nat inside source list 1 pool NAT-POOL overload",
+            "access-list 1 permit 10.0.0.0 0.255.255.255\nip nat inside source list 1 interface serial 0/0/0 overload",
+            "access-list 1 permit 10.0.0.0 0.255.255.255\nip nat pool NAT-POOL 192.168.2.1 192.168.2.8 netmask 255.255.255.240\nip nat inside source list 1 pool NAT-POOL overload\nip nat inside source static 10.0.0.5 209.165.200.225"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 697,
+          "sourceNumber": 21,
+          "question": "What are two of the required steps to configure PAT? (Choose two.)",
+          "reference": "Lecture 11 NAT",
+          "explanation": "The steps that are required to configure PAT are to define a pool of global addresses to be used for overload translation, to configure source translation by using the keywords interface and overload, and to identify the interfaces that are involved in the PAT.",
+          "options": [
+            "Create a standard access list to define applications that should be translated.",
+            "Define a pool of global addresses to be used for overload translation.",
+            "Define the Hello and Interval timers to match the adjacent neighbor router.",
+            "Define the range of source ports to be used.",
+            "Identify the inside interface."
+          ],
+          "answer": [
+            1,
+            4
+          ]
+        },
+        {
+          "slide": null,
+          "id": 698,
+          "sourceNumber": 22,
+          "question": "What is the name for the public IPv4 addresses used on a NAT-enabled router?",
+          "reference": "Lecture 11 NAT",
+          "explanation": "An inside local address is the address of the source, as seen from the inside of the network. An outside global address is the address of the destination, as seen from the outside network. The public IPv4 addresses used by the NAT-enabled router to represent inside hosts are inside global addresses.",
+          "options": [
+            "Inside global addresses",
+            "Inside local addresses",
+            "Outside global addresses",
+            "Outside local addresses"
+          ],
+          "answer": [
+            0
+          ]
+        }
+      ]
     }
   ]
 }
