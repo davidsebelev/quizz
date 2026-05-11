@@ -13,6 +13,7 @@ app.use('/photo', express.static(path.join(__dirname, '../photo')));
 app.use('/photoNew', express.static(path.join(__dirname, '../photoNew')));
 app.use('/photoLec3', express.static(path.join(__dirname, '../photoLec3')));
 app.use('/phlec6', express.static(path.join(__dirname, '../phlec6')));
+app.use('/phlec9', express.static(path.join(__dirname, '../phlec9')));
 
 const DATA_FILE = path.join(__dirname, '../data/questions.json');
 
