@@ -10407,6 +10407,453 @@
           ]
         }
       ]
+    },
+    {
+      "id": "topic12-transport-layer",
+      "title": "Transport Layer",
+      "icon": "🚚",
+      "lecture": "Lecture 12",
+      "questions": [
+        {
+          "slide": null,
+          "id": 1201,
+          "sourceNumber": 1,
+          "question": "Which two characteristics are associated with UDP sessions? (Choose two.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "UDP has low overhead, does not acknowledge received data, and is used when minimum delay is more important than transport-layer reliability.",
+          "options": [
+            "Destination devices receive traffic with minimal delay.",
+            "Transmitted data segments are tracked.",
+            "Destination devices reassemble messages and pass them to an application.",
+            "Received data is unacknowledged.",
+            "Unacknowledged data packets are retransmitted."
+          ],
+          "answer": [
+            0,
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1202,
+          "sourceNumber": 2,
+          "question": "What happens if part of an FTP message is not delivered to the destination?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "FTP uses TCP. TCP sequence and acknowledgment numbers identify missing segments, and the missing part is sent again.",
+          "options": [
+            "The message is lost because FTP does not use a reliable delivery method.",
+            "The FTP source host sends a query to the destination host.",
+            "The part of the FTP message that was lost is re-sent.",
+            "The entire FTP message is re-sent."
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1203,
+          "sourceNumber": 3,
+          "question": "A host device needs to send a large video file across the network while providing data communication to other users. Which feature will allow different communication streams to occur at the same time, without having a single data stream using all available bandwidth?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "Multiplexing allows multiple communication streams to be interleaved across the network at the same time.",
+          "options": [
+            "window size",
+            "multiplexing",
+            "port numbers",
+            "acknowledgments"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1204,
+          "sourceNumber": 4,
+          "question": "What kind of port must be requested from IANA in order to be used with a specific application?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "Registered ports, numbered 1024 through 49151, can be assigned by IANA to specific applications or processes.",
+          "options": [
+            "registered port",
+            "private port",
+            "dynamic port",
+            "source port"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1205,
+          "sourceNumber": 5,
+          "question": "What type of information is included in the transport header?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "The transport layer header identifies application processes by using source and destination port numbers.",
+          "options": [
+            "destination and source logical addresses",
+            "destination and source physical addresses",
+            "destination and source port numbers",
+            "encoded application data"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1206,
+          "sourceNumber": 6,
+          "question": "What is a socket?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "A socket is formed by an IP address together with a port number, such as a source IP and source port or a destination IP and destination port.",
+          "options": [
+            "the combination of the source and destination IP address and source and destination Ethernet address",
+            "the combination of a source IP address and port number or a destination IP address and port number",
+            "the combination of the source and destination sequence and acknowledgment numbers",
+            "the combination of the source and destination sequence numbers and port numbers"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1207,
+          "sourceNumber": 7,
+          "question": "What is the complete range of TCP and UDP well-known ports?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "Well-known TCP and UDP ports use the range from 0 through 1023.",
+          "options": [
+            "0 to 255",
+            "0 to 1023",
+            "256 - 1023",
+            "1024 - 49151"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1208,
+          "sourceNumber": 8,
+          "question": "Which flag in the TCP header is used in response to a received FIN in order to terminate connectivity between two network devices?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "When a device receives a TCP segment with the FIN flag, it responds with ACK to acknowledge that termination request.",
+          "options": [
+            "FIN",
+            "ACK",
+            "SYN",
+            "RST"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1209,
+          "sourceNumber": 9,
+          "question": "What is a characteristic of a TCP server process?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "A server can have multiple application services active at the same time, each listening on its own port.",
+          "options": [
+            "Every application process running on the server has to be configured to use a dynamic port number.",
+            "There can be many ports open simultaneously on a server, one for each active server application.",
+            "An individual server can have two services assigned to the same port number within the same transport layer services.",
+            "A host running two different applications can have both configured to use the same server port."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1210,
+          "sourceNumber": 10,
+          "question": "Which two flags in the TCP header are used in a TCP three-way handshake to establish connectivity between two network devices? (Choose two.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "TCP uses SYN and ACK flags during the three-way handshake to establish a connection.",
+          "options": [
+            "ACK",
+            "FIN",
+            "PSH",
+            "RST",
+            "SYN",
+            "URG"
+          ],
+          "answer": [
+            0,
+            4
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1211,
+          "sourceNumber": 11,
+          "question": "A PC is downloading a large file from a server. The TCP window is 1000 bytes. The server is sending the file using 100-byte segments. How many segments will the server send before it requires an acknowledgment from the PC?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "A 1000-byte window divided into 100-byte segments allows 10 segments before an acknowledgment is required.",
+          "options": [
+            "1 segment",
+            "10 segments",
+            "100 segments",
+            "1000 segments"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1212,
+          "sourceNumber": 12,
+          "question": "Which factor determines TCP window size?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "TCP window size is based on how much data the destination can accept and process before sending an acknowledgment.",
+          "options": [
+            "the amount of data to be transmitted",
+            "the number of services included in the TCP segment",
+            "the amount of data the destination can process at one time",
+            "the amount of data the source is capable of sending at one time"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1213,
+          "sourceNumber": 13,
+          "question": "During a TCP session, a destination device sends an acknowledgment number to the source device. What does the acknowledgment number represent?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "The TCP acknowledgment number identifies the next byte that the destination expects to receive.",
+          "options": [
+            "the total number of bytes that have been received",
+            "one number more than the sequence number",
+            "the next byte that the destination expects to receive",
+            "the last sequence number that was sent by the source"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1214,
+          "sourceNumber": 14,
+          "question": "What information is used by TCP to reassemble and reorder received segments?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "TCP uses sequence numbers in segment headers to place received segments back into the correct order.",
+          "options": [
+            "port numbers",
+            "sequence numbers",
+            "acknowledgment numbers",
+            "fragment numbers"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1215,
+          "sourceNumber": 15,
+          "question": "What does TCP do if the sending source detects network congestion on the path to the destination?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "If acknowledgments are missing or delayed, TCP can reduce the amount of unacknowledged data sent before waiting for acknowledgments.",
+          "options": [
+            "The source host will send a request for more frequent acknowledgments to the destination.",
+            "The source will decrease the amount of data that it sends before it must receive acknowledgements from the destination.",
+            "The destination will request retransmission of the entire message.",
+            "The source will acknowledge the last segment that is sent and include a request for a smaller window size in the message."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1216,
+          "sourceNumber": 16,
+          "question": "What is a characteristic of UDP?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "UDP does not reorder datagrams into the original transmission order; it passes received data up to the application.",
+          "options": [
+            "UDP datagrams take the same path and arrive in the correct order at the destination.",
+            "Applications that use UDP are always considered unreliable.",
+            "UDP reassembles the received datagrams in the order they were received.",
+            "UDP only passes data to the network when the destination is ready to receive the data."
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1217,
+          "sourceNumber": 17,
+          "question": "What does a client do when it has UDP datagrams to send?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "UDP is connectionless, so the client sends datagrams without a transport-layer handshake.",
+          "options": [
+            "It just sends the datagrams.",
+            "It queries the server to see if it is ready to receive data.",
+            "It sends a simplified three-way handshake to the server.",
+            "It sends to the server a segment with the SYN flag set to synchronize the conversation."
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1218,
+          "sourceNumber": 18,
+          "question": "What happens if the first packet of a TFTP transfer is lost?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "TFTP uses UDP, so any needed retry behavior is handled by the TFTP application rather than by UDP.",
+          "options": [
+            "The client will wait indefinitely for the reply.",
+            "The TFTP application will retry the request if a reply is not received.",
+            "The next-hop router or the default gateway will provide a reply with an error code.",
+            "The transport layer will retry the query if a reply is not received."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1219,
+          "sourceNumber": 19,
+          "question": "A host device is receiving live streaming video. How does the device account for video data that is lost during transmission?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "Live streaming commonly uses UDP. Missing data can cause a brief disruption, but the stream continues instead of waiting for retransmission.",
+          "options": [
+            "The device will immediately request a retransmission of the missing data.",
+            "The device will use sequence numbers to pause the video stream until the correct data arrives.",
+            "The device will delay the streaming video until the entire video stream is received.",
+            "The device will continue receiving the streaming video, but there may be a momentary disruption."
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1220,
+          "sourceNumber": 20,
+          "question": "Why does HTTP use TCP as the transport layer protocol?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "HTTP needs reliable and complete delivery of web page data, so it uses TCP.",
+          "options": [
+            "to ensure the fastest possible download speed",
+            "because HTTP is a best-effort protocol",
+            "because transmission errors can be tolerated easily",
+            "because HTTP requires reliable delivery"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1221,
+          "sourceNumber": 21,
+          "question": "When is UDP preferred to TCP?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "UDP is preferred when an application can tolerate some loss and benefits from lower delay, such as voice or video.",
+          "options": [
+            "when a client sends a segment to a server",
+            "when all the data must be fully received before any part of it is considered useful",
+            "when an application can tolerate some loss of data during transmission",
+            "when segments must arrive in a very specific sequence to be processed successfully"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1222,
+          "sourceNumber": 22,
+          "question": "Which three application layer protocols use TCP? (Choose three.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "SMTP, FTP, and HTTP use TCP because they require reliable transport and do not have real-time delivery requirements.",
+          "options": [
+            "SMTP",
+            "FTP",
+            "SNMP",
+            "HTTP",
+            "TFTP",
+            "DHCP"
+          ],
+          "answer": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1223,
+          "sourceNumber": 23,
+          "type": "match",
+          "question": "Refer to the exhibit. Consider a datagram that originates on the PC and that is destined for the web server. Match the IP addresses and port numbers that are in that datagram to the description. (Not all options are used.)",
+          "image": "lec12/Screenshot 2026-05-12 at 22.03.13.png",
+          "imageAlt": "Topology showing a PC at 192.168.1.2 communicating through routers R1 and R2 to a web server at 192.168.2.2.",
+          "imageCaption": "Use the exhibit to identify the source and destination fields.",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "The PC is the source, so its IP address is 192.168.1.2 and its client source port is 2578. The web server is the destination, so the destination IP address is 192.168.2.2 and HTTP uses destination port 80.",
+          "pairs": [
+            {
+              "left": "destination IP address",
+              "right": "192.168.2.2"
+            },
+            {
+              "left": "destination port number",
+              "right": "80"
+            },
+            {
+              "left": "source IP address",
+              "right": "192.168.1.2"
+            },
+            {
+              "left": "source port number",
+              "right": "2578"
+            }
+          ],
+          "matchOptions": [
+            "192.168.2.2",
+            "80",
+            "192.168.1.2",
+            "2578",
+            "192.168.1.1",
+            "192.168.2.1",
+            "443"
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1224,
+          "sourceNumber": 24,
+          "question": "What information is used by TCP to reassemble and reorder received segments?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 9",
+          "explanation": "TCP sequence numbers identify the order of segments so the receiving host can reassemble them correctly.",
+          "options": [
+            "sequence numbers",
+            "acknowledgment numbers",
+            "fragment numbers",
+            "port numbers"
+          ],
+          "answer": [
+            0
+          ]
+        }
+      ]
     }
   ]
 }

@@ -15,6 +15,7 @@ app.use('/photoLec3', express.static(path.join(__dirname, '../photoLec3')));
 app.use('/phlec6', express.static(path.join(__dirname, '../phlec6')));
 app.use('/phlec9', express.static(path.join(__dirname, '../phLec9')));
 app.use('/ospf', express.static(path.join(__dirname, '../ospf')));
+app.use('/lec12', express.static(path.join(__dirname, '../lec12')));
 
 const DATA_FILE = path.join(__dirname, '../data/questions.json');
 
