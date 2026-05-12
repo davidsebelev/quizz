@@ -7911,6 +7911,2112 @@
       ]
     },
     {
+      "id": "topic10-single-area-ospfv2-concepts",
+      "title": "Single-Area OSPFv2 Concepts",
+      "icon": "🧭",
+      "lecture": "Lecture 10",
+      "questions": [
+        {
+          "slide": null,
+          "id": 699,
+          "sourceNumber": 1,
+          "question": "What is a function of OSPF hello packets?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "The OSPF hello packet serves three primary functions: discover OSPF neighbors and establish adjacencies, advertise parameters that OSPF neighbors must agree on, and elect the DR and BDR.",
+          "options": [
+            "to discover neighbors and build adjacencies between them",
+            "to ensure database synchronization between routers",
+            "to send specifically requested link-state records",
+            "to request specific link-state records from neighbor routers"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 700,
+          "sourceNumber": 2,
+          "question": "Which OSPF packet contains the different types of link-state advertisements?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "Link-state update (LSU) packets contain different types of link-state advertisements (LSAs). The LSUs are used to reply to link-state requests (LSRs) and to announce new information.",
+          "options": [
+            "LSU",
+            "LSR",
+            "hello",
+            "DBD",
+            "LSAck"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 701,
+          "sourceNumber": 3,
+          "question": "Which statements describe features of the OSPF topology table? (Choose three.)",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "The topology table on an OSPF router is a link-state database (LSDB) that lists information about all other routers in the network, and represents the network topology. All routers within an area have identical link-state databases, and the table can be viewed using the show ip ospf database command. The EIGRP topology table contains feasible successor routes. This concept is not used by OSPF. The SPF algorithm uses the LSDB to produce the unique routing table for each router which contains the lowest cost route entries for known networks.",
+          "options": [
+            "After convergence, the table only contains the lowest cost route entries for all known networks.",
+            "The topology table contains feasible successor routes.",
+            "The table can be viewed via the show ip ospf database command.",
+            "Its contents are the result of running the SPF algorithm.",
+            "It is a link-state database that represents the network topology.",
+            "When converged, all routers in an area have identical topology tables."
+          ],
+          "answer": [
+            2,
+            4,
+            5
+          ]
+        },
+        {
+          "slide": null,
+          "id": 702,
+          "sourceNumber": 4,
+          "question": "What does an OSPF area contain?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "An OSPF area contains one set of link-state information, although each router within the area will process that information individually to form its own SPF tree. OSPF process IDs are locally significant and are created by the administrator. Router IDs uniquely identify each router.",
+          "options": [
+            "routers that share the same process ID",
+            "routers that share the same router ID",
+            "routers that have the same link-state information in their LSDBs",
+            "routers whose SPF trees are identical"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 703,
+          "sourceNumber": 5,
+          "question": "A router is participating in an OSPFv2 domain. What will always happen if the dead interval expires before the router receives a hello packet from an adjacent DROTHER OSPF router?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "On Cisco routers the default dead interval is 4 times the hello interval, and this timer has expired in this case. SPF does not determine the state of neighbor routers; it determines which routes become routing table entries. A DR/BDR election will not always automatically run; this depends on the type of network and on whether or not the router no longer up was a DR or BDR.",
+          "options": [
+            "A new dead interval timer of 4 times the hello interval will start.",
+            "SPF will run and determine which neighbor router is down.",
+            "OSPF will run a new DR/BDR election.",
+            "OSPF will remove that neighbor from the router link-state database."
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 704,
+          "sourceNumber": 6,
+          "question": "What is the order of packet types used by an OSPF router to establish convergence?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "An OSPF router progresses to convergence using Hello packets for neighbor adjacencies, DBD packets to synchronize databases, LSR packets to request more information, LSU packets to send link-state updates, and LSAck packets to acknowledge receipt of LSUs.",
+          "options": [
+            "LSAck, Hello, DBD, LSU, LSR",
+            "LSU, LSAck, Hello, DBD, LSR",
+            "Hello, DBD, LSR, LSU, LSAck",
+            "Hello, LSAck, LSU, LSR, DBD"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 705,
+          "sourceNumber": 7,
+          "question": "What is a feature of the OSPF routing protocol?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "OSPF uses the SPF algorithm to choose the best path and routing changes trigger routing updates. Routers can be grouped into areas to support a hierarchical system, and OSPF scales well in both small and large networks.",
+          "options": [
+            "OSPF authentication is configured in the same way on IPv4 and IPv6 networks.",
+            "Routers can be grouped into autonomous systems to support a hierarchical system.",
+            "It scales well in both small and large networks.",
+            "The SPF algorithm chooses the best path based on 30-second updates."
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 706,
+          "sourceNumber": 8,
+          "question": "What is used to create the OSPF neighbor table?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "The adjacency database is used to create the OSPF neighbor table. The link-state database is used to create the topology table, and the forwarding database is used to create the routing table.",
+          "options": [
+            "link-state database",
+            "forwarding database",
+            "routing table",
+            "adjacency database"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 707,
+          "sourceNumber": 9,
+          "question": "What is identical on all OSPF routers within a single area?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "When the LSP flooding process completes, all OSPF routers learn the same link-state information in the routing area. This information is used to build a complete link-state database, which is the same on all OSPF routers within that specific area.",
+          "options": [
+            "neighbor table",
+            "routing table",
+            "link-state database",
+            "static routes"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 708,
+          "sourceNumber": 10,
+          "question": "What function is performed by the OSPF designated router?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "OSPF designated routers are elected on multiaccess networks to disseminate LSAs to other OSPF routers. By having a single router disseminate LSAs, the exchanging of LSAs is more efficient.",
+          "options": [
+            "summarizing routes between areas",
+            "maintaining the link-state database",
+            "redistribution of external routes into OSPF",
+            "dissemination of LSAs"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 709,
+          "sourceNumber": 11,
+          "question": "What are two reasons for creating an OSPF network with multiple areas? (Choose two.)",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "OSPF areas help decrease the demand for router memory and processing power by limiting OSPF protocol traffic, keeping link-state databases small, and requiring fewer SPF recalculations. Multiarea OSPF requires additional configuration and does not directly relate to Internet connectivity.",
+          "options": [
+            "to simplify configuration",
+            "to ensure that an area is used to connect the network to the Internet",
+            "to reduce use of memory and processor resources",
+            "to reduce SPF calculations",
+            "to provide areas in the network for routers that are not running OSPF"
+          ],
+          "answer": [
+            2,
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 710,
+          "sourceNumber": 12,
+          "question": "At which OSPF state are neighbor routers converged and able to exchange routing updates?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "OSPF neighbors that reach the Full state are converged and can exchange routing information.",
+          "options": [
+            "Exchange",
+            "Two-Way",
+            "ExStart",
+            "Full"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 711,
+          "sourceNumber": 13,
+          "question": "The OSPF hello timer has been set to 15 seconds on a router in a point-to-point network. By default, what is the dead interval on this router?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "By default, the dead interval is calculated as 4 times the hello interval.",
+          "options": [
+            "30 seconds",
+            "60 seconds",
+            "45 seconds",
+            "15 seconds"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 712,
+          "sourceNumber": 14,
+          "question": "What happens immediately after two OSPF routers have exchanged hello packets and have formed a neighbor adjacency?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "During the exchange of hello packets, OSPF routers negotiate the election process and set OSPF parameters. DBD packets are exchanged after that step has completed. DBD packets contain abbreviated lists of link-state information.",
+          "options": [
+            "They exchange abbreviated lists of their LSDBs.",
+            "They negotiate the election process if they are on a multiaccess network.",
+            "They exchange DBD packets in order to advertise parameters such as hello and dead intervals.",
+            "They request more information about their databases."
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 713,
+          "sourceNumber": 15,
+          "question": "Which statement is correct about multiarea OSPF?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "A company with one large autonomous system can divide it into smaller areas. Multi-area OSPF decreases the frequency of SPF calculations and lightens the load on routers. In single-area OSPF, all routers are located in area 0 or the backbone area.",
+          "options": [
+            "OSPF can consolidate a fragmented OSPF area into one large area.",
+            "Arranging routers into areas partitions a large autonomous system in order to lighten the load on routers.",
+            "All routers are in one area called the backbone area (area 0).",
+            "OSPF multiarea increases the frequency of SPF calculation."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 714,
+          "sourceNumber": 16,
+          "question": "Which OSPF data structure is identical in all routers in an OSPF area after convergence?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "Each OSPF router has its own adjacency database, SPF tree, and routing table. The link-state database for an area must reflect the same information for all routers in that area.",
+          "options": [
+            "Adjacency database",
+            "Link-state database",
+            "Routing table",
+            "SPF tree"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 715,
+          "sourceNumber": 17,
+          "question": "What are the purposes of an OSPF router ID? (Choose two.)",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "The OSPF router ID uniquely identifies the router within the OSPF domain and facilitates router participation in the DR election. It does not determine SPF costs or directly move a neighbor relationship to Full.",
+          "options": [
+            "To enable the SPF algorithm to determine the lowest-cost path to remote networks",
+            "To facilitate router participation in the election of the designated router",
+            "To facilitate the establishment of network convergence",
+            "To facilitate the transition of the OSPF neighbor state to Full",
+            "To uniquely identify the router within the OSPF domain"
+          ],
+          "answer": [
+            1,
+            4
+          ]
+        },
+        {
+          "slide": null,
+          "id": 716,
+          "sourceNumber": 18,
+          "question": "Which statement describes a multiarea OSPF network?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "A multiarea OSPF network uses a two-level hierarchy. The main area is the backbone area, and all other areas must connect to the backbone area.",
+          "options": [
+            "It consists of multiple network areas that are daisy-chained together.",
+            "It has a core backbone area with other areas connected to the backbone area.",
+            "It has multiple routers that run multiple routing protocols simultaneously, and each protocol consists of an area.",
+            "It requires a three-layer hierarchical network design approach."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 717,
+          "sourceNumber": 19,
+          "question": "What are the advantages of using multiarea OSPF? (Choose two.)",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "A multiarea OSPF network improves routing performance and efficiency in a large network. Routes between areas can be summarized, fewer LSAs are exchanged, and topology changes in one area do not cause SPF recalculations in other areas.",
+          "options": [
+            "A backbone area is not required.",
+            "It allows OSPFv2 and OSPFv3 to run together.",
+            "It enables multiple routing protocols to run in a large network.",
+            "It improves routing efficiency by reducing the routing table and link-state update overhead.",
+            "It improves routing performance by dividing the neighbor table into separate smaller ones.",
+            "Topology changes in one area do not cause SPF recalculations in other areas."
+          ],
+          "answer": [
+            3,
+            5
+          ]
+        },
+        {
+          "slide": null,
+          "id": 718,
+          "sourceNumber": 20,
+          "question": "Which command can be used to verify the contents of the LSDB in an OSPF area?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "The show ip ospf database command is used to verify the contents of the LSDB. The show ip ospf interface command verifies OSPF-enabled interfaces. The show ip ospf neighbor command shows OSPF neighbor information. The show ip route ospf command displays OSPF routes in the routing table.",
+          "options": [
+            "show ip ospf database",
+            "show ip ospf interface",
+            "show ip ospf neighbor",
+            "show ip route ospf"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 719,
+          "sourceNumber": 21,
+          "question": "Which of the following facilitates hierarchical routing in OSPF?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "OSPF supports areas to prevent larger routing tables, excessive SPF calculations, and large LSDBs. Only routers within an area share link-state information, allowing OSPF to scale hierarchically with all areas connected to a backbone area.",
+          "options": [
+            "1. Auto-summarization",
+            "2. Frequent SPF calculations",
+            "3. The election of designated routers",
+            "4. The use of multiple areas"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 720,
+          "sourceNumber": 22,
+          "question": "Which step does an OSPF-enabled router take immediately after the OSPF router builds the topology table?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "The OSPF operation steps are: establish neighbor adjacencies, exchange link-state advertisements, build the topology table, execute the SPF algorithm, and choose the best route.",
+          "options": [
+            "Chooses the best path",
+            "Establishes an adjacency with another router",
+            "Exchanges link-state advertisements",
+            "Executes the SPF algorithm"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 721,
+          "sourceNumber": 23,
+          "question": "Which type of OSPFv2 packet contains an abbreviated list of the LSDB of a sending router and is used by receiving routers to check against the local LSDB?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "The Type 2 Database Description (DBD) packet contains an abbreviated list of the sending router's LSDB and is used by receiving routers to check against the local LSDB.",
+          "options": [
+            "Database Description",
+            "Link-State Acknowledgment",
+            "Link-State Request",
+            "Link-State Update"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 722,
+          "sourceNumber": 24,
+          "question": "Which OSPF states are performed prior to two routers forming a neighbor adjacency? (Choose three.)",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "OSPF progresses through states while establishing neighbor adjacencies, exchanging routing information, calculating best routes, and reaching convergence. The Down, Init, and Two-Way states are involved before neighbor adjacency is formed.",
+          "options": [
+            "Down",
+            "Exchange",
+            "ExStart",
+            "Init",
+            "Loading",
+            "Two-Way"
+          ],
+          "answer": [
+            0,
+            3,
+            5
+          ]
+        },
+        {
+          "slide": null,
+          "id": 723,
+          "sourceNumber": 25,
+          "question": "In an OSPF network, when are DR and BDR elections required?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "When routers are interconnected over a common Ethernet network, a designated router (DR) and backup designated router (BDR) must be elected.",
+          "options": [
+            "When all the routers in an OSPF area cannot form adjacencies",
+            "When the routers are interconnected over a common Ethernet network",
+            "When the two adjacent neighbors are in two different networks",
+            "When the two adjacent neighbors are interconnected over a point-to-point link"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 724,
+          "sourceNumber": 26,
+          "question": "When an OSPF network is converged and no network topology change has been detected by a router, how often are LSU packets sent to neighboring routers?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Concepts",
+          "explanation": "After adjacent routers are synchronized and in the Full state, LSUs are normally sent when a topology change is detected. In a stable OSPF network, LSAs are refreshed every 30 minutes and carried in LSU packets.",
+          "options": [
+            "Every 10 seconds",
+            "Every 40 seconds",
+            "Every 15 minutes",
+            "Every 30 minutes"
+          ],
+          "answer": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic10-single-area-ospfv2-configuration",
+      "title": "Single-Area OSPFv2 Configuration",
+      "icon": "⚙️",
+      "lecture": "Lecture 10",
+      "questions": [
+        {
+          "slide": null,
+          "id": 725,
+          "sourceNumber": 1,
+          "question": "Which criterion is preferred by the router to choose a router ID?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The preferred order of criteria for Cisco routers to identify the router ID is: an explicitly configured router using the router-id rid command; the IP address of any configured loopback interface; and the IP address of any active interface on the router. The active interface does not have to be OSPF-enabled.",
+          "options": [
+            "the IP address of the highest configured loopback interface on the router",
+            "the IP address of the highest active OSPF-enabled interface",
+            "the router-id rid command",
+            "the IP address of the highest active interface on the router"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 726,
+          "sourceNumber": 2,
+          "question": "Which wildcard mask would be used to advertise the 192.168.5.96/27 network as part of an OSPF configuration?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The wildcard mask can be found by subtracting the subnet mask from 255.255.255.255. A /27 subnet mask is 255.255.255.224, so the wildcard mask is 0.0.0.31.",
+          "options": [
+            "0.0.0.32",
+            "0.0.0.31",
+            "255.255.255.224",
+            "255.255.255.223"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 727,
+          "sourceNumber": 3,
+          "question": "The following three networks are directly connected to an OSPF router: 192.168.0.0/24, 192.168.1.0/24, and 192.168.2.0/24. Which OSPF network command would advertise only the 192.168.1.0 network to neighbors?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "To advertise only the 192.168.1.0/24 network, the wildcard mask used in the network command must match the first 24 bits exactly. A wildcard mask uses binary zero to match bits exactly, so the first 24 bits must be zero and the low-order 8 bits can be set to 1.",
+          "options": [
+            "router(config-router)# network 192.168.1.0 0.0.0.0 area 0",
+            "router(config-router)# network 192.168.1.0 0.0.0.255 area 0",
+            "router(config-router)# network 192.168.1.0 255.255.255.255 area 0",
+            "router(config-router)# network 192.168.0.0 0.0.15.255 area 0"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 728,
+          "sourceNumber": 4,
+          "question": "Which three parameters should match in order for a pair of routers to form an adjacency when running OSPFv2? (Choose three.)",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "For routers running OSPFv2 to form an adjacency, parameters such as subnet mask, network type, hello and dead timers, corresponding network commands, and authentication information must match.",
+          "options": [
+            "OSPFv2 process number",
+            "OSPFv2 type of network",
+            "router ID",
+            "interface priority",
+            "hello timer",
+            "subnet mask"
+          ],
+          "answer": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "slide": null,
+          "id": 729,
+          "sourceNumber": 5,
+          "question": "What are two features of the OSPF routing protocol? (Choose two.)",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "OSPF is an interior gateway, link-state, classless routing protocol. It uses a cost metric based on bandwidth, runs Dijkstra's algorithm, builds a topological map, supports event-driven updates, and supports hierarchical design.",
+          "options": [
+            "used primarily as an EGP",
+            "uses Dijkstra's algorithm to build the SPF tree",
+            "has an administrative distance of 100",
+            "automatically summarizes networks at the classful boundaries",
+            "calculates its metric using bandwidth"
+          ],
+          "answer": [
+            1,
+            4
+          ]
+        },
+        {
+          "slide": null,
+          "id": 730,
+          "sourceNumber": 6,
+          "question": "A router with two LAN interfaces, two WAN interfaces, and one configured loopback interface is operating with OSPF as its routing protocol. What does the router OSPF process use to assign the router ID?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "OSPF requires a unique router ID on each router. The router ID can be configured manually with the router-id command. If this command is not issued, the OSPF process uses the highest IPv4 address on an active interface, with preference given to loopback interfaces.",
+          "options": [
+            "the loopback interface IP address",
+            "the highest IP address on the LAN interfaces",
+            "the OSPF area ID that is configured on the interface with the highest IP address",
+            "the IP address of the interface that is configured with priority 0",
+            "the highest IP address that is configured on the WAN interfaces"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 731,
+          "sourceNumber": 7,
+          "question": "Which verification command would identify the specific interfaces on a router that were configured with the passive-interface command?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The show ip protocols command identifies interfaces that are configured as passive.",
+          "options": [
+            "show ip protocols",
+            "show ip eigrp neighbors",
+            "show ip interface brief",
+            "show ip route eigrp"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 732,
+          "sourceNumber": 8,
+          "question": "Which command, if applied on an OSPF router, would give a Gigabit Ethernet interface a lower cost than a Fast Ethernet interface?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "OSPF uses the formula Cost = reference bandwidth / interface bandwidth. With the default reference bandwidth, Fast Ethernet and faster interfaces can both have a cost of 1. The auto-cost reference-bandwidth 1000 command changes the reference bandwidth to 1,000,000,000 bps, allowing Gigabit Ethernet to have a lower cost than Fast Ethernet.",
+          "options": [
+            "(config-if)# bandwidth 100",
+            "(config-if)# ip ospf priority 1",
+            "(config-router)# auto-cost reference-bandwidth 1000",
+            "(config-if)# ip ospf cost 100"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 733,
+          "sourceNumber": 9,
+          "question": "A network administrator has just changed the router ID on a router that is working in an OSPFv2 environment. What should the administrator do to reset the adjacencies and use the new router ID?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "If the router ID has changed on a working router, the OSPFv2 process must be cleared for the new router ID to take effect.",
+          "options": [
+            "Configure the network statements.",
+            "Change the OSPFv2 process ID.",
+            "Issue the clear ip ospf process privileged mode command.",
+            "Change the interface priority."
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 734,
+          "sourceNumber": 10,
+          "question": "Which command can be used to view the OSPF hello and dead time intervals?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The OSPF hello and dead timers are configured per interface. The show ip ospf interface command displays these timers, and adding an interface name and number displays output for a specific interface.",
+          "options": [
+            "show ip ospf route",
+            "show ip protocols",
+            "show ip ospf interface",
+            "show ip ospf neighbor"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 735,
+          "sourceNumber": 11,
+          "question": "What does the SPF algorithm consider to be the best path to a network?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "Link-state protocols use accumulated cost to reach destination networks. The shortest path is not always the path with the fewest hops, but the overall fastest pathway based on cumulative bandwidth cost.",
+          "options": [
+            "The path that includes the fastest cumulative bandwidth links.",
+            "The path with the least number of hops.",
+            "The path with the smallest delays.",
+            "The path that includes the fastest single bandwidth link."
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 736,
+          "sourceNumber": 12,
+          "question": "What is one use of the router ID in OSPF routing?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The OSPF router ID uniquely identifies each router within an OSPF area and can be used in the DR election process. If priorities are tied, the router with the highest router ID is elected DR.",
+          "options": [
+            "The router ID indicates the highest IPv4 address of all routers that are participating in OSPF routing.",
+            "The router ID identifies the OSPF area.",
+            "The router ID can be used to break a tie in the election process.",
+            "The router ID indicates the router priority value."
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 737,
+          "sourceNumber": 13,
+          "question": "What is the first criterion used by OSPF routers to elect a DR?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "When electing a DR, the router with the highest OSPF priority becomes the DR. If all routers have the same priority, the router with the highest router ID is elected.",
+          "options": [
+            "highest priority",
+            "highest router ID",
+            "highest MAC address",
+            "highest IP address"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 738,
+          "sourceNumber": 14,
+          "question": "Which command could be used on a router to ensure that an OSPF adjacency is formed with another router?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The show ip ospf neighbor command is commonly used when an expected route does not appear in the routing table from OSPFv2. It verifies whether an OSPF neighbor adjacency has formed.",
+          "options": [
+            "show ip protocols",
+            "show ip ospf interface",
+            "show ip route",
+            "show ip ospf neighbor",
+            "show ip interface brief"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 739,
+          "sourceNumber": 15,
+          "question": "A router in an OSPF enterprise network has a default static route that has been configured via the interface that connects to the ISP. Which command would the network administrator apply on this router so that other routers in the OSPF network will use this default route?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "When an OSPF router has a default static route and the default-information originate command is applied, the router declares itself as the source of default route information and propagates the default static route in OSPF updates.",
+          "options": [
+            "redistribute connected",
+            "redistribute static",
+            "redistribute static subnets",
+            "default-information originate"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 740,
+          "sourceNumber": 16,
+          "question": "A router is participating in an OSPFv2 domain. What will always happen if the Dead interval expires before the router receives a Hello packet from an adjacent OSPF router?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "On Cisco routers, the default Dead interval is four times the Hello interval. If it expires, OSPF considers the neighbor unreachable and removes that neighbor from the router's link-state database. SPF determines routes, not neighbor state. A DR/BDR election does not always automatically run.",
+          "options": [
+            "A new Dead interval timer of four times the Hello interval will start.",
+            "OSPF will remove that neighbor from the router's link-state database.",
+            "OSPF will run a new DR/BDR election.",
+            "SPF will run and determine which neighbor router is down."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 741,
+          "sourceNumber": 17,
+          "question": "Which command would be used to determine if an OSPF routing protocol-initiated relationship had been made with an adjacent router?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The show ip ospf neighbor command shows whether adjacent routers have exchanged OSPF messages and formed a neighbor relationship.",
+          "options": [
+            "ping",
+            "show ip interface brief",
+            "show ip ospf neighbor",
+            "show ip protocols"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 742,
+          "sourceNumber": 18,
+          "question": "Which command is used to verify the OSPFv2 router ID, the interfaces explicitly configured to advertise OSPF routes, the passive interfaces, the neighbors the router is receiving updates from, and the default administrative distance, which is 110 for OSPF?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The show ip protocols command checks that OSPF is enabled and lists routing protocol details such as the router ID, advertised networks, passive interfaces, routing information sources, and administrative distance.",
+          "options": [
+            "show ip interface brief",
+            "show ip ospf interface",
+            "show ip protocols",
+            "show ip route ospf"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 743,
+          "sourceNumber": 19,
+          "question": "Two OSPFv2 routers are interconnected using a point-to-point WAN link. Which command could be used to verify the configured Hello and Dead timer intervals?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The show ip ospf interface serial 0/0/0 command displays the configured Hello and Dead timer intervals on a point-to-point serial WAN link between two OSPFv2 routers.",
+          "options": [
+            "show ip ospf neighbor",
+            "show ip ospf interface fastethernet 0/1",
+            "show ip ospf interface serial 0/0/0",
+            "show ipv6 ospf interface serial 0/0/0"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 744,
+          "sourceNumber": 20,
+          "question": "You are troubleshooting convergence and adjacency issues in an OSPFv2 network and have noticed that network route entries are missing from the routing table. Which commands provide additional information about the state of router adjacencies, timer intervals, and the area ID? (Choose two.)",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The show ip ospf interface command displays OSPF interface details such as timer intervals and area ID. The show ip ospf neighbor command displays adjacency information for neighboring OSPF routers.",
+          "options": [
+            "show ip ospf interface",
+            "show ip ospf neighbor",
+            "show ip protocols",
+            "show ip route ospf",
+            "show running-configuration"
+          ],
+          "answer": [
+            0,
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 745,
+          "sourceNumber": 21,
+          "question": "A network engineer has manually configured the Hello interval to 15 seconds on an interface of a router that is running OSPFv2. By default, how will the Dead interval on the interface be affected?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "Cisco IOS automatically modifies the Dead interval to four times the Hello interval. With a Hello interval of 15 seconds, the Dead interval becomes 60 seconds.",
+          "options": [
+            "The Dead interval will not change from the default value.",
+            "The Dead interval will now be 15 seconds.",
+            "The Dead interval will now be 30 seconds.",
+            "The Dead interval will now be 60 seconds."
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 746,
+          "sourceNumber": 22,
+          "question": "To establish a neighbor adjacency, two OSPF routers exchange Hello packets. Which values in the Hello packets must match on the two routers? (Choose two.)",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The Hello and Dead interval timers contained in a Hello packet must be the same on neighboring routers in order to form an adjacency.",
+          "options": [
+            "1. Dead interval",
+            "2. Hello interval",
+            "3. List of neighbors",
+            "4. Router ID",
+            "5. Router priority"
+          ],
+          "answer": [
+            0,
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 747,
+          "sourceNumber": 23,
+          "question": "What is the default router priority value for all Cisco OSPF routers?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The router priority value is used in a DR/BDR election. The default priority for all OSPF routers is 1, but it can be manually changed to any value from 0 to 255.",
+          "options": [
+            "0",
+            "1",
+            "10",
+            "255"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 748,
+          "sourceNumber": 24,
+          "question": "What indicates to a link-state router that a neighbor is unreachable?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "OSPF routers send Hello packets to monitor the state of a neighbor. When a router stops receiving Hello packets from a neighbor, that neighbor is considered unreachable and the adjacency is broken.",
+          "options": [
+            "The router no longer receives Hello packets.",
+            "The router no longer receives routing updates.",
+            "The router receives an LSP with previously learned information.",
+            "The router receives an update with a hop count of 16."
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 749,
+          "sourceNumber": 25,
+          "question": "Which of the following will OSPF use when it chooses its router ID?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The first preference for an OSPF router ID is an explicitly configured 32-bit address. If a router ID configured through the router-id command is not available, OSPF next uses the highest IPv4 address on a loopback interface. If no loopback is available, it uses the highest IPv4 address from active physical interfaces.",
+          "options": [
+            "A loopback interface that is configured with the highest IP address on the router",
+            "The highest active interface IP address that is configured on the router",
+            "The lowest active interface IP address that is configured on the router",
+            "The highest active interface that participates in the routing process because of a specifically configured network statement"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 750,
+          "sourceNumber": 26,
+          "question": "An OSPF router has three directly connected networks: 10.1.0.0/16, 10.1.1.0/16, and 10.1.2.0/16. Which OSPF network command would advertise only the 10.1.1.0 network to neighbors?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "To advertise only the 10.1.1.0 network, the wildcard mask used in the network command must match the first 24 bits exactly.",
+          "options": [
+            "router(config-router)# network 10.1.0.0 0.0.15.255 area 0",
+            "router(config-router)# network 10.1.1.0 0.0.0.0 area 0",
+            "router(config-router)# network 10.1.1.0 0.0.0.255 area 0",
+            "router(config-router)# network 10.1.1.0 0.0.255.255 area 0"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 751,
+          "sourceNumber": 27,
+          "question": "By default, what is the OSPF cost for a link with Gigabit Ethernet interfaces?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "OSPF uses the formula Cost = 100,000,000 / bandwidth. Because OSPF uses only integer costs, any bandwidth of 100 Mbps or greater has a default cost of 1.",
+          "options": [
+            "1",
+            "100",
+            "10000",
+            "100000000"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 752,
+          "sourceNumber": 28,
+          "question": "An administrator is configuring single-area OSPF on a router. One of the networks that must be advertised is 64.100.1.64 255.255.255.192. Which OSPF network statement should be configured?",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "The subnet mask 255.255.255.192 corresponds to a wildcard mask of 0.0.0.63. The correct network statement is network 64.100.1.64 0.0.0.63 area 0.",
+          "options": [
+            "network 64.100.1.64 0.0.0.15 area 0",
+            "network 64.100.1.64 0.0.0.31 area 0",
+            "network 64.100.1.64 0.0.0.63 area 0",
+            "network 64.100.1.64 0.0.0.127 area 0"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 753,
+          "sourceNumber": 29,
+          "question": "Which of these factors will prevent two routers from forming an OSPFv2 adjacency? (Choose two.)",
+          "reference": "Lecture 10 Single-Area OSPFv2 Configuration",
+          "explanation": "OSPF routers can fail to form an adjacency if subnet masks do not match, Hello or Dead timers do not match, OSPF network types do not match, or an OSPF network command is missing or incorrect. Mismatched IOS versions, private IP addressing, and different Ethernet interface speeds are not causes by themselves.",
+          "options": [
+            "Mismatched Cisco IOS versions",
+            "Mismatched Ethernet interfaces (for example, Fa0/0 to G0/0)",
+            "Mismatched OSPF Hello or Dead timers",
+            "Mismatched subnet masks on the link interfaces",
+            "Use of private IP addresses on the link interfaces"
+          ],
+          "answer": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topic10-final",
+      "title": "Lecture 10 Final",
+      "icon": "🏁",
+      "lecture": "Lecture 10",
+      "questions": [
+        {
+          "slide": null,
+          "id": 754,
+          "sourceNumber": 1,
+          "question": "What is a function of OSPF hello packets?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.2.4",
+          "options": [
+            "to send specifically requested link-state records",
+            "to discover neighbors and build adjacencies between them",
+            "to ensure database synchronization between routers",
+            "to request specific link-state records from neighbor routers"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 755,
+          "sourceNumber": 2,
+          "question": "Which OSPF packet contains the different types of link-state advertisements?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.2.3",
+          "options": [
+            "hello",
+            "DBD",
+            "LSR",
+            "LSU",
+            "LSAck"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 756,
+          "sourceNumber": 3,
+          "question": "Which three statements describe features of the OSPF topology table? (Choose three.)",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.1.2\n\nThe topology table on an OSPF router is a link-state database (LSDB) that lists information about all other routers in the network, and represents the network topology. All routers within an area have identical link-state databases, and the table can be viewed using the show ip ospf database command. The EIGRP topology table contains feasible successor routes. This concept is not used by OSPF. The SPF algorithm uses the LSDB to produce the unique routing table for each router which contains the lowest cost route entries for known networks.",
+          "options": [
+            "It is a link-state database that represents the network topology.",
+            "Its contents are the result of running the SPF algorithm.",
+            "When converged, all routers in an area have identical topology tables.",
+            "The topology table contains feasible successor routes.",
+            "The table can be viewed via the show ip ospf database command.",
+            "After convergence, the table only contains the lowest cost route entries for all known networks."
+          ],
+          "answer": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "slide": null,
+          "id": 757,
+          "sourceNumber": 4,
+          "question": "What does an OSPF area contain?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.1.4\n\nAn OSPF area contains one set of link-state information, although each router within the area will process that information individually to form its own SPF tree. OSPF process IDs are locally significant and are created by the administrator. Router IDs uniquely identify each router.",
+          "options": [
+            "routers that share the same router ID",
+            "routers whose SPF trees are identical",
+            "routers that have the same link-state information in their LSDBs",
+            "routers that share the same process ID"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 758,
+          "sourceNumber": 5,
+          "question": "What is used to facilitate hierarchical routing in OSPF?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.1.4\n\nOSPF supports the concept of areas to prevent larger routing tables, excessive SPF calculations, and large LSDBs. Only routers within an area share link-state information. This allows OSPF to scale in a hierarchical fashion with all areas that connect to a backbone area.",
+          "options": [
+            "the use of multiple areas",
+            "frequent SPF calculations",
+            "autosummarization",
+            "the election of designated routers"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 759,
+          "sourceNumber": 6,
+          "question": "Which OSPF data structure is identical on all OSPF routers that share the same area?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.1.2\n\nRegardless of which OSPF area a router resides in, the adjacency database, routing table, and forwarding database are unique for each router. The link-state database lists information about all other routers within an area and is identical across all OSPF routers participating in that area.",
+          "options": [
+            "forwarding database",
+            "link-state database",
+            "adjacency database",
+            "routing table"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 760,
+          "sourceNumber": 7,
+          "question": "Which step does an OSPF-enabled router take immediately after establishing an adjacency with another router?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.1.3\n\nThe OSPF operation steps are as follows:",
+          "options": [
+            "builds the topology table",
+            "exchanges link-state advertisements",
+            "chooses the best path",
+            "executes the SPF algorithm"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 761,
+          "sourceNumber": 8,
+          "question": "A network engineer has manually configured the hello interval to 15 seconds on an interface of a router that is running OSPFv2. By default, how will the dead interval on the interface be affected?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.4.9\n\nCisco IOS automatically modifies the dead interval to four times the hello interval.",
+          "options": [
+            "The dead interval will not change from the default value.",
+            "The dead interval will now be 30 seconds.",
+            "The dead interval will now be 60 seconds.",
+            "The dead interval will now be 15 seconds."
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 762,
+          "sourceNumber": 9,
+          "question": "Refer to the exhibit. A network administrator has configured the OSPF timers to the values that are shown in the graphic. What is the result of having those manually configured timers?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.4.9\n\nThe dead timer (20 seconds) on R1 expires before the next hello packet from R2 (25 seconds).",
+          "image": "/ospf/Screenshot 2026-05-12 at 20.15.55.png",
+          "imageAlt": "Lecture 10 Final exhibit for question 9",
+          "imageCaption": "Lecture 10 Final exhibit",
+          "options": [
+            "R1 automatically adjusts its own timers to match the R2 timers.",
+            "The R1 dead timer expires between hello packets from R2.",
+            "The hello timer on R2 expires every ten seconds.",
+            "The neighbor adjacency has formed."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 763,
+          "sourceNumber": 10,
+          "question": "To establish a neighbor adjacency two OSPF routers will exchange hello packets. Which two values in the hello packets must match on both routers? (Choose two.)",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.2.4\n\nThe hello and dead interval timers contained in a hello packet must be the same on neighboring routers in order to form an adjacency.",
+          "options": [
+            "dead interval",
+            "router priority",
+            "list of neighbors",
+            "router ID",
+            "hello interval"
+          ],
+          "answer": [
+            0,
+            4
+          ]
+        },
+        {
+          "slide": null,
+          "id": 764,
+          "sourceNumber": 11,
+          "question": "What is the default router priority value for all Cisco OSPF routers?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.2.4\n\nThe router priority value is used in a DR/BDR election. The default priority for all OSPF routers is 1 but it can be manually altered to any value 0 to 255.",
+          "options": [
+            "0",
+            "1",
+            "10",
+            "255"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 765,
+          "sourceNumber": 12,
+          "question": "Which type of OSPFv2 packet contains an abbreviated list of the LSDB of a sending router and is used by receiving routers to check against the local LSDB?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.2.2\n\nThe database description (DBD) packet contains an abbreviated list of the LSDB sent by a neighboring router and is used by receiving routers to check against the local LSDB.",
+          "options": [
+            "database description",
+            "link-state update",
+            "link-state request",
+            "link-state acknowledgment"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 766,
+          "sourceNumber": 13,
+          "question": "In an OSPF network when are DR and BDR elections required?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.3.3\n\nWhen the routers are interconnected over a common Ethernet network, then a designated router (DR) and a backup DR (BDR) must be elected.",
+          "options": [
+            "when the two adjacent neighbors are interconnected over a point-to-point link",
+            "when all the routers in an OSPF area cannot form adjacencies",
+            "when the routers are interconnected over a common Ethernet network",
+            "when the two adjacent neighbors are in two different networks"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 767,
+          "sourceNumber": 14,
+          "question": "When an OSPF network is converged and no network topology change has been detected by a router, how often will LSU packets be sent to neighboring routers?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.3.4\n\nAfter all LSRs have been satisfied for a given router, the adjacent routers are considered synchronized and in a full state. Updates (LSUs) are sent to neighbors only under the following conditions:",
+          "options": [
+            "every 5 minutes",
+            "every 10 minutes",
+            "every 30 minutes",
+            "every 60 minutes"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 768,
+          "sourceNumber": 15,
+          "question": "What will an OSPF router prefer to use first as a router ID?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.1.4\n\nThe first preference for an OSPF router ID is an explicitly configured 32-bit address. This address is not included in the routing table and is not defined by the network command. If a router ID that is configured through the router-id command is not available, OSPF routers next use the highest IP address available on a loopback interface, as loopbacks used as router IDs are also not routable addresses. Lacking either of these alternatives, an OSPF router will use the highest IP address from its active physical interfaces.",
+          "options": [
+            "a loopback interface that is configured with the highest IP address on the router",
+            "any IP address that is configured using the router-id command",
+            "the highest active interface IP that is configured on the router",
+            "the highest active interface that participates in the routing process because of a specifically configured network statement"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 769,
+          "sourceNumber": 16,
+          "question": "What are the two purposes of an OSPF router ID? (Choose two.)",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.1.3\n\nOSPF router ID does not contribute to SPF algorithm calculations, nor does it facilitate the transition of the OSPF neighbor state to Full. Although the router ID is contained within OSPF messages when router adjacencies are being established, it has no bearing on the actual convergence process.",
+          "options": [
+            "to uniquely identify the router within the OSPF domain",
+            "to facilitate router participation in the election of the designated router",
+            "to enable the SPF algorithm to determine the lowest cost path to remote networks",
+            "to facilitate the establishment of network convergence",
+            "to facilitate the transition of the OSPF neighbor state to Full"
+          ],
+          "answer": [
+            0,
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 770,
+          "sourceNumber": 17,
+          "question": "Refer to the exhibit. If no router ID was manually configured, what would router Branch1 use as its OSPF router ID?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.1.4\n\nIn OSPFv2, a Cisco router uses a three-tier method to derive its router ID. The first choice is the manually configured router ID with the router-id command. If the router ID is not manually configured, the router will choose the highest IPv4 address of the configured loopback interfaces. Finally if no loopback interfaces are configured, the router chooses the highest active IPv4 address of its physical interfaces.",
+          "image": "/ospf/Screenshot 2026-05-12 at 20.15.46.png",
+          "imageAlt": "Lecture 10 Final exhibit for question 17",
+          "imageCaption": "Lecture 10 Final exhibit",
+          "options": [
+            "10.0.0.1",
+            "10.1.0.1",
+            "192.168.1.100",
+            "209.165.201.1"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 771,
+          "sourceNumber": 18,
+          "question": "A network technician issues the following commands when configuring a router:\nR1(config)# router ospf 11\nR1(config-router)# network 10.10.10.0 0.0.0.255 area 0\nWhat does the number 11 represent?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.1.2\n\nThere is no autonomous system number to configure on OSPF. The area number is located at the end of the network statement. The cost of a link can be modified in the interface configuration mode. The process ID is local to the router.",
+          "options": [
+            "the OSPF process ID on R1",
+            "the cost of the link to R1",
+            "the autonomous system number to which R1 belongs",
+            "the administrative distance that is manually assigned to R1",
+            "the area number where R1 is located"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 772,
+          "sourceNumber": 19,
+          "question": "An OSPF router has three directly connected networks; 172.16.0.0/16, 172.16.1.0/16, and 172.16.2.0/16. Which OSPF network command would advertise only the 172.16.1.0 network to neighbors?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.2.4\n\nTo advertise only the 172.16.1.0/16 network the wildcard mask used in the network command must match the first 16-bits exactly. To match bits exactly, a wildcard mask uses a binary zero. This means that the first 16-bits of the wildcard mask must be zero. The low order 16-bits can all be set to 1.",
+          "options": [
+            "router(config-router)# network 172.16.1.0 0.0.255.255 area 0",
+            "router(config-router)# network 172.16.0.0 0.0.15.255 area 0",
+            "router(config-router)# network 172.16.1.0 255.255.255.0 area 0",
+            "router(config-router)# network 172.16.1.0 0.0.0.0 area 0"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 773,
+          "sourceNumber": 20,
+          "question": "Refer to the exhibit. Which three statements describe the results of the OSPF election process of the topology that is shown in the exhibit? (Choose three.)",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.3.6\n\nR2 will be elected DR because it has the highest priority of 255, all of the others have a priority of 1. R3 will be elected BDR because it has the numerically highest router-ID of 192.168.1.4. The R4 router-ID is 172.16.1.1 because it is the IPv4 address attached to the loopback 0 interface.",
+          "image": "/ospf/Screenshot 2026-05-12 at 20.15.37.png",
+          "imageAlt": "Lecture 10 Final exhibit for question 20",
+          "imageCaption": "Lecture 10 Final exhibit",
+          "options": [
+            "R3 will be elected BDR.",
+            "The R4 FastEthernet 0/0 priority is 128.",
+            "The R4 router ID is 172.16.1.1.",
+            "R1 will be elected BDR.",
+            "The router ID on R2 is the loopback interface.",
+            "R2 will be elected DR."
+          ],
+          "answer": [
+            0,
+            2,
+            5
+          ]
+        },
+        {
+          "slide": null,
+          "id": 774,
+          "sourceNumber": 21,
+          "question": "Refer to the exhibit. If the switch reboots and all routers have to re-establish OSPF adjacencies, which routers will become the new DR and BDR?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.3.6\n\nOSPF elections of a DR are based on the following in order of precedence:",
+          "image": "/ospf/Screenshot 2026-05-12 at 20.15.28.png",
+          "imageAlt": "Lecture 10 Final exhibit for question 21",
+          "imageCaption": "Lecture 10 Final exhibit",
+          "options": [
+            "Router R4 will become the DR and router R1 will become the BDR.",
+            "Router R2 will become the DR and router R3 will become the BDR.",
+            "Router R1 will become the DR and router R2 will become the BDR.",
+            "Router R4 will become the DR and router R3 will become the BDR."
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 775,
+          "sourceNumber": 22,
+          "question": "By default, what is the OSPF cost for any link with a bandwidth of 100 Mb/s or greater?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.4.1\n\nOSPF uses the formula: Cost = 100,000,000 / bandwidth. Because OSPF will only use integers as cost, any bandwidth of 100 Mb/s or greater will all equal a cost of 1.",
+          "options": [
+            "100000000",
+            "10000",
+            "1",
+            "100"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 776,
+          "sourceNumber": 23,
+          "question": "Refer to the exhibit. What is the OSPF cost to reach the router A LAN 172.16.1.0/24 from B?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.4.3\n\nThe formula used to calculate the OSPF cost is as follows:",
+          "image": "/ospf/Screenshot 2026-05-12 at 20.15.20.png",
+          "imageAlt": "Lecture 10 Final exhibit for question 23",
+          "imageCaption": "Lecture 10 Final exhibit",
+          "options": [
+            "782",
+            "74",
+            "128",
+            "65"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 777,
+          "sourceNumber": 24,
+          "question": "Refer to the exhibit. On which router or routers would a default route be statically configured in a corporate environment that uses single area OSPF as the routing protocol?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.5.1\n\nThe default route is applied to the router that connects to the Internet, or R0-A. R0-A then distributes that default route using the OSPF routing protocol.",
+          "image": "/ospf/Screenshot 2026-05-12 at 20.15.11.png",
+          "imageAlt": "Lecture 10 Final exhibit for question 24",
+          "imageCaption": "Lecture 10 Final exhibit",
+          "options": [
+            "R0-A",
+            "ISP, R0-A, R0-B, and R0-C",
+            "ISP",
+            "R0-B and R0-C",
+            "ISP and R0-A",
+            "R0-A, R0-B, and R0-C"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 778,
+          "sourceNumber": 25,
+          "question": "What command would be used to determine if a routing protocol-initiated relationship had been made with an adjacent router?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.6.1\n\nWhile the show ip interface brief and ping commands can be used to determine if Layer 1, 2, and 3 connectivity exists, neither command can be used to determine if a particular OSPF or EIGRP-initiated relationship has been made. The show ip protocols command is useful in determining the routing parameters such as timers, router ID, and metric information associated with a specific routing protocol. The show ip ospf neighbor command shows if two adjacent routers have exchanged OSPF messages in order to form a neighbor relationship.",
+          "options": [
+            "ping",
+            "show ip ospf neighbor",
+            "show ip interface brief",
+            "show ip protocols"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 779,
+          "sourceNumber": 26,
+          "question": "Refer to the exhibit. Which command did an administrator issue to produce this output?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.6.4",
+          "image": "/ospf/Screenshot 2026-05-12 at 20.15.03.png",
+          "imageAlt": "Lecture 10 Final exhibit for question 26",
+          "imageCaption": "Lecture 10 Final exhibit",
+          "options": [
+            "R1# show ip ospf interface serial0/0/1",
+            "R1# show ip route ospf",
+            "R1# show ip ospf",
+            "R1# show ip ospf neighbor"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 780,
+          "sourceNumber": 27,
+          "question": "Which command is used to verify that OSPF is enabled and also provides a list of the networks that are being advertised by the network?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.6.2\n\nThe command show ip ospf interface verifies the active OSPF interfaces. The command show ip interface brief is used to check that the interfaces are operational. The command show ip route ospf displays the entries that are learned via OSPF in the routing table. The command show ip protocols checks that OSPF is enabled and lists the networks that are advertised.",
+          "options": [
+            "show ip interface brief",
+            "show ip ospf interface",
+            "show ip protocols",
+            "show ip route ospf"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 781,
+          "sourceNumber": 28,
+          "question": "Refer to the exhibit. A network administrator has configured OSPFv2 on the two Cisco routers but PC1 is unable to connect to PC2. What is the most likely problem?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.2.4\n\nIf a LAN network is not advertised using OSPFv2, a remote network will not be reachable. The output displays a successful neighbor adjacency between router R1 and R2 on the interface S0/0 of both routers.",
+          "image": "/ospf/Screenshot 2026-05-12 at 20.14.55.png",
+          "imageAlt": "Lecture 10 Final exhibit for question 28",
+          "imageCaption": "Lecture 10 Final exhibit",
+          "options": [
+            "Interface Fa0/0 has not been activated for OSPFv2 on router R2.",
+            "Interface Fa0/0 is configured as a passive-interface on router R2.",
+            "Interface S0/0 is configured as a passive-interface on router R2.",
+            "Interface s0/0 has not been activated for OSPFv2 on router R2."
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 782,
+          "sourceNumber": 29,
+          "question": "What is the recommended Cisco best practice for configuring an OSPF-enabled router so that each router can be easily identified when troubleshooting routing issues?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.1.4\n\nA Cisco router is assigned a router ID to uniquely identify it. It can be automatically assigned and take the value of the highest configured IP address on any interface, the value of a specifically-configured loopback address, or the value assigned (which is in the exact form of an IP address) using the router-id command. Cisco recommends using the router-id command.",
+          "options": [
+            "Configure a value using the router-id command.",
+            "Use the highest active interface IP address that is configured on the router.",
+            "Use a loopback interface configured with the highest IP address on the router.",
+            "Use the highest IP address assigned to an active interface participating in the routing process."
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 783,
+          "sourceNumber": 30,
+          "question": "Which step in the link-state routing process is described by a router running an algorithm to determine the best path to each destination?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.1.3\n\nIn the link-state routing process, executing the SPF algorithm is the step where a router runs the Dijkstra Shortest Path First (SPF) algorithm against its Link-State Database (topology table). This calculation creates an SPF tree, which determines the best (shortest) path to every destination network based on cumulative link costs. Once this algorithm finishes, the best routes are then offered to the routing table.",
+          "options": [
+            "load balancing equal-cost paths",
+            "declaring a neighbor to be inaccessible",
+            "choosing the best route",
+            "executing the SPF algorithm"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 784,
+          "sourceNumber": 31,
+          "question": "An administrator is configuring single-area OSPF on a router. One of the networks that must be advertised is 192.168.223.0 255.255.254.0. What wildcard mask would the administrator use in the OSPF network statement?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.2.2",
+          "options": [
+            "0.0.1.255",
+            "0.0.7.255",
+            "0.0.15.255",
+            "0.0.31.255"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 785,
+          "sourceNumber": 32,
+          "question": "What is the format of the router ID on an OSPF-enabled router?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.1.3\n\nA router ID is a 32-bit number formatted like an IPv4 address and assigned in order to uniquely identify a router among OSPF peers.",
+          "options": [
+            "a unique router host name that is configured on the router",
+            "a unique phrase with no more than 16 characters",
+            "a 32-bit number formatted like an IPv4 address",
+            "an 8-bit number with a decimal value between 0 and 255",
+            "a character string with no space"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 786,
+          "sourceNumber": 34,
+          "question": "After modifying the router ID on an OSPF router, what is the preferred method to make the new router ID effective?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.1.7\n\nTo modify a router-id on an OSPF-enabled router, it is necessary to reset the OSPF routing process by entering either the clear ip ospf process command or the reload command.",
+          "options": [
+            "HQ# copy running-config startup-config",
+            "HQ# resume",
+            "HQ# clear ip route *",
+            "HQ# clear ip ospf process"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 787,
+          "sourceNumber": 35,
+          "question": "In an OSPFv2 configuration, what is the effect of entering the command network 192.168.1.1 0.0.0.0 area 0 ?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.2.4\n\nEntering the command network 192.168.1.1 0.0.0.0 area 0 will turn on only the interface with that IP address for OSPF routing. It does not change the router ID. Instead, OSPF will use the network that is configured on that interface.",
+          "options": [
+            "It allows all 192.168.1.0 networks to be advertised.",
+            "It tells the router which interface to turn on for the OSPF routing process.",
+            "It changes the router ID of the router to 192.168.1.1.",
+            "It enables OSPF on all interfaces on the router."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 788,
+          "sourceNumber": 36,
+          "question": "What is the reason for a network engineer to alter the default reference bandwidth parameter when configuring OSPF?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.4.2\n\nBy default, Fast Ethernet, Gigabit, and 10 Gigabit Ethernet interfaces all have a cost of 1. Altering the default reference bandwidth alters the cost calculation, allowing each speed to be more accurately reflected in the cost.",
+          "options": [
+            "to force that specific link to be used in the destination route",
+            "to more accurately reflect the cost of links greater than 100 Mb/s",
+            "to enable the link for OSPF routing",
+            "to increase the speed of the link"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 789,
+          "sourceNumber": 37,
+          "question": "Open the PT Activity. Perform the tasks in the activity instructions and then answer the question.\nWhich task has to be performed on Router 1 for it to establish an OSPF adjacency with Router 2?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.6.1\n\nEach interface on the link connecting the OSPF routers must be in the same subnet for an adjacency to be established. The IP address subnet mask on FastEthernet interface 0/0 must be changed to 255.255.255.0. The FastEthernet interface 0/0 is not passive. The 10.0.1.0/24 network is only connected to Router2 so should not be advertised by Router1. The clear ip ospf process command will start the OPSF process on Router1 but will not cause an adjacency to be established if the subnet mask mismatch on the connecting interfaces still exists.",
+          "options": [
+            "Issue the clear ip ospf process command.",
+            "Change the subnet mask of interface FastEthernet 0/0 to 255.255.255.0.",
+            "Remove the passive interface command from interface FastEthernet 0/0.",
+            "Add the network 10.0.1.0 0.0.0.255 area 0 command to the OSPF process."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 790,
+          "sourceNumber": 38,
+          "question": "Match the description to the term. (Not all options are used.)",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.1.2\n\nDUAL is the algorithm used by EIGRP. In multiarea OSPF, OSPF is implemented using multiple areas, and all of them must be connected to the backbone area.",
+          "type": "match",
+          "pairs": [
+            {
+              "left": "This is the algorithm used by OSPF.",
+              "right": "Shortest Path First"
+            },
+            {
+              "left": "This is where the details of the neighboring routers can be found.",
+              "right": "Adjacency database"
+            },
+            {
+              "left": "All the routers are in the backbone area.",
+              "right": "Single-area OSPF"
+            },
+            {
+              "left": "This is where you can find the topology table.",
+              "right": "Link-state database"
+            }
+          ],
+          "matchOptions": [
+            "Shortest Path First",
+            "Adjacency database",
+            "Single-area OSPF",
+            "Link-state database"
+          ]
+        },
+        {
+          "slide": null,
+          "id": 791,
+          "sourceNumber": 39,
+          "question": "What is a benefit of multiarea OSPF routing?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.1.5\n\nWith multiarea OSPF, only routers within an area share the same link-state database. Changes to the network topology in one area do not impact other areas, which reduces the number of SPF algorithm calculations and the of link-state databases.",
+          "options": [
+            "Topology changes in one area do not cause SPF recalculations in other areas.",
+            "Routers in all areas share the same link-state database and have a complete picture of the entire network.",
+            "A backbone area is not required.",
+            "Automatic route summarization occurs by default between areas."
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 792,
+          "sourceNumber": 40,
+          "question": "Match the OSPF state with the order in which it occurs. (Not all options are used.)",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.3.2\n\nThe active and passive states are used by EIGRP.\n\nPlace the options in the following order:",
+          "type": "match",
+          "pairs": [
+            {
+              "left": "second state",
+              "right": "Init state"
+            },
+            {
+              "left": "seventh state",
+              "right": "Full state"
+            },
+            {
+              "left": "fifth state",
+              "right": "Exchange state"
+            },
+            {
+              "left": "first state",
+              "right": "Down state"
+            },
+            {
+              "left": "fourth state",
+              "right": "Exstart state"
+            },
+            {
+              "left": "third state",
+              "right": "Two-way state"
+            },
+            {
+              "left": "sixth state",
+              "right": "Loading state"
+            }
+          ],
+          "matchOptions": [
+            "Init state",
+            "Full state",
+            "Exchange state",
+            "Down state",
+            "Exstart state",
+            "Two-way state",
+            "Loading state"
+          ]
+        },
+        {
+          "slide": null,
+          "id": 793,
+          "sourceNumber": 41,
+          "question": "What indicates to a link-state router that a neighbor is unreachable?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.4.7\n\nOSPF routers send hello packets to monitor the state of a neighbor. When a router stops receiving hello packets from a neighbor, that neighbor is considered unreachable and the adjacency is broken.",
+          "options": [
+            "if the router no longer receives hello packets",
+            "if the router receives an update with a hop count of 16",
+            "if the router receives an LSP with previously learned information",
+            "if the router no longer receives routing updates"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 794,
+          "sourceNumber": 42,
+          "question": "Which three OSPF states are involved when two routers are forming an adjacency? (Choose three.)",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.3.4\n\nOSPF operation progresses through 7 states for establishing neighboring router adjacency, exchanging routing information, calculating the best routes, and reaching convergence. The Down, Init, and Two-way states are involved in the phase of neighboring router adjacency establishment.",
+          "options": [
+            "Exchange",
+            "Init",
+            "ExStart",
+            "Two-way",
+            "Loading",
+            "Down"
+          ],
+          "answer": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "slide": null,
+          "id": 795,
+          "sourceNumber": 43,
+          "question": "Refer to the exhibit. Suppose that routers B, C, and D have a default priority, and router A has a priority 0. Which conclusion can be drawn from the DR/BDR election process?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.3.7\n\nIf the priority is set to 0, the router is not capable of becoming the DR, so router A cannot be the DR. OSPF DR and BDR elections are not preemptive. If a new router with a higher priority or higher router ID is added to the network after the DR and BDR election, the newly added router does not take over the DR or the BDR role.",
+          "image": "/ospf/Screenshot 2026-05-12 at 20.14.33.png",
+          "imageAlt": "Lecture 10 Final exhibit for question 43",
+          "imageCaption": "Lecture 10 Final exhibit",
+          "options": [
+            "If the priority of router C is changed to 255, then it will become the DR.",
+            "Router A will become the DR and router D will become the BDR.",
+            "If the DR fails, the new DR will be router B.",
+            "If a new router with a higher priority is added to this network, it will become the DR."
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 796,
+          "sourceNumber": 44,
+          "question": "An administrator is configuring single-area OSPF on a router. One of the networks that must be advertised is 64.102.0.0 255.255.255.128. What wildcard mask would the administrator use in the OSPF network statement?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.2.2",
+          "options": [
+            "0.0.31.255",
+            "0.0.0.63",
+            "0.0.63.255",
+            "0.0.0.127"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 797,
+          "sourceNumber": 45,
+          "question": "Which command will a network engineer issue to verify the configured hello and dead timer intervals on a point-to-point WAN link between two routers that are running OSPFv2?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.4.8\n\nThe show ip ospf interface serial 0/0/0 command will display the configured hello and dead timer intervals on a point-to-point serial WAN link between two OSPFv2 routers. The show ipv6 ospf interface serial 0/0/0 command will display the configured hello and dead timer intervals on a point-to-point serial link between two OSPFv3 routers. The show ip ospf interface fastethernet 0/1 command will display the configured hello and dead timer intervals on a multiaccess link between two (or more) OSPFv2 routers. The show ip ospf neighbor command will display the dead interval elapsed time since the last hello message was received, but does not show the configured value of the timer.",
+          "options": [
+            "show ipv6 ospf interface serial 0/0/0",
+            "show ip ospf neighbor",
+            "show ip ospf interface fastethernet 0/1",
+            "show ip ospf interface serial 0/0/0"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 798,
+          "sourceNumber": 46,
+          "question": "An administrator is configuring single-area OSPF on a router. One of the networks that must be advertised is 128.107.0.0 255.255.255.192. What wildcard mask would the administrator use in the OSPF network statement?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.2.2",
+          "options": [
+            "0.0.63.255",
+            "0.0.0.63",
+            "0.0.0.3",
+            "0.0.0.7"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 799,
+          "sourceNumber": 47,
+          "question": "Match each OSPF packet type to how it is used by a router. (Not all options are used.)",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.2.2",
+          "type": "match",
+          "pairs": [
+            {
+              "left": "link-state request packet",
+              "right": "query another router for additional information"
+            },
+            {
+              "left": "hello packet",
+              "right": "establish and maintain adjacencies"
+            },
+            {
+              "left": "database description packet",
+              "right": "compare local topology to that sent by another router"
+            },
+            {
+              "left": "link-state update packet",
+              "right": "advertise new information"
+            }
+          ],
+          "matchOptions": [
+            "query another router for additional information",
+            "establish and maintain adjacencies",
+            "compare local topology to that sent by another router",
+            "advertise new information"
+          ]
+        },
+        {
+          "slide": null,
+          "id": 800,
+          "sourceNumber": 48,
+          "question": "An administrator is configuring single-area OSPF on a router. One of the networks that must be advertised is 192.168.181.0 255.255.254.0. What wildcard mask would the administrator use in the OSPF network statement?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.2.2",
+          "options": [
+            ".0.63.255",
+            "0.0.15.255",
+            "0.0.1.255",
+            "0.0.31.255"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 801,
+          "sourceNumber": 49,
+          "question": "An administrator is configuring single-area OSPF on a router. One of the networks that must be advertised is 198.19.0.0 255.255.252.0. What wildcard mask would the administrator use in the OSPF network statement?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.2.2",
+          "options": [
+            "0.0.63.255",
+            "0.0.3.255",
+            "0.0.31.255",
+            "0.0.0.255"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 802,
+          "sourceNumber": 50,
+          "question": "An administrator is configuring single-area OSPF on a router. One of the networks that must be advertised is 128.107.0.0 255.255.252.0. What wildcard mask would the administrator use in the OSPF network statement?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.2.2",
+          "options": [
+            "0.0.3.255",
+            "0.0.0.7",
+            "0.0.0.3",
+            "0.0.63.255"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 803,
+          "sourceNumber": 51,
+          "question": "Which step in the link-state routing process is described by a router flooding link-state and cost information about each directly connected link?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.1.3\n\nAccording to the link-state routing process, once neighbor adjacencies are established, routers begin exchanging link-state advertisements (LSAs). During this step, each router floods information regarding the state and cost of its directly connected links to its neighbors. These neighbors then immediately forward the information to their own neighbors until all routers in the OSPF area possess identical link-state information.",
+          "options": [
+            "building the topology table",
+            "selecting the router ID",
+            "exchanging link-state advertisements",
+            "injecting the default route"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 804,
+          "sourceNumber": 52,
+          "question": "Which step in the link-state routing process is described by a router sending Hello packets out all of the OSPF-enabled interfaces?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.1.3",
+          "options": [
+            "electing the designated router",
+            "establishing neighbor adjacencies",
+            "injecting the default route",
+            "exchanging link-state advertisements"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 805,
+          "sourceNumber": 53,
+          "question": "An administrator is configuring single-area OSPF on a router. One of the networks that must be advertised is 64.100.0.0 255.255.255.0. What wildcard mask would the administrator use in the OSPF network statement?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.2.2",
+          "options": [
+            "0.0.0.31",
+            "0.0.0.255",
+            "0.0.0.63",
+            "0.0.0.127"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 806,
+          "sourceNumber": 54,
+          "question": "Which step in the link-state routing process is described by a router inserting best paths into the routing table?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.1.3",
+          "options": [
+            "declaring a neighbor to be inaccessible",
+            "executing the SPF algorithm",
+            "load balancing equal-cost paths",
+            "choosing the best route"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 807,
+          "sourceNumber": 55,
+          "question": "What type of address is 64.101.198.197?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.5.1",
+          "options": [
+            "public",
+            "private"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 808,
+          "sourceNumber": 56,
+          "question": "An OSPF router has three directly connected networks; 172.16.0.0/24, 172.16.1.0/24, and 172.16.2.0/24. Which OSPF network command would advertise only the 172.16.1.0 network to neighbors?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 2.2.4\n\nTo advertise only the 172.16.1.0/24 network the wildcard mask used in the network command must match the first 24-bits exactly. To match bits exactly, a wildcard mask uses a binary zero. This means that the first 24-bits of the wildcard mask must be zero. The low order 8-bits can all be set to 1.",
+          "options": [
+            "router(config-router)# network 172.16.1.0 0.0.255.255 area 0",
+            "router(config-router)# network 172.16.0.0 0.0.15.255 area 0",
+            "router(config-router)# network 172.16.1.0 0.0.0.255 area 0",
+            "router(config-router)# network 172.16.1.0 0.0.0.0 area 0"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 809,
+          "sourceNumber": 57,
+          "question": "Which step in the link-state routing process is described by a router building a link-state database based on received LSAs?",
+          "reference": "Lecture 10 Final",
+          "sourceUrl": "https://itexamanswers.net/ccna-3-v7-modules-1-2-ospf-concepts-and-configuration-exam-answers.html",
+          "explanation": "Topic 1.1.3",
+          "options": [
+            "selecting the router ID",
+            "declaring a neighbor to be inaccessible",
+            "executing the SPF algorithm",
+            "building the topology table"
+          ],
+          "answer": [
+            3
+          ]
+        }
+      ]
+    },
+    {
       "id": "topic11-nat",
       "title": "NAT",
       "icon": "🔁",

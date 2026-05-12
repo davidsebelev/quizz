@@ -11,6 +11,8 @@ let selectedIndices = new Set();
 let selectedSingleIndex = null;
 let matchingSelections = new Map();
 let isMistakeReview = false;
+let topicCache = new Map();
+let currentLecture = null;
 
 window.addEventListener('DOMContentLoaded', () => { loadHome(); });
 
@@ -109,6 +111,12 @@ function renderTabs(topics) {
   vlsmBtn.textContent = 'VLSM';
   vlsmBtn.onclick = () => openVlsmPractice(vlsmBtn);
   container.appendChild(vlsmBtn);
+
+  const lecturesBtn = document.createElement('button');
+  lecturesBtn.className = 'hero-tab lectures-tab';
+  lecturesBtn.textContent = 'Lectures';
+  lecturesBtn.onclick = () => openLectures(lecturesBtn);
+  container.appendChild(lecturesBtn);
 }
 
 function filterTopics(lecture, btn) {
@@ -122,6 +130,136 @@ function openVlsmPractice(btn) {
   if (btn) btn.classList.add('active');
   renderVlsmPractice();
   showScreen('screen-vlsm');
+}
+
+function openLectures(btn) {
+  document.querySelectorAll('.hero-tab').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderLectureTabs();
+  showScreen('screen-lectures');
+}
+
+function getLectures() {
+  return [...new Set(allTopics.map(topic => topic.lecture))];
+}
+
+function renderLectureTabs() {
+  const tabs = document.getElementById('lecture-tabs');
+  const lectures = getLectures();
+  document.getElementById('lecture-count').textContent = `${lectures.length}`;
+  tabs.innerHTML = lectures.map((lecture, index) => `
+    <button class="lecture-tab ${index === 0 ? 'active' : ''}" onclick="selectLecture('${escapeAttr(lecture)}', this)">
+      ${escapeHTML(lecture)}
+    </button>
+  `).join('');
+
+  if (lectures.length) selectLecture(lectures[0], tabs.querySelector('.lecture-tab'));
+  else {
+    document.getElementById('lecture-title').textContent = 'No lectures';
+    document.getElementById('lecture-summary').textContent = '';
+    document.getElementById('lecture-content').innerHTML = '<div class="loading">No lectures found.</div>';
+  }
+}
+
+async function selectLecture(lecture, btn) {
+  currentLecture = lecture;
+  document.querySelectorAll('.lecture-tab').forEach(tab => tab.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+
+  const lectureTopics = allTopics.filter(topic => topic.lecture === lecture);
+  const totalQuestions = lectureTopics.reduce((sum, topic) => sum + topic.count, 0);
+  document.getElementById('lecture-title').textContent = lecture;
+  document.getElementById('lecture-summary').textContent = `${lectureTopics.length} topics · ${totalQuestions} questions`;
+  const content = document.getElementById('lecture-content');
+  content.innerHTML = '<div class="loading">Loading answers…</div>';
+
+  try {
+    const topics = await Promise.all(lectureTopics.map(loadTopicDetails));
+    if (currentLecture !== lecture) return;
+    content.innerHTML = topics.map(renderLectureTopic).join('');
+  } catch (error) {
+    content.innerHTML = '<div class="loading" style="color:#ef4444">Failed to load lecture answers.</div>';
+  }
+}
+
+async function loadTopicDetails(topic) {
+  if (topicCache.has(topic.id)) return topicCache.get(topic.id);
+  const res = await fetch(`${API}/topics/${topic.id}`);
+  if (!res.ok) throw new Error(`Failed to load ${topic.id}`);
+  const fullTopic = await res.json();
+  topicCache.set(topic.id, fullTopic);
+  return fullTopic;
+}
+
+function renderLectureTopic(topic) {
+  return `
+    <section class="lecture-topic">
+      <div class="lecture-topic-header">
+        <div>
+          <div class="topic-lecture">${escapeHTML(topic.lecture)}</div>
+          <h3>${escapeHTML(topic.title)}</h3>
+        </div>
+        <span class="topic-count">${topic.questions.length} questions</span>
+      </div>
+      <div class="lecture-question-list">
+        ${topic.questions.map((question, index) => renderLectureQuestion(question, index)).join('')}
+      </div>
+    </section>
+  `;
+}
+
+function renderLectureQuestion(question, index) {
+  const number = question.sourceNumber || index + 1;
+  const imageSrc = question.image || question.imageUrl;
+  return `
+    <article class="lecture-question">
+      <div class="lecture-question-top">
+        <span class="lecture-question-number">${number}</span>
+        <h4>${escapeHTML(question.question)}</h4>
+      </div>
+      ${imageSrc ? `
+        <figure class="lecture-media">
+          <img src="${escapeAttr(imageSrc)}" alt="${escapeAttr(question.imageAlt || question.question)}" />
+          ${question.imageCaption ? `<figcaption>${escapeHTML(question.imageCaption)}</figcaption>` : ''}
+        </figure>
+      ` : ''}
+      <div class="lecture-answer">
+        <div class="lecture-answer-label">Correct answer</div>
+        ${renderCorrectAnswer(question)}
+      </div>
+      ${question.explanation ? `
+        <div class="lecture-explanation">
+          <div class="lecture-answer-label">Explanation</div>
+          <p>${escapeHTML(question.explanation)}</p>
+        </div>
+      ` : ''}
+    </article>
+  `;
+}
+
+function renderCorrectAnswer(question) {
+  if (question.type === 'match') {
+    return `
+      <ul class="lecture-match-list">
+        ${(question.pairs || []).map(pair => `
+          <li><span>${escapeHTML(pair.left)}</span><strong>${escapeHTML(pair.right)}</strong></li>
+        `).join('')}
+      </ul>
+    `;
+  }
+
+  if (question.type === 'fill_blank') {
+    return `<div class="lecture-answer-text">${getFillAnswers(question).map(escapeHTML).join(' / ')}</div>`;
+  }
+
+  const answers = Array.isArray(question.answer)
+    ? question.answer.map(index => question.options?.[index]).filter(Boolean)
+    : [];
+  return `
+    <ul class="lecture-answer-list">
+      ${answers.map(answer => `<li>${escapeHTML(answer)}</li>`).join('')}
+    </ul>
+  `;
 }
 
 function renderVlsmPractice() {
@@ -548,6 +686,7 @@ async function startTopic(topicId) {
     currentIndex = 0; score = 0; answers = []; mistakeQuestions = []; isMistakeReview = false;
     document.getElementById('quiz-nav-title').textContent = currentTopic.title;
     showScreen('screen-quiz');
+    renderQuestionJump();
     loadQuestion();
   } catch (e) { alert('Failed to load topic. Is the server running?'); }
 }
@@ -565,6 +704,7 @@ function loadQuestion() {
 
   document.getElementById('quiz-meta').textContent = `Question ${currentIndex + 1} of ${total}`;
   document.getElementById('progress-fill').style.width = `${(currentIndex / total) * 100}%`;
+  renderQuestionJump();
   document.getElementById('q-text').textContent = q.question;
   renderQuestionImage(q);
   document.getElementById('feedback-block').style.display = 'none';
@@ -598,10 +738,12 @@ function loadQuestion() {
   optDiv.className = 'options';
   if (isMatch) {
     renderMatchingOptions(q, optDiv);
+    renderAnsweredQuestion(q);
     return;
   }
   if (isFillBlank) {
     renderFillBlankOption(q, optDiv);
+    renderAnsweredQuestion(q);
     return;
   }
 
@@ -618,6 +760,65 @@ function loadQuestion() {
     }
     optDiv.appendChild(btn);
   });
+  renderAnsweredQuestion(q);
+}
+
+function renderQuestionJump() {
+  const container = document.getElementById('question-jump');
+  if (!container || !currentQuestions.length) return;
+
+  container.innerHTML = currentQuestions.map((question, index) => {
+    const answered = answers.find(answer => answer.question === question);
+    const state = answered ? (answered.correct ? 'correct' : 'wrong') : '';
+    const active = index === currentIndex ? 'active' : '';
+    const label = question.sourceNumber || index + 1;
+    return `
+      <button class="question-jump-btn ${active} ${state}" onclick="jumpToQuestion(${index})" type="button">
+        ${label}
+      </button>
+    `;
+  }).join('');
+}
+
+function jumpToQuestion(index) {
+  if (index < 0 || index >= currentQuestions.length || index === currentIndex) return;
+  currentIndex = index;
+  loadQuestion();
+}
+
+function getRecordedAnswer(question) {
+  return answers.find(answer => answer.question === question);
+}
+
+function renderAnsweredQuestion(question) {
+  const recorded = getRecordedAnswer(question);
+  if (!recorded) return;
+
+  document.getElementById('btn-confirm').style.display = 'none';
+  document.getElementById('btn-next').style.display = 'inline-flex';
+
+  if (question.type === 'match') {
+    document.querySelectorAll('.match-row').forEach((row, index) => {
+      row.classList.add('correct');
+      const select = row.querySelector('.match-select');
+      select.value = question.pairs[index].right;
+      select.disabled = true;
+    });
+  } else if (question.type === 'fill_blank') {
+    const input = document.getElementById('fill-answer');
+    input.value = getFillAnswers(question)[0] || '';
+    input.disabled = true;
+    input.parentElement.classList.add(recorded.correct ? 'correct' : 'wrong');
+  } else {
+    const correctSet = new Set(question.answer || []);
+    document.querySelectorAll('.option').forEach(option => {
+      const index = parseInt(option.dataset.idx);
+      option.classList.add('disabled');
+      if (correctSet.has(index)) option.classList.add('correct');
+    });
+  }
+
+  showFeedback(question, recorded.correct);
 }
 
 function renderQuestionImage(q) {
@@ -726,6 +927,7 @@ function confirmFillBlank(q) {
     correct,
     correctTexts: acceptableAnswers,
   });
+  renderQuestionJump();
   showFeedback(q, correct);
   document.getElementById('btn-next').style.display = 'inline-flex';
 }
@@ -769,6 +971,7 @@ function confirmMatching(q) {
     correct,
     correctTexts: pairs.map(pair => `${pair.left} → ${pair.right}`),
   });
+  renderQuestionJump();
   showFeedback(q, correct);
   document.getElementById('btn-next').style.display = 'inline-flex';
 }
@@ -793,6 +996,7 @@ function confirmSingle(q) {
     else if (idx === chosenIdx && !correct) o.classList.add('wrong');
   });
   answers.push({ question: q, q: q.question, correct, correctTexts: q.answer.map(i => q.options[i]) });
+  renderQuestionJump();
   showFeedback(q, correct);
   document.getElementById('btn-next').style.display = 'inline-flex';
 }
@@ -830,6 +1034,7 @@ function confirmMulti(q) {
     else if (selectedIndices.has(idx)) o.classList.add('wrong');
   });
   answers.push({ question: q, q: q.question, correct, correctTexts: q.answer.map(i => q.options[i]) });
+  renderQuestionJump();
   showFeedback(q, correct);
   document.getElementById('btn-next').style.display = 'inline-flex';
 }
@@ -846,8 +1051,16 @@ function showFeedback(q, correct) {
 
 function nextQuestion() {
   currentIndex++;
-  if (currentIndex >= currentQuestions.length) showResults();
-  else loadQuestion();
+  if (currentIndex >= currentQuestions.length) {
+    const firstUnanswered = currentQuestions.findIndex(question => !getRecordedAnswer(question));
+    if (firstUnanswered === -1) showResults();
+    else {
+      currentIndex = firstUnanswered;
+      loadQuestion();
+    }
+    return;
+  }
+  loadQuestion();
 }
 
 function goHome() { loadHome(); }
@@ -890,6 +1103,7 @@ function startMistakeReview() {
   isMistakeReview = true;
   document.getElementById('quiz-nav-title').textContent = 'Работа над ошибками';
   showScreen('screen-quiz');
+  renderQuestionJump();
   loadQuestion();
 }
 
@@ -921,4 +1135,8 @@ function escapeHTML(value) {
     '"': '&quot;',
     "'": '&#39;',
   }[char]));
+}
+
+function escapeAttr(value) {
+  return escapeHTML(value).replace(/`/g, '&#96;');
 }

@@ -23,6 +23,24 @@
     </main>
   </div>
 
+  <!-- LECTURE ANSWERS -->
+  <div id="screen-lectures" class="screen">
+    <nav class="quiz-nav">
+      <button class="btn-back" onclick="goHome()">← Home</button>
+      <span class="quiz-nav-title">Lectures</span>
+      <span class="quiz-attempts" id="lecture-count">0</span>
+    </nav>
+
+    <main class="lectures-page">
+      <div class="lecture-tabs" id="lecture-tabs"></div>
+      <div class="lecture-header">
+        <h2 id="lecture-title">Lecture Answers</h2>
+        <p id="lecture-summary"></p>
+      </div>
+      <div class="lecture-content" id="lecture-content"></div>
+    </main>
+  </div>
+
   <!-- VLSM PRACTICE -->
   <div id="screen-vlsm" class="screen">
     <nav class="quiz-nav">
@@ -45,6 +63,7 @@
     </nav>
     <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
     <div class="quiz-meta" id="quiz-meta">Question 1 of 10</div>
+    <div class="question-jump" id="question-jump"></div>
 
     <div class="quiz-card" id="quiz-card">
       <div class="q-header">
