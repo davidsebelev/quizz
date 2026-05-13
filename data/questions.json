@@ -8623,6 +8623,263 @@
           "reference": "https://itexamanswers.net/ccna-1-v5-1-v6-0-chapter-8-exam-answers-100-full.html",
           "id": 44,
           "sourceNumber": 44
+        },
+        {
+          "question": "What is a function of the tracert command that differs from the ping command when they are used on a workstation?",
+          "options": [
+            "The tracert command reaches the destination faster.",
+            "The tracert command shows the information of routers in the path.",
+            "The tracert command sends one ICMP message to each hop in the path.",
+            "The tracert command is used to test the connectivity between two devices."
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "The tracert command sends three pings to each hop (router) in the path toward the destination and displays the domain name and IP address of hops from their responses. Because tracert uses the ping command, the travel time is the same as a standalone ping command. The primary function of a standalone ping command is to test the connectivity between two hosts.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 45,
+          "sourceNumber": 45
+        },
+        {
+          "question": "Which ICMP message is used by the traceroute utility during the process of finding the path between two end hosts?",
+          "options": [
+            "redirect",
+            "ping",
+            "time exceeded",
+            "destination unreachable"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Traceroute progressively increments the TTL (IPv4) or hop limit (IPv6) field for sending a sequence of ping commands. When a router senses that the TTL or hop limit is 0, it discards the packet and sends a time exceeded message to the source. The returned message contains the IP address of the router that discarded the packet.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 46,
+          "sourceNumber": 46
+        },
+        {
+          "question": "Which two things can be determined by using the ping command? (Choose two.)",
+          "options": [
+            "the number of routers between the source and destination device",
+            "the IP address of the router nearest the destination device",
+            "the average time it takes a packet to reach the destination and for the response to return to the source",
+            "the destination device is reachable through the network",
+            "the average time it takes each router in the path between source and destination to respond"
+          ],
+          "answer": [
+            2,
+            3
+          ],
+          "explanation": "A ping command provides feedback on the time between when an echo request was sent to a remote host and when the echo reply was received. A successful ping also indicates that the destination host was reachable through the network.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 47,
+          "sourceNumber": 47
+        },
+        {
+          "question": "Which statement describes a characteristic of the traceroute utility?",
+          "options": [
+            "It sends four Echo Request messages.",
+            "It utilizes the ICMP Source Quench messages.",
+            "It is primarily used to test connectivity between two hosts.",
+            "It identifies the routers in the path from a source host to a destination host."
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Traceroute is a utility that generates a list of hops (or routers) along the path from a source host to the destination host.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 48,
+          "sourceNumber": 48
+        },
+        {
+          "question": "Which utility uses the Internet Control Messaging Protocol (ICMP)?",
+          "options": [
+            "RIP",
+            "DNS",
+            "ping",
+            "NTP"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "ICMP is used by network devices to send error messages, and the ping utility uses ICMP echo request and echo reply messages.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 49,
+          "sourceNumber": 49
+        },
+        {
+          "question": "A network administrator can successfully ping the server at www.cisco.com, but cannot ping the company web server located at an ISP in another city. Which tool or command would help identify the specific router where the packet was lost or delayed?",
+          "options": [
+            "ipconfig",
+            "netstat",
+            "telnet",
+            "traceroute"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "The traceroute command provides connectivity information about the path a packet takes to reach the destination and about every router (hop) along the way. It also indicates how long a packet takes to get from the source to each hop and back.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 50,
+          "sourceNumber": 50
+        },
+        {
+          "question": "Which protocol is used by IPv4 and IPv6 to provide error messaging?",
+          "options": [
+            "ICMP",
+            "NDP",
+            "ARP",
+            "DHCP"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "ICMP is used by IPv4 and IPv6 to provide for messages to be sent in the event of certain errors and for informational purposes.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 51,
+          "sourceNumber": 51
+        },
+        {
+          "question": "What message is sent by a host to check the uniqueness of an IPv6 address before using that address?",
+          "options": [
+            "neighbor solicitation",
+            "ARP request",
+            "echo request",
+            "router solicitation"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "In IPv6, Duplicate Address Detection (DAD) is used in place of ARP. An IPv6 host performs DAD by sending a neighbor solicitation (NS) message to its own IPv6 address to ensure the uniqueness of the address prior to using it.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 52,
+          "sourceNumber": 52
+        },
+        {
+          "question": "A technician is troubleshooting a network where it is suspected that a defective node in the network path is causing packets to be dropped. The technician only has the IP address of the end point device and does not have any details of the intermediate devices. What command can the technician use to identify the faulty node?",
+          "options": [
+            "tracert",
+            "ping",
+            "ipconfig /flushdns",
+            "ipconfig /displaydns"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The tracert command identifies each hop in the path to a destination, which can help locate the node where packets are dropped.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 53,
+          "sourceNumber": 53
+        },
+        {
+          "question": "A user who is unable to connect to the file server contacts the help desk. The helpdesk technician asks the user to ping the IP address of the default gateway that is configured on the workstation. What is the purpose for this ping command?",
+          "options": [
+            "to obtain a dynamic IP address from the server",
+            "to request that gateway forward the connection request to the file server",
+            "to test that the host has the capability to reach hosts on other networks",
+            "to resolve the domain name of the file server to its IP address"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The ping command is used to test connectivity between hosts. Pinging the default gateway tests whether the host has the capability to reach hosts on its own network and on other networks.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 54,
+          "sourceNumber": 54
+        },
+        {
+          "question": "A user calls to report that a PC cannot access the internet. The network technician asks the user to issue the command ping 127.0.0.1 in a command prompt window. The user reports that the result is four positive replies. What conclusion can be drawn based on this connectivity test?",
+          "options": [
+            "The PC can access the network. The problem exists beyond the local network.",
+            "The IP address obtained from the DHCP server is correct.",
+            "The PC can access the Internet. However, the web browser may not work.",
+            "The TCP/IP implementation is functional."
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "The ping 127.0.0.1 command verifies that the TCP/IP stack is functional. This loopback test does not send traffic beyond the PC itself.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 55,
+          "sourceNumber": 55
+        },
+        {
+          "question": "Which command can be used to test connectivity between two devices using echo request and echo reply messages?",
+          "options": [
+            "netstat",
+            "traceroute",
+            "ICMP",
+            "ping"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Ping is used to test connectivity between end devices. It uses ICMP echo request and echo reply messages.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 56,
+          "sourceNumber": 56
+        },
+        {
+          "question": "What field content is used by ICMPv6 to determine that a packet has expired?",
+          "options": [
+            "TTL field",
+            "CRC field",
+            "Hop Limit field",
+            "Time Exceeded field"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "ICMPv6 sends a Time Exceeded message if the router cannot forward an IPv6 packet because the packet expired. The router uses the Hop Limit field to determine if the packet has expired.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 57,
+          "sourceNumber": 57
+        },
+        {
+          "question": "Which protocol provides feedback from the destination host to the source host about errors in packet delivery?",
+          "options": [
+            "ARP",
+            "BOOTP",
+            "DNS",
+            "ICMP"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "The ICMP protocol operates at Layer 3 of the OSI model, which is the Internet layer of the TCP/IP model. ICMP encapsulates the ping and traceroute commands.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 58,
+          "sourceNumber": 58
+        },
+        {
+          "question": "A network administrator is testing network connectivity by issuing the ping command on a router. Which symbol will be displayed to indicate that a time expired during the wait for an ICMP echo reply message?",
+          "options": [
+            "U",
+            ".",
+            "!",
+            "$"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "When the ping command is issued on a router, ! indicates receipt of an ICMP echo reply message, . indicates a timeout while waiting for an ICMP echo reply message, and U indicates that an ICMP unreachable message was received.",
+          "slide": null,
+          "reference": "User provided ICMP questions",
+          "id": 59,
+          "sourceNumber": 59
         }
       ]
     },
