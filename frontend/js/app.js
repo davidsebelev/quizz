@@ -14,7 +14,9 @@ let isMistakeReview = false;
 let topicCache = new Map();
 let currentLecture = null;
 
-window.addEventListener('DOMContentLoaded', () => { loadHome(); });
+window.addEventListener('DOMContentLoaded', () => {
+  loadHome();
+});
 
 const vlsmPractices = [
   {
@@ -1072,7 +1074,12 @@ function confirmSingle(q) {
     if (idx === q.answer[0]) o.classList.add('correct');
     else if (idx === chosenIdx && !correct) o.classList.add('wrong');
   });
-  answers.push({ question: q, q: q.question, correct, correctTexts: q.answer.map(i => q.options[i]) });
+  answers.push({
+    question: q,
+    q: q.question,
+    correct,
+    correctTexts: q.answer.map(i => q.options[i]),
+  });
   renderQuestionJump();
   showFeedback(q, correct);
   document.getElementById('btn-next').style.display = 'inline-flex';
@@ -1110,7 +1117,12 @@ function confirmMulti(q) {
     if (correctSet.has(idx)) o.classList.add('correct');
     else if (selectedIndices.has(idx)) o.classList.add('wrong');
   });
-  answers.push({ question: q, q: q.question, correct, correctTexts: q.answer.map(i => q.options[i]) });
+  answers.push({
+    question: q,
+    q: q.question,
+    correct,
+    correctTexts: q.answer.map(i => q.options[i]),
+  });
   renderQuestionJump();
   showFeedback(q, correct);
   document.getElementById('btn-next').style.display = 'inline-flex';

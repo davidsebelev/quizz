@@ -17,6 +17,8 @@ app.use('/phlec9', express.static(path.join(__dirname, '../phLec9')));
 app.use('/ospf', express.static(path.join(__dirname, '../ospf')));
 app.use('/lec12', express.static(path.join(__dirname, '../lec12')));
 app.use('/lec13', express.static(path.join(__dirname, '../lec13')));
+app.use('/net', express.static(path.join(__dirname, '../net')));
+app.use('/ipv6', express.static(path.join(__dirname, '../ipv6')));
 
 const DATA_FILE = path.join(__dirname, '../data/questions.json');
 const VIRTUAL_TOPIC_DEFS = [
