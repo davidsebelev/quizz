@@ -10803,7 +10803,7 @@
           "sourceNumber": 23,
           "type": "match",
           "question": "Refer to the exhibit. Consider a datagram that originates on the PC and that is destined for the web server. Match the IP addresses and port numbers that are in that datagram to the description. (Not all options are used.)",
-          "image": "lec12/Screenshot 2026-05-12 at 22.03.13.png",
+          "image": "/lec12/Screenshot 2026-05-12 at 22.03.13.png",
           "imageAlt": "Topology showing a PC at 192.168.1.2 communicating through routers R1 and R2 to a web server at 192.168.2.2.",
           "imageCaption": "Use the exhibit to identify the source and destination fields.",
           "reference": "ITexamanswers.net CCNA 1 Chapter 9",
@@ -10848,6 +10848,1073 @@
             "acknowledgment numbers",
             "fragment numbers",
             "port numbers"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1225,
+          "sourceNumber": 25,
+          "question": "What are the primary purposes of the transport layer? (Choose three.)",
+          "reference": "Lecture 12 Transport Layer",
+          "explanation": "The transport layer segments data, identifies the proper application by using port numbers, and tracks individual conversations. MAC addressing is handled by the data link layer. IP addressing and routing are handled by the network layer.",
+          "options": [
+            "Determining the best route between source and destination",
+            "Adding the source and destination MAC address to frames",
+            "Tracking the individual communication between applications on the source and destination hosts",
+            "Adding the source and destination IP address",
+            "Segmenting data for and reassembling segmented data into streams of application data at the destination",
+            "Identifying the proper application for each communication stream"
+          ],
+          "answer": [
+            2,
+            4,
+            5
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1226,
+          "sourceNumber": 26,
+          "question": "What is assigned by the transport layer to identify an application or service?",
+          "reference": "Lecture 12 Transport Layer",
+          "explanation": "Transport layer port numbers identify application conversations and destination services.",
+          "options": [
+            "Segment",
+            "Packet",
+            "Port",
+            "MAC address",
+            "IP address"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1227,
+          "sourceNumber": 27,
+          "question": "What is a characteristic of UDP?",
+          "reference": "Lecture 12 Transport Layer",
+          "explanation": "UDP is connectionless and does not provide TCP features such as acknowledgments, windowing, flow control, or reliable delivery.",
+          "options": [
+            "Reliable delivery",
+            "Connectionless",
+            "Windowing",
+            "Expectational acknowledgements",
+            "Flow control"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1228,
+          "sourceNumber": 28,
+          "question": "Which of the following types of applications would use UDP? (Choose three.)",
+          "reference": "Lecture 12 Transport Layer",
+          "explanation": "UDP is commonly used by applications that are delay-sensitive, simple request-and-reply transactions, or unidirectional. VoIP, DHCP, and TFTP use UDP. Telnet, FTP, and HTTP use TCP.",
+          "options": [
+            "Telnet",
+            "VoIP",
+            "FTP",
+            "HTTP",
+            "DHCP",
+            "TFTP"
+          ],
+          "answer": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1229,
+          "sourceNumber": 29,
+          "question": "Which TCP header field specifies the number of segments that can be accepted before an acknowledgement is required?",
+          "reference": "Lecture 12 Transport Layer",
+          "explanation": "The window size indicates how much data can be received before an acknowledgment is required.",
+          "options": [
+            "Acknowledgement number",
+            "Header length",
+            "Window size",
+            "Checksum"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1230,
+          "sourceNumber": 30,
+          "question": "What range of ports can either be used by TCP to identify the requested service on the destination device or as a client source port?",
+          "reference": "Lecture 12 Transport Layer",
+          "explanation": "Registered ports use the range 1024 through 49151. They can identify registered services and can also be selected by clients as source ports.",
+          "options": [
+            "0 to 1023",
+            "0 to 49151",
+            "1024 to 49151",
+            "49152 to 65535"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1231,
+          "sourceNumber": 31,
+          "type": "fill_blank",
+          "question": "A dynamic port in the range of 49152 to 65535 is also known as a(n) ____ port.",
+          "answers": [
+            "ephemeral",
+            "private",
+            "ephemeral or private",
+            "private or ephemeral"
+          ],
+          "blankLabel": "Missing term",
+          "placeholder": "Enter the port type",
+          "reference": "Lecture 12 Transport Layer",
+          "explanation": "Dynamic ports from 49152 to 65535 are also called ephemeral or private ports."
+        },
+        {
+          "slide": null,
+          "id": 1232,
+          "sourceNumber": 32,
+          "question": "Which TCP header control bit is set on to terminate a TCP conversation?",
+          "reference": "Lecture 12 Transport Layer",
+          "explanation": "The FIN control bit indicates that the sender has no more data to send and is used to terminate a TCP conversation.",
+          "options": [
+            "URG",
+            "ACK",
+            "PSH",
+            "RST",
+            "SYN",
+            "FIN"
+          ],
+          "answer": [
+            5
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1233,
+          "sourceNumber": 33,
+          "question": "If a client sends an ISN of 2 to a server and a server responds with an ISN of 1 to the client, what is the final stage of the TCP three-way handshake?",
+          "reference": "Lecture 12 Transport Layer",
+          "explanation": "The client completes the three-way handshake by acknowledging the server ISN plus 1. If the server ISN is 1, the client sends an acknowledgment of 2.",
+          "options": [
+            "Client sends an acknowledgement of 2.",
+            "Server sends an acknowledgement of 2.",
+            "Client sends an acknowledgement of 3.",
+            "Server sends an acknowledgement of 3.",
+            "Client sends a new ISN of 3.",
+            "Server sends a new ISN of 2."
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1234,
+          "sourceNumber": 34,
+          "question": "A client is downloading a large file from a server using FTP. One of the segments is lost during transit. What will happen?",
+          "reference": "Lecture 12 Transport Layer",
+          "explanation": "FTP uses TCP. When loss is detected, the receiver can advertise a smaller window size so the sender reduces the amount of unacknowledged data in flight.",
+          "options": [
+            "The FTP session is immediately terminated.",
+            "The FTP client responds to the server with a smaller window size in the TCP header.",
+            "The FTP client responds to the client with an increased window size in the TCP header.",
+            "The FTP server responds to the client with a smaller window size in the TCP header.",
+            "The FTP server responds to the client with an increased window size in the TCP header.",
+            "The FTP session continues, but the result is a corrupt file that must be downloaded again.",
+            "The FTP session continues with no alteration in window size, and the missing segment is requested again after the rest of the file is downloaded."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1235,
+          "sourceNumber": 35,
+          "type": "fill_blank",
+          "question": "TCP will normally retransmit lost data from the last successful acknowledgement. To allow the destination to acknowledge bytes in discontinuous segments and request retransmission of only the missing data, both hosts must be able to support an optional feature called ____.",
+          "answers": [
+            "selective acknowledgements",
+            "selective acknowledgments",
+            "SACK",
+            "selective acknowledgements (SACK)",
+            "selective acknowledgments (SACK)"
+          ],
+          "blankLabel": "Missing feature",
+          "placeholder": "Enter the TCP feature",
+          "reference": "Lecture 12 Transport Layer",
+          "explanation": "Selective acknowledgements, or SACK, allow a receiver to acknowledge discontinuous blocks of data so only missing data needs to be retransmitted."
+        },
+        {
+          "slide": null,
+          "id": 1236,
+          "sourceNumber": 36,
+          "type": "fill_blank",
+          "question": "_____ is the term used to describe the interleaving of data from multiple users on the same network.",
+          "answers": [
+            "Multiplexing"
+          ],
+          "blankLabel": "Missing term",
+          "placeholder": "Enter the term",
+          "reference": "Lecture 12 Transport Layer",
+          "explanation": "Multiplexing describes interleaving data from multiple users or applications on the same network."
+        },
+        {
+          "slide": null,
+          "id": 1237,
+          "sourceNumber": 37,
+          "type": "fill_blank",
+          "question": "Both TCP and UDP use ____ to separate multiple communications on the same channel.",
+          "answers": [
+            "port numbers",
+            "ports"
+          ],
+          "blankLabel": "Missing term",
+          "placeholder": "Enter the term",
+          "reference": "Lecture 12 Transport Layer",
+          "explanation": "TCP and UDP use port numbers to distinguish multiple application conversations on a host."
+        }
+      ]
+    },
+    {
+      "id": "topic13-application-layer",
+      "title": "Application Layer",
+      "icon": "🧩",
+      "lecture": "Lecture 13",
+      "questions": [
+        {
+          "slide": null,
+          "id": 1301,
+          "sourceNumber": 1,
+          "question": "Which two definitions accurately describe the associated application layer protocol? (Choose two.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "DNS resolves Internet names to IP addresses. Telnet provides terminal emulation and remote access to servers and networking devices.",
+          "options": [
+            "SMTP - transfers web pages from web servers to clients",
+            "Telnet - provides remote access to servers and networking devices",
+            "DNS - resolves Internet names to IP addresses",
+            "FTP - transfers email messages and attachments",
+            "HTTP - enables devices on a network to obtain IP addresses"
+          ],
+          "answer": [
+            1,
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1302,
+          "sourceNumber": 2,
+          "question": "The application layer of the TCP/IP model performs the functions of what three layers of the OSI model? (Choose three.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "The TCP/IP application layer represents the OSI session, presentation, and application layers.",
+          "options": [
+            "physical",
+            "session",
+            "network",
+            "presentation",
+            "data link",
+            "transport",
+            "application"
+          ],
+          "answer": [
+            1,
+            3,
+            6
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1303,
+          "sourceNumber": 3,
+          "question": "Which layer in the TCP/IP model is used for formatting, compressing, and encrypting data?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "In the TCP/IP model, application layer functions include data formatting, compression, encryption, and dialog control.",
+          "options": [
+            "internetwork",
+            "session",
+            "presentation",
+            "application",
+            "network access"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1304,
+          "sourceNumber": 4,
+          "question": "What are two characteristics of the application layer of the TCP/IP model? (Choose two.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "The application layer is closest to the end user and supports the creation and maintenance of dialogs between applications.",
+          "options": [
+            "responsibility for logical addressing",
+            "responsibility for physical addressing",
+            "the creation and maintenance of dialogue between source and destination applications",
+            "closest to the end user",
+            "the establishing of window size"
+          ],
+          "answer": [
+            2,
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1305,
+          "sourceNumber": 5,
+          "question": "A manufacturing company subscribes to certain hosted services from its ISP. The services that are required include hosted world wide web, file transfer, and e-mail. Which protocols represent these three key applications? (Choose three.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "HTTP supports hosted web pages, FTP supports file transfer, and SMTP supports email sending.",
+          "options": [
+            "FTP",
+            "HTTP",
+            "DNS",
+            "SNMP",
+            "DHCP",
+            "SMTP"
+          ],
+          "answer": [
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1306,
+          "sourceNumber": 6,
+          "question": "What is an example of network communication that uses the client-server model?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "A DNS query uses the client-server model: the workstation acts as a client and queries a DNS server.",
+          "options": [
+            "A user uses eMule to download a file that is shared by a friend after the file location is determined.",
+            "A workstation initiates an ARP to find the MAC address of a receiving host.",
+            "A user prints a document by using a printer that is attached to a workstation of a coworker.",
+            "A workstation initiates a DNS request when the user types www.cisco.com in the address bar of a web browser."
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1307,
+          "sourceNumber": 7,
+          "question": "Two students are working on a network design project. One student wants to share a folder so that the other student can access the file and copy it to a USB drive. Which networking model is being used?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "In a peer-to-peer model, devices can share resources directly without a dedicated server.",
+          "options": [
+            "peer-to-peer",
+            "client-based",
+            "master-slave",
+            "point-to-point"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1308,
+          "sourceNumber": 8,
+          "question": "What do the client/server and peer-to-peer network models have in common?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "Both models support devices that act as clients and devices that provide services as servers.",
+          "options": [
+            "Both models have dedicated servers.",
+            "Both models support devices in server and client roles.",
+            "Both models require the use of TCP/IP-based protocols.",
+            "Both models are used only in the wired network environment."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1309,
+          "sourceNumber": 9,
+          "question": "What is an advantage for small organizations of adopting IMAP instead of POP?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "IMAP keeps messages on the mail server, which supports centralized storage and backup.",
+          "options": [
+            "Messages are kept in the mail servers until they are manually deleted from the email client.",
+            "When the user connects to a POP server, copies of the messages are kept in the mail server for a short time, but IMAP keeps them for a long time.",
+            "IMAP sends and retrieves email, but POP only retrieves email.",
+            "POP only allows the client to store messages in a centralized way, while IMAP allows distributed storage."
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1310,
+          "sourceNumber": 10,
+          "question": "Which application layer protocol uses message types such as GET, PUT, and POST?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "GET, PUT, and POST are HTTP request methods.",
+          "options": [
+            "DNS",
+            "DHCP",
+            "SMTP",
+            "HTTP",
+            "POP3"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1311,
+          "sourceNumber": 11,
+          "question": "When retrieving email messages, which protocol allows for easy, centralized storage and backup of emails that would be desirable for a small- to medium-sized business?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "IMAP keeps email on the server and allows clients to view synchronized copies.",
+          "options": [
+            "IMAP",
+            "POP",
+            "SMTP",
+            "HTTPS"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1312,
+          "sourceNumber": 12,
+          "question": "What is the function of the Nslookup utility?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "Nslookup manually queries DNS name servers to resolve host names to IP addresses.",
+          "options": [
+            "to manually query the name servers to resolve a given host name",
+            "to view the network settings on a host",
+            "to manually force a client to send a DHCP request",
+            "to display all cached DNS entries on a host"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1313,
+          "sourceNumber": 13,
+          "question": "What message type is used by an HTTP client to request data from a web server?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "An HTTP client sends a GET request to request data from a web server.",
+          "options": [
+            "POST",
+            "ACK",
+            "GET",
+            "PUT"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1314,
+          "sourceNumber": 14,
+          "question": "Which protocol is used by a client to communicate securely with a web server?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "HTTPS is the secure form of HTTP used for protected web communication.",
+          "options": [
+            "SMB",
+            "HTTPS",
+            "SMTP",
+            "IMAP"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1315,
+          "sourceNumber": 15,
+          "question": "Which three statements describe a DHCP Discover message? (Choose three.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "A DHCPDISCOVER is sent by a client seeking an address, uses the broadcast destination IP address 255.255.255.255, and is received by all hosts, although only a DHCP server replies.",
+          "options": [
+            "The source MAC address is 48 ones (FF-FF-FF-FF-FF-FF).",
+            "The destination IP address is 255.255.255.255.",
+            "The message comes from a server offering an IP address.",
+            "The message comes from a client seeking an IP address.",
+            "All hosts receive the message, but only a DHCP server replies.",
+            "Only the DHCP server receives the message."
+          ],
+          "answer": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1316,
+          "sourceNumber": 16,
+          "question": "What part of the URL, http://www.cisco.com/index.html, represents the top-level DNS domain?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "In the URL, .com is the top-level domain.",
+          "options": [
+            ".com",
+            "www",
+            "http",
+            "index"
+          ],
+          "answer": [
+            0
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1317,
+          "sourceNumber": 17,
+          "question": "Which two tasks can be performed by a local DNS server? (Choose two.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "DNS maps names to IP addresses and can forward unresolved requests to other DNS servers.",
+          "options": [
+            "providing IP addresses to local hosts",
+            "allowing data transfer between two network devices",
+            "mapping name-to-IP addresses for internal hosts",
+            "forwarding name resolution requests between servers",
+            "retrieving email messages"
+          ],
+          "answer": [
+            2,
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1318,
+          "sourceNumber": 18,
+          "question": "Which phrase describes an FTP daemon?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "An FTP daemon is a background program running on an FTP server that provides FTP services.",
+          "options": [
+            "a diagnostic FTP program",
+            "a program that is running on an FTP server",
+            "a program that is running on an FTP client",
+            "an application that is used to request data from an FTP server"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1319,
+          "sourceNumber": 19,
+          "question": "Which statement is true about FTP?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "FTP can transfer files in either direction: clients can download from or upload to an FTP server.",
+          "options": [
+            "The client can choose if FTP is going to establish one or two connections with the server.",
+            "The client can download data from or upload data to the server.",
+            "FTP is a peer-to-peer application.",
+            "FTP does not provide reliability during data transmission."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1320,
+          "sourceNumber": 20,
+          "question": "What is true about the Server Message Block protocol?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "SMB supports file, printer, and directory sharing, and clients establish a long-term connection to servers.",
+          "options": [
+            "Different SMB message types have a different format.",
+            "Clients establish a long term connection to servers.",
+            "SMB messages cannot authenticate a session.",
+            "SMB uses the FTP protocol for communication."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1321,
+          "sourceNumber": 21,
+          "question": "Which application layer protocol is used to provide file-sharing and print services to Microsoft applications?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "SMB is used in Microsoft networking for file and printer sharing.",
+          "options": [
+            "HTTP",
+            "SMTP",
+            "DHCP",
+            "SMB"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1322,
+          "sourceNumber": 22,
+          "type": "fill_blank",
+          "question": "What is the acronym for the protocol that is used when securely communicating with a web server?",
+          "answers": [
+            "HTTPS"
+          ],
+          "blankLabel": "Protocol acronym",
+          "placeholder": "Enter the acronym",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "HTTPS is used for secure communication with a web server."
+        },
+        {
+          "slide": null,
+          "id": 1323,
+          "sourceNumber": 23,
+          "type": "fill_blank",
+          "question": "The HTTP message type used by the client to request data from the web server is the ____ message.",
+          "answers": [
+            "GET"
+          ],
+          "blankLabel": "HTTP message type",
+          "placeholder": "Enter the message type",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "The HTTP GET message is used by a client to request web data."
+        },
+        {
+          "slide": null,
+          "id": 1324,
+          "sourceNumber": 24,
+          "question": "Open the PT Activity. Perform the tasks in the activity instructions and then answer the question. Which PC or PCs are sending FTP packets to the server?",
+          "image": "/lec13/Screenshot 2026-05-13 at 02.23.07.png",
+          "imageAlt": "Packet Tracer activity with PC_1, PC_2, PC_3, and a server. The task asks which PC is using FTP.",
+          "imageCaption": "Use the exhibit to identify which PC sends FTP packets.",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "PC_2 uses destination port 21, which indicates an FTP control session with the server.",
+          "options": [
+            "PC_3",
+            "PC_1",
+            "PC_2",
+            "PC_1 and PC_3"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1325,
+          "sourceNumber": 25,
+          "type": "fill_blank",
+          "question": "Refer to the exhibit. What command was used to resolve a given host name by querying the name servers?",
+          "image": "/lec13/Screenshot 2026-05-13 at 02.22.20.png",
+          "imageAlt": "Command output showing a DNS query for cisco.netacad.net and a resolved IP address.",
+          "imageCaption": "Identify the command shown in the exhibit.",
+          "answers": [
+            "nslookup"
+          ],
+          "blankLabel": "Command",
+          "placeholder": "Enter the command",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "Nslookup is used to manually query name servers to resolve a host name."
+        },
+        {
+          "slide": null,
+          "id": 1326,
+          "sourceNumber": 26,
+          "type": "match",
+          "question": "Match a statement to the related network model. (Not all options are used.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "Peer-to-peer networks do not require a dedicated server and roles are set per request. Peer-to-peer applications require a user interface and a background service.",
+          "pairs": [
+            {
+              "left": "no dedicated server is required",
+              "right": "peer-to-peer network"
+            },
+            {
+              "left": "client and server roles are set on a per request basis",
+              "right": "peer-to-peer network"
+            },
+            {
+              "left": "requires a specific user interface",
+              "right": "peer-to-peer application"
+            },
+            {
+              "left": "a background service is required",
+              "right": "peer-to-peer application"
+            }
+          ],
+          "matchOptions": [
+            "peer-to-peer network",
+            "peer-to-peer application",
+            "client-server network"
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1327,
+          "sourceNumber": 27,
+          "type": "match",
+          "question": "Match the functions to the name of the application. (Not all options are used.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "DHCP assigns IP addresses, DNS maps names to addresses, IMAP allows message viewing, HTTP displays web pages, and SMTP sends email.",
+          "pairs": [
+            {
+              "left": "DHCP",
+              "right": "dynamically assigns IP address to clients"
+            },
+            {
+              "left": "DNS",
+              "right": "maps URLs to numerical addresses"
+            },
+            {
+              "left": "IMAP",
+              "right": "allows viewing of messages on email clients"
+            },
+            {
+              "left": "HTTP",
+              "right": "displays web pages"
+            },
+            {
+              "left": "SMTP",
+              "right": "sends email messages"
+            }
+          ],
+          "matchOptions": [
+            "dynamically assigns IP address to clients",
+            "maps URLs to numerical addresses",
+            "allows viewing of messages on email clients",
+            "displays web pages",
+            "sends email messages",
+            "transfers files"
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1328,
+          "sourceNumber": 28,
+          "question": "Which three layers of the OSI model provide similar network services to those provided by the application layer of the TCP/IP model? (Choose three.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "The OSI session, presentation, and application layers provide services similar to the TCP/IP application layer.",
+          "options": [
+            "physical layer",
+            "session layer",
+            "transport layer",
+            "application layer",
+            "presentation layer",
+            "data link layer"
+          ],
+          "answer": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1329,
+          "sourceNumber": 29,
+          "question": "Which two tasks are functions of the presentation layer? (Choose two.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "Presentation layer functions include compression, encryption, and formatting.",
+          "options": [
+            "compression",
+            "addressing",
+            "encryption",
+            "session control",
+            "authentication"
+          ],
+          "answer": [
+            0,
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1330,
+          "sourceNumber": 30,
+          "question": "Select three protocols that operate at the Application Layer of the OSI model. (Choose three.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "FTP, POP3, and DHCP are application layer protocols. ARP, TCP, and DSL operate at other layers or technologies.",
+          "options": [
+            "ARP",
+            "TCP",
+            "DSL",
+            "FTP",
+            "POP3",
+            "DHCP"
+          ],
+          "answer": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1331,
+          "sourceNumber": 31,
+          "question": "A manufacturing company subscribes to certain hosted services from their ISP. The services required include hosted world wide web, file transfer, and e-mail. Which protocols represent these three key applications? (Choose three.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "The protocols are HTTP for web, FTP for file transfer, and SMTP for email.",
+          "options": [
+            "FTP",
+            "HTTP",
+            "DNS",
+            "SNMP",
+            "DHCP",
+            "SMTP"
+          ],
+          "answer": [
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1332,
+          "sourceNumber": 32,
+          "question": "What are two characteristics of peer-to-peer networks? (Choose two.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "Peer-to-peer networks use decentralized resources and allow resource sharing without a dedicated server.",
+          "options": [
+            "scalable",
+            "one way data flow",
+            "decentralized resources",
+            "centralized user accounts",
+            "resource sharing without a dedicated server"
+          ],
+          "answer": [
+            2,
+            4
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1333,
+          "sourceNumber": 33,
+          "question": "Which two actions are taken by SMTP if the destination email server is busy when email messages are sent? (Choose two.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "If the destination email server is busy, SMTP tries again later and periodically checks the queue for messages to resend.",
+          "options": [
+            "SMTP sends an error message back to the sender and closes the connection.",
+            "SMTP tries to send the messages at a later time.",
+            "SMTP will discard the message if it is still not delivered after a predetermined expiration time.",
+            "SMTP periodically checks the queue for messages and attempts to send them again.",
+            "SMTP sends the messages to another mail server for delivery."
+          ],
+          "answer": [
+            1,
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1334,
+          "sourceNumber": 34,
+          "question": "A DHCP-enabled client PC has just booted. During which two steps will the client PC use broadcast messages when communicating with a DHCP server? (Choose two.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "During initial lease acquisition, the DHCP client broadcasts DHCPDISCOVER and DHCPREQUEST messages.",
+          "options": [
+            "DHCPDISCOVER",
+            "DHCPACK",
+            "DHCPOFFER",
+            "DHCPREQUEST",
+            "DHCPNAK"
+          ],
+          "answer": [
+            0,
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1335,
+          "sourceNumber": 35,
+          "question": "A user accessed the game site www.nogamename.com last week. The night before the user accesses the game site again, the site administrator changes the site IP address. What will be the consequence of that action for the user?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "DNS maps the site name to the current IP address, so the user can still access the site by name after DNS records are updated.",
+          "options": [
+            "The user will not be able to access the site.",
+            "The user will access the site without problems.",
+            "The user will have to modify the DNS server address on the local PC in order to access the site.",
+            "The user will have to issue a ping to this new IP address to be sure that the domain name remained the same."
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1336,
+          "sourceNumber": 36,
+          "question": "Which DNS server in the DNS hierarchy would be considered authoritative for the domain name records of a company named netacad?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "The authoritative DNS server for the company's domain records would be the domain server for netacad.com.",
+          "options": [
+            ".com",
+            "netacad.com",
+            "mx.netacad.com",
+            "www.netacad.com"
+          ],
+          "answer": [
+            1
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1337,
+          "sourceNumber": 37,
+          "question": "When would it be more efficient to use SMB to transfer files instead of FTP?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "SMB is efficient for long-term sessions and repeated file access, such as downloading many files from the same server.",
+          "options": [
+            "when downloading large files with a variety of formats from different servers",
+            "when a peer-to-peer application is required",
+            "when the host devices on the network use the Windows operating system",
+            "when downloading large numbers of files from the same server",
+            "when uploading the same file to multiple remote servers"
+          ],
+          "answer": [
+            3
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1338,
+          "sourceNumber": 38,
+          "type": "fill_blank",
+          "question": "What is the acronym for the protocol that is used when securely communicating with a web server?",
+          "answers": [
+            "HTTPS"
+          ],
+          "blankLabel": "Protocol acronym",
+          "placeholder": "Enter the acronym",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "HTTPS is the protocol used for secure web communication."
+        },
+        {
+          "slide": null,
+          "id": 1339,
+          "sourceNumber": 39,
+          "type": "match",
+          "question": "Match the DNS record type to the corresponding description. (Not all options are used.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "A records map host names to end device addresses, NS identifies authoritative name servers, CNAME identifies canonical aliases, and MX identifies mail exchange records.",
+          "pairs": [
+            {
+              "left": "A",
+              "right": "end device address"
+            },
+            {
+              "left": "NS",
+              "right": "authoritative name server"
+            },
+            {
+              "left": "CNAME",
+              "right": "canonical name"
+            },
+            {
+              "left": "MX",
+              "right": "mail exchange record"
+            }
+          ],
+          "matchOptions": [
+            "end device address",
+            "authoritative name server",
+            "canonical name",
+            "mail exchange record",
+            "routing table entry"
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1340,
+          "sourceNumber": 40,
+          "type": "match",
+          "question": "Match the purpose with its DHCP message type. (Not all options are used.)",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "DHCPDISCOVER locates servers, DHCPOFFER suggests a lease, DHCPREQUEST accepts a specific offer, and DHCPACK acknowledges a successful lease.",
+          "pairs": [
+            {
+              "left": "DHCPREQUEST",
+              "right": "a message that is used to identify the explicit server and lease offer to accept"
+            },
+            {
+              "left": "DHCPDISCOVER",
+              "right": "a message that is used to locate any available DHCP server on a network"
+            },
+            {
+              "left": "DHCPOFFER",
+              "right": "a message that is used to suggest a lease to a client"
+            },
+            {
+              "left": "DHCPACK",
+              "right": "a message that is used to acknowledge that the lease is successful"
+            }
+          ],
+          "matchOptions": [
+            "a message that is used to identify the explicit server and lease offer to accept",
+            "a message that is used to locate any available DHCP server on a network",
+            "a message that is used to suggest a lease to a client",
+            "a message that is used to acknowledge that the lease is successful",
+            "a message that terminates the lease"
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1341,
+          "sourceNumber": 41,
+          "question": "Open the PT activity. In Simulation mode, capture the packets. What is the application layer service being requested from Server0 by PC0?",
+          "image": "/lec13/Screenshot 2026-05-13 at 02.21.42.png",
+          "imageAlt": "Packet Tracer topology with PC0 requesting a service from Server0.",
+          "imageCaption": "Use the packet details in the activity to identify the requested service.",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "The captured PDU uses destination port 443, which indicates HTTPS.",
+          "options": [
+            "FTP",
+            "DNS",
+            "HTTPS",
+            "HTTP",
+            "SMTP"
+          ],
+          "answer": [
+            2
+          ]
+        },
+        {
+          "slide": null,
+          "id": 1342,
+          "sourceNumber": 42,
+          "question": "Which protocol is used by Windows for file and printer sharing?",
+          "reference": "ITexamanswers.net CCNA 1 Chapter 10",
+          "explanation": "SMB is the Windows protocol used for file and printer sharing.",
+          "options": [
+            "SMB",
+            "SMTP",
+            "HTTPS",
+            "IMAP"
           ],
           "answer": [
             0

@@ -88,7 +88,7 @@ async function loadHome() {
   try {
     const res = await fetch(`${API}/topics`);
     allTopics = await res.json();
-    renderTopics(allTopics);
+    renderHomeSections();
     renderTabs(allTopics);
   } catch (e) {
     grid.innerHTML = `<div class="loading" style="color:#ef4444">⚠️ Cannot connect to server.<br>Run: <code>node backend/server.js</code></div>`;
@@ -97,15 +97,21 @@ async function loadHome() {
 
 function renderTabs(topics) {
   const container = document.getElementById('hero-tabs');
-  const lectures = [...new Set(topics.map(t => t.lecture))];
   container.innerHTML = `<button class="hero-tab active" onclick="filterTopics(null, this)">All</button>`;
-  lectures.forEach(l => {
+
+  allTopics.filter(topic => isHomeTopic(topic)).forEach(topic => {
     const btn = document.createElement('button');
     btn.className = 'hero-tab';
-    btn.textContent = l.toUpperCase();
-    btn.onclick = () => filterTopics(l, btn);
+    btn.textContent = topic.lecture.toUpperCase();
+    btn.onclick = () => {
+      document.querySelectorAll('.hero-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      if (isAttestationTopic(topic)) openAttestation(topic.id);
+      else startTopic(topic.id);
+    };
     container.appendChild(btn);
   });
+
   const vlsmBtn = document.createElement('button');
   vlsmBtn.className = 'hero-tab vlsm-tab';
   vlsmBtn.textContent = 'VLSM';
@@ -119,10 +125,30 @@ function renderTabs(topics) {
   container.appendChild(lecturesBtn);
 }
 
+function renderHomeSections() {
+  document.querySelector('.hero-subtitle').textContent = 'Select a practice mode';
+  const sections = [
+    ...allTopics.filter(topic => isHomeTopic(topic)),
+    { id: 'vlsm-practice', title: 'VLSM', icon: '🧮', lecture: 'Practice', count: vlsmPractices.length },
+    { id: 'lectures-overview', title: 'Lectures', icon: '📚', lecture: 'Answers', count: getLectures().length },
+  ];
+  renderTopics(sections);
+}
+
+function isHomeTopic(topic) {
+  return ['attestation-1', 'attestation-2', 'final-exam'].includes(topic.id);
+}
+
+function isToolTopic(topic) {
+  return ['vlsm-practice', 'lectures-overview'].includes(topic.id);
+}
+
 function filterTopics(lecture, btn) {
   document.querySelectorAll('.hero-tab').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  renderTopics(lecture ? allTopics.filter(t => t.lecture === lecture) : allTopics);
+  document.querySelector('.hero-subtitle').textContent = lecture ? 'Select a topic to practice' : 'Select a practice mode';
+  if (lecture) renderTopics(allTopics.filter(t => t.lecture === lecture));
+  else renderHomeSections();
 }
 
 function openVlsmPractice(btn) {
@@ -140,7 +166,36 @@ function openLectures(btn) {
 }
 
 function getLectures() {
-  return [...new Set(allTopics.map(topic => topic.lecture))];
+  return [...new Set(allTopics.filter(topic => !isVirtualTopic(topic)).map(topic => topic.lecture))];
+}
+
+function isVirtualTopic(topic) {
+  return ['attestation-1', 'attestation-2', 'final-exam'].includes(topic.id);
+}
+
+function isAttestationTopic(topic) {
+  return ['attestation-1', 'attestation-2'].includes(topic.id);
+}
+
+function getAttestationTopics(attestationId) {
+  if (attestationId === 'attestation-1') {
+    return allTopics.filter(topic => !isVirtualTopic(topic) && /^Lecture [1-6]$/.test(topic.lecture));
+  }
+  if (attestationId === 'attestation-2') {
+    return allTopics.filter(topic => !isVirtualTopic(topic) && !/^Lecture [1-6]$/.test(topic.lecture));
+  }
+  return [];
+}
+
+function openAttestation(attestationId) {
+  const attestation = allTopics.find(topic => topic.id === attestationId);
+  if (!attestation) return;
+
+  document.querySelectorAll('.hero-tab').forEach(b => {
+    b.classList.toggle('active', b.textContent === attestation.lecture.toUpperCase());
+  });
+  document.querySelector('.hero-subtitle').textContent = `${attestation.title}: select a lecture topic`;
+  renderTopics(getAttestationTopics(attestationId));
 }
 
 function renderLectureTabs() {
@@ -666,7 +721,7 @@ function renderTopics(topics) {
   const grid = document.getElementById('topics-grid');
   if (!topics.length) { grid.innerHTML = '<div class="loading">No topics found.</div>'; return; }
   grid.innerHTML = topics.map(t => `
-    <div class="topic-card" onclick="startTopic('${t.id}')">
+    <div class="topic-card" onclick="${getTopicClickAction(t)}">
       <div class="topic-icon">${t.icon}</div>
       <div class="topic-lecture">${t.lecture}</div>
       <div class="topic-title">${t.title}</div>
@@ -676,6 +731,13 @@ function renderTopics(topics) {
       </div>
     </div>
   `).join('');
+}
+
+function getTopicClickAction(topic) {
+  if (isAttestationTopic(topic)) return `openAttestation('${topic.id}')`;
+  if (topic.id === 'vlsm-practice') return 'openVlsmPractice()';
+  if (topic.id === 'lectures-overview') return 'openLectures()';
+  return `startTopic('${topic.id}')`;
 }
 
 async function startTopic(topicId) {
@@ -689,6 +751,20 @@ async function startTopic(topicId) {
     renderQuestionJump();
     loadQuestion();
   } catch (e) { alert('Failed to load topic. Is the server running?'); }
+}
+
+function renderQuestionSource(q) {
+  const source = document.getElementById('q-source');
+  if (!source) return;
+
+  if (!q.sourceLecture && !q.sourceTopic) {
+    source.style.display = 'none';
+    source.textContent = '';
+    return;
+  }
+
+  source.textContent = [q.sourceLecture, q.sourceTopic].filter(Boolean).join(' · ');
+  source.style.display = 'inline-flex';
 }
 
 function loadQuestion() {
@@ -705,6 +781,7 @@ function loadQuestion() {
   document.getElementById('quiz-meta').textContent = `Question ${currentIndex + 1} of ${total}`;
   document.getElementById('progress-fill').style.width = `${(currentIndex / total) * 100}%`;
   renderQuestionJump();
+  renderQuestionSource(q);
   document.getElementById('q-text').textContent = q.question;
   renderQuestionImage(q);
   document.getElementById('feedback-block').style.display = 'none';
@@ -771,7 +848,7 @@ function renderQuestionJump() {
     const answered = answers.find(answer => answer.question === question);
     const state = answered ? (answered.correct ? 'correct' : 'wrong') : '';
     const active = index === currentIndex ? 'active' : '';
-    const label = question.sourceNumber || index + 1;
+    const label = isVirtualTopic(currentTopic) ? index + 1 : (question.sourceNumber || index + 1);
     return `
       <button class="question-jump-btn ${active} ${state}" onclick="jumpToQuestion(${index})" type="button">
         ${label}

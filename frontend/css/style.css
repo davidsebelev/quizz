@@ -395,6 +395,20 @@ body {
 .q-header { margin-bottom: 1.25rem; }
 .q-text { margin-bottom: 0.5rem; }
 
+.q-source {
+  align-items: center;
+  max-width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(59,130,246,0.28);
+  border-radius: 8px;
+  background: rgba(59,130,246,0.1);
+  color: #93c5fd;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 .q-media {
   margin: 1rem 0 0.75rem;
   border: 1px solid var(--border);
