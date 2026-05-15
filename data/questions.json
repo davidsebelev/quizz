@@ -938,6 +938,502 @@
       "attestation": "Attestation 1"
     },
     {
+      "id": "topic1-v2",
+      "title": "Lecture 1 v2",
+      "icon": "🌐",
+      "lecture": "Lecture 1",
+      "questions": [
+        {
+          "id": 1,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "How does BYOD change the way in which businesses implement networks?",
+          "options": [
+            "BYOD requires organizations to purchase laptops rather than desktops.",
+            "BYOD users are responsible for their own network security, thus reducing the need for organizational security policies.",
+            "BYOD devices are more expensive than devices that are purchased by an organization.",
+            "BYOD provides flexibility in where and how users can access network resources."
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "A BYOD environment requires an organization to accommodate a variety of devices and access methods. Personal devices, which are not under company control, may be involved, so security is critical. Onsite hardware costs will be reduced, allowing a business to focus on delivering collaboration tools and other software to BYOD users."
+        },
+        {
+          "id": 2,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "An employee wants to access the network of the organization remotely, in the safest possible way. What network feature would allow an employee to gain secure remote access to a company network?",
+          "options": [
+            "ACL",
+            "IPS",
+            "VPN",
+            "BYOD"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Virtual private networks (VPN) are used to provide secure access to remote workers."
+        },
+        {
+          "id": 3,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "What is the Internet?",
+          "options": [
+            "It is a network based on Ethernet technology.",
+            "It provides network access for mobile devices.",
+            "It provides connections through interconnected global networks.",
+            "It is a private network for an organization with LAN and WAN connections."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The Internet provides global connections that enable networked devices with different network technologies, such as Ethernet, DSL/cable, and serial connections, to communicate. A private network for an organization with LAN and WAN connections is an intranet."
+        },
+        {
+          "id": 4,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "What are two functions of end devices on a network? (Choose two.)",
+          "options": [
+            "They originate the data that flows through the network.",
+            "They direct data over alternate paths in the event of link failures.",
+            "They filter the flow of data to enhance security.",
+            "They are the interface between humans and the communication network.",
+            "They provide the channel over which the network message travels."
+          ],
+          "answer": [
+            0,
+            3
+          ],
+          "explanation": "End devices originate the data that flows through the network and are the interface between humans and the communication network. Intermediary devices direct data over alternate paths and filter traffic. Network media provide the channel through which messages travel."
+        },
+        {
+          "id": 5,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "In which scenario would the use of a WISP be recommended?",
+          "options": [
+            "an Internet cafe in a city",
+            "a farm in a rural area without wired broadband access",
+            "any home with multiple wireless devices",
+            "an apartment in a building with cable access to the Internet"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Wireless Internet Service Providers (WISPs) are typically found in rural areas where DSL or cable access is not available. A dish or antenna on the subscriber property connects wirelessly to a WISP transmitter."
+        },
+        {
+          "id": 6,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "What characteristic of a network enables it to quickly grow to support new users and applications without impacting the performance of the service being delivered to existing users?",
+          "options": [
+            "reliability",
+            "scalability",
+            "quality of service",
+            "accessibility"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Networks must be able to quickly grow to support new users and services without impacting existing users and services. This ability to grow is known as scalability."
+        },
+        {
+          "id": 7,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "A college is building a new dormitory on its campus. Workers accidentally damage a fiber optic cable that connects two existing dormitories to the campus data center. Although the cable has been cut, students only experience a very short interruption of network services. What characteristic of the network is shown here?",
+          "options": [
+            "quality of service (QoS)",
+            "scalability",
+            "security",
+            "fault tolerance",
+            "integrity"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Fault tolerance allows a network to quickly respond to failures of network devices, media, or services. QoS prioritizes traffic, scalability supports growth, and security protects networks and data."
+        },
+        {
+          "id": 8,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "What are two characteristics of a scalable network? (Choose two.)",
+          "options": [
+            "easily overloaded with increased traffic",
+            "grows in size without impacting existing users",
+            "is not as reliable as a small network",
+            "suitable for modular devices that allow for expansion",
+            "offers limited number of applications"
+          ],
+          "answer": [
+            1,
+            3
+          ],
+          "explanation": "Scalable networks can grow without costly replacement of existing devices. Modular networking devices support expansion."
+        },
+        {
+          "id": 9,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "Which device performs the function of determining the path that messages should take through internetworks?",
+          "options": [
+            "a router",
+            "a firewall",
+            "a web server",
+            "a DSL modem"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "A router determines the path messages should take through the network. A firewall filters traffic, a web server provides content, and a DSL modem provides Internet connectivity."
+        },
+        {
+          "id": 10,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "Which two Internet connection options do not require that physical cables be run to the building? (Choose two.)",
+          "options": [
+            "DSL",
+            "cellular",
+            "satellite",
+            "dialup",
+            "dedicated leased line"
+          ],
+          "answer": [
+            1,
+            2
+          ],
+          "explanation": "Cellular connectivity uses the cell phone network. Satellite connectivity is often used where physical cabling is not available outside the home or business."
+        },
+        {
+          "id": 11,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "What type of network must a home user access in order to do online shopping?",
+          "options": [
+            "an intranet",
+            "the Internet",
+            "an extranet",
+            "a local area network"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Home users go online shopping over the Internet because online vendors are accessed through the Internet. An intranet is for internal use, and an extranet provides selected access to external partners."
+        },
+        {
+          "id": 12,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "During a routine inspection, a technician discovered that software installed on a computer was secretly collecting data about websites that were visited by users of the computer. Which type of threat is affecting this computer?",
+          "options": [
+            "DoS attack",
+            "identity theft",
+            "spyware",
+            "zero-day attack"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Spyware is software installed on a network device that secretly collects information."
+        },
+        {
+          "id": 13,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "Which term refers to a network that provides secure access to the corporate offices by suppliers, customers, and collaborators?",
+          "options": [
+            "Internet",
+            "intranet",
+            "extranet",
+            "extendednet"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Extranets provide secure access to selected corporate resources for suppliers, customers, and collaborators. An intranet is a private internal network, and the Internet is the worldwide collection of connected networks."
+        },
+        {
+          "id": 14,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "A large corporation has modified its network to allow users to access network resources from their personal laptops and smart phones. Which networking trend does this describe?",
+          "options": [
+            "cloud computing",
+            "online collaboration",
+            "bring your own device",
+            "video conferencing"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Bring your own device (BYOD) allows users to use personal devices to access the corporate network. This can affect security and compatibility with corporate resources."
+        },
+        {
+          "id": 15,
+          "slide": null,
+          "reference": "User provided Lecture 1 v2 questions",
+          "question": "What is an ISP?",
+          "options": [
+            "It is a standards body that develops cabling and wiring standards for networking.",
+            "It is a protocol that establishes how computers within a local network communicate.",
+            "It is an organization that enables individuals and businesses to connect to the Internet.",
+            "It is a networking device that combines the functionality of several different networking devices in one."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "An ISP, or Internet Service Provider, is an organization that provides Internet access for businesses and individuals."
+        }
+      ],
+      "attestation": "Attestation 1"
+    },
+    {
+      "id": "topic2-v2",
+      "title": "Lecture 2 v2",
+      "icon": "🖥️",
+      "lecture": "Lecture 2",
+      "questions": [
+        {
+          "id": 1,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "Which functionality is provided by DHCP?",
+          "options": [
+            "automatic assignment of an IP address to each host",
+            "remote switch management",
+            "translation of IP addresses to domain names",
+            "end-to-end connectivity test"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "DHCP provides dynamic and automatic IP address assignment to hosts."
+        },
+        {
+          "id": 2,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "Which two functions are provided to users by the context-sensitive help feature of the Cisco IOS CLI? (Choose two.)",
+          "options": [
+            "providing an error message when a wrong command is submitted",
+            "displaying a list of all available commands within the current mode",
+            "allowing the user to complete the remainder of an abbreviated command with the TAB key",
+            "determining which option, keyword, or argument is available for the entered command",
+            "selecting the best command to accomplish a task"
+          ],
+          "answer": [
+            1,
+            3
+          ],
+          "explanation": "Context-sensitive help provides a list of commands and the arguments associated with those commands within the current mode. Syntax checking provides error messages, and the TAB key completes abbreviated commands."
+        },
+        {
+          "id": 3,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "Which memory location on a Cisco router or switch stores the startup configuration file?",
+          "options": [
+            "RAM",
+            "ROM",
+            "NVRAM",
+            "flash"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The startup configuration file of a Cisco router or switch is stored in NVRAM, which is nonvolatile memory."
+        },
+        {
+          "id": 4,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "To what subnet does the IP address 10.1.100.50 belong if a subnet mask of 255.255.0.0 is used?",
+          "options": [
+            "10.1.0.0",
+            "10.0.0.0",
+            "10.1.100.32",
+            "10.1.100.0"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The subnet mask 255.255.0.0 identifies the first two octets as the network portion, so 10.1.100.50 belongs to subnet 10.1.0.0."
+        },
+        {
+          "id": 5,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "When a hostname is configured through the Cisco CLI, which three naming conventions are part of the guidelines? (Choose three.)",
+          "options": [
+            "the hostname should be fewer than 64 characters in length",
+            "the hostname should be written in all lower case characters",
+            "the hostname should contain no spaces",
+            "the hostname should end with a special character",
+            "the hostname should begin with a letter"
+          ],
+          "answer": [
+            0,
+            2,
+            4
+          ],
+          "explanation": "A hostname should be fewer than 64 characters, contain no spaces, and begin with a letter. It can use upper or lower case characters and should end with a letter or digit, not a special character."
+        },
+        {
+          "id": 6,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "What is the function of the shell in an OS?",
+          "options": [
+            "It interacts with the device hardware.",
+            "It interfaces between the users and the kernel.",
+            "It provides dedicated firewall services.",
+            "It provides the intrusion protection services for the device."
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Most operating systems contain a shell and a kernel. The kernel interacts with the hardware, and the shell interfaces between the kernel and the users."
+        },
+        {
+          "id": 7,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "A router with a valid operating system contains a configuration file stored in NVRAM. The configuration file has an enable secret password but no console password. When the router boots up, which mode will display?",
+          "options": [
+            "global configuration mode",
+            "setup mode",
+            "privileged EXEC mode",
+            "user EXEC mode"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "If a Cisco IOS device has a valid IOS and a valid configuration file, it boots into user EXEC mode. A password is required to enter privileged EXEC mode."
+        },
+        {
+          "id": 8,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "An administrator has just changed the IP address of an interface on an IOS device. What else must be done in order to apply those changes to the device?",
+          "options": [
+            "Copy the running configuration to the startup configuration file.",
+            "Copy the information in the startup configuration file to the running configuration.",
+            "Reload the device and type yes when prompted to save the configuration.",
+            "Nothing must be done. Changes to the configuration on an IOS device take effect as soon as the command is typed correctly and the Enter key has been pressed."
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Changes to router and switch configurations take effect as soon as the command is entered. Because changes affect live devices immediately, they should be carefully planned."
+        },
+        {
+          "id": 9,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "Which memory location on a Cisco router or switch will lose all content when the device is restarted?",
+          "options": [
+            "ROM",
+            "flash",
+            "NVRAM",
+            "RAM"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "RAM is volatile memory and loses all contents if the router or switch is restarted or shut down."
+        },
+        {
+          "id": 10,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "Why would a technician enter the command copy startup-config running-config?",
+          "options": [
+            "to remove all configurations from the switch",
+            "to save an active configuration to NVRAM",
+            "to copy an existing configuration into RAM",
+            "to make a changed configuration the new startup configuration"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The command copy startup-config running-config copies a previously saved configuration from NVRAM into RAM."
+        },
+        {
+          "id": 11,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "Which statement is true about the running configuration file in a Cisco IOS device?",
+          "options": [
+            "It affects the operation of the device immediately when modified.",
+            "It is stored in NVRAM.",
+            "It should be deleted using the erase running-config command.",
+            "It is automatically saved when the router reboots."
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Configuration commands modify the running configuration immediately. Running configurations are not stored in NVRAM and are not saved automatically."
+        },
+        {
+          "id": 12,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "Which two statements are true regarding the user EXEC mode? (Choose two.)",
+          "options": [
+            "All router commands are available.",
+            "Global configuration mode can be accessed by entering the enable command.",
+            "The device prompt for this mode ends with the \">\" symbol.",
+            "Interfaces and routing protocols can be configured.",
+            "Only some aspects of the router configuration can be viewed."
+          ],
+          "answer": [
+            2,
+            4
+          ],
+          "explanation": "User EXEC mode limits access to some show commands and is identified by the > prompt. It is the first level of user interface encountered when configuring a router."
+        },
+        {
+          "id": 13,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "Which type of access is secured on a Cisco router or switch with the enable secret command?",
+          "options": [
+            "virtual terminal",
+            "privileged EXEC",
+            "AUX port",
+            "console line"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "The enable secret command secures access to privileged EXEC mode on a Cisco router or switch."
+        },
+        {
+          "id": 14,
+          "slide": null,
+          "reference": "User provided Lecture 2 v2 questions",
+          "question": "What is the default SVI on a Cisco switch?",
+          "options": [
+            "VLAN1",
+            "VLAN99",
+            "VLAN100",
+            "VLAN999"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Layer 2 switches use switch virtual interfaces (SVIs) to provide remote access over IP. The default SVI on a Cisco switch is VLAN1."
+        }
+      ],
+      "attestation": "Attestation 1"
+    },
+    {
       "id": "topic2",
       "title": "Configure a Network Operating System",
       "icon": "🖥️",
@@ -2771,6 +3267,569 @@
             2
           ],
           "explanation": "Network 1 is wired Ethernet and uses CSMA/CD. Network 2 is point-to-point. Network 3 is wireless and uses CSMA/CA."
+        }
+      ],
+      "attestation": "Attestation 1"
+    },
+    {
+      "id": "topic3-physical-layer-v2",
+      "title": "Physical Layer v2",
+      "icon": "🔌",
+      "lecture": "Lecture 3",
+      "questions": [
+        {
+          "id": 1,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "Which standards organization oversees development of wireless LAN standards?",
+          "options": [
+            "IANA",
+            "IEEE",
+            "IOS",
+            "TIA"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "IANA oversees IP address allocation and domain names. TIA focuses on communication standards. IEEE 802 standards include Ethernet 802.3, wireless LANs 802.11, and wireless PANs 802.15."
+        },
+        {
+          "id": 2,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "A network administrator is designing a new network infrastructure that includes both wired and wireless connectivity. Under which situation would a wireless connection be recommended?",
+          "options": [
+            "The end-user device only has an Ethernet NIC.",
+            "The end-user device requires a dedicated connection because of performance requirements.",
+            "The end-user device needs mobility when connecting to the network.",
+            "The end-user device area has a high concentration of RFI."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Wireless is recommended when end-user devices need mobility. Ethernet-only devices, high RFI areas, and dedicated performance requirements favor wired connections."
+        },
+        {
+          "id": 3,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "A network administrator is troubleshooting connectivity issues on a server. Using a tester, the administrator notices that the signals generated by the server NIC are distorted and not usable. In which layer of the OSI model is the error categorized?",
+          "options": [
+            "presentation layer",
+            "network layer",
+            "physical layer",
+            "data link layer"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The NIC encodes frames as electrical, optical, or radio signals for transmission on the media. Signal generation and signaling are physical layer functions."
+        },
+        {
+          "id": 4,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "What type of cable is used to connect a workstation serial port to a Cisco router console port?",
+          "options": [
+            "crossover",
+            "rollover",
+            "straight-through",
+            "coaxial"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "A rollover, or console, cable is used to connect from a PC serial port to a Cisco router console port."
+        },
+        {
+          "id": 5,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "Which type of UTP cable is used to connect a PC to a switch port?",
+          "options": [
+            "console",
+            "rollover",
+            "crossover",
+            "straight-through"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "A straight-through cable is normally used to connect a host to a switch. Rollover cables are for console access, and crossover cables connect similar devices."
+        },
+        {
+          "id": 6,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "What is the definition of bandwidth?",
+          "options": [
+            "the measure of the transfer of bits across the media over a given period of time",
+            "the speed at which bits travel on the network",
+            "the amount of data that can flow from one place to another in a given amount of time",
+            "the measure of usable data transferred over a given period of time"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Bandwidth is the capacity of a network medium to carry data, usually measured as the amount of data that can move between two points per second."
+        },
+        {
+          "id": 7,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "Which statement correctly describes frame encoding?",
+          "options": [
+            "It uses the characteristic of one wave to modify another wave.",
+            "It transmits data signals along with a clock signal which occurs at evenly spaced time durations.",
+            "It generates the electrical, optical, or wireless signals that represent the binary numbers of the frame.",
+            "It converts bits into a predefined code in order to provide a predictable pattern to help distinguish data bits from control bits."
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Frame encoding converts bits into predefined codes recognized by sender and receiver, helping identify frame boundaries and distinguish data bits from control bits."
+        },
+        {
+          "id": 8,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "What is a characteristic of UTP cabling?",
+          "options": [
+            "cancellation",
+            "cladding",
+            "immunity to electrical hazards",
+            "woven copper braid or metallic foil"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Cancellation is a UTP property where adjacent twisted wires help cancel magnetic fields. Cladding and immunity to electrical hazards relate to fiber, and woven braid or foil is shielding."
+        },
+        {
+          "id": 9,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "A wireless LAN is being deployed inside the new one room office that is occupied by the park ranger. The office is located at the highest part of the national park. After network testing is complete, the technicians report that the wireless LAN signal is occasionally affected by some type of interference. What is a possible cause of the signal distortion? (Choose two.)",
+          "options": [
+            "the microwave oven",
+            "the large number of trees that surround the office",
+            "the cellular phones that are used by the employees",
+            "the elevated location where the wireless LAN was installed",
+            "the number of wireless devices that are used in the wireless LAN"
+          ],
+          "answer": [
+            0,
+            2
+          ],
+          "explanation": "In a one-room isolated office, likely wireless interference sources include a microwave oven and cellular phones. Trees, elevation, and a small number of local devices are less likely causes."
+        },
+        {
+          "id": 10,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "What is indicated by the term throughput?",
+          "options": [
+            "the guaranteed data transfer rate offered by an ISP",
+            "the capacity of a particular medium to carry data",
+            "the measure of the usable data transferred across the media",
+            "the measure of the bits transferred across the media over a given period of time",
+            "the time it takes for a message to get from sender to receiver"
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Throughput is the actual measure of bits transferred across the media during a period of time. Goodput is the usable application data transferred."
+        },
+        {
+          "id": 11,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "What is one advantage of using fiber optic cabling rather than copper cabling?",
+          "options": [
+            "It is usually cheaper than copper cabling.",
+            "It is able to be installed around sharp bends.",
+            "It is easier to terminate and install than copper cabling.",
+            "It is able to carry signals much farther than copper cabling."
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Fiber optic cabling generally carries signals much farther than copper cabling and is immune to EMI/RFI, though it is usually more expensive and harder to terminate."
+        },
+        {
+          "id": 12,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "What is the purpose of the OSI physical layer?",
+          "options": [
+            "controlling access to media",
+            "transmitting bits across the local media",
+            "performing error detection on received frames",
+            "exchanging frames between nodes over physical network media"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "The physical layer transmits bits as signals across local media. Media access, frame exchange, and error detection are data link layer functions."
+        },
+        {
+          "id": 13,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "Why are two strands of fiber used for a single fiber optic connection?",
+          "options": [
+            "The two strands allow the data to travel for longer distances without degrading.",
+            "They prevent crosstalk from causing interference on the connection.",
+            "They increase the speed at which the data can travel.",
+            "They allow for full-duplex connectivity."
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Light travels one direction down a single fiber strand, so two strands are used to support simultaneous sending and receiving for full-duplex connectivity."
+        },
+        {
+          "id": 14,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "Which characteristic describes crosstalk?",
+          "options": [
+            "the distortion of the network signal from fluorescent lighting",
+            "the distortion of the transmitted messages from signals carried in adjacent wires",
+            "the weakening of the network signal over long cable lengths",
+            "the loss of wireless signal over excessive distance from the access point"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Crosstalk is disturbance caused by electric or magnetic fields from signals carried on adjacent wires in the same cable."
+        },
+        {
+          "id": 15,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "Which procedure is used to reduce the effect of crosstalk in copper cables?",
+          "options": [
+            "requiring proper grounding connections",
+            "twisting opposing circuit wire pairs together",
+            "wrapping the bundle of wires with metallic shielding",
+            "designing a cable infrastructure to avoid crosstalk interference",
+            "avoiding sharp bends during installation"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Twisting opposing circuit wire pairs together helps cancel interference from adjacent wires and reduces crosstalk."
+        },
+        {
+          "id": 16,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "Which statement describes a characteristic of the frame header fields of the data link layer?",
+          "options": [
+            "They all include the flow control and logical connection fields.",
+            "Ethernet frame header fields contain Layer 3 source and destination addresses.",
+            "They vary depending on protocols.",
+            "They include information on user applications."
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Data link frame header fields vary by protocol. Different protocols may include different fields for priority, control, media access, flow control, or congestion control."
+        },
+        {
+          "id": 17,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "Which two factors influence the method that is used for media access control? (Choose two.)",
+          "options": [
+            "how data is generated by end devices applications",
+            "how the connection between nodes appears to the data link layer",
+            "how signals are encoded by the NICs on end devices",
+            "how nodes share the media",
+            "how the IP protocol forwards the packet to the destination"
+          ],
+          "answer": [
+            1,
+            3
+          ],
+          "explanation": "Media access control depends on how nodes share the media and how the connection between nodes appears to the data link layer."
+        },
+        {
+          "id": 18,
+          "slide": null,
+          "reference": "User provided Physical Layer v2 questions",
+          "question": "What is a characteristic of a WAN hub-and-spoke topology?",
+          "options": [
+            "It requires that some of the branch sites be interconnected through point-to-point links.",
+            "It requires that every site be interconnected to each other through point-to-point links.",
+            "All sites require a hub device that connects to a router.",
+            "The branch sites are connected to a central site through point-to-point links."
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "In a WAN hub-and-spoke topology, branch sites connect to a central hub site through point-to-point links."
+        }
+      ],
+      "attestation": "Attestation 1"
+    },
+    {
+      "id": "topic3-data-link-layer-v2",
+      "title": "Data Link Layer v2",
+      "icon": "🔗",
+      "lecture": "Lecture 3",
+      "questions": [
+        {
+          "id": 1,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "What are two services performed by the data link layer of the OSI model? (Choose two.)",
+          "options": [
+            "It encrypts data packets.",
+            "It determines the path to forward packets.",
+            "It accepts Layer 3 packets and encapsulates them into frames.",
+            "It provides media access control and performs error detection.",
+            "It monitors the Layer 2 communication by building a MAC address table."
+          ],
+          "answer": [
+            2,
+            3
+          ],
+          "explanation": "The data link layer accepts Layer 3 packets and encapsulates them into frames. It also provides media access control and performs error detection. Path determination is a Layer 3 function."
+        },
+        {
+          "id": 2,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "What does a router do after de-encapsulating a received frame?",
+          "options": [
+            "determines the best path",
+            "de-encapsulates the frame",
+            "re-encapsulates the packet into a new frame",
+            "forwards the new frame onto the network medium"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "At each hop, a router accepts a frame, de-encapsulates it, determines the best path, re-encapsulates the packet into a new frame, and forwards it onto the correct medium."
+        },
+        {
+          "id": 3,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "What attribute of a NIC would place it at the data link layer of the OSI model?",
+          "options": [
+            "attached Ethernet cable",
+            "IP address",
+            "MAC address",
+            "RJ-45 port",
+            "TCP/IP protocol stack"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The data link layer handles media access and physical addressing. A NIC MAC address is a Layer 2 address."
+        },
+        {
+          "id": 4,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "Although CSMA/CD is still a feature of Ethernet, why is it no longer necessary?",
+          "options": [
+            "the virtually unlimited availability of IPv6 addresses",
+            "the use of CSMA/CA",
+            "the use of full-duplex capable Layer 2 switches",
+            "the development of half-duplex switch operation",
+            "the use of Gigabit Ethernet speeds"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Full-duplex Layer 2 switching eliminates collisions, so CSMA/CD is no longer needed in modern switched Ethernet networks."
+        },
+        {
+          "id": 5,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "What type of physical topology can be created by connecting all Ethernet cables to a central device?",
+          "options": [
+            "bus",
+            "ring",
+            "star",
+            "mesh"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "When Ethernet devices connect to a central hub or switch, the physical topology is a star."
+        },
+        {
+          "id": 6,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "A technician has been asked to develop a physical topology for a network that provides a high level of redundancy. Which physical topology requires that every node is attached to every other node on the network?",
+          "options": [
+            "bus",
+            "hierarchical",
+            "mesh",
+            "ring",
+            "star"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "A full mesh topology connects every node to every other node, providing high availability and redundancy."
+        },
+        {
+          "id": 7,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "Which statement describes the half-duplex mode of data transmission?",
+          "options": [
+            "Data that is transmitted over the network can only flow in one direction.",
+            "Data that is transmitted over the network flows in one direction at a time.",
+            "Data that is transmitted over the network flows in one direction to many different destinations simultaneously.",
+            "Data that is transmitted over the network flows in both directions at the same time."
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Simplex allows data to flow in one direction only. Half-duplex allows data to flow in one direction at a time. Full-duplex allows data to flow both directions at the same time."
+        },
+        {
+          "id": 8,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "Which is a function of the Logical Link Control (LLC) sublayer?",
+          "options": [
+            "to define the media access processes that are performed by the hardware",
+            "to provide data link layer addressing",
+            "to identify which network layer protocol is being used",
+            "to accept segments and package them into data units that are called packets"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The LLC sublayer identifies which network layer protocol is being carried. MAC handles media access and data link addressing."
+        },
+        {
+          "id": 9,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "Which data link layer media access control method does Ethernet use with legacy Ethernet hubs?",
+          "options": [
+            "CSMA/CD",
+            "determinism",
+            "turn taking",
+            "token passing"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Legacy shared Ethernet networks using hubs use CSMA/CD. Wireless 802.11 networks use CSMA/CA."
+        },
+        {
+          "id": 10,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "What are the two sublayers of the OSI model data link layer? (Choose two.)",
+          "options": [
+            "internet",
+            "physical",
+            "LLC",
+            "transport",
+            "MAC",
+            "network access"
+          ],
+          "answer": [
+            2,
+            4
+          ],
+          "explanation": "The OSI data link layer is divided into the Logical Link Control (LLC) sublayer and the Media Access Control (MAC) sublayer."
+        },
+        {
+          "id": 11,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "What method is used to manage contention-based access on a wireless network?",
+          "options": [
+            "CSMA/CD",
+            "priority ordering",
+            "CSMA/CA",
+            "token passing"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Wireless networks use carrier sense multiple access with collision avoidance (CSMA/CA) to manage contention. Wired legacy Ethernet uses CSMA/CD."
+        },
+        {
+          "id": 12,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "What identifier is used at the data link layer to uniquely identify an Ethernet device?",
+          "options": [
+            "IP address",
+            "MAC address",
+            "sequence number",
+            "TCP port number",
+            "UDP port number"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Ethernet devices are identified at the data link layer by MAC addresses. IP addresses are Layer 3 identifiers, and TCP/UDP ports are Layer 4 identifiers."
+        },
+        {
+          "id": 13,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "Which two engineering organizations define open standards and protocols that apply to the data link layer? (Choose two.)",
+          "options": [
+            "Institute of Electrical and Electronics Engineers (IEEE)",
+            "Internet Assigned Numbers Authority (IANA)",
+            "International Telecommunication Union (ITU)",
+            "Electronic Industries Alliance (EIA)",
+            "Internet Society (ISOC)"
+          ],
+          "answer": [
+            0,
+            2
+          ],
+          "explanation": "IEEE and ITU define open standards and protocols that apply to the data link layer and network access technologies. IANA manages addressing and protocol identifiers."
+        },
+        {
+          "id": 14,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "Which layer of the OSI model is responsible for specifying the encapsulation method used for specific types of media?",
+          "options": [
+            "application",
+            "transport",
+            "data link",
+            "physical"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "The data link layer specifies framing and encapsulation methods for different physical media types."
+        },
+        {
+          "id": 15,
+          "slide": null,
+          "reference": "User provided Data Link Layer v2 questions",
+          "question": "What is true concerning physical and logical topologies?",
+          "options": [
+            "The logical topology is always the same as the physical topology.",
+            "Physical topologies are concerned with how a network transfers frames.",
+            "Physical topologies display the IP addressing scheme of each network.",
+            "Logical topologies refer to how a network transfers data between devices."
+          ],
+          "answer": [
+            3
+          ],
+          "explanation": "Physical topologies show the physical interconnection of devices. Logical topologies describe how the network transfers data between connected nodes."
         }
       ],
       "attestation": "Attestation 1"
@@ -7800,7 +8859,7 @@
     },
     {
       "id": "topic8-ipv6-addressing",
-      "title": "IPv6 Addressing/IC",
+      "title": "IPv6 Addressing",
       "icon": "🌐",
       "lecture": "Lecture 8",
       "questions": [
@@ -8623,7 +9682,15 @@
           "reference": "https://itexamanswers.net/ccna-1-v5-1-v6-0-chapter-8-exam-answers-100-full.html",
           "id": 44,
           "sourceNumber": 44
-        },
+        }
+      ]
+    },
+    {
+      "id": "topic8-icmp",
+      "title": "ICMP",
+      "icon": "📡",
+      "lecture": "Lecture 8",
+      "questions": [
         {
           "question": "What is a function of the tracert command that differs from the ping command when they are used on a workstation?",
           "options": [
@@ -8638,8 +9705,8 @@
           "explanation": "The tracert command sends three pings to each hop (router) in the path toward the destination and displays the domain name and IP address of hops from their responses. Because tracert uses the ping command, the travel time is the same as a standalone ping command. The primary function of a standalone ping command is to test the connectivity between two hosts.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 45,
-          "sourceNumber": 45
+          "id": 1,
+          "sourceNumber": 1
         },
         {
           "question": "Which ICMP message is used by the traceroute utility during the process of finding the path between two end hosts?",
@@ -8655,8 +9722,8 @@
           "explanation": "Traceroute progressively increments the TTL (IPv4) or hop limit (IPv6) field for sending a sequence of ping commands. When a router senses that the TTL or hop limit is 0, it discards the packet and sends a time exceeded message to the source. The returned message contains the IP address of the router that discarded the packet.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 46,
-          "sourceNumber": 46
+          "id": 2,
+          "sourceNumber": 2
         },
         {
           "question": "Which two things can be determined by using the ping command? (Choose two.)",
@@ -8674,8 +9741,8 @@
           "explanation": "A ping command provides feedback on the time between when an echo request was sent to a remote host and when the echo reply was received. A successful ping also indicates that the destination host was reachable through the network.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 47,
-          "sourceNumber": 47
+          "id": 3,
+          "sourceNumber": 3
         },
         {
           "question": "Which statement describes a characteristic of the traceroute utility?",
@@ -8691,8 +9758,8 @@
           "explanation": "Traceroute is a utility that generates a list of hops (or routers) along the path from a source host to the destination host.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 48,
-          "sourceNumber": 48
+          "id": 4,
+          "sourceNumber": 4
         },
         {
           "question": "Which utility uses the Internet Control Messaging Protocol (ICMP)?",
@@ -8708,8 +9775,8 @@
           "explanation": "ICMP is used by network devices to send error messages, and the ping utility uses ICMP echo request and echo reply messages.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 49,
-          "sourceNumber": 49
+          "id": 5,
+          "sourceNumber": 5
         },
         {
           "question": "A network administrator can successfully ping the server at www.cisco.com, but cannot ping the company web server located at an ISP in another city. Which tool or command would help identify the specific router where the packet was lost or delayed?",
@@ -8725,8 +9792,8 @@
           "explanation": "The traceroute command provides connectivity information about the path a packet takes to reach the destination and about every router (hop) along the way. It also indicates how long a packet takes to get from the source to each hop and back.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 50,
-          "sourceNumber": 50
+          "id": 6,
+          "sourceNumber": 6
         },
         {
           "question": "Which protocol is used by IPv4 and IPv6 to provide error messaging?",
@@ -8742,8 +9809,8 @@
           "explanation": "ICMP is used by IPv4 and IPv6 to provide for messages to be sent in the event of certain errors and for informational purposes.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 51,
-          "sourceNumber": 51
+          "id": 7,
+          "sourceNumber": 7
         },
         {
           "question": "What message is sent by a host to check the uniqueness of an IPv6 address before using that address?",
@@ -8759,8 +9826,8 @@
           "explanation": "In IPv6, Duplicate Address Detection (DAD) is used in place of ARP. An IPv6 host performs DAD by sending a neighbor solicitation (NS) message to its own IPv6 address to ensure the uniqueness of the address prior to using it.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 52,
-          "sourceNumber": 52
+          "id": 8,
+          "sourceNumber": 8
         },
         {
           "question": "A technician is troubleshooting a network where it is suspected that a defective node in the network path is causing packets to be dropped. The technician only has the IP address of the end point device and does not have any details of the intermediate devices. What command can the technician use to identify the faulty node?",
@@ -8776,8 +9843,8 @@
           "explanation": "The tracert command identifies each hop in the path to a destination, which can help locate the node where packets are dropped.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 53,
-          "sourceNumber": 53
+          "id": 9,
+          "sourceNumber": 9
         },
         {
           "question": "A user who is unable to connect to the file server contacts the help desk. The helpdesk technician asks the user to ping the IP address of the default gateway that is configured on the workstation. What is the purpose for this ping command?",
@@ -8793,8 +9860,8 @@
           "explanation": "The ping command is used to test connectivity between hosts. Pinging the default gateway tests whether the host has the capability to reach hosts on its own network and on other networks.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 54,
-          "sourceNumber": 54
+          "id": 10,
+          "sourceNumber": 10
         },
         {
           "question": "A user calls to report that a PC cannot access the internet. The network technician asks the user to issue the command ping 127.0.0.1 in a command prompt window. The user reports that the result is four positive replies. What conclusion can be drawn based on this connectivity test?",
@@ -8810,8 +9877,8 @@
           "explanation": "The ping 127.0.0.1 command verifies that the TCP/IP stack is functional. This loopback test does not send traffic beyond the PC itself.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 55,
-          "sourceNumber": 55
+          "id": 11,
+          "sourceNumber": 11
         },
         {
           "question": "Which command can be used to test connectivity between two devices using echo request and echo reply messages?",
@@ -8827,8 +9894,8 @@
           "explanation": "Ping is used to test connectivity between end devices. It uses ICMP echo request and echo reply messages.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 56,
-          "sourceNumber": 56
+          "id": 12,
+          "sourceNumber": 12
         },
         {
           "question": "What field content is used by ICMPv6 to determine that a packet has expired?",
@@ -8844,8 +9911,8 @@
           "explanation": "ICMPv6 sends a Time Exceeded message if the router cannot forward an IPv6 packet because the packet expired. The router uses the Hop Limit field to determine if the packet has expired.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 57,
-          "sourceNumber": 57
+          "id": 13,
+          "sourceNumber": 13
         },
         {
           "question": "Which protocol provides feedback from the destination host to the source host about errors in packet delivery?",
@@ -8861,8 +9928,8 @@
           "explanation": "The ICMP protocol operates at Layer 3 of the OSI model, which is the Internet layer of the TCP/IP model. ICMP encapsulates the ping and traceroute commands.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 58,
-          "sourceNumber": 58
+          "id": 14,
+          "sourceNumber": 14
         },
         {
           "question": "A network administrator is testing network connectivity by issuing the ping command on a router. Which symbol will be displayed to indicate that a time expired during the wait for an ICMP echo reply message?",
@@ -8878,8 +9945,8 @@
           "explanation": "When the ping command is issued on a router, ! indicates receipt of an ICMP echo reply message, . indicates a timeout while waiting for an ICMP echo reply message, and U indicates that an ICMP unreachable message was received.",
           "slide": null,
           "reference": "User provided ICMP questions",
-          "id": 59,
-          "sourceNumber": 59
+          "id": 15,
+          "sourceNumber": 15
         }
       ]
     },
@@ -14896,6 +15963,2972 @@
           "answer": [
             0
           ]
+        }
+      ]
+    },
+    {
+      "id": "web-lecture-3-js",
+      "title": "JavaScript / ECMAScript Exam Preparation",
+      "icon": "💻",
+      "lecture": "Lecture 3 JS",
+      "questions": [
+        {
+          "id": 3001,
+          "sourceNumber": 1,
+          "question": "What does querySelector() return?",
+          "options": [
+            "All matching elements",
+            "First matching element",
+            "Only div elements",
+            "HTML collection"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: B) First matching element. querySelector() searches by CSS selector and returns only the first matching element in the document."
+        },
+        {
+          "id": 3002,
+          "sourceNumber": 2,
+          "question": "Which keyword should be used by default in modern JavaScript?",
+          "options": [
+            "var",
+            "static",
+            "const",
+            "public"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: C) const. const should be the default in modern JavaScript because it is block-scoped and prevents reassignment, which makes code safer and clearer."
+        },
+        {
+          "id": 3003,
+          "sourceNumber": 3,
+          "question": "Which method converts an object into JSON string?",
+          "options": [
+            "JSON.parse()",
+            "JSON.stringify()",
+            "toJSON()",
+            "parseJSON()"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: B) JSON.stringify(). JSON.stringify() converts a JavaScript object or value into a JSON string for storage or data transfer."
+        },
+        {
+          "id": 3004,
+          "sourceNumber": 4,
+          "question": "What does classList.toggle() do?",
+          "options": [
+            "Deletes all classes",
+            "Changes CSS file",
+            "Adds/removes class",
+            "Hides element"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: C) Adds/removes class. classList.toggle() adds a class when it is missing and removes it when it is already present."
+        },
+        {
+          "id": 3005,
+          "sourceNumber": 5,
+          "question": "Which event is commonly used for keyboard input?",
+          "options": [
+            "mousemove",
+            "click",
+            "keydown",
+            "submit"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: C) keydown. keydown is commonly used for keyboard input because it fires when the user presses a key."
+        },
+        {
+          "id": 3006,
+          "sourceNumber": 6,
+          "question": "What does preventDefault() do?",
+          "options": [
+            "Deletes event",
+            "Prevents default browser behavior",
+            "Stops JS execution",
+            "Removes HTML element"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: B) Prevents default browser behavior. preventDefault() stops the browser action normally triggered by an event, such as submitting a form or following a link."
+        },
+        {
+          "id": 3007,
+          "sourceNumber": 7,
+          "question": "Which method is used to attach events?",
+          "options": [
+            "querySelector()",
+            "createElement()",
+            "addEventListener()",
+            "appendChild()"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: C) addEventListener(). addEventListener() attaches an event handler function to an element for events such as click, input, or keydown."
+        },
+        {
+          "id": 3008,
+          "sourceNumber": 8,
+          "question": "Which method filters array elements?",
+          "options": [
+            "map()",
+            "reduce()",
+            "filter()",
+            "push()"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: C) filter(). filter() creates a new array containing only the elements that satisfy the callback condition."
+        },
+        {
+          "id": 3009,
+          "sourceNumber": 9,
+          "question": "Which ES version introduced async/await?",
+          "options": [
+            "ES5",
+            "ES6",
+            "ES2017",
+            "ES2025"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: C) ES2017. async/await was introduced in ES2017 to make Promise-based asynchronous code easier to read."
+        },
+        {
+          "id": 3010,
+          "sourceNumber": 10,
+          "question": "Which ES version introduced classes?",
+          "options": [
+            "ES5",
+            "ES6",
+            "ES2020",
+            "ES2025"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: B) ES6. JavaScript class syntax was introduced in ES6, also known as ECMAScript 2015."
+        },
+        {
+          "id": 3011,
+          "sourceNumber": 11,
+          "type": "fill_blank",
+          "question": "Complete the DOM selection code. Use the method that returns the first element matching the CSS selector.\n\nconst el = document.__________(\"#title\");",
+          "answers": [
+            "querySelector"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: querySelector. document.querySelector(\"#title\") is correct because querySelector returns the first DOM element matching the CSS selector."
+        },
+        {
+          "id": 3012,
+          "sourceNumber": 12,
+          "type": "fill_blank",
+          "question": "Complete the classList code. Use the method that adds the class \"active\" to the element.\n\nel.classList.__________(\"active\");",
+          "answers": [
+            "add"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: add. classList.add(\"active\") is correct because add inserts the class into the element class list."
+        },
+        {
+          "id": 3013,
+          "sourceNumber": 13,
+          "type": "fill_blank",
+          "question": "Complete the DOM creation code. Use the method that creates a new div element.\n\nconst div = document.__________(\"div\");",
+          "answers": [
+            "createElement"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: createElement. document.createElement(\"div\") is correct because createElement creates a new HTML element with the given tag name."
+        },
+        {
+          "id": 3014,
+          "sourceNumber": 14,
+          "type": "fill_blank",
+          "question": "Complete the DOM insertion code. Use the method that adds child inside parent.\n\nparent.__________(child);",
+          "answers": [
+            "appendChild"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: appendChild. parent.appendChild(child) is correct because appendChild inserts the child node inside the parent node."
+        },
+        {
+          "id": 3015,
+          "sourceNumber": 15,
+          "type": "fill_blank",
+          "question": "Complete the event listener code. Use the method that attaches a click handler to the button.\n\nbtn.__________________(\"click\", handleClick);",
+          "answers": [
+            "addEventListener"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: addEventListener. btn.addEventListener(\"click\", handleClick) is correct because addEventListener registers handleClick to run when the click event happens."
+        },
+        {
+          "id": 3016,
+          "sourceNumber": 16,
+          "type": "fill_blank",
+          "question": "Complete the JSON serialization code. Convert the user object into a JSON string.\n\nconst json = JSON.__________(user);",
+          "answers": [
+            "stringify"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: stringify. JSON.stringify(user) is correct because stringify converts the user object into a JSON string."
+        },
+        {
+          "id": 3017,
+          "sourceNumber": 17,
+          "type": "fill_blank",
+          "question": "Complete the JSON parsing code. Convert a JSON string back into an object.\n\nconst obj = JSON.__________(json);",
+          "answers": [
+            "parse"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: parse. JSON.parse(json) is correct because parse converts a JSON string back into a JavaScript object."
+        },
+        {
+          "id": 3018,
+          "sourceNumber": 18,
+          "type": "fill_blank",
+          "question": "Complete the form input code. Read the text currently typed into the input element.\n\nconst text = input.__________;",
+          "answers": [
+            "value"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: value. input.value is correct because the value property stores the current text entered into a form input."
+        },
+        {
+          "id": 3019,
+          "sourceNumber": 19,
+          "type": "fill_blank",
+          "question": "Complete the event code. Stop the browser default action, for example form submit reload.\n\ne.__________________();",
+          "answers": [
+            "preventDefault"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: preventDefault. e.preventDefault() is correct because it cancels the event default action, such as page reload on form submit."
+        },
+        {
+          "id": 3020,
+          "sourceNumber": 20,
+          "type": "fill_blank",
+          "question": "Complete the array transformation code. Create a new array where every number is doubled.\n\nconst doubled = nums.__________(n => n * 2);",
+          "answers": [
+            "map"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: map. nums.map(n => n * 2) is correct because map transforms every array item and returns a new array of transformed values."
+        },
+        {
+          "id": 3021,
+          "sourceNumber": 21,
+          "type": "fill_blank",
+          "question": "Complete the array filtering code. Keep only even numbers from nums.\n\nconst evens = nums.__________(n => n % 2 === 0);",
+          "answers": [
+            "filter"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: filter. nums.filter(n => n % 2 === 0) is correct because filter keeps only items that pass the condition."
+        },
+        {
+          "id": 3022,
+          "sourceNumber": 22,
+          "type": "fill_blank",
+          "question": "Complete the array reduction code. Combine all numbers into one sum value.\n\nconst sum = nums.__________((acc, n) => acc + n, 0);",
+          "answers": [
+            "reduce"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: reduce. nums.reduce((acc, n) => acc + n, 0) is correct because reduce combines array values into one accumulated result."
+        },
+        {
+          "id": 3023,
+          "sourceNumber": 23,
+          "type": "fill_blank",
+          "question": "Complete the redirect code. Change the current browser page to profile.html.\n\nwindow.location.__________ = \"profile.html\";",
+          "answers": [
+            "href"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: href. window.location.href is correct because assigning to href changes the current page URL and redirects the browser."
+        },
+        {
+          "id": 3024,
+          "sourceNumber": 24,
+          "type": "fill_blank",
+          "question": "Complete the JavaScript version fact. ES6 is also known as ECMAScript 2015.\n\nES6 was released in the year ________.",
+          "answers": [
+            "2015"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: 2015. ES6 is also called ECMAScript 2015 because that version of the standard was released in 2015."
+        },
+        {
+          "id": 3025,
+          "sourceNumber": 25,
+          "type": "fill_blank",
+          "question": "Complete the operator question. Write the JavaScript optional chaining operator.\n\nOptional chaining operator is written as ________.",
+          "answers": [
+            "?."
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/javascript_ecmascript_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: ?.. The optional chaining operator is ?. because it safely accesses nested properties or calls without throwing when the left side is null or undefined."
+        }
+      ]
+    },
+    {
+      "id": "web-lecture-4-angular",
+      "title": "Angular / TypeScript Exam Preparation",
+      "icon": "🅰️",
+      "lecture": "Lecture 4 Angular",
+      "questions": [
+        {
+          "id": 4001,
+          "sourceNumber": 1,
+          "question": "What is Angular?",
+          "options": [
+            "Database",
+            "Framework",
+            "Browser",
+            "CSS library"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: B) Framework. Angular is a web application framework used to build structured frontend applications."
+        },
+        {
+          "id": 4002,
+          "sourceNumber": 2,
+          "question": "Angular is primarily built with:",
+          "options": [
+            "Java",
+            "Python",
+            "TypeScript",
+            "PHP"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: C) TypeScript. Angular is primarily built with TypeScript, which adds static typing and modern tooling on top of JavaScript."
+        },
+        {
+          "id": 4003,
+          "sourceNumber": 3,
+          "question": "What does @Component do?",
+          "options": [
+            "Creates database",
+            "Marks class as Angular component",
+            "Starts server",
+            "Creates route"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: B) Marks class as Angular component. @Component provides Angular metadata and tells Angular that the class is a component."
+        },
+        {
+          "id": 4004,
+          "sourceNumber": 4,
+          "question": "Which property defines custom HTML tag name?",
+          "options": [
+            "template",
+            "selector",
+            "styles",
+            "signal"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: B) selector. The selector property defines the custom HTML tag or selector used to render the component."
+        },
+        {
+          "id": 4005,
+          "sourceNumber": 5,
+          "question": "What does {{ title }} represent?",
+          "options": [
+            "Event binding",
+            "Property binding",
+            "Interpolation",
+            "Signal update"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 1",
+          "explanation": "Correct answer: C) Interpolation. {{ title }} is interpolation because Angular evaluates the expression and displays its value in the template."
+        },
+        {
+          "id": 4006,
+          "sourceNumber": 6,
+          "type": "fill_blank",
+          "question": "Complete the Angular Signals state declaration. Create a signal with initial value 0.\n\ncount = __________(0);",
+          "answers": [
+            "signal"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: signal. count = signal(0) is correct because signal creates reactive state with an initial value of 0."
+        },
+        {
+          "id": 4007,
+          "sourceNumber": 7,
+          "type": "fill_blank",
+          "question": "Complete the Angular template interpolation. Read the current value from the count signal.\n\n{{ __________ }}",
+          "answers": [
+            "count()"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: count(). {{ count() }} is correct because Angular signals are read by calling them as functions in the template."
+        },
+        {
+          "id": 4008,
+          "sourceNumber": 8,
+          "type": "fill_blank",
+          "question": "Complete the Angular property binding. Bind imageUrl to the image src property.\n\n__________=\"imageUrl\"",
+          "answers": [
+            "[src]"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: [src]. [src]=\"imageUrl\" is correct because square brackets perform property binding to the src property."
+        },
+        {
+          "id": 4009,
+          "sourceNumber": 9,
+          "type": "fill_blank",
+          "question": "Complete the Angular event binding. Run increment() when the element is clicked.\n\n__________=\"increment()\"",
+          "answers": [
+            "(click)"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: (click). (click)=\"increment()\" is correct because parentheses define event binding for the click event."
+        },
+        {
+          "id": 4010,
+          "sourceNumber": 10,
+          "type": "fill_blank",
+          "question": "Complete the Angular two-way binding. Bind the form value to the name property.\n\n__________=\"name\"",
+          "answers": [
+            "[(ngModel)]"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: [(ngModel)]. [(ngModel)]=\"name\" is correct because banana-in-a-box syntax creates two-way binding between the input and the name property."
+        },
+        {
+          "id": 4011,
+          "sourceNumber": 11,
+          "type": "fill_blank",
+          "question": "Complete the Angular signal assignment. Replace the count signal value with 0.\n\nthis.count.__________(0);",
+          "answers": [
+            "set"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: set. this.count.set(0) is correct because set replaces the signal value with the provided new value."
+        },
+        {
+          "id": 4012,
+          "sourceNumber": 12,
+          "type": "fill_blank",
+          "question": "Complete the Angular signal update. Increase count based on the previous value.\n\nthis.count.__________(n => n + 1);",
+          "answers": [
+            "update"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: update. this.count.update(n => n + 1) is correct because update calculates the next signal value from the previous value."
+        },
+        {
+          "id": 4013,
+          "sourceNumber": 13,
+          "type": "fill_blank",
+          "question": "Complete the derived signal code. Create a value that recalculates from count.\n\ndouble = __________(() => this.count() * 2);",
+          "answers": [
+            "computed"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: computed. computed(() => this.count() * 2) is correct because computed creates a derived reactive value from other signals."
+        },
+        {
+          "id": 4014,
+          "sourceNumber": 14,
+          "type": "fill_blank",
+          "question": "Complete the Angular CLI command. Create a new Angular project named my-app.\n\nng __________ my-app",
+          "answers": [
+            "new"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: new. ng new my-app is correct because the Angular CLI new command creates a new Angular project."
+        },
+        {
+          "id": 4015,
+          "sourceNumber": 15,
+          "type": "fill_blank",
+          "question": "Complete the Angular CLI command. Start the local development server.\n\nng __________",
+          "answers": [
+            "serve"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: serve. ng serve is correct because the Angular CLI serve command starts the local development server."
+        }
+      ]
+    },
+    {
+      "id": "web-lecture-5-angular-lifecycle",
+      "title": "Angular Lifecycle & Component Communication Exam Prep",
+      "icon": "🔄",
+      "lecture": "Lecture 5 Angular Lifecycle",
+      "questions": [
+        {
+          "id": 5001,
+          "question": "What does lifecycle mean in Angular?",
+          "options": [
+            "CSS animation",
+            "Stages of component existence",
+            "Angular routing",
+            "TypeScript compilation"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Correct answer: B) Stages of component existence. Angular lifecycle means the stages a component goes through from creation to updates and final destruction.",
+          "sourceNumber": 1,
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 1"
+        },
+        {
+          "id": 5002,
+          "question": "Which hook is mainly used for initialization logic?",
+          "options": [
+            "constructor",
+            "ngOnDestroy",
+            "ngOnInit",
+            "ngDoCheck"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Correct answer: C) ngOnInit. ngOnInit is the correct hook for initialization logic because Angular has created the component and initialized its inputs.",
+          "sourceNumber": 2,
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 1"
+        },
+        {
+          "id": 5003,
+          "question": "Which hook is called before component destruction?",
+          "options": [
+            "ngOnInit",
+            "ngOnDestroy",
+            "ngAfterViewInit",
+            "ngOnChanges"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Correct answer: B) ngOnDestroy. ngOnDestroy runs right before Angular removes the component, so it is used for cleanup.",
+          "sourceNumber": 3,
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 1"
+        },
+        {
+          "id": 5004,
+          "question": "Which hook reacts to input changes?",
+          "options": [
+            "ngOnChanges",
+            "ngOnDestroy",
+            "constructor",
+            "ngAfterViewChecked"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Correct answer: A) ngOnChanges. ngOnChanges is called when Angular detects changes to component input values.",
+          "sourceNumber": 4,
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 1"
+        },
+        {
+          "id": 5005,
+          "question": "What object does ngOnChanges receive?",
+          "options": [
+            "EventEmitter",
+            "Observable",
+            "SimpleChanges",
+            "Signal"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Correct answer: C) SimpleChanges. ngOnChanges receives a SimpleChanges object that describes changed inputs and their previous/current values.",
+          "sourceNumber": 5,
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 1"
+        },
+        {
+          "id": 5006,
+          "question": "What is constructor mainly used for in Angular?",
+          "options": [
+            "Cleanup",
+            "Dependency Injection",
+            "Rendering HTML",
+            "Routing"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Correct answer: B) Dependency Injection. The constructor is mainly used to inject services and dependencies, not to load data or run component initialization logic.",
+          "sourceNumber": 6,
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 1"
+        },
+        {
+          "id": 5007,
+          "question": "Which hook is better for HTTP requests and data loading?",
+          "options": [
+            "constructor",
+            "ngOnInit",
+            "ngOnDestroy",
+            "ngAfterViewInit"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Correct answer: B) ngOnInit. ngOnInit is better for HTTP requests and data loading because the component is initialized and inputs are available.",
+          "sourceNumber": 7,
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 1"
+        },
+        {
+          "id": 5008,
+          "question": "Which hook is commonly used for cleanup?",
+          "options": [
+            "ngOnChanges",
+            "constructor",
+            "ngOnDestroy",
+            "ngOnInit"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Correct answer: C) ngOnDestroy. ngOnDestroy is used for cleanup tasks such as stopping timers and unsubscribing before the component is removed.",
+          "sourceNumber": 8,
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 1"
+        },
+        {
+          "id": 5009,
+          "question": "What function is commonly used inside ngOnDestroy for timers?",
+          "options": [
+            "clearTimeout",
+            "removeSignal",
+            "clearInterval",
+            "stopTimer"
+          ],
+          "answer": [
+            2
+          ],
+          "explanation": "Correct answer: C) clearInterval. clearInterval is used to stop a repeating timer created by setInterval, commonly inside ngOnDestroy.",
+          "sourceNumber": 9,
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 1"
+        },
+        {
+          "id": 5010,
+          "question": "What can happen if cleanup is NOT done in ngOnDestroy?",
+          "options": [
+            "Faster rendering",
+            "Memory leaks",
+            "CSS errors",
+            "TypeScript compilation errors"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Correct answer: B) Memory leaks. Without cleanup, timers, subscriptions, or event listeners can keep running after the component is removed, causing memory leaks.",
+          "sourceNumber": 10,
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 1"
+        },
+        {
+          "id": 5011,
+          "sourceNumber": 11,
+          "type": "fill_blank",
+          "question": "Complete the lifecycle interface. This component needs the initialization lifecycle hook.\n\nexport class StudentComponent implements __________ {}",
+          "answers": [
+            "OnInit"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: OnInit. OnInit is correct because it is the interface used when a component implements the ngOnInit lifecycle hook."
+        },
+        {
+          "id": 5012,
+          "sourceNumber": 12,
+          "type": "fill_blank",
+          "question": "Complete the cleanup lifecycle interface. This timer component needs a hook before it is removed.\n\nexport class TimerComponent implements OnInit, __________ {}",
+          "answers": [
+            "OnDestroy"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: OnDestroy. OnDestroy is correct because it is the interface used for cleanup before Angular destroys the component."
+        },
+        {
+          "id": 5013,
+          "sourceNumber": 13,
+          "type": "fill_blank",
+          "question": "Complete the ngOnChanges parameter type. This object contains changed input values.\n\nngOnChanges(changes: __________): void {}",
+          "answers": [
+            "SimpleChanges"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: SimpleChanges. SimpleChanges is correct because ngOnChanges receives a SimpleChanges object with details about changed inputs."
+        },
+        {
+          "id": 5014,
+          "sourceNumber": 14,
+          "type": "fill_blank",
+          "question": "Complete the timer cleanup code. Stop a repeating interval when the component is destroyed.\n\n__________(this.intervalId);",
+          "answers": [
+            "clearInterval"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: clearInterval. clearInterval is correct because it stops a timer that was created with setInterval."
+        },
+        {
+          "id": 5015,
+          "sourceNumber": 15,
+          "type": "fill_blank",
+          "question": "Complete the SimpleChange property. Read the new value of the changed grade input.\n\nchanges['grade'].________________",
+          "answers": [
+            "currentValue"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: currentValue. currentValue is correct because it stores the new value after an input change."
+        },
+        {
+          "id": 5016,
+          "sourceNumber": 16,
+          "type": "fill_blank",
+          "question": "Complete the SimpleChange property. Read the old value of the changed grade input.\n\nchanges['grade'].________________",
+          "answers": [
+            "previousValue"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: previousValue. previousValue is correct because it stores the value before the input changed."
+        },
+        {
+          "id": 5017,
+          "sourceNumber": 17,
+          "type": "fill_blank",
+          "question": "Complete the SimpleChange property. Check whether this is the first time the input changed.\n\nchanges['grade'].________________",
+          "answers": [
+            "firstChange"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: firstChange. firstChange is correct because it tells whether the change is the first update for that input."
+        },
+        {
+          "id": 5018,
+          "sourceNumber": 18,
+          "type": "fill_blank",
+          "question": "Complete the lifecycle hook name. Run code after Angular initializes the component view/template.\n\n________________(): void {}",
+          "answers": [
+            "ngAfterViewInit"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: ngAfterViewInit. ngAfterViewInit is correct because it runs after Angular finishes initializing the component view."
+        },
+        {
+          "id": 5019,
+          "sourceNumber": 19,
+          "type": "fill_blank",
+          "question": "Complete the class method used for dependency injection. Inject StudentService into the component.\n\n________________(private api: StudentService) {}",
+          "answers": [
+            "constructor"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: constructor. constructor is correct because Angular dependencies such as services are injected through the class constructor."
+        },
+        {
+          "id": 5020,
+          "sourceNumber": 20,
+          "type": "fill_blank",
+          "question": "Complete the Angular signal input declaration. Receive a Student value from the parent component.\n\nstudent = __________<Student>();",
+          "answers": [
+            "input"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: input. input is correct because Angular signal inputs use input<T>() to receive data from a parent component."
+        },
+        {
+          "id": 5021,
+          "sourceNumber": 21,
+          "type": "fill_blank",
+          "question": "Complete the Angular signal output declaration. Create an event that sends a student id upward.\n\ndeleteStudent = __________<number>();",
+          "answers": [
+            "output"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: output. output is correct because Angular signal outputs use output<T>() to create events emitted to a parent component."
+        },
+        {
+          "id": 5022,
+          "sourceNumber": 22,
+          "type": "fill_blank",
+          "question": "Complete the output event code. Send the selected student id to the parent component.\n\nthis.deleteStudent.__________(id);",
+          "answers": [
+            "emit"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: emit. emit is correct because output events use emit(value) to send data from child to parent."
+        },
+        {
+          "id": 5023,
+          "sourceNumber": 23,
+          "type": "fill_blank",
+          "question": "Complete the parent template event handler. Pass the emitted child event value into removeStudent.\n\n(delete)=\"removeStudent(__________)\"",
+          "answers": [
+            "$event"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: $event. $event is correct because it contains the value emitted by the child output event."
+        },
+        {
+          "id": 5024,
+          "sourceNumber": 24,
+          "type": "fill_blank",
+          "question": "Complete the two-way binding syntax. Keep the input value and searchTerm property synchronized.\n\n<input __________=\"searchTerm\">",
+          "answers": [
+            "[(ngModel)]"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: [(ngModel)]. [(ngModel)] is correct because it creates two-way binding between the input element and the component property."
+        },
+        {
+          "id": 5025,
+          "sourceNumber": 25,
+          "type": "fill_blank",
+          "question": "Complete the Angular imports array. Add the module required for ngModel in template-driven forms.\n\nimports: [CommonModule, __________]",
+          "answers": [
+            "FormsModule"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: FormsModule. FormsModule is correct because ngModel belongs to Angular FormsModule."
+        },
+        {
+          "id": 5026,
+          "sourceNumber": 26,
+          "type": "fill_blank",
+          "question": "Complete the Angular control flow block. Render content only when isLoggedIn is true.\n\n@__________ (isLoggedIn)",
+          "answers": [
+            "if"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: if. if is correct because @if is Angular control flow for conditional rendering."
+        },
+        {
+          "id": 5027,
+          "sourceNumber": 27,
+          "type": "fill_blank",
+          "question": "Complete the Angular control flow block. Repeat template content for every student in students.\n\n@__________ (student of students)",
+          "answers": [
+            "for"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: for. for is correct because @for is Angular control flow for looping over a collection."
+        },
+        {
+          "id": 5028,
+          "sourceNumber": 28,
+          "type": "fill_blank",
+          "question": "Complete the Angular signal state declaration. Create reactive state with initial value 0.\n\ncount = __________(0);",
+          "answers": [
+            "signal"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: signal. signal is correct because signal(0) creates a writable reactive value initialized to 0."
+        },
+        {
+          "id": 5029,
+          "sourceNumber": 29,
+          "type": "fill_blank",
+          "question": "Complete the derived signal declaration. Calculate double from the current count signal.\n\ndouble = __________(() => this.count() * 2);",
+          "answers": [
+            "computed"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: computed. computed is correct because computed creates a derived reactive value based on other signals."
+        },
+        {
+          "id": 5030,
+          "sourceNumber": 30,
+          "type": "fill_blank",
+          "question": "Complete the signal update code. Increase count based on its previous value.\n\nthis.count.__________(n => n + 1);",
+          "answers": [
+            "update"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/angular_lifecycle_exam_prep.pdf — Part 2",
+          "explanation": "Correct answer: update. update is correct because update receives the previous signal value and returns the next value."
+        }
+      ]
+    },
+    {
+      "id": "web-lecture-7-python-django",
+      "title": "Python & Django Question Bank",
+      "icon": "🐍",
+      "lecture": "Lecture 7 Python Django",
+      "questions": [
+        {
+          "id": 7001,
+          "sourceNumber": 1,
+          "question": "What typing model does Python use?",
+          "options": [
+            "Static typing",
+            "Manual typing",
+            "Dynamic / duck typing",
+            "Interface typing"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) Dynamic / duck typing. Python uses dynamic typing and duck typing because variable types are determined at runtime and behavior matters more than declared interfaces."
+        },
+        {
+          "id": 7002,
+          "sourceNumber": 2,
+          "question": "Which container is mutable and ordered?",
+          "options": [
+            "tuple",
+            "set",
+            "list",
+            "dict"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) list. A list is ordered and mutable because it preserves item order and can be changed after creation."
+        },
+        {
+          "id": 7003,
+          "sourceNumber": 3,
+          "question": "Which container is immutable and ordered?",
+          "options": [
+            "list",
+            "tuple",
+            "set",
+            "dict"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) tuple. A tuple is ordered and immutable because it preserves item order but cannot be changed after creation."
+        },
+        {
+          "id": 7004,
+          "sourceNumber": 4,
+          "question": "Which container stores key-value pairs?",
+          "options": [
+            "dict",
+            "list",
+            "set",
+            "tuple"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: A) dict. A dict stores data as key-value pairs, so values can be accessed by their keys."
+        },
+        {
+          "id": 7005,
+          "sourceNumber": 5,
+          "question": "Which container stores unique unordered values?",
+          "options": [
+            "list",
+            "tuple",
+            "dict",
+            "set"
+          ],
+          "answer": [
+            3
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: D) set. A set stores unique values and does not preserve a normal index-based order like a list."
+        },
+        {
+          "id": 7006,
+          "sourceNumber": 6,
+          "question": "What does append() do?",
+          "options": [
+            "Removes item",
+            "Adds item to end",
+            "Sorts list",
+            "Clears list"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Adds item to end. append() is a list method that adds one item to the end of the list."
+        },
+        {
+          "id": 7007,
+          "sourceNumber": 7,
+          "question": "What does student.get('grade', 'N/A') provide?",
+          "options": [
+            "HTTP response",
+            "Safe fallback lookup",
+            "Sorting",
+            "Mutation"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Safe fallback lookup. dict.get(key, default) safely returns the value for the key or the fallback value when the key is missing."
+        },
+        {
+          "id": 7008,
+          "sourceNumber": 8,
+          "question": "What do *args represent?",
+          "options": [
+            "Variable positional arguments",
+            "Keyword arguments",
+            "Route params",
+            "Lists only"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: A) Variable positional arguments. *args collects extra positional arguments into a tuple."
+        },
+        {
+          "id": 7009,
+          "sourceNumber": 9,
+          "question": "What do **kwargs represent?",
+          "options": [
+            "Lists",
+            "Variable keyword arguments",
+            "Positional args",
+            "Tuples"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Variable keyword arguments. **kwargs collects extra keyword arguments into a dictionary."
+        },
+        {
+          "id": 7010,
+          "sourceNumber": 10,
+          "question": "What is Django?",
+          "options": [
+            "Database",
+            "Python web framework",
+            "CSS framework",
+            "JavaScript runtime"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Python web framework. Django is a Python web framework used to build server-side web applications."
+        },
+        {
+          "id": 7011,
+          "sourceNumber": 11,
+          "question": "What does MTV stand for?",
+          "options": [
+            "Main Template Variable",
+            "Model Template View",
+            "Module Template Value",
+            "Model Type View"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Model Template View. Django follows the MTV pattern: Model for data, Template for presentation, and View for request logic."
+        },
+        {
+          "id": 7012,
+          "sourceNumber": 12,
+          "question": "Which file contains project configuration?",
+          "options": [
+            "views.py",
+            "urls.py",
+            "settings.py",
+            "admin.py"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) settings.py. settings.py contains Django project configuration such as installed apps, database settings, middleware, and templates."
+        },
+        {
+          "id": 7013,
+          "sourceNumber": 13,
+          "question": "Which file handles routing?",
+          "options": [
+            "models.py",
+            "settings.py",
+            "urls.py",
+            "apps.py"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) urls.py. urls.py maps URL paths to Django views, so it handles routing."
+        },
+        {
+          "id": 7014,
+          "sourceNumber": 14,
+          "question": "Which command creates Django project?",
+          "options": [
+            "runserver",
+            "migrate",
+            "django-admin startproject",
+            "startapp"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) django-admin startproject. django-admin startproject creates a new Django project structure."
+        },
+        {
+          "id": 7015,
+          "sourceNumber": 15,
+          "question": "Which command starts development server?",
+          "options": [
+            "makemigrations",
+            "shell",
+            "python manage.py runserver",
+            "migrate"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) python manage.py runserver. python manage.py runserver starts Django's local development server."
+        },
+        {
+          "id": 7016,
+          "sourceNumber": 16,
+          "question": "Which command creates new app?",
+          "options": [
+            "python manage.py startapp",
+            "migrate",
+            "runserver",
+            "startproject"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: A) python manage.py startapp. python manage.py startapp creates a new Django application inside a project."
+        },
+        {
+          "id": 7017,
+          "sourceNumber": 17,
+          "question": "What does makemigrations do?",
+          "options": [
+            "Applies migrations",
+            "Generates migration files",
+            "Starts server",
+            "Deletes DB"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Generates migration files. makemigrations creates migration files from model changes."
+        },
+        {
+          "id": 7018,
+          "sourceNumber": 18,
+          "question": "What does migrate do?",
+          "options": [
+            "Creates migrations",
+            "Creates app",
+            "Applies migrations to DB",
+            "Creates route"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) Applies migrations to DB. migrate applies migration files to the database schema."
+        },
+        {
+          "id": 7019,
+          "sourceNumber": 19,
+          "question": "What is INSTALLED_APPS?",
+          "options": [
+            "Registered Django apps",
+            "Static files",
+            "Database engine",
+            "Templates"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: A) Registered Django apps. INSTALLED_APPS is the settings list where Django apps are registered for the project."
+        },
+        {
+          "id": 7020,
+          "sourceNumber": 20,
+          "question": "What does wsgi.py represent?",
+          "options": [
+            "Routing table",
+            "Deployment entry point",
+            "ORM config",
+            "Template engine"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Deployment entry point. wsgi.py is the WSGI entry point used by deployment servers to run the Django application."
+        },
+        {
+          "id": 7021,
+          "sourceNumber": 21,
+          "type": "fill_blank",
+          "question": "Add a new student name to the end of the students list.\n\nstudents.__________(\"Bob\")",
+          "answers": [
+            "append"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: append. append is correct because list.append(value) adds one new item to the end of a Python list."
+        },
+        {
+          "id": 7022,
+          "sourceNumber": 22,
+          "type": "fill_blank",
+          "question": "Safely read a dictionary value. If grade is missing, return the fallback value \"N/A\".\n\nstudent.__________(\"grade\", \"N/A\")",
+          "answers": [
+            "get"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: get. get is correct because dict.get(key, default) returns the default value when the key is not found."
+        },
+        {
+          "id": 7023,
+          "sourceNumber": 23,
+          "type": "fill_blank",
+          "question": "Complete the function parameter for variable positional arguments.\n\ndef total(*__________):",
+          "answers": [
+            "args"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: args. args is correct because *args is the conventional name for collecting extra positional arguments."
+        },
+        {
+          "id": 7024,
+          "sourceNumber": 24,
+          "type": "fill_blank",
+          "question": "Complete the function parameter for variable keyword arguments.\n\ndef build_profile(**__________):",
+          "answers": [
+            "kwargs"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: kwargs. kwargs is correct because **kwargs is the conventional name for collecting extra keyword arguments."
+        },
+        {
+          "id": 7025,
+          "sourceNumber": 25,
+          "type": "fill_blank",
+          "question": "Complete the Python constructor method name for initializing an object.\n\ndef __________(self, name):",
+          "answers": [
+            "__init__"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: __init__. __init__ is correct because it is the special method Python calls when creating a new object instance."
+        },
+        {
+          "id": 7026,
+          "sourceNumber": 26,
+          "type": "fill_blank",
+          "question": "Complete the Python string representation method name.\n\ndef __________(self):",
+          "answers": [
+            "__str__"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: __str__. __str__ is correct because it defines the human-readable string representation of an object."
+        },
+        {
+          "id": 7027,
+          "sourceNumber": 27,
+          "type": "fill_blank",
+          "question": "Complete the package installation command for Django.\n\npip install __________",
+          "answers": [
+            "django"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: django. django is correct because pip install django installs the Django framework package."
+        },
+        {
+          "id": 7028,
+          "sourceNumber": 28,
+          "type": "fill_blank",
+          "question": "Complete the Django command that creates a new project named mysite.\n\ndjango-admin __________ mysite",
+          "answers": [
+            "startproject"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: startproject. startproject is correct because django-admin startproject creates a new Django project."
+        },
+        {
+          "id": 7029,
+          "sourceNumber": 29,
+          "type": "fill_blank",
+          "question": "Complete the Django command that starts the local development server.\n\npython manage.py __________",
+          "answers": [
+            "runserver"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: runserver. runserver is correct because python manage.py runserver starts the Django development server."
+        },
+        {
+          "id": 7030,
+          "sourceNumber": 30,
+          "type": "fill_blank",
+          "question": "Complete the Django command that creates a new app named students.\n\npython manage.py __________ students",
+          "answers": [
+            "startapp"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: startapp. startapp is correct because python manage.py startapp creates a new Django app."
+        },
+        {
+          "id": 7031,
+          "sourceNumber": 31,
+          "type": "fill_blank",
+          "question": "Complete the Django command that generates migration files from model changes.\n\npython manage.py __________",
+          "answers": [
+            "makemigrations"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: makemigrations. makemigrations is correct because it creates migration files based on model changes."
+        },
+        {
+          "id": 7032,
+          "sourceNumber": 32,
+          "type": "fill_blank",
+          "question": "Complete the Django command that applies migrations to the database.\n\npython manage.py __________",
+          "answers": [
+            "migrate"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: migrate. migrate is correct because it applies pending migrations to the database schema."
+        },
+        {
+          "id": 7033,
+          "sourceNumber": 33,
+          "type": "fill_blank",
+          "question": "Complete the app name in INSTALLED_APPS to register the students app.\n\nINSTALLED_APPS = ['__________']",
+          "answers": [
+            "students"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: students. students is correct because adding the app name to INSTALLED_APPS registers that Django app in the project."
+        },
+        {
+          "id": 7034,
+          "sourceNumber": 34,
+          "type": "fill_blank",
+          "question": "Complete the import for delegating URL routes to another urls.py file.\n\nfrom django.urls import path, __________",
+          "answers": [
+            "include"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: include. include is correct because django.urls.include lets one URLconf include another URLconf."
+        },
+        {
+          "id": 7035,
+          "sourceNumber": 35,
+          "type": "fill_blank",
+          "question": "Complete the route that delegates /students/ URLs to students.urls.\n\npath('students/', __________('students.urls'))",
+          "answers": [
+            "include"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: include. include is correct because include(\"students.urls\") delegates matching routes to the app URL configuration."
+        },
+        {
+          "id": 7036,
+          "sourceNumber": 36,
+          "type": "fill_blank",
+          "question": "Complete the import for the Django HTTP response class.\n\nfrom django.http import __________",
+          "answers": [
+            "HttpResponse"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: HttpResponse. HttpResponse is correct because it is the Django class used to return a simple HTTP response."
+        },
+        {
+          "id": 7037,
+          "sourceNumber": 37,
+          "type": "fill_blank",
+          "question": "Complete the return statement that sends plain text back to the browser.\n\nreturn __________(\"Hello World\")",
+          "answers": [
+            "HttpResponse"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: HttpResponse. HttpResponse is correct because HttpResponse(\"Hello World\") creates an HTTP response containing that text."
+        },
+        {
+          "id": 7038,
+          "sourceNumber": 38,
+          "type": "fill_blank",
+          "question": "Complete the dynamic route parameter name used by the detail view.\n\npath('<int:__________>/', views.detail_view)",
+          "answers": [
+            "pk"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: pk. pk is correct because pk is a common Django name for the primary key captured from a dynamic route."
+        },
+        {
+          "id": 7039,
+          "sourceNumber": 39,
+          "type": "fill_blank",
+          "question": "Complete where SECRET_KEY should never be committed. The expected answer is a version control platform/location.\n\nSECRET_KEY should never be committed to\n__________",
+          "answers": [
+            "Git",
+            "GitHub",
+            "Git / GitHub"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: Git. Git / GitHub is correct because SECRET_KEY is sensitive and should not be committed to version control or pushed to GitHub."
+        },
+        {
+          "id": 7040,
+          "sourceNumber": 40,
+          "type": "fill_blank",
+          "question": "Complete the description of wsgi.py in Django deployment.\n\nwsgi.py is deployment __________ point",
+          "answers": [
+            "entry"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture7_python_django_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: entry. entry is correct because wsgi.py is the deployment entry point for WSGI servers."
+        }
+      ]
+    },
+    {
+      "id": "web-lecture-8-django-orm",
+      "title": "Django ORM & Architecture Question Bank",
+      "icon": "🗃️",
+      "lecture": "Lecture 8 Django ORM",
+      "questions": [
+        {
+          "id": 8001,
+          "sourceNumber": 1,
+          "type": "fill_blank",
+          "question": "Delegate routing from the main urls.py file to another app urls.py file.\n\npath('api/', __________('api.urls'))",
+          "answers": [
+            "include"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: include. include is correct because it delegates matching URL patterns to another URLconf such as api.urls."
+        },
+        {
+          "id": 8002,
+          "sourceNumber": 2,
+          "type": "fill_blank",
+          "question": "Complete the dynamic integer route parameter name for a product detail URL.\n\npath('products/<int:__________>/')",
+          "answers": [
+            "pk",
+            "id"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: pk. pk is correct because <int:pk> captures an integer from the URL and passes it to the view; id is also commonly used for the same purpose."
+        },
+        {
+          "id": 8003,
+          "sourceNumber": 3,
+          "type": "fill_blank",
+          "question": "Complete the regex capture group. Match a one- or two-digit number in the URL.\n\nre_path(r'^time/plus/__________$', views.hours_ahead)",
+          "answers": [
+            "(\\d{1,2})"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: (\\d{1,2}). (\\d{1,2}) is correct because parentheses capture the value and \\d{1,2} matches one or two digits."
+        },
+        {
+          "id": 8004,
+          "sourceNumber": 4,
+          "type": "fill_blank",
+          "question": "Complete the app registration in Django settings. Register the api app.\n\nINSTALLED_APPS = ['__________']",
+          "answers": [
+            "api"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: api. api is correct because adding the app name to INSTALLED_APPS registers that Django app in the project."
+        },
+        {
+          "id": 8005,
+          "sourceNumber": 5,
+          "type": "fill_blank",
+          "question": "Complete the Django shortcut that loads a template, injects context, and returns a response.\n\nreturn __________(request, 'products/list.html', context)",
+          "answers": [
+            "render"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: render. render is correct because render(request, template, context) returns an HttpResponse with the rendered template."
+        },
+        {
+          "id": 8006,
+          "sourceNumber": 6,
+          "type": "fill_blank",
+          "question": "Complete the template expression. Output the user name property.\n\n{{ user.__________ }}",
+          "answers": [
+            "name"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: name. name is correct because user.name reads the name attribute and interpolation displays it in the template."
+        },
+        {
+          "id": 8007,
+          "sourceNumber": 7,
+          "type": "fill_blank",
+          "question": "Complete the Django template logic tag. Render content only when user.is_active is true.\n\n{% __________ user.is_active %}",
+          "answers": [
+            "if"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: if. if is correct because {% if condition %} is the Django template tag for conditional rendering."
+        },
+        {
+          "id": 8008,
+          "sourceNumber": 8,
+          "type": "fill_blank",
+          "question": "Complete the CharField argument. Limit the maximum string length to 200 characters.\n\nmodels.CharField(__________=200)",
+          "answers": [
+            "max_length"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: max_length. max_length is correct because CharField requires a maximum length for database storage and validation."
+        },
+        {
+          "id": 8009,
+          "sourceNumber": 9,
+          "type": "fill_blank",
+          "question": "Complete the IntegerField argument. Set the default value to 0.\n\nmodels.IntegerField(__________=0)",
+          "answers": [
+            "default"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: default. default is correct because default=0 tells Django to use 0 when no value is provided."
+        },
+        {
+          "id": 8010,
+          "sourceNumber": 10,
+          "type": "fill_blank",
+          "question": "Complete the model relation field. A product belongs to one category and a category can have many products.\n\nmodels.__________(Category, on_delete=models.CASCADE)",
+          "answers": [
+            "ForeignKey"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: ForeignKey. ForeignKey is correct because it represents a many-to-one relationship in Django models."
+        },
+        {
+          "id": 8011,
+          "sourceNumber": 11,
+          "type": "fill_blank",
+          "question": "Complete the model method used for a readable string representation of an object.\n\ndef __________(self):",
+          "answers": [
+            "__str__"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: __str__. __str__ is correct because Django uses it to display a readable representation of model instances."
+        },
+        {
+          "id": 8012,
+          "sourceNumber": 12,
+          "type": "fill_blank",
+          "question": "Complete the Django command that creates migration files from model changes.\n\npython manage.py __________",
+          "answers": [
+            "makemigrations"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: makemigrations. makemigrations is correct because it generates migration files based on model changes."
+        },
+        {
+          "id": 8013,
+          "sourceNumber": 13,
+          "type": "fill_blank",
+          "question": "Complete the Django command that applies migration files to the database.\n\npython manage.py __________",
+          "answers": [
+            "migrate"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: migrate. migrate is correct because it applies migrations and updates the database schema."
+        },
+        {
+          "id": 8014,
+          "sourceNumber": 14,
+          "type": "fill_blank",
+          "question": "Complete the response class for returning JSON data from a Django view.\n\nreturn __________({'id': 1})",
+          "answers": [
+            "JsonResponse"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: JsonResponse. JsonResponse is correct because it creates an HTTP response with JSON content."
+        },
+        {
+          "id": 8015,
+          "sourceNumber": 15,
+          "type": "fill_blank",
+          "question": "Complete the JsonResponse option for returning a list instead of a dictionary.\n\nJsonResponse(data, __________)",
+          "answers": [
+            "safe=False"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: safe=False. safe=False is correct because Django requires safe=False when JsonResponse returns a non-dict object such as a list."
+        },
+        {
+          "id": 8016,
+          "sourceNumber": 16,
+          "type": "fill_blank",
+          "question": "Complete the ORM query that returns all Product rows.\n\nProduct.objects.__________()",
+          "answers": [
+            "all"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: all. all is correct because Product.objects.all() returns a QuerySet containing all rows."
+        },
+        {
+          "id": 8017,
+          "sourceNumber": 17,
+          "type": "fill_blank",
+          "question": "Complete the ORM query that returns exactly one Product by id.\n\nProduct.objects.__________(id=1)",
+          "answers": [
+            "get"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: get. get is correct because get() returns a single object or raises an exception if none or multiple match."
+        },
+        {
+          "id": 8018,
+          "sourceNumber": 18,
+          "type": "fill_blank",
+          "question": "Complete the ORM query that returns products with price greater than or equal to 500.\n\nProduct.objects.__________(price__gte=500)",
+          "answers": [
+            "filter"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: filter. filter is correct because filter() returns a QuerySet containing all objects that match the condition."
+        },
+        {
+          "id": 8019,
+          "sourceNumber": 19,
+          "type": "fill_blank",
+          "question": "Complete the ordering string for descending price order.\n\nProduct.objects.order_by('__________price')",
+          "answers": [
+            "-"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: -. - is correct because a leading hyphen in order_by means descending order."
+        },
+        {
+          "id": 8020,
+          "sourceNumber": 20,
+          "type": "fill_blank",
+          "question": "Complete the model helper method name used to convert an object into a dictionary for JSON serialization.\n\ndef __________(self):",
+          "answers": [
+            "to_json"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: to_json. to_json is correct because it is a common helper method name for converting a model instance into a JSON-friendly dictionary."
+        },
+        {
+          "id": 8021,
+          "sourceNumber": 21,
+          "question": "What does MTV stand for in Django?",
+          "options": [
+            "Model Template View",
+            "Main Template Variable",
+            "Model Type View",
+            "Module Template View"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: A) Model Template View. Django uses the MTV pattern: Model handles data, Template handles presentation, and View handles request/response logic."
+        },
+        {
+          "id": 8022,
+          "sourceNumber": 22,
+          "question": "Which layer handles database/data logic?",
+          "options": [
+            "Template",
+            "View",
+            "Model",
+            "URL"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) Model. The Model layer is correct because Django models define data structure and database behavior."
+        },
+        {
+          "id": 8023,
+          "sourceNumber": 23,
+          "question": "What does include() do in urls.py?",
+          "options": [
+            "Creates model",
+            "Delegates routing to another urls.py",
+            "Starts server",
+            "Creates migration"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Delegates routing to another urls.py. include() is correct because it connects a URL path to another URLconf, usually from an app."
+        },
+        {
+          "id": 8024,
+          "sourceNumber": 24,
+          "question": "Which function maps URL to specific view?",
+          "options": [
+            "JsonResponse",
+            "include",
+            "path",
+            "render"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) path. path() is correct because it defines a URL pattern and connects it to a specific view function or class."
+        },
+        {
+          "id": 8025,
+          "sourceNumber": 25,
+          "question": "What does <int:pk> do in a Django path route?",
+          "options": [
+            "Creates DB id",
+            "Captures integer parameter",
+            "Makes URL optional",
+            "Converts string"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Captures integer parameter. <int:pk> is correct because it captures an integer from the URL and passes it to the view as pk."
+        },
+        {
+          "id": 8026,
+          "sourceNumber": 26,
+          "question": "What do parentheses () do in regex routes?",
+          "options": [
+            "Comments",
+            "Capture arguments",
+            "Create migrations",
+            "Start server"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Capture arguments. Parentheses are correct because regex capture groups extract matched URL parts and pass them as arguments."
+        },
+        {
+          "id": 8027,
+          "sourceNumber": 27,
+          "question": "What does render() do?",
+          "options": [
+            "Creates DB",
+            "Loads template + injects context + returns HttpResponse",
+            "Converts JSON",
+            "Starts server"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Loads template + injects context + returns HttpResponse. render() is correct because it combines a template with context data and returns an HttpResponse."
+        },
+        {
+          "id": 8028,
+          "sourceNumber": 28,
+          "question": "Which field requires max_length?",
+          "options": [
+            "IntegerField",
+            "BooleanField",
+            "CharField",
+            "FloatField"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) CharField. CharField is correct because Django requires max_length to define the maximum stored string length."
+        },
+        {
+          "id": 8029,
+          "sourceNumber": 29,
+          "question": "What does ForeignKey represent?",
+          "options": [
+            "many-to-many",
+            "one-to-one",
+            "many-to-one",
+            "JSON relation"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) many-to-one. ForeignKey is correct because many rows in one model can point to one row in another model."
+        },
+        {
+          "id": 8030,
+          "sourceNumber": 30,
+          "question": "What does CASCADE do?",
+          "options": [
+            "Makes read-only",
+            "Deletes related objects",
+            "Orders queryset",
+            "Creates copy"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Deletes related objects. CASCADE is correct because when the referenced object is deleted, related objects are also deleted."
+        },
+        {
+          "id": 8031,
+          "sourceNumber": 31,
+          "question": "What does get() return?",
+          "options": [
+            "QuerySet",
+            "One object or exception",
+            "List",
+            "JSON"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) One object or exception. get() is correct because it returns a single matching object or raises an exception if the result is missing or not unique."
+        },
+        {
+          "id": 8032,
+          "sourceNumber": 32,
+          "question": "What does filter() return?",
+          "options": [
+            "QuerySet",
+            "Single object",
+            "Dict",
+            "String"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: A) QuerySet. filter() is correct because it returns a QuerySet of all matching objects."
+        },
+        {
+          "id": 8033,
+          "sourceNumber": 33,
+          "question": "What does order_by('-price') mean?",
+          "options": [
+            "Ascending",
+            "Random",
+            "Descending",
+            "Group by"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) Descending. '-price' is correct because the leading hyphen orders the field in descending order."
+        },
+        {
+          "id": 8034,
+          "sourceNumber": 34,
+          "question": "When is safe=False required?",
+          "options": [
+            "Dict",
+            "List",
+            "GET",
+            "Model"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) List. safe=False is correct for a list because Django JsonResponse only allows dictionaries by default unless safe is disabled."
+        },
+        {
+          "id": 8035,
+          "sourceNumber": 35,
+          "question": "Why use to_json()?",
+          "options": [
+            "Create migrations",
+            "Avoid repeated serialization code",
+            "Create routes",
+            "Start server"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture8_django_orm_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Avoid repeated serialization code. to_json() is correct because a helper method centralizes model-to-dictionary serialization logic."
+        }
+      ]
+    },
+    {
+      "id": "web-lecture-9-drf-advanced-orm",
+      "title": "Django REST Framework & Advanced ORM Question Bank",
+      "icon": "🔌",
+      "lecture": "Lecture 9 DRF & Advanced ORM",
+      "questions": [
+        {
+          "id": 9001,
+          "sourceNumber": 1,
+          "question": "Which field should be used for money values?",
+          "options": [
+            "FloatField",
+            "IntegerField",
+            "DecimalField",
+            "TextField"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) DecimalField. DecimalField is correct because money needs exact decimal precision instead of floating-point approximation."
+        },
+        {
+          "id": 9002,
+          "sourceNumber": 2,
+          "question": "Why is FloatField bad for money?",
+          "options": [
+            "Too slow",
+            "Loses precision",
+            "Cannot store decimals",
+            "Cannot filter"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Loses precision. FloatField is bad for money because binary floating-point values can introduce rounding errors."
+        },
+        {
+          "id": 9003,
+          "sourceNumber": 3,
+          "question": "What does blank=True affect?",
+          "options": [
+            "Database storage",
+            "Validation/forms/API",
+            "Routing",
+            "SQL indexes"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Validation/forms/API. blank=True affects validation and form/API required behavior, not the database NULL storage directly."
+        },
+        {
+          "id": 9004,
+          "sourceNumber": 4,
+          "question": "What does null=True affect?",
+          "options": [
+            "Database storage",
+            "Templates",
+            "Routing",
+            "JSON serialization"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: A) Database storage. null=True affects database storage because it allows the column to store SQL NULL."
+        },
+        {
+          "id": 9005,
+          "sourceNumber": 5,
+          "question": "Which relationship represents many products to one category?",
+          "options": [
+            "OneToOneField",
+            "ManyToManyField",
+            "ForeignKey",
+            "JSONField"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) ForeignKey. ForeignKey is correct because many Product rows can point to one Category row."
+        },
+        {
+          "id": 9006,
+          "sourceNumber": 6,
+          "question": "What does related_name='products' allow?",
+          "options": [
+            "Product.category_set",
+            "cat.products.all()",
+            "Product.related()",
+            "category.products()"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) cat.products.all(). related_name=\"products\" creates the reverse manager on Category, so cat.products.all() gets related products."
+        },
+        {
+          "id": 9007,
+          "sourceNumber": 7,
+          "question": "What does ManyToManyField automatically create?",
+          "options": [
+            "Serializer",
+            "URL route",
+            "Join/intermediate table",
+            "ViewSet"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) Join/intermediate table. ManyToManyField is correct because Django creates an intermediate join table to connect records from both models."
+        },
+        {
+          "id": 9008,
+          "sourceNumber": 8,
+          "question": "What does auto_now_add=True do?",
+          "options": [
+            "Updates on every save",
+            "Sets value once on INSERT",
+            "Creates migration",
+            "Makes field editable"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Sets value once on INSERT. auto_now_add=True is correct because it stores the timestamp only when the object is first created."
+        },
+        {
+          "id": 9009,
+          "sourceNumber": 9,
+          "question": "What does auto_now=True do?",
+          "options": [
+            "Updates on every save",
+            "Sets value only once",
+            "Creates index",
+            "Deletes old values"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: A) Updates on every save. auto_now=True is correct because it updates the timestamp each time the model is saved."
+        },
+        {
+          "id": 9010,
+          "sourceNumber": 10,
+          "question": "What does ordering = ['-created_at'] do?",
+          "options": [
+            "Ascending sort",
+            "Random order",
+            "Default descending order",
+            "Deletes old objects"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) Default descending order. ordering = ['-created_at'] is correct because the leading hyphen sorts newest created_at values first by default."
+        },
+        {
+          "id": 9011,
+          "sourceNumber": 11,
+          "question": "What does unique_together create?",
+          "options": [
+            "ForeignKey",
+            "Composite uniqueness constraint",
+            "Join table",
+            "Serializer validation only"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Composite uniqueness constraint. unique_together is correct because it enforces uniqueness across a combination of fields."
+        },
+        {
+          "id": 9012,
+          "sourceNumber": 12,
+          "question": "What does filter() return?",
+          "options": [
+            "Single object",
+            "QuerySet",
+            "Dict",
+            "JSON"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) QuerySet. filter() is correct because it returns a QuerySet containing all matching rows."
+        },
+        {
+          "id": 9013,
+          "sourceNumber": 13,
+          "question": "What does get() return?",
+          "options": [
+            "QuerySet",
+            "One object or exception",
+            "List",
+            "Response"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) One object or exception. get() is correct because it returns one matching object or raises an exception when none or multiple match."
+        },
+        {
+          "id": 9014,
+          "sourceNumber": 14,
+          "question": "What does Q(a) | Q(b) mean?",
+          "options": [
+            "AND",
+            "OR",
+            "NOT",
+            "XOR"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) OR. The | operator is correct because it combines Q objects with logical OR."
+        },
+        {
+          "id": 9015,
+          "sourceNumber": 15,
+          "question": "What does ~Q(...) mean?",
+          "options": [
+            "AND",
+            "OR",
+            "NOT",
+            "QuerySet"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) NOT. ~Q(...) is correct because the tilde negates a Q condition."
+        },
+        {
+          "id": 9016,
+          "sourceNumber": 16,
+          "question": "What does aggregate() return?",
+          "options": [
+            "Computed field per object",
+            "One value for whole QuerySet",
+            "One serializer",
+            "Route list"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) One value for whole QuerySet. aggregate() is correct because it calculates summary values over the entire QuerySet."
+        },
+        {
+          "id": 9017,
+          "sourceNumber": 17,
+          "question": "What does annotate() do?",
+          "options": [
+            "Deletes rows",
+            "Adds computed field per object",
+            "Creates migration",
+            "Generates serializer"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Adds computed field per object. annotate() is correct because it adds calculated values to each object in the QuerySet."
+        },
+        {
+          "id": 9018,
+          "sourceNumber": 18,
+          "question": "What replaces manual to_json() in DRF?",
+          "options": [
+            "JsonResponse",
+            "ModelSerializer",
+            "HttpResponse",
+            "Router"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) ModelSerializer. ModelSerializer is correct because DRF serializers convert model instances to and from JSON-friendly representations."
+        },
+        {
+          "id": 9019,
+          "sourceNumber": 19,
+          "question": "What does ModelViewSet automatically provide?",
+          "options": [
+            "Only GET",
+            "CRUD actions",
+            "Only POST",
+            "Only serializers"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) CRUD actions. ModelViewSet is correct because it provides list, retrieve, create, update, and delete actions."
+        },
+        {
+          "id": 9020,
+          "sourceNumber": 20,
+          "question": "Why is many=True required?",
+          "options": [
+            "For one object",
+            "For QuerySet/list serialization",
+            "For DELETE request",
+            "For migrations"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) For QuerySet/list serialization. many=True is correct because serializers need it when serializing multiple objects from a QuerySet or list."
+        },
+        {
+          "id": 9021,
+          "sourceNumber": 21,
+          "question": "What does DefaultRouter do?",
+          "options": [
+            "Creates migrations",
+            "Auto-generates URLs",
+            "Creates serializers",
+            "Creates database"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Auto-generates URLs. DefaultRouter is correct because it automatically creates URL patterns for registered ViewSets."
+        },
+        {
+          "id": 9022,
+          "sourceNumber": 22,
+          "question": "What does @action(detail=True) mean?",
+          "options": [
+            "URL contains object id",
+            "Creates DB index",
+            "Makes serializer read-only",
+            "Enables pagination"
+          ],
+          "answer": [
+            0
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: A) URL contains object id. detail=True is correct because the custom action applies to a single object and includes its id/pk in the URL."
+        },
+        {
+          "id": 9023,
+          "sourceNumber": 23,
+          "question": "What does fields='__all__' mean?",
+          "options": [
+            "No fields",
+            "Only id",
+            "Include all model fields",
+            "Exclude all fields"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: C) Include all model fields. fields='__all__' is correct because it tells a ModelSerializer to include every field from the model."
+        },
+        {
+          "id": 9024,
+          "sourceNumber": 24,
+          "question": "What does readonly_fields do in ModelAdmin?",
+          "options": [
+            "Deletes fields",
+            "Makes fields non-editable in admin",
+            "Creates indexes",
+            "Adds serializers"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Makes fields non-editable in admin. readonly_fields is correct because it displays fields in Django admin without allowing edits."
+        },
+        {
+          "id": 9025,
+          "sourceNumber": 25,
+          "question": "When does SQL execute for QuerySets?",
+          "options": [
+            "Immediately",
+            "Only on evaluation",
+            "During migration",
+            "During serializer creation"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 1",
+          "explanation": "Correct answer: B) Only on evaluation. QuerySets are lazy, so SQL executes only when the QuerySet is evaluated, such as by iteration, slicing, or serialization."
+        },
+        {
+          "id": 9026,
+          "sourceNumber": 26,
+          "type": "fill_blank",
+          "question": "Complete the Django model field for storing money with exact decimal precision.\n\nprice = models.__________(max_digits=10, decimal_places=2)",
+          "answers": [
+            "DecimalField"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: DecimalField. DecimalField is correct because it stores exact decimal values and supports max_digits and decimal_places."
+        },
+        {
+          "id": 9027,
+          "sourceNumber": 27,
+          "type": "fill_blank",
+          "question": "Complete the validation/forms option. Allow the description to be empty in forms or API validation.\n\ndescription = models.TextField(__________=True)",
+          "answers": [
+            "blank"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: blank. blank is correct because blank=True controls whether validation allows an empty value."
+        },
+        {
+          "id": 9028,
+          "sourceNumber": 28,
+          "type": "fill_blank",
+          "question": "Complete the database NULL option. Allow the database column to store SQL NULL.\n\ndescription = models.TextField(__________=True)",
+          "answers": [
+            "null"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: null. null is correct because null=True allows SQL NULL in the database column."
+        },
+        {
+          "id": 9029,
+          "sourceNumber": 29,
+          "type": "fill_blank",
+          "question": "Complete the many-to-one relationship from Product to Category.\n\ncategory = models.__________(Category, on_delete=models.CASCADE)",
+          "answers": [
+            "ForeignKey"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: ForeignKey. ForeignKey is correct because many products can belong to one category."
+        },
+        {
+          "id": 9030,
+          "sourceNumber": 30,
+          "type": "fill_blank",
+          "question": "Complete the reverse relation name. A Category should access its products with cat.products.all().\n\nrelated_name='__________'",
+          "answers": [
+            "products"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: products. products is correct because related_name=\"products\" creates the reverse accessor cat.products."
+        },
+        {
+          "id": 9031,
+          "sourceNumber": 31,
+          "type": "fill_blank",
+          "question": "Complete the one-to-one relationship field from profile to user.\n\nprofile = models.__________(User, on_delete=models.CASCADE)",
+          "answers": [
+            "OneToOneField"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: OneToOneField. OneToOneField is correct because it represents a one-to-one relationship between two model records."
+        },
+        {
+          "id": 9032,
+          "sourceNumber": 32,
+          "type": "fill_blank",
+          "question": "Complete the many-to-many relationship field between products and tags.\n\ntags = models.__________(Tag, related_name='products')",
+          "answers": [
+            "ManyToManyField"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: ManyToManyField. ManyToManyField is correct because products can have many tags and tags can belong to many products."
+        },
+        {
+          "id": 9033,
+          "sourceNumber": 33,
+          "type": "fill_blank",
+          "question": "Complete the created timestamp option. Set the timestamp once when the row is inserted.\n\ncreated_at = models.DateTimeField(__________=True)",
+          "answers": [
+            "auto_now_add"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: auto_now_add. auto_now_add is correct because it sets the datetime only once when the object is created."
+        },
+        {
+          "id": 9034,
+          "sourceNumber": 34,
+          "type": "fill_blank",
+          "question": "Complete the updated timestamp option. Refresh the timestamp every time the row is saved.\n\nupdated_at = models.DateTimeField(__________=True)",
+          "answers": [
+            "auto_now"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: auto_now. auto_now is correct because it updates the datetime on every save."
+        },
+        {
+          "id": 9035,
+          "sourceNumber": 35,
+          "type": "fill_blank",
+          "question": "Complete the default model ordering. Sort by created_at in descending order.\n\nordering = ['__________created_at']",
+          "answers": [
+            "-"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: -. - is correct because a leading hyphen means descending order."
+        },
+        {
+          "id": 9036,
+          "sourceNumber": 36,
+          "type": "fill_blank",
+          "question": "Complete the ORM OR query using Q objects.\n\nQ(price__lt=500) _____ Q(name__icontains='budget')",
+          "answers": [
+            "|"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: |. | is correct because it combines Q objects with logical OR."
+        },
+        {
+          "id": 9037,
+          "sourceNumber": 37,
+          "type": "fill_blank",
+          "question": "Complete the ORM AND query using Q objects.\n\nQ(is_active=True) _____ Q(price__gt=100)",
+          "answers": [
+            "&"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: &. & is correct because it combines Q objects with logical AND."
+        },
+        {
+          "id": 9038,
+          "sourceNumber": 38,
+          "type": "fill_blank",
+          "question": "Complete the ORM NOT query. Exclude products from the Archived category.\n\nProduct.objects.filter(_____Q(category__name='Archived'))",
+          "answers": [
+            "~"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: ~. ~ is correct because it negates a Q object condition."
+        },
+        {
+          "id": 9039,
+          "sourceNumber": 39,
+          "type": "fill_blank",
+          "question": "Complete the ORM method that returns one summary value for the whole QuerySet.\n\nProduct.objects.__________(Avg('price'))",
+          "answers": [
+            "aggregate"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: aggregate. aggregate is correct because it calculates summary values across the entire QuerySet."
+        },
+        {
+          "id": 9040,
+          "sourceNumber": 40,
+          "type": "fill_blank",
+          "question": "Complete the ORM method that adds a computed field to each Category object.\n\nCategory.objects.__________(product_count=Count('products'))",
+          "answers": [
+            "annotate"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: annotate. annotate is correct because it adds calculated fields per object in the QuerySet."
+        },
+        {
+          "id": 9041,
+          "sourceNumber": 41,
+          "type": "fill_blank",
+          "question": "Complete the DRF serializer base class for a model serializer.\n\nclass ProductSerializer(serializers.__________):",
+          "answers": [
+            "ModelSerializer"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: ModelSerializer. ModelSerializer is correct because it builds serializer fields from a Django model."
+        },
+        {
+          "id": 9042,
+          "sourceNumber": 42,
+          "type": "fill_blank",
+          "question": "Complete the serializer Meta field setting that includes all model fields.\n\nfields = '__________'",
+          "answers": [
+            "__all__"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: __all__. __all__ is correct because fields='__all__' includes every model field in the serializer."
+        },
+        {
+          "id": 9043,
+          "sourceNumber": 43,
+          "type": "fill_blank",
+          "question": "Complete the DRF ViewSet class that provides CRUD actions.\n\nclass ProductViewSet(viewsets.__________):",
+          "answers": [
+            "ModelViewSet"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: ModelViewSet. ModelViewSet is correct because it provides default CRUD actions for a model API."
+        },
+        {
+          "id": 9044,
+          "sourceNumber": 44,
+          "type": "fill_blank",
+          "question": "Complete the serializer option for serializing a QuerySet/list.\n\nserializer = ProductSerializer(qs, __________=True)",
+          "answers": [
+            "many"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: many. many is correct because many=True tells DRF the serializer is handling multiple objects."
+        },
+        {
+          "id": 9045,
+          "sourceNumber": 45,
+          "type": "fill_blank",
+          "question": "Complete the router class that auto-generates URLs for ViewSets.\n\nrouter = __________()",
+          "answers": [
+            "DefaultRouter"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture9_drf_question_bank.pdf — Part 2",
+          "explanation": "Correct answer: DefaultRouter. DefaultRouter is correct because it creates URL routes automatically for registered ViewSets."
         }
       ]
     }

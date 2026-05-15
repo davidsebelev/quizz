@@ -10,9 +10,35 @@
 </head>
 <body>
 
+  <!-- SUBJECT SELECT -->
+  <div id="screen-subjects" class="screen active">
+    <header class="subject-hero">
+      <div class="subject-kicker">Course hub</div>
+      <h1>Study Dashboard</h1>
+      <p>Choose a subject and continue practice.</p>
+    </header>
+
+    <main class="subject-grid" aria-label="Subject selection">
+      <button class="subject-card network-card" type="button" onclick="openNetworks()">
+        <span class="subject-icon">🌐</span>
+        <span class="subject-label">Networks</span>
+        <span class="subject-description">CCNA quizzes, lectures, VLSM and final exam practice.</span>
+        <span class="subject-arrow">Open →</span>
+      </button>
+
+      <button class="subject-card webdev-card" type="button" onclick="openWebDev()">
+        <span class="subject-icon">💻</span>
+        <span class="subject-label">Web Dev</span>
+        <span class="subject-description">HTML, CSS, JavaScript, DOM and frontend project prep.</span>
+        <span class="subject-arrow">Open →</span>
+      </button>
+    </main>
+  </div>
+
   <!-- HOME -->
-  <div id="screen-home" class="screen active">
+  <div id="screen-home" class="screen">
     <header class="hero">
+      <button class="subject-back" type="button" onclick="goSubjects()">← Subjects</button>
       <div class="hero-icon">🌐</div>
       <h1 id="app-title">Quiz App</h1>
       <div class="hero-tabs" id="hero-tabs"></div>
@@ -20,6 +46,48 @@
     </header>
     <main class="topics-grid" id="topics-grid">
       <div class="loading">Loading topics…</div>
+    </main>
+  </div>
+
+  <!-- WEB DEV -->
+  <div id="screen-webdev" class="screen">
+    <nav class="quiz-nav">
+      <button class="btn-back" onclick="goSubjects()">← Subjects</button>
+      <span class="quiz-nav-title">Web Dev</span>
+      <span class="quiz-attempts">Ready</span>
+    </nav>
+
+    <main class="webdev-page">
+      <section class="webdev-header">
+        <div>
+          <div class="subject-kicker">Web Development</div>
+          <h2>Practice workspace</h2>
+        </div>
+        <span class="webdev-status">Subject page</span>
+      </section>
+
+      <section class="webdev-modules" id="webdev-modules" aria-label="Web Dev modules">
+        <article class="webdev-module">
+          <span class="module-tag">HTML</span>
+          <h3>Semantic Structure</h3>
+          <p>Tags, forms, tables, accessibility basics and page structure.</p>
+        </article>
+        <article class="webdev-module">
+          <span class="module-tag">CSS</span>
+          <h3>Layout & Styling</h3>
+          <p>Flexbox, grid, responsive screens, selectors and visual states.</p>
+        </article>
+        <article class="webdev-module">
+          <span class="module-tag">JS</span>
+          <h3>JavaScript Logic</h3>
+          <p>Variables, functions, arrays, events and browser interaction.</p>
+        </article>
+        <article class="webdev-module">
+          <span class="module-tag">DOM</span>
+          <h3>Frontend Tasks</h3>
+          <p>Dynamic UI updates, validation, local state and API requests.</p>
+        </article>
+      </section>
     </main>
   </div>
 

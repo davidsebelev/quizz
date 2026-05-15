@@ -21,27 +21,31 @@ app.use('/net', express.static(path.join(__dirname, '../net')));
 app.use('/ipv6', express.static(path.join(__dirname, '../ipv6')));
 
 const DATA_FILE = path.join(__dirname, '../data/questions.json');
+function isWebDevTopic(topic) {
+  return topic.id.startsWith('web-');
+}
+
 const VIRTUAL_TOPIC_DEFS = [
   {
     id: 'attestation-1',
     title: 'Attestation 1',
     icon: '📝',
     lecture: 'Attestation 1',
-    includeTopic: topic => /^Lecture [1-6]$/.test(topic.lecture),
+    includeTopic: topic => !isWebDevTopic(topic) && /^Lecture [1-6]$/.test(topic.lecture),
   },
   {
     id: 'attestation-2',
     title: 'Attestation 2',
     icon: '📘',
     lecture: 'Attestation 2',
-    includeTopic: topic => !/^Lecture [1-6]$/.test(topic.lecture),
+    includeTopic: topic => !isWebDevTopic(topic) && !/^Lecture [1-6]$/.test(topic.lecture),
   },
   {
     id: 'final-exam',
     title: 'Final Exam',
     icon: '🧾',
     lecture: 'Final Exam',
-    includeTopic: () => true,
+    includeTopic: topic => !isWebDevTopic(topic),
   },
 ];
 

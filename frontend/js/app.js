@@ -13,9 +13,10 @@ let matchingSelections = new Map();
 let isMistakeReview = false;
 let topicCache = new Map();
 let currentLecture = null;
+let activeSubject = 'subjects';
 
 window.addEventListener('DOMContentLoaded', () => {
-  loadHome();
+  showScreen('screen-subjects');
 });
 
 const vlsmPractices = [
@@ -97,6 +98,52 @@ async function loadHome() {
   }
 }
 
+function openNetworks() {
+  activeSubject = 'networks';
+  loadHome();
+}
+
+async function openWebDev() {
+  activeSubject = 'webdev';
+  showScreen('screen-webdev');
+  const modules = document.getElementById('webdev-modules');
+  modules.innerHTML = '<div class="loading">Loading Web Dev topics…</div>';
+
+  try {
+    if (!allTopics.length) {
+      const res = await fetch(`${API}/topics`);
+      allTopics = await res.json();
+    }
+    renderWebDevTopics();
+  } catch (error) {
+    modules.innerHTML = `<div class="loading" style="color:#ef4444">Cannot connect to server.<br>Run: <code>node backend/server.js</code></div>`;
+  }
+}
+
+function goSubjects() {
+  activeSubject = 'subjects';
+  showScreen('screen-subjects');
+}
+
+function renderWebDevTopics() {
+  const modules = document.getElementById('webdev-modules');
+  const webTopics = allTopics.filter(isWebDevTopic);
+
+  if (!webTopics.length) {
+    modules.innerHTML = '<div class="loading">No Web Dev topics found.</div>';
+    return;
+  }
+
+  modules.innerHTML = webTopics.map(topic => `
+    <button class="webdev-module webdev-topic-card" type="button" onclick="startTopic('${topic.id}')">
+      <span class="module-tag">${escapeHTML(topic.lecture)}</span>
+      <h3>${escapeHTML(topic.title)}</h3>
+      <p>${topic.count} questions from the Web Dev question base.</p>
+      <span class="subject-arrow">Start quiz →</span>
+    </button>
+  `).join('');
+}
+
 function renderTabs(topics) {
   const container = document.getElementById('hero-tabs');
   container.innerHTML = `<button class="hero-tab active" onclick="filterTopics(null, this)">All</button>`;
@@ -168,11 +215,15 @@ function openLectures(btn) {
 }
 
 function getLectures() {
-  return [...new Set(allTopics.filter(topic => !isVirtualTopic(topic)).map(topic => topic.lecture))];
+  return [...new Set(allTopics.filter(topic => !isVirtualTopic(topic) && !isWebDevTopic(topic)).map(topic => topic.lecture))];
 }
 
 function isVirtualTopic(topic) {
   return ['attestation-1', 'attestation-2', 'final-exam'].includes(topic.id);
+}
+
+function isWebDevTopic(topic) {
+  return topic.id.startsWith('web-');
 }
 
 function isAttestationTopic(topic) {
@@ -181,10 +232,10 @@ function isAttestationTopic(topic) {
 
 function getAttestationTopics(attestationId) {
   if (attestationId === 'attestation-1') {
-    return allTopics.filter(topic => !isVirtualTopic(topic) && /^Lecture [1-6]$/.test(topic.lecture));
+    return allTopics.filter(topic => !isVirtualTopic(topic) && !isWebDevTopic(topic) && /^Lecture [1-6]$/.test(topic.lecture));
   }
   if (attestationId === 'attestation-2') {
-    return allTopics.filter(topic => !isVirtualTopic(topic) && !/^Lecture [1-6]$/.test(topic.lecture));
+    return allTopics.filter(topic => !isVirtualTopic(topic) && !isWebDevTopic(topic) && !/^Lecture [1-6]$/.test(topic.lecture));
   }
   return [];
 }
@@ -746,6 +797,7 @@ async function startTopic(topicId) {
   try {
     const res = await fetch(`${API}/topics/${topicId}`);
     currentTopic = await res.json();
+    if (isWebDevTopic(currentTopic)) activeSubject = 'webdev';
     currentQuestions = prepareQuestions(currentTopic.questions);
     currentIndex = 0; score = 0; answers = []; mistakeQuestions = []; isMistakeReview = false;
     document.getElementById('quiz-nav-title').textContent = currentTopic.title;
@@ -1152,7 +1204,13 @@ function nextQuestion() {
   loadQuestion();
 }
 
-function goHome() { loadHome(); }
+function goHome() {
+  if (activeSubject === 'webdev' || (currentTopic && isWebDevTopic(currentTopic))) {
+    openWebDev();
+    return;
+  }
+  openNetworks();
+}
 
 function showResults() {
   const total = currentQuestions.length;
