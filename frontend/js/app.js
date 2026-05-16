@@ -325,6 +325,7 @@ function renderLectureQuestion(question, index) {
         <span class="lecture-question-number">${number}</span>
         <h4>${escapeHTML(question.question)}</h4>
       </div>
+      ${question.context ? `<pre class="lecture-question-context">${escapeHTML(question.context)}</pre>` : ''}
       ${imageSrc ? `
         <figure class="lecture-media">
           <img src="${escapeAttr(imageSrc)}" alt="${escapeAttr(question.imageAlt || question.question)}" />
@@ -837,6 +838,7 @@ function loadQuestion() {
   renderQuestionJump();
   renderQuestionSource(q);
   document.getElementById('q-text').textContent = q.question;
+  renderQuestionContext(q);
   renderQuestionImage(q);
   document.getElementById('feedback-block').style.display = 'none';
   document.getElementById('btn-next').style.display = 'none';
@@ -971,6 +973,20 @@ function renderQuestionImage(q) {
   caption.textContent = q.imageCaption || '';
   caption.style.display = q.imageCaption ? 'block' : 'none';
   media.style.display = 'block';
+}
+
+function renderQuestionContext(q) {
+  const context = document.getElementById('q-context');
+  if (!context) return;
+
+  if (!q.context) {
+    context.textContent = '';
+    context.style.display = 'none';
+    return;
+  }
+
+  context.textContent = q.context;
+  context.style.display = 'block';
 }
 
 function renderMatchingOptions(q, optDiv) {

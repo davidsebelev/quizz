@@ -18931,6 +18931,2967 @@
           "explanation": "Correct answer: DefaultRouter. DefaultRouter is correct because it creates URL routes automatically for registered ViewSets."
         }
       ]
+    },
+    {
+      "id": "web-lecture-10-drf-api-views-crud",
+      "title": "DRF API Views & CRUD Question Bank",
+      "icon": "🔌",
+      "lecture": "Lecture 10 DRF API Views & CRUD",
+      "questions": [
+        {
+          "id": 10001,
+          "sourceNumber": 1,
+          "question": "Why is @csrf_exempt dangerous?",
+          "options": [
+            "Slows server",
+            "Disables CSRF protection",
+            "Deletes cookies",
+            "Blocks JSON"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Multiple Choice",
+          "explanation": "Correct answer: B) Disables CSRF protection. @csrf_exempt bypasses Django CSRF checks, so unsafe requests are no longer protected by the normal CSRF mechanism."
+        },
+        {
+          "id": 10002,
+          "sourceNumber": 2,
+          "question": "What replaces json.loads(request.body)?",
+          "options": [
+            "request.POST",
+            "request.GET",
+            "request.data",
+            "request.body"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Multiple Choice",
+          "explanation": "Correct answer: C) request.data. In DRF, request.data provides parsed request content for JSON and other supported media types."
+        },
+        {
+          "id": 10003,
+          "sourceNumber": 3,
+          "question": "What replaces JsonResponse in DRF?",
+          "options": [
+            "HttpResponse",
+            "Serializer",
+            "Response",
+            "APIView"
+          ],
+          "answer": [
+            2
+          ],
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Multiple Choice",
+          "explanation": "Correct answer: C) Response. DRF Response renders serializer data using content negotiation instead of manually returning JsonResponse."
+        },
+        {
+          "id": 10004,
+          "sourceNumber": 4,
+          "question": "What does serializer.is_valid() do?",
+          "options": [
+            "Saves object",
+            "Validates incoming data",
+            "Deletes object",
+            "Creates router"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Multiple Choice",
+          "explanation": "Correct answer: B) Validates incoming data. serializer.is_valid() checks submitted data and populates validated_data or errors."
+        },
+        {
+          "id": 10005,
+          "sourceNumber": 5,
+          "question": "What does serializer.save() do?",
+          "options": [
+            "Validation",
+            "Creates/updates object",
+            "Migration",
+            "JSON generation"
+          ],
+          "answer": [
+            1
+          ],
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Multiple Choice",
+          "explanation": "Correct answer: B) Creates/updates object. After validation, serializer.save() calls create() or update() depending on how the serializer was initialized."
+        },
+        {
+          "id": 10006,
+          "sourceNumber": 6,
+          "type": "fill_blank",
+          "question": "Complete the DRF function-based view decorator.\n\n@__________(['GET', 'POST'])",
+          "answers": [
+            "api_view"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: api_view. @api_view declares the allowed HTTP methods for a DRF function-based view."
+        },
+        {
+          "id": 10007,
+          "sourceNumber": 7,
+          "type": "fill_blank",
+          "question": "Complete the parsed request body attribute in DRF.\n\nrequest.__________",
+          "answers": [
+            "data"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: data. request.data contains parsed request payload data in DRF."
+        },
+        {
+          "id": 10008,
+          "sourceNumber": 8,
+          "type": "fill_blank",
+          "question": "Complete the DRF response class.\n\nreturn __________(serializer.data)",
+          "answers": [
+            "Response"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: Response. DRF Response returns API data with renderer/content negotiation support."
+        },
+        {
+          "id": 10009,
+          "sourceNumber": 9,
+          "type": "fill_blank",
+          "question": "Complete the serializer validation method.\n\nserializer.__________()",
+          "answers": [
+            "is_valid"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: is_valid. is_valid() checks whether incoming serializer data passes validation."
+        },
+        {
+          "id": 10010,
+          "sourceNumber": 10,
+          "type": "fill_blank",
+          "question": "Complete the serializer save call.\n\nserializer.__________()",
+          "answers": [
+            "save"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: save. save() persists the validated serializer data by creating or updating an object."
+        },
+        {
+          "id": 10011,
+          "sourceNumber": 11,
+          "type": "fill_blank",
+          "question": "Complete the serializer validation errors attribute.\n\nserializer.__________",
+          "answers": [
+            "errors"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: errors. serializer.errors contains validation error details after is_valid() fails."
+        },
+        {
+          "id": 10012,
+          "sourceNumber": 12,
+          "type": "fill_blank",
+          "question": "Complete the QuerySet serialization option.\n\nProductSerializer(products, __________=True)",
+          "answers": [
+            "many"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: many. many=True tells the serializer it is serializing multiple objects."
+        },
+        {
+          "id": 10013,
+          "sourceNumber": 13,
+          "type": "fill_blank",
+          "question": "Complete the PUT update serializer pattern.\n\nProductSerializer(__________=product, data=request.data)",
+          "answers": [
+            "instance"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: instance. Passing instance=product tells the serializer to update an existing object."
+        },
+        {
+          "id": 10014,
+          "sourceNumber": 14,
+          "type": "fill_blank",
+          "question": "Complete the DRF class-based view base class.\n\nclass ProductAPIView(__________):",
+          "answers": [
+            "APIView"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: APIView. APIView is DRF's base class for class-based API views."
+        },
+        {
+          "id": 10015,
+          "sourceNumber": 15,
+          "type": "fill_blank",
+          "question": "Complete the class-based view GET method.\n\ndef __________(self, request):",
+          "answers": [
+            "get"
+          ],
+          "blankLabel": "Missing code",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/lecture10_drf_crud_question_bank.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: get. A get() method handles HTTP GET requests in a class-based view."
+        }
+      ]
+    },
+    {
+      "id": "web-fill-blanks-lectures-8-9-10",
+      "title": "Fill Blanks Lectures 8, 9, 10",
+      "icon": "✍️",
+      "lecture": "fill_blanks_lectures",
+      "questions": [
+        {
+          "id": 11001,
+          "sourceNumber": 1,
+          "type": "fill_blank",
+          "question": "Import path/include.\n\nfrom django.urls import path, __________",
+          "answers": [
+            "include"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: include."
+        },
+        {
+          "id": 11002,
+          "sourceNumber": 2,
+          "type": "fill_blank",
+          "question": "Import JsonResponse.\n\nfrom django.http import __________",
+          "answers": [
+            "JsonResponse"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: JsonResponse."
+        },
+        {
+          "id": 11003,
+          "sourceNumber": 3,
+          "type": "fill_blank",
+          "question": "Import models.\n\nfrom django.db import __________",
+          "answers": [
+            "models"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: models."
+        },
+        {
+          "id": 11004,
+          "sourceNumber": 4,
+          "type": "fill_blank",
+          "question": "Import render.\n\nfrom django.shortcuts import __________",
+          "answers": [
+            "render"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: render."
+        },
+        {
+          "id": 11005,
+          "sourceNumber": 5,
+          "type": "fill_blank",
+          "question": "Import re_path.\n\nfrom django.urls import path, __________",
+          "answers": [
+            "re_path"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: re_path."
+        },
+        {
+          "id": 11006,
+          "sourceNumber": 6,
+          "type": "fill_blank",
+          "question": "Import admin.\n\nfrom django.contrib import __________",
+          "answers": [
+            "admin"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: admin."
+        },
+        {
+          "id": 11007,
+          "sourceNumber": 7,
+          "type": "fill_blank",
+          "question": "Import Product model.\n\nfrom .models import __________",
+          "answers": [
+            "Product"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: Product."
+        },
+        {
+          "id": 11008,
+          "sourceNumber": 8,
+          "type": "fill_blank",
+          "question": "Import HttpResponse.\n\nfrom django.http import __________",
+          "answers": [
+            "HttpResponse"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: HttpResponse."
+        },
+        {
+          "id": 11009,
+          "sourceNumber": 9,
+          "type": "fill_blank",
+          "question": "Import Count.\n\nfrom django.db.models import __________",
+          "answers": [
+            "Count"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: Count."
+        },
+        {
+          "id": 11010,
+          "sourceNumber": 10,
+          "type": "fill_blank",
+          "question": "Import Q.\n\nfrom django.db.models import __________",
+          "answers": [
+            "Q"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: Q."
+        },
+        {
+          "id": 11011,
+          "sourceNumber": 11,
+          "type": "fill_blank",
+          "question": "Import serializers.\n\nfrom rest_framework import __________",
+          "answers": [
+            "serializers"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: serializers."
+        },
+        {
+          "id": 11012,
+          "sourceNumber": 12,
+          "type": "fill_blank",
+          "question": "Import viewsets.\n\nfrom rest_framework import __________",
+          "answers": [
+            "viewsets"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: viewsets."
+        },
+        {
+          "id": 11013,
+          "sourceNumber": 13,
+          "type": "fill_blank",
+          "question": "Import routers.\n\nfrom rest_framework.routers import __________",
+          "answers": [
+            "DefaultRouter"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: DefaultRouter."
+        },
+        {
+          "id": 11014,
+          "sourceNumber": 14,
+          "type": "fill_blank",
+          "question": "Import ProductSerializer.\n\nfrom .serializers import __________",
+          "answers": [
+            "ProductSerializer"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: ProductSerializer."
+        },
+        {
+          "id": 11015,
+          "sourceNumber": 15,
+          "type": "fill_blank",
+          "question": "Import ProductViewSet.\n\nfrom .views import __________",
+          "answers": [
+            "ProductViewSet"
+          ],
+          "blankLabel": "Missing import",
+          "placeholder": "Type the missing part",
+          "slide": null,
+          "reference": "web/import_fill_blanks_lectures_8_9_10.pdf - Fill in the Blanks",
+          "explanation": "Correct answer: ProductViewSet."
+        }
+      ]
+    },
+    {
+      "id": "web-v4",
+      "title": "V4 Questions",
+      "icon": "🧪",
+      "lecture": "V4",
+      "questions": [
+        {
+          "id": 12001,
+          "sourceNumber": 1,
+          "type": "fill_blank",
+          "question": "Fill in the blanks.\n\nfrom rest_framework import generics\nclass ProductListAPIView(generics.__________):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n\nclass ProductDetailAPIView(generics.__________):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    __________ = 'product_id'",
+          "answers": [
+            "ListCreateAPIView, RetrieveUpdateDestroyAPIView, lookup_field"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "reference": "web/v4.pdf - Q1",
+          "slide": null,
+          "explanation": "Correct answer: ListCreateAPIView, RetrieveUpdateDestroyAPIView, lookup_field."
+        },
+        {
+          "id": 12002,
+          "sourceNumber": 2,
+          "question": "Inside REST_FRAMEWORK in settings.py, which key configures global authentication classes?",
+          "options": [
+            "AUTHENTICATION_BACKENDS",
+            "DEFAULT_PERMISSION_CLASSES",
+            "DEFAULT_AUTHENTICATION_CLASSES",
+            "AUTH_CLASSES"
+          ],
+          "answer": [
+            2
+          ],
+          "reference": "web/v4.pdf - Q2",
+          "slide": null,
+          "explanation": "Correct answer: DEFAULT_AUTHENTICATION_CLASSES."
+        },
+        {
+          "id": 12003,
+          "sourceNumber": 3,
+          "question": "Which DRF permission class restricts access to authenticated users only?",
+          "options": [
+            "AllowAny",
+            "IsAuthenticated",
+            "IsAdminUser",
+            "DjangoModelPermissions"
+          ],
+          "answer": [
+            1
+          ],
+          "reference": "web/v4.pdf - Q3",
+          "slide": null,
+          "explanation": "Correct answer: IsAuthenticated."
+        },
+        {
+          "id": 12004,
+          "sourceNumber": 4,
+          "type": "fill_blank",
+          "question": "Which manage.py sub-command starts Django's built-in development web server?",
+          "answers": [
+            "runserver"
+          ],
+          "blankLabel": "Command",
+          "reference": "web/v4.pdf - Q4",
+          "slide": null,
+          "explanation": "Correct answer: runserver.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12005,
+          "sourceNumber": 5,
+          "type": "fill_blank",
+          "question": "Fill in the blanks.\n\nclass Category(models.Model):\n    name = models.CharField(max_length=100)\n\n    def __________(self):\n        return self.__________",
+          "answers": [
+            "__str__, name"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q5",
+          "slide": null,
+          "explanation": "Correct answer: __str__, name.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12006,
+          "sourceNumber": 6,
+          "question": "What does unique=True on a Django model field do?",
+          "options": [
+            "Hides the field in admin",
+            "Encrypts the value automatically",
+            "Makes it the primary key",
+            "Adds a database UNIQUE constraint so duplicate values are not allowed"
+          ],
+          "answer": [
+            3
+          ],
+          "reference": "web/v4.pdf - Q6",
+          "slide": null,
+          "explanation": "Correct answer: Adds a database UNIQUE constraint so duplicate values are not allowed."
+        },
+        {
+          "id": 12007,
+          "sourceNumber": 7,
+          "type": "fill_blank",
+          "question": "Fill in the blanks.\n\nclass ProductCreateView(generics.CreateAPIView):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    permission_classes = [IsAuthenticated]\n\n    def __________(self, serializer):\n        serializer.save(__________self.__________.user)",
+          "answers": [
+            "perform_create, owner=, request"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q7",
+          "slide": null,
+          "explanation": "Correct answer: perform_create, owner=, request.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12008,
+          "sourceNumber": 8,
+          "type": "fill_blank",
+          "question": "Which DRF router class auto-generates URL patterns for a registered ViewSet?",
+          "answers": [
+            "DefaultRouter"
+          ],
+          "blankLabel": "Class name",
+          "reference": "web/v4.pdf - Q8",
+          "slide": null,
+          "explanation": "Correct answer: DefaultRouter.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12009,
+          "sourceNumber": 9,
+          "question": "How do you pass the request object into a serializer so it can be accessed via self.context['request']?",
+          "options": [
+            "ProductSerializer(product, request=request)",
+            "ProductSerializer(product, context={'request': request})",
+            "ProductSerializer(product, self.request manually)",
+            "This is impossible in DRF"
+          ],
+          "answer": [
+            1
+          ],
+          "reference": "web/v4.pdf - Q9",
+          "slide": null,
+          "explanation": "Correct answer: ProductSerializer(product, context={'request': request})."
+        },
+        {
+          "id": 12010,
+          "sourceNumber": 10,
+          "type": "fill_blank",
+          "question": "With DRFs OrderingFilter enabled, which URL query parameter requests result ordering? (the part before =)",
+          "answers": [
+            "ordering"
+          ],
+          "blankLabel": "Query parameter",
+          "reference": "web/v4.pdf - Q10",
+          "slide": null,
+          "explanation": "Correct answer: ordering.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12011,
+          "sourceNumber": 11,
+          "type": "fill_blank",
+          "question": "Fill in the blanks.\n\nfrom rest_framework import viewsets, routers\n\nclass ProductViewSet(viewsets.__________):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n\nrouter = routers.__________()\nrouter.__________(r'products', ProductViewSet)",
+          "answers": [
+            "ModelViewSet, DefaultRouter, register"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q11",
+          "slide": null,
+          "explanation": "Correct answer: ModelViewSet, DefaultRouter, register.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12012,
+          "sourceNumber": 12,
+          "type": "fill_blank",
+          "question": "Which Simple JWT class-based view returns an access + refresh token pair when given valid credentials?",
+          "answers": [
+            "TokenObtainPairView"
+          ],
+          "blankLabel": "Class name",
+          "reference": "web/v4.pdf - Q12",
+          "slide": null,
+          "explanation": "Correct answer: TokenObtainPairView.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12013,
+          "sourceNumber": 13,
+          "type": "fill_blank",
+          "question": "Which manage.py sub-command scaffolds a brand-new Django app inside the project?",
+          "answers": [
+            "startapp"
+          ],
+          "blankLabel": "Command",
+          "reference": "web/v4.pdf - Q13",
+          "slide": null,
+          "explanation": "Correct answer: startapp.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12014,
+          "sourceNumber": 14,
+          "question": "Which queryset expression returns products whose price is strictly greater than 100?",
+          "options": [
+            "Product.objects.filter(price__gt=100)",
+            "Product.objects.filter(price>100)",
+            "Product.objects.where(price__gt=100)",
+            "Product.objects.filter(price__gte=100)"
+          ],
+          "answer": [
+            0
+          ],
+          "reference": "web/v4.pdf - Q14",
+          "slide": null,
+          "explanation": "Correct answer: Product.objects.filter(price__gt=100)."
+        },
+        {
+          "id": 12015,
+          "sourceNumber": 15,
+          "question": "When credentials are invalid, what does Djangos authenticate() function return?",
+          "options": [
+            "AnonymousUser",
+            "ValidationError",
+            "None",
+            "{}"
+          ],
+          "answer": [
+            2
+          ],
+          "reference": "web/v4.pdf - Q15",
+          "slide": null,
+          "explanation": "Correct answer: None."
+        },
+        {
+          "id": 12016,
+          "sourceNumber": 16,
+          "question": "Which Django model field is most appropriate for storing money values such as product price?",
+          "options": [
+            "FloatField",
+            "IntegerField",
+            "DecimalField with max_digits and decimal_places",
+            "CharField"
+          ],
+          "answer": [
+            2
+          ],
+          "reference": "web/v4.pdf - Q16",
+          "slide": null,
+          "explanation": "Correct answer: DecimalField with max_digits and decimal_places."
+        },
+        {
+          "id": 12017,
+          "sourceNumber": 17,
+          "type": "fill_blank",
+          "question": "Fill in the blanks.\n\nclass ProductSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Product\n        fields = '__all__'\n\n    def ___________price(self, value):\n        if value < 0:\n            raise serializers.__________('Price must be non-negative')\n        return __________",
+          "answers": [
+            "validate, ValidationError, value"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q17",
+          "slide": null,
+          "explanation": "Correct answer: validate, ValidationError, value.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12018,
+          "sourceNumber": 18,
+          "question": "In a ModelSerializer, what does fields = '__all__' mean?",
+          "options": [
+            "Includes every model field in serializer output",
+            "Only includes required fields",
+            "Includes fields except id",
+            "Dynamically chooses random fields"
+          ],
+          "answer": [
+            0
+          ],
+          "reference": "web/v4.pdf - Q18",
+          "slide": null,
+          "explanation": "Correct answer: Includes every model field in serializer output."
+        },
+        {
+          "id": 12019,
+          "sourceNumber": 19,
+          "type": "fill_blank",
+          "question": "In a sample JWT header:\n\n{ \"alg\": \"____\", \"typ\": \"JWT\" }\n\nwhich short string fills the blank?",
+          "answers": [
+            "HS256"
+          ],
+          "blankLabel": "Algorithm",
+          "reference": "web/v4.pdf - Q19",
+          "slide": null,
+          "explanation": "Correct answer: HS256.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12020,
+          "sourceNumber": 20,
+          "type": "fill_blank",
+          "question": "With DRFs SearchFilter enabled, which URL query parameter triggers the search? (the part before =)",
+          "answers": [
+            "search"
+          ],
+          "blankLabel": "Query parameter",
+          "reference": "web/v4.pdf - Q20",
+          "slide": null,
+          "explanation": "Correct answer: search.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12021,
+          "sourceNumber": 21,
+          "type": "fill_blank",
+          "question": "When writing a class-based view in urls.py, which class method is called to turn the class into a callable view?\n\nTokenObtainPairView.__________()",
+          "answers": [
+            "as_view"
+          ],
+          "blankLabel": "Method",
+          "reference": "web/v4.pdf - Q21",
+          "slide": null,
+          "explanation": "Correct answer: as_view.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12022,
+          "sourceNumber": 22,
+          "type": "fill_blank",
+          "question": "@__________(detail=__________, methods=['get'])\ndef featured(self, request):\n    qs = Product.objects.filter(is_featured=True)\n    serializer = self.get_serializer(qs, ________=True)",
+          "answers": [
+            "action, False, many"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q22",
+          "slide": null,
+          "explanation": "Correct answer: action, False, many.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12023,
+          "sourceNumber": 23,
+          "type": "fill_blank",
+          "question": "from django.db import ________\n\nclass Category(________.Model):\n    name = ________.CharField(max_length=300)\n\n    class ________:\n        verbose_name = 'Category'\n        verbose_name_plural = '________'",
+          "answers": [
+            "models, models, models, Meta, Categories"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q23",
+          "slide": null,
+          "explanation": "Correct answer: models, models, models, Meta, Categories.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12024,
+          "sourceNumber": 24,
+          "type": "fill_blank",
+          "question": "from rest_framework_simplejwt.views import (\n    __________,\n    TokenRefreshView,\n)\nurlpatterns = [\n    path('api/token/', __________.__________(), name='token_obtain_pair'),\n    path('api/token/refresh/', __________.as_view(), name='token_refresh'),\n]",
+          "answers": [
+            "TokenObtainPairView, TokenObtainPairView, as_view, TokenRefreshView"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q24",
+          "slide": null,
+          "explanation": "Correct answer: TokenObtainPairView, TokenObtainPairView, as_view, TokenRefreshView.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12025,
+          "sourceNumber": 25,
+          "type": "fill_blank",
+          "question": "from django.views.decorators.csrf import __________\nfrom django.http import JsonResponse\nimport json\n\n@__________\ndef products_list(request):\n    if request.method == 'POST':\n        data = __________.loads(request.__________)",
+          "answers": [
+            "csrf_exempt, csrf_exempt, json, body"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q25",
+          "slide": null,
+          "explanation": "Correct answer: csrf_exempt, csrf_exempt, json, body.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12026,
+          "sourceNumber": 26,
+          "question": "Which command sequence creates and applies database migrations?",
+          "options": [
+            "migrate then makemigrations",
+            "runserver then migrate",
+            "makemigrations then migrate",
+            "collectstatic then migrate"
+          ],
+          "answer": [
+            2
+          ],
+          "reference": "web/v4.pdf - Q26",
+          "slide": null,
+          "explanation": "Correct answer: makemigrations then migrate."
+        },
+        {
+          "id": 12027,
+          "sourceNumber": 27,
+          "type": "fill_blank",
+          "question": "Complete the condition:\n\nif __________ == 'GET':",
+          "answers": [
+            "request.method"
+          ],
+          "blankLabel": "Condition part",
+          "reference": "web/v4.pdf - Q27",
+          "slide": null,
+          "explanation": "Correct answer: request.method.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12028,
+          "sourceNumber": 28,
+          "type": "fill_blank",
+          "question": "Which Python special method controls how a model instance is shown in admin/shell?",
+          "answers": [
+            "__str__"
+          ],
+          "blankLabel": "Method",
+          "reference": "web/v4.pdf - Q28",
+          "slide": null,
+          "explanation": "Correct answer: __str__.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12029,
+          "sourceNumber": 29,
+          "type": "fill_blank",
+          "question": "Which filter backend class is commonly used with filterset_fields?",
+          "answers": [
+            "DjangoFilterBackend"
+          ],
+          "blankLabel": "Class name",
+          "reference": "web/v4.pdf - Q29",
+          "slide": null,
+          "explanation": "Correct answer: DjangoFilterBackend.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12030,
+          "sourceNumber": 30,
+          "question": "What does read_only_fields mean in a serializer?",
+          "options": [
+            "Hidden from output",
+            "Included in output but ignored on input",
+            "Required on POST only",
+            "Only editable by admin"
+          ],
+          "answer": [
+            1
+          ],
+          "reference": "web/v4.pdf - Q30",
+          "slide": null,
+          "explanation": "Correct answer: Included in output but ignored on input."
+        },
+        {
+          "id": 12031,
+          "sourceNumber": 31,
+          "question": "Which HTTP method performs a full resource update?",
+          "options": [
+            "POST",
+            "PATCH",
+            "UPDATE",
+            "PUT"
+          ],
+          "answer": [
+            3
+          ],
+          "reference": "web/v4.pdf - Q31",
+          "slide": null,
+          "explanation": "Correct answer: PUT."
+        },
+        {
+          "id": 12032,
+          "sourceNumber": 32,
+          "question": "What is the main purpose of CORS?",
+          "options": [
+            "Database backups",
+            "Control whether browsers allow one origin to access another origin",
+            "Encrypt request body",
+            "Generate JWT tokens"
+          ],
+          "answer": [
+            1
+          ],
+          "reference": "web/v4.pdf - Q32",
+          "slide": null,
+          "explanation": "Correct answer: Control whether browsers allow one origin to access another origin."
+        },
+        {
+          "id": 12033,
+          "sourceNumber": 33,
+          "question": "Which class is the base class for Django models?",
+          "options": [
+            "models.Schema",
+            "django.orm.Entity",
+            "models.Model",
+            "django.db.Database"
+          ],
+          "answer": [
+            2
+          ],
+          "reference": "web/v4.pdf - Q33",
+          "slide": null,
+          "explanation": "Correct answer: models.Model."
+        },
+        {
+          "id": 12034,
+          "sourceNumber": 34,
+          "question": "Which two attributes do GenericAPIView mixins rely on?",
+          "options": [
+            "queryset and serializer_class",
+            "auth_classes and permission_classes",
+            "renderer_classes and parser_classes",
+            "model and fields"
+          ],
+          "answer": [
+            0
+          ],
+          "reference": "web/v4.pdf - Q34",
+          "slide": null,
+          "explanation": "Correct answer: queryset and serializer_class."
+        },
+        {
+          "id": 12035,
+          "sourceNumber": 35,
+          "question": "What is the main purpose of perform_create()?",
+          "options": [
+            "Inject extra data during save (e.g. owner=request.user)",
+            "Generate URLs",
+            "Send emails after response",
+            "Replace validation"
+          ],
+          "answer": [
+            0
+          ],
+          "reference": "web/v4.pdf - Q35",
+          "slide": null,
+          "explanation": "Correct answer: Inject extra data during save (e.g. owner=request.user)."
+        },
+        {
+          "id": 12036,
+          "sourceNumber": 36,
+          "question": "What does serializer.is_valid(raise_exception=True) do on invalid input?",
+          "options": [
+            "Raises ValidationError and returns HTTP 400",
+            "Enables strict mode only",
+            "Returns False silently",
+            "Stores errors only"
+          ],
+          "answer": [
+            0
+          ],
+          "reference": "web/v4.pdf - Q36",
+          "slide": null,
+          "explanation": "Correct answer: Raises ValidationError and returns HTTP 400."
+        },
+        {
+          "id": 12037,
+          "sourceNumber": 37,
+          "type": "fill_blank",
+          "question": "Which top-level dictionary in settings.py stores DRF-wide configuration?",
+          "answers": [
+            "REST_FRAMEWORK"
+          ],
+          "blankLabel": "Setting name",
+          "reference": "web/v4.pdf - Q37",
+          "slide": null,
+          "explanation": "Correct answer: REST_FRAMEWORK.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12038,
+          "sourceNumber": 38,
+          "type": "fill_blank",
+          "question": "Which HTTP method returns supported methods for a URL?",
+          "answers": [
+            "OPTIONS"
+          ],
+          "blankLabel": "HTTP method",
+          "reference": "web/v4.pdf - Q38",
+          "slide": null,
+          "explanation": "Correct answer: OPTIONS.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12039,
+          "sourceNumber": 39,
+          "question": "With DRF SearchFilter enabled, which URL triggers search for text phone?",
+          "options": [
+            "http://url?filter=phone",
+            "http://url?search=phone",
+            "http://url?find=phone",
+            "http://url?q=phone"
+          ],
+          "answer": [
+            1
+          ],
+          "reference": "web/v4.pdf - Q39",
+          "slide": null,
+          "explanation": "Correct answer: http://url?search=phone."
+        },
+        {
+          "id": 12040,
+          "sourceNumber": 40,
+          "type": "fill_blank",
+          "question": "INSTALLED_APPS = [\n    'rest_framework',\n    '__________',\n]\n\nMIDDLEWARE = [\n    'corsheaders.__________.__________',\n]",
+          "answers": [
+            "corsheaders, middleware, CorsMiddleware"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q40",
+          "slide": null,
+          "explanation": "Correct answer: corsheaders, middleware, CorsMiddleware.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12041,
+          "sourceNumber": 41,
+          "type": "fill_blank",
+          "question": "Python coding: read integer n and print n!.",
+          "answers": [
+            "n=int(input()); r=1; for i in range(1,n+1): r*=i; print(r)"
+          ],
+          "blankLabel": "Python code",
+          "reference": "web/v4.pdf - Q41",
+          "slide": null,
+          "explanation": "Correct answer: n=int(input()); r=1; for i in range(1,n+1): r*=i; print(r).",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12042,
+          "sourceNumber": 42,
+          "type": "fill_blank",
+          "question": "Python coding: read integers a and b and print their greatest common divisor.",
+          "answers": [
+            "a=int(input()); b=int(input()); while b!=0: a,b=b,a%b; print(a)"
+          ],
+          "blankLabel": "Python code",
+          "reference": "web/v4.pdf - Q42",
+          "slide": null,
+          "explanation": "Correct answer: a=int(input()); b=int(input()); while b!=0: a,b=b,a%b; print(a).",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12043,
+          "sourceNumber": 43,
+          "question": "Which package should be installed to use Simple JWT with Django REST Framework?",
+          "options": [
+            "djangorestframework-simplejwt",
+            "django-jwt-token",
+            "restframework-jwt-auth",
+            "simple-jwt-django"
+          ],
+          "answer": [
+            0
+          ],
+          "reference": "web/v4.pdf - Q43",
+          "slide": null,
+          "explanation": "Correct answer: djangorestframework-simplejwt."
+        },
+        {
+          "id": 12044,
+          "sourceNumber": 44,
+          "question": "How do you restrict access to a single APIView class to authenticated users?",
+          "options": [
+            "Set require_login = True",
+            "Set permission_classes = [IsAuthenticated] as a class attribute on the APIView",
+            "Decorate the class with @login_required",
+            "Put permissions = IsAuthenticated inside Meta"
+          ],
+          "answer": [
+            1
+          ],
+          "reference": "web/v4.pdf - Q44",
+          "slide": null,
+          "explanation": "Correct answer: Set permission_classes = [IsAuthenticated] as a class attribute on the APIView."
+        },
+        {
+          "id": 12045,
+          "sourceNumber": 45,
+          "question": "Which DRF permission class allows only authenticated users?",
+          "options": [
+            "AllowAny",
+            "IsAdminUser",
+            "IsAuthenticated",
+            "DjangoModelPermissions"
+          ],
+          "answer": [
+            2
+          ],
+          "reference": "web/v4.pdf - Q45",
+          "slide": null,
+          "explanation": "Correct answer: IsAuthenticated."
+        },
+        {
+          "id": 12046,
+          "sourceNumber": 46,
+          "type": "fill_blank",
+          "question": "def ____price(self, value):\n    if value < 0:\n        raise serializers.____('Price must be non-negative')\n    return ____",
+          "answers": [
+            "validate, ValidationError, value"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q46",
+          "slide": null,
+          "explanation": "Correct answer: validate, ValidationError, value.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12047,
+          "sourceNumber": 47,
+          "question": "In a ModelSerializer.Meta, what is true about fields and exclude?",
+          "options": [
+            "You may set either fields or exclude, but not both",
+            "You must always set both",
+            "exclude is only for admin models",
+            "fields works only with function-based views"
+          ],
+          "answer": [
+            0
+          ],
+          "reference": "web/v4.pdf - Q47",
+          "slide": null,
+          "explanation": "Correct answer: You may set either fields or exclude, but not both."
+        },
+        {
+          "id": 12048,
+          "sourceNumber": 48,
+          "question": "How do you pass the request object into a serializer so it can be accessed via self.context['request']?",
+          "options": [
+            "ProductSerializer(product, request=request)",
+            "ProductSerializer(product, context={'request': request})",
+            "ProductSerializer(product, self.request manually)",
+            "This is impossible in DRF"
+          ],
+          "answer": [
+            1
+          ],
+          "reference": "web/v4.pdf - Q48",
+          "slide": null,
+          "explanation": "Correct answer: ProductSerializer(product, context={'request': request})."
+        },
+        {
+          "id": 12049,
+          "sourceNumber": 49,
+          "question": "How should you raise a validation error inside a DRF serializer validation method?",
+          "options": [
+            "Call self.fail() with no arguments",
+            "Raise serializers.ValidationError(message)",
+            "Return False",
+            "Set self.errors = message"
+          ],
+          "answer": [
+            1
+          ],
+          "reference": "web/v4.pdf - Q49",
+          "slide": null,
+          "explanation": "Correct answer: Raise serializers.ValidationError(message)."
+        },
+        {
+          "id": 12050,
+          "sourceNumber": 50,
+          "type": "fill_blank",
+          "question": "Which HTTP method returns the supported HTTP methods for the given URL?",
+          "answers": [
+            "OPTIONS"
+          ],
+          "blankLabel": "HTTP method",
+          "reference": "web/v4.pdf - Q50",
+          "slide": null,
+          "explanation": "Correct answer: OPTIONS.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12051,
+          "sourceNumber": 51,
+          "type": "fill_blank",
+          "question": "Which top-level dictionary name in settings.py stores Django REST Framework configuration?",
+          "answers": [
+            "REST_FRAMEWORK"
+          ],
+          "blankLabel": "Setting name",
+          "reference": "web/v4.pdf - Q51",
+          "slide": null,
+          "explanation": "Correct answer: REST_FRAMEWORK.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12052,
+          "sourceNumber": 52,
+          "type": "fill_blank",
+          "question": "GenericAPIView with mixins: fill in the mixin combination for a list + create view.\n\nfrom rest_framework import generics, mixins\n\nclass ProductListAPIView(mixins.__________, mixins.CreateModelMixin, generics.__________):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n\n    def get(self, request, *args, **kwargs):\n        return self.__________(request, *args, **kwargs)",
+          "answers": [
+            "ListModelMixin, GenericAPIView, list"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q52",
+          "slide": null,
+          "explanation": "Correct answer: ListModelMixin, GenericAPIView, list.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12053,
+          "sourceNumber": 53,
+          "type": "fill_blank",
+          "question": "DjangoFilterBackend with filterset_class.\n\nfrom django_filters.rest_framework import __________\nfrom rest_framework.permissions import IsAuthenticated\nfrom rest_framework import generics\n\nclass ProductListAPIView(generics.ListAPIView):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    filter_backends = (__________,)\n    __________ = ProductFilter\n    __________ = (IsAuthenticated,)",
+          "answers": [
+            "DjangoFilterBackend, DjangoFilterBackend, filterset_class, permission_classes"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q53",
+          "slide": null,
+          "explanation": "Correct answer: DjangoFilterBackend, DjangoFilterBackend, filterset_class, permission_classes.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12054,
+          "sourceNumber": 54,
+          "type": "fill_blank",
+          "question": "Pip workflow: save and reinstall dependencies.\n\npip __________ > __________\npip __________ -r __________",
+          "answers": [
+            "freeze, requirements.txt, install, requirements.txt"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q54",
+          "slide": null,
+          "explanation": "Correct answer: freeze, requirements.txt, install, requirements.txt.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12055,
+          "sourceNumber": 55,
+          "question": "For a long, free-form description with no enforced length limit, which Django model field is most appropriate?",
+          "options": [
+            "SlugField",
+            "CharField",
+            "BinaryField",
+            "TextField"
+          ],
+          "answer": [
+            3
+          ],
+          "reference": "web/v4.pdf - Q55",
+          "slide": null,
+          "explanation": "Correct answer: TextField."
+        },
+        {
+          "id": 12056,
+          "sourceNumber": 56,
+          "question": "If Product.category = models.ForeignKey(Category, related_name='products'), how do you get all products belonging to category instance cat?",
+          "options": [
+            "cat.products.all()",
+            "Product.objects.get(cat)",
+            "cat.product_set.fetch()",
+            "cat.related(Product)"
+          ],
+          "answer": [
+            0
+          ],
+          "reference": "web/v4.pdf - Q56",
+          "slide": null,
+          "explanation": "Correct answer: cat.products.all()."
+        },
+        {
+          "id": 12057,
+          "sourceNumber": 57,
+          "type": "fill_blank",
+          "question": "Python coding: read a single line of lowercase words separated by spaces. Print each unique word with its frequency, one per line, in the form word count, sorted alphabetically by word.",
+          "answers": [
+            "words=input().split(); used=[]; for w in sorted(words): if w not in used: print(w, words.count(w)); used.append(w)"
+          ],
+          "blankLabel": "Python code",
+          "reference": "web/v4.pdf - Q57",
+          "slide": null,
+          "explanation": "Correct answer: words=input().split(); used=[]; for w in sorted(words): if w not in used: print(w, words.count(w)); used.append(w).",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12058,
+          "sourceNumber": 58,
+          "type": "fill_blank",
+          "question": "Python coding: read one line containing a sentence with words separated by spaces. Print the number of words on the first line and the total number of non-space characters on the second line.",
+          "answers": [
+            "line=input(); words=line.split(); print(len(words)); print(len(line.replace(' ', '')))"
+          ],
+          "blankLabel": "Python code",
+          "reference": "web/v4.pdf - Q58",
+          "slide": null,
+          "explanation": "Correct answer: line=input(); words=line.split(); print(len(words)); print(len(line.replace(' ', ''))).",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12059,
+          "sourceNumber": 59,
+          "type": "fill_blank",
+          "question": "Custom PageNumberPagination.\n\nfrom rest_framework.__________ import PageNumberPagination\n\nclass StandardResultsPagination(__________):\n    page_size = 10\n    page_size_query_param = 'page_size'\n    max_page_size = 100\n\nclass ProductListAPIView(generics.ListAPIView):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    __________ = StandardResultsPagination",
+          "answers": [
+            "pagination, PageNumberPagination, pagination_class"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q59",
+          "slide": null,
+          "explanation": "Correct answer: pagination, PageNumberPagination, pagination_class.",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 12060,
+          "sourceNumber": 60,
+          "type": "fill_blank",
+          "question": "Cross-field validation with validate().\n\nclass TimeRangeSerializer(serializers.Serializer):\n    start = serializers.IntegerField()\n    end = serializers.IntegerField()\n\n    def __________(self, attrs):\n        if attrs['start'] >= attrs['end']:\n            raise serializers.__________('start must be before end')\n        return __________",
+          "answers": [
+            "validate, ValidationError, attrs"
+          ],
+          "blankLabel": "Answers in order",
+          "reference": "web/v4.pdf - Q60",
+          "slide": null,
+          "explanation": "Correct answer: validate, ValidationError, attrs.",
+          "placeholder": "Type the answer"
+        }
+      ]
+    },
+    {
+      "id": "web-lecture-11-fill-in-the-blanks",
+      "title": "Lecture 11 Fill in the Blanks",
+      "icon": "✍️",
+      "lecture": "Lecture 11 Fill in the Blanks",
+      "questions": [
+        {
+          "id": 13001,
+          "sourceNumber": 1,
+          "type": "fill_blank",
+          "question": "Serialization mode.\n\nserializer = AlbumSerializer(__________)",
+          "answers": [
+            "album",
+            "obj"
+          ],
+          "blankLabel": "Missing argument",
+          "explanation": "Correct answer: album or obj. Passing an instance puts the serializer in serialization mode.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q1",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13002,
+          "sourceNumber": 2,
+          "type": "fill_blank",
+          "question": "Deserialization mode.\n\nserializer = AlbumSerializer(__________=request.data)",
+          "answers": [
+            "data"
+          ],
+          "blankLabel": "Missing keyword",
+          "explanation": "Correct answer: data. Passing data=request.data puts the serializer in deserialization mode.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q2",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13003,
+          "sourceNumber": 3,
+          "type": "fill_blank",
+          "question": "QuerySet serialization.\n\nAlbumSerializer(Album.objects.all(), __________=True)",
+          "answers": [
+            "many"
+          ],
+          "blankLabel": "Missing keyword",
+          "explanation": "Correct answer: many. many=True is required when serializing a QuerySet or list.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q3",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13004,
+          "sourceNumber": 4,
+          "type": "fill_blank",
+          "question": "Validated dictionary.\n\nserializer.__________________",
+          "answers": [
+            "validated_data"
+          ],
+          "blankLabel": "Serializer attribute",
+          "explanation": "Correct answer: validated_data. validated_data contains cleaned input after successful validation.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q4",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13005,
+          "sourceNumber": 5,
+          "type": "fill_blank",
+          "question": "Validation errors dict.\n\nserializer.__________________",
+          "answers": [
+            "errors"
+          ],
+          "blankLabel": "Serializer attribute",
+          "explanation": "Correct answer: errors. serializer.errors contains validation error details.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q5",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13006,
+          "sourceNumber": 6,
+          "type": "fill_blank",
+          "question": "Auto serializer.\n\nserializers.__________________",
+          "answers": [
+            "ModelSerializer"
+          ],
+          "blankLabel": "Serializer class",
+          "explanation": "Correct answer: ModelSerializer. ModelSerializer automatically builds fields from a model.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q6",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13007,
+          "sourceNumber": 7,
+          "type": "fill_blank",
+          "question": "Hidden password field.\n\npassword = serializers.CharField(__________________=True)",
+          "answers": [
+            "write_only"
+          ],
+          "blankLabel": "Field option",
+          "explanation": "Correct answer: write_only. write_only=True accepts input but hides the field from output.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q7",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13008,
+          "sourceNumber": 8,
+          "type": "fill_blank",
+          "question": "SerializerMethodField naming.\n\ndef ___________full_name(self, obj):",
+          "answers": [
+            "get"
+          ],
+          "blankLabel": "Method prefix",
+          "explanation": "Correct answer: get. SerializerMethodField uses get_<field_name> by default.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q8",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13009,
+          "sourceNumber": 9,
+          "type": "fill_blank",
+          "question": "Field-level validation.\n\ndef ___________________duration(self, value):",
+          "answers": [
+            "validate"
+          ],
+          "blankLabel": "Method prefix",
+          "explanation": "Correct answer: validate. Field-level serializer validation uses validate_<field_name>.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q9",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13010,
+          "sourceNumber": 10,
+          "type": "fill_blank",
+          "question": "Object-level validation.\n\ndef __________(self, data):",
+          "answers": [
+            "validate"
+          ],
+          "blankLabel": "Method name",
+          "explanation": "Correct answer: validate. Object-level serializer validation is implemented in validate().",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q10",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13011,
+          "sourceNumber": 11,
+          "type": "fill_blank",
+          "question": "Raise validation error.\n\nraise serializers.__________________",
+          "answers": [
+            "ValidationError"
+          ],
+          "blankLabel": "Exception class",
+          "explanation": "Correct answer: ValidationError. DRF serializer validation errors are raised with serializers.ValidationError.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q11",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13012,
+          "sourceNumber": 12,
+          "type": "fill_blank",
+          "question": "JWT header.\n\nAuthorization: __________ <token>",
+          "answers": [
+            "Bearer"
+          ],
+          "blankLabel": "Auth scheme",
+          "explanation": "Correct answer: Bearer. JWT tokens are commonly sent as Authorization: Bearer <token>.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q12",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13013,
+          "sourceNumber": 13,
+          "type": "fill_blank",
+          "question": "JWT login endpoint.\n\n__________________.as_view()",
+          "answers": [
+            "TokenObtainPairView"
+          ],
+          "blankLabel": "View class",
+          "explanation": "Correct answer: TokenObtainPairView. It returns the access and refresh token pair.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q13",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13014,
+          "sourceNumber": 14,
+          "type": "fill_blank",
+          "question": "JWT refresh endpoint.\n\n__________________.as_view()",
+          "answers": [
+            "TokenRefreshView"
+          ],
+          "blankLabel": "View class",
+          "explanation": "Correct answer: TokenRefreshView. It refreshes JWT access tokens.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q14",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13015,
+          "sourceNumber": 15,
+          "type": "fill_blank",
+          "question": "JWT auth class.\n\n'rest_framework_simplejwt.authentication.__________________'",
+          "answers": [
+            "JWTAuthentication"
+          ],
+          "blankLabel": "Authentication class",
+          "explanation": "Correct answer: JWTAuthentication. This class enables Simple JWT authentication in DRF.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q15",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13016,
+          "sourceNumber": 16,
+          "type": "fill_blank",
+          "question": "Safe password creation.\n\nUser.objects.__________________",
+          "answers": [
+            "create_user"
+          ],
+          "blankLabel": "Manager method",
+          "explanation": "Correct answer: create_user. create_user hashes the password safely.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q16",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13017,
+          "sourceNumber": 17,
+          "type": "fill_blank",
+          "question": "Custom User extension.\n\nclass CustomUser(__________________):",
+          "answers": [
+            "AbstractUser"
+          ],
+          "blankLabel": "Base class",
+          "explanation": "Correct answer: AbstractUser. Custom users commonly extend AbstractUser.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q17",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13018,
+          "sourceNumber": 18,
+          "type": "fill_blank",
+          "question": "Custom User setting.\n\n__________________ = 'accounts.CustomUser'",
+          "answers": [
+            "AUTH_USER_MODEL"
+          ],
+          "blankLabel": "Setting name",
+          "explanation": "Correct answer: AUTH_USER_MODEL. This setting points Django to the custom user model.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q18",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13019,
+          "sourceNumber": 19,
+          "type": "fill_blank",
+          "question": "Public registration permission.\n\npermission_classes = [__________________]",
+          "answers": [
+            "AllowAny"
+          ],
+          "blankLabel": "Permission class",
+          "explanation": "Correct answer: AllowAny. AllowAny permits unauthenticated access.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q19",
+          "placeholder": "Type the answer"
+        },
+        {
+          "id": 13020,
+          "sourceNumber": 20,
+          "type": "fill_blank",
+          "question": "Pagination size setting.\n\n'__________________': 10",
+          "answers": [
+            "PAGE_SIZE"
+          ],
+          "blankLabel": "Setting key",
+          "explanation": "Correct answer: PAGE_SIZE. PAGE_SIZE configures the default pagination size.",
+          "slide": null,
+          "reference": "web/lecture11_fill_in_the_blanks.pdf - Q20",
+          "placeholder": "Type the answer"
+        }
+      ]
+    },
+    {
+      "id": "web-quiz-fill-blank",
+      "title": "Quiz Fill Blank",
+      "icon": "✍️",
+      "lecture": "Quiz Fill Blank",
+      "questions": [
+        {
+          "id": 14001,
+          "sourceNumber": 138,
+          "type": "fill_blank",
+          "question": "Model field types",
+          "context": "Complete the Django model definition.\n\nfrom django.db import models\nclass Product(models.[____1____]):\n    name = models.CharField([____2____]=300)\n    price = models.[____3____](max_digits=10, decimal_places=2)",
+          "answers": [
+            "Model, max_length, DecimalField"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q138",
+          "explanation": "Correct answer: Model, max_length, DecimalField."
+        },
+        {
+          "id": 14002,
+          "sourceNumber": 139,
+          "type": "fill_blank",
+          "question": "ForeignKey declaration",
+          "context": "Fill in the foreign-key relation between Product and Category.\n\ncategory = models.[____1____](\n    Category,\n    [____2____]=models.CASCADE,\n    related_name='[____3____]',\n)",
+          "answers": [
+            "ForeignKey, on_delete, products"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q139",
+          "explanation": "Correct answer: ForeignKey, on_delete, products."
+        },
+        {
+          "id": 14003,
+          "sourceNumber": 140,
+          "type": "fill_blank",
+          "question": "Model __str__",
+          "context": "Define the human-readable string for a Category instance.\n\nclass Category(models.Model):\n    name = models.CharField(max_length=300)\n    def [____1____](self):\n        return self.[____2____]",
+          "answers": [
+            "__str__, name"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q140",
+          "explanation": "Correct answer: __str__, name."
+        },
+        {
+          "id": 14004,
+          "sourceNumber": 141,
+          "type": "fill_blank",
+          "question": "DRF function-based view",
+          "context": "Complete the DRF function-based list/create view.\n\n@[____1____](['GET', 'POST'])\ndef products_list(request):\n    if request.method == 'GET':\n        products = Product.objects.all()\n        serializer = ProductSerializer(products, [____2____]=True)\n        return [____3____](serializer.data)",
+          "answers": [
+            "api_view, many, Response"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q141",
+          "explanation": "Correct answer: api_view, many, Response."
+        },
+        {
+          "id": 14005,
+          "sourceNumber": 142,
+          "type": "fill_blank",
+          "question": "DRF APIView class",
+          "context": "Fill in the class-based list+create view.\n\nfrom rest_framework.views import APIView\nclass ProductListAPIView([____1____]):\n    def [____2____](self, request):\n        products = Product.objects.all()\n        serializer = ProductSerializer(products, many=True)\n        return Response(serializer.data)\n    def [____3____](self, request):\n        serializer = ProductSerializer(data=request.data)\n        serializer.is_valid(raise_exception=True)\n        serializer.save()\n        return Response(serializer.data, status=status.HTTP_201_CREATED)",
+          "answers": [
+            "APIView, get, post"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q142",
+          "explanation": "Correct answer: APIView, get, post."
+        },
+        {
+          "id": 14006,
+          "sourceNumber": 143,
+          "type": "fill_blank",
+          "question": "urls.py with as_view()",
+          "context": "Wire up two class-based views in urls.py.\n\nurlpatterns = [\n    path('products/', [____1____].as_view()),\n    path('products/<int:[____2____]>/', ProductDetailAPIView.[____3____]()),\n]",
+          "answers": [
+            "ProductListAPIView, pk, as_view"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q143",
+          "explanation": "Correct answer: ProductListAPIView, pk, as_view."
+        },
+        {
+          "id": 14007,
+          "sourceNumber": 144,
+          "type": "fill_blank",
+          "question": "Serializer save flow",
+          "context": "Validate, save, and return the serialized object.\n\nserializer = ProductSerializer(data=request.data)\nif serializer.[____1____]():\n    serializer.[____2____]()\n    return Response(serializer.[____3____], status=status.HTTP_201_CREATED)\nreturn Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)",
+          "answers": [
+            "is_valid, save, data"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q144",
+          "explanation": "Correct answer: is_valid, save, data."
+        },
+        {
+          "id": 14008,
+          "sourceNumber": 145,
+          "type": "fill_blank",
+          "question": "GenericAPIView with mixins",
+          "context": "Fill in the mixin combination for a list+create view.\n\nclass ProductListAPIView(mixins.[____1____],\n                         mixins.CreateModelMixin,\n                         generics.[____2____]):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    def get(self, request, *args, **kwargs):\n        return self.[____3____](request, *args, **kwargs)",
+          "answers": [
+            "ListModelMixin, GenericAPIView, list"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q145",
+          "explanation": "Correct answer: ListModelMixin, GenericAPIView, list."
+        },
+        {
+          "id": 14009,
+          "sourceNumber": 146,
+          "type": "fill_blank",
+          "question": "Concrete generic views",
+          "context": "Use the concrete generic views for full CRUD.\n\nclass ProductListAPIView(generics.[____1____]):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\nclass ProductDetailAPIView(generics.[____2____]):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    [____3____] = 'product_id'",
+          "answers": [
+            "ListCreateAPIView, RetrieveUpdateDestroyAPIView, lookup_url_kwarg"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q146",
+          "explanation": "Correct answer: ListCreateAPIView, RetrieveUpdateDestroyAPIView, lookup_url_kwarg."
+        },
+        {
+          "id": 14010,
+          "sourceNumber": 147,
+          "type": "fill_blank",
+          "question": "ModelSerializer Meta",
+          "context": "Auto-generate fields from the Product model.\n\nfrom rest_framework import serializers\nfrom .models import Product\nclass ProductSerializer(serializers.[____1____]):\n    class [____2____]:\n        model = Product\n        [____3____] = '__all__'",
+          "answers": [
+            "ModelSerializer, Meta, fields"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q147",
+          "explanation": "Correct answer: ModelSerializer, Meta, fields."
+        },
+        {
+          "id": 14011,
+          "sourceNumber": 148,
+          "type": "fill_blank",
+          "question": "DELETE returns 204",
+          "context": "Implement the destroy handler returning the right status.\n\ndef delete(self, request, product_id):\n    product = self.get_object(product_id)\n    product.[____1____]()\n    return Response(status=status.HTTP_204_[____2____])",
+          "answers": [
+            "delete, NO_CONTENT"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q148",
+          "explanation": "Correct answer: delete, NO_CONTENT."
+        },
+        {
+          "id": 14012,
+          "sourceNumber": 149,
+          "type": "fill_blank",
+          "question": "Simple JWT URLs",
+          "context": "Wire up the obtain-pair and refresh endpoints.\n\nfrom rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView\nurlpatterns = [\n    path('api/token/', [____1____].as_view(), name='token_obtain_pair'),\n    path('api/token/refresh/', [____2____].as_view(), name='token_refresh'),\n]",
+          "answers": [
+            "TokenObtainPairView, TokenRefreshView"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q149",
+          "explanation": "Correct answer: TokenObtainPairView, TokenRefreshView."
+        },
+        {
+          "id": 14013,
+          "sourceNumber": 150,
+          "type": "fill_blank",
+          "question": "DRF settings dict",
+          "context": "Configure pagination and the filter backend in settings.py.\n\nREST_FRAMEWORK = {\n    '[____1____]': 'rest_framework.pagination.PageNumberPagination',\n    '[____2____]': 10,\n    'DEFAULT_FILTER_BACKENDS': (\n        'django_filters.rest_framework.[____3____]',\n    ),\n}",
+          "answers": [
+            "DEFAULT_PAGINATION_CLASS, PAGE_SIZE, DjangoFilterBackend"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q150",
+          "explanation": "Correct answer: DEFAULT_PAGINATION_CLASS, PAGE_SIZE, DjangoFilterBackend."
+        },
+        {
+          "id": 14014,
+          "sourceNumber": 151,
+          "type": "fill_blank",
+          "question": "Search and ordering filters",
+          "context": "Enable search and ordering on a list view.\n\nfrom rest_framework import filters, generics\nclass ProductListAPIView(generics.ListAPIView):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    filter_backends = (filters.[____1____], filters.[____2____])\n    search_fields = ('name',)\n    [____3____] = ('name',)",
+          "answers": [
+            "SearchFilter, OrderingFilter, ordering_fields"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q151",
+          "explanation": "Correct answer: SearchFilter, OrderingFilter, ordering_fields."
+        },
+        {
+          "id": 14015,
+          "sourceNumber": 152,
+          "type": "fill_blank",
+          "question": "JWT auth + permission settings",
+          "context": "Make JWTAuthentication the default and require login.\n\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.[____1____]',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.[____2____]',\n    ),\n}",
+          "answers": [
+            "JWTAuthentication, IsAuthenticated"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q152",
+          "explanation": "Correct answer: JWTAuthentication, IsAuthenticated."
+        },
+        {
+          "id": 14016,
+          "sourceNumber": 153,
+          "type": "fill_blank",
+          "question": "JWT request header",
+          "context": "Show the HTTP header that carries an access token to a protected endpoint.\n\nGET /api/products/ HTTP/1.1\nHost: example.com\n[____1____]: [____2____] eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+          "answers": [
+            "Authorization, Bearer"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q153",
+          "explanation": "Correct answer: Authorization, Bearer."
+        },
+        {
+          "id": 14017,
+          "sourceNumber": 154,
+          "type": "fill_blank",
+          "question": "ViewSet and router",
+          "context": "Register a full-CRUD ViewSet with the default router.\n\nfrom rest_framework import viewsets, routers\nclass ProductViewSet(viewsets.[____1____]):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\nrouter = routers.[____2____]()\nrouter.[____3____](r'products', ProductViewSet)",
+          "answers": [
+            "ModelViewSet, DefaultRouter, register"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q154",
+          "explanation": "Correct answer: ModelViewSet, DefaultRouter, register."
+        },
+        {
+          "id": 14018,
+          "sourceNumber": 155,
+          "type": "fill_blank",
+          "question": "Custom ViewSet endpoint",
+          "context": "Add a custom list-style endpoint to a ViewSet.\n\nfrom rest_framework.decorators import action\nfrom rest_framework.response import Response\nclass ProductViewSet(viewsets.ModelViewSet):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    @[____1____](detail=[____2____], methods=['get'])\n    def featured(self, request):\n        qs = Product.objects.filter(is_featured=True)\n        serializer = self.get_serializer(qs, [____3____]=True)\n        return Response(serializer.data)",
+          "answers": [
+            "action, False, many"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q155",
+          "explanation": "Correct answer: action, False, many."
+        },
+        {
+          "id": 14019,
+          "sourceNumber": 156,
+          "type": "fill_blank",
+          "question": "DRF status constants",
+          "context": "Pick the correct HTTP status constant in each line.\n\nfrom rest_framework import status\n# successful create\nstatus.HTTP_201_[____1____]\n# validation error\nstatus.HTTP_[____2____]_BAD_REQUEST\n# missing object\nstatus.HTTP_[____3____]_NOT_FOUND",
+          "answers": [
+            "CREATED, 400, 404"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q156",
+          "explanation": "Correct answer: CREATED, 400, 404."
+        },
+        {
+          "id": 14020,
+          "sourceNumber": 157,
+          "type": "fill_blank",
+          "question": "APIView get_object pattern",
+          "context": "Implement the helper that fetches a Product or returns None.\n\nclass ProductDetailAPIView(APIView):\n    def get_object(self, product_id):\n        try:\n            return Product.objects.[____1____](pk=product_id)\n        except Product.[____2____]:\n            return None\n    def get(self, request, product_id):\n        product = self.[____3____](product_id)\n        if product is None:\n            return Response(status=status.HTTP_404_NOT_FOUND)\n        serializer = ProductSerializer(product)\n        return Response(serializer.data)",
+          "answers": [
+            "get, DoesNotExist, get_object"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q157",
+          "explanation": "Correct answer: get, DoesNotExist, get_object."
+        },
+        {
+          "id": 14021,
+          "sourceNumber": 158,
+          "type": "fill_blank",
+          "question": "Custom Serializer + create",
+          "context": "Define a non-Model serializer with explicit fields and a create() method.\n\nclass ProductSerializer(serializers.[____1____]):\n    id = serializers.IntegerField(read_only=True)\n    name = serializers.[____2____](max_length=300)\n    price = serializers.DecimalField(max_digits=10, decimal_places=2)\n    def [____3____](self, validated_data):\n        return Product.objects.create(**validated_data)",
+          "answers": [
+            "Serializer, CharField, create"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q158",
+          "explanation": "Correct answer: Serializer, CharField, create."
+        },
+        {
+          "id": 14022,
+          "sourceNumber": 159,
+          "type": "fill_blank",
+          "question": "Serializer update method",
+          "context": "Implement update() so the serializer can write back to an existing instance.\n\ndef update(self, [____1____], validated_data):\n    instance.name = validated_data.get('name', instance.name)\n    instance.price = validated_data.get('price', instance.price)\n    instance.[____2____]()\n    return [____3____]",
+          "answers": [
+            "instance, save, instance"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q159",
+          "explanation": "Correct answer: instance, save, instance."
+        },
+        {
+          "id": 14023,
+          "sourceNumber": 160,
+          "type": "fill_blank",
+          "question": "validate_<field> method",
+          "context": "Reject negative prices on the price field.\n\nclass ProductSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Product\n        fields = '__all__'\n    def [____1____]_price(self, value):\n        if value < 0:\n            raise serializers.[____2____]('Price must be non-negative')\n        return [____3____]",
+          "answers": [
+            "validate, ValidationError, value"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q160",
+          "explanation": "Correct answer: validate, ValidationError, value."
+        },
+        {
+          "id": 14024,
+          "sourceNumber": 161,
+          "type": "fill_blank",
+          "question": "Cross-field validate()",
+          "context": "Reject input where end is not after start.\n\nclass TimeRangeSerializer(serializers.Serializer):\n    start = serializers.IntegerField()\n    end = serializers.IntegerField()\n    def [____1____](self, attrs):\n        if attrs['start'] >= attrs['end']:\n            raise serializers.[____2____]('start must be before end')\n        return [____3____]",
+          "answers": [
+            "validate, ValidationError, attrs"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q161",
+          "explanation": "Correct answer: validate, ValidationError, attrs."
+        },
+        {
+          "id": 14025,
+          "sourceNumber": 162,
+          "type": "fill_blank",
+          "question": "SerializerMethodField",
+          "context": "Expose a computed discounted_price field on the serializer.\n\nclass ProductSerializer(serializers.ModelSerializer):\n    discounted_price = serializers.[____1____]()\n    class Meta:\n        model = Product\n        fields = ['id', 'name', 'price', 'discounted_price']\n    def [____2____]_discounted_price(self, [____3____]):\n        return obj.price * Decimal('0.9')",
+          "answers": [
+            "SerializerMethodField, get, obj"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q162",
+          "explanation": "Correct answer: SerializerMethodField, get, obj."
+        },
+        {
+          "id": 14026,
+          "sourceNumber": 163,
+          "type": "fill_blank",
+          "question": "Nested serializer",
+          "context": "Embed Category data inside Product output.\n\nclass CategorySerializer(serializers.[____1____]):\n    class Meta:\n        model = Category\n        fields = ['id', 'name']\nclass ProductSerializer(serializers.ModelSerializer):\n    category = [____2____]([____3____]=True)\n    class Meta:\n        model = Product\n        fields = ['id', 'name', 'category']",
+          "answers": [
+            "ModelSerializer, CategorySerializer, read_only"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q163",
+          "explanation": "Correct answer: ModelSerializer, CategorySerializer, read_only."
+        },
+        {
+          "id": 14027,
+          "sourceNumber": 164,
+          "type": "fill_blank",
+          "question": "write_only and read_only_fields",
+          "context": "Hide the password from responses while keeping id read-only.\n\nclass UserSerializer(serializers.ModelSerializer):\n    password = serializers.CharField([____1____]=True)\n    class Meta:\n        model = User\n        fields = ['id', 'username', 'password']\n        [____2____]_fields = ['id']\n    def create(self, validated_data):\n        return User.objects.[____3____](**validated_data)",
+          "answers": [
+            "write_only, read_only, create"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q164",
+          "explanation": "Correct answer: write_only, read_only, create."
+        },
+        {
+          "id": 14028,
+          "sourceNumber": 165,
+          "type": "fill_blank",
+          "question": "perform_create injects user",
+          "context": "Attach the request user as the owner during create.\n\nclass ProductCreateView(generics.CreateAPIView):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    permission_classes = [IsAuthenticated]\n    def [____1____](self, serializer):\n        serializer.save([____2____]=self.[____3____].user)",
+          "answers": [
+            "perform_create, owner, request"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q165",
+          "explanation": "Correct answer: perform_create, owner, request."
+        },
+        {
+          "id": 14029,
+          "sourceNumber": 166,
+          "type": "fill_blank",
+          "question": "get_queryset filtered by user",
+          "context": "Only return orders that belong to the current user.\n\nclass MyOrdersAPIView(generics.ListAPIView):\n    serializer_class = OrderSerializer\n    permission_classes = [IsAuthenticated]\n    def [____1____](self):\n        return Order.objects.[____2____](user=self.request.[____3____])",
+          "answers": [
+            "get_queryset, filter, user"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q166",
+          "explanation": "Correct answer: get_queryset, filter, user."
+        },
+        {
+          "id": 14030,
+          "sourceNumber": 167,
+          "type": "fill_blank",
+          "question": "get_serializer_class per action",
+          "context": "Return different serializers for read vs write actions on a ViewSet.\n\nclass ProductViewSet(viewsets.ModelViewSet):\n    queryset = Product.objects.[____1____]()\n    def [____2____](self):\n        if self.action in ['list', '[____3____]']:\n            return ProductReadSerializer\n        return ProductWriteSerializer",
+          "answers": [
+            "all, get_serializer_class, retrieve"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q167",
+          "explanation": "Correct answer: all, get_serializer_class, retrieve."
+        },
+        {
+          "id": 14031,
+          "sourceNumber": 168,
+          "type": "fill_blank",
+          "question": "JWT auth + permission settings (2)",
+          "context": "Make Simple JWT the default auth and require login by default.\n\nREST_FRAMEWORK = {\n    '[____1____]': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    '[____2____]': (\n        'rest_framework.permissions.[____3____]',\n    ),\n}",
+          "answers": [
+            "DEFAULT_AUTHENTICATION_CLASSES, DEFAULT_PERMISSION_CLASSES, IsAuthenticated"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q168",
+          "explanation": "Correct answer: DEFAULT_AUTHENTICATION_CLASSES, DEFAULT_PERMISSION_CLASSES, IsAuthenticated."
+        },
+        {
+          "id": 14032,
+          "sourceNumber": 169,
+          "type": "fill_blank",
+          "question": "JWT URLs imports",
+          "context": "Import and wire the obtain-pair and refresh views.\n\nfrom rest_framework_simplejwt.views import (\n    [____1____],\n    TokenRefreshView,\n)\nurlpatterns = [\n    path('api/token/', [____1____].[____2____](), name='token_obtain_pair'),\n    path('api/token/refresh/', [____3____].as_view(), name='token_refresh'),\n]",
+          "answers": [
+            "TokenObtainPairView, as_view, TokenRefreshView"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q169",
+          "explanation": "Correct answer: TokenObtainPairView, as_view, TokenRefreshView."
+        },
+        {
+          "id": 14033,
+          "sourceNumber": 170,
+          "type": "fill_blank",
+          "question": "Custom PageNumberPagination",
+          "context": "Subclass the page-number pagination and wire it onto the view.\n\nfrom rest_framework.[____1____] import PageNumberPagination\nclass StandardResultsPagination([____2____]):\n    page_size = 10\n    page_size_query_param = 'page_size'\n    max_page_size = 100\nclass ProductListAPIView(generics.ListAPIView):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    [____3____] = StandardResultsPagination",
+          "answers": [
+            "pagination, PageNumberPagination, pagination_class"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q170",
+          "explanation": "Correct answer: pagination, PageNumberPagination, pagination_class."
+        },
+        {
+          "id": 14034,
+          "sourceNumber": 171,
+          "type": "fill_blank",
+          "question": "Custom FilterSet",
+          "context": "Define a FilterSet for Product and attach it to the view.\n\nimport django_filters\nfrom .models import Product\nclass ProductFilter(django_filters.[____1____]):\n    min_price = django_filters.NumberFilter(field_name='price', lookup_expr='gte')\n    max_price = django_filters.NumberFilter(field_name='price', lookup_expr='lte')\n    class Meta:\n        [____2____] = Product\n        fields = ['category']\nclass ProductListAPIView(generics.ListAPIView):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    filter_backends = (DjangoFilterBackend,)\n    [____3____] = ProductFilter",
+          "answers": [
+            "FilterSet, model, filterset_class"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q171",
+          "explanation": "Correct answer: FilterSet, model, filterset_class."
+        },
+        {
+          "id": 14035,
+          "sourceNumber": 172,
+          "type": "fill_blank",
+          "question": "Throttle settings",
+          "context": "Limit anonymous and authenticated request rates globally.\n\nREST_FRAMEWORK = {\n    'DEFAULT_THROTTLE_CLASSES': (\n        'rest_framework.throttling.[____1____]',\n        'rest_framework.throttling.[____2____]',\n    ),\n    'DEFAULT_THROTTLE_RATES': {\n        '[____3____]': '100/day',\n        'user': '1000/day',\n    },\n}",
+          "answers": [
+            "AnonRateThrottle, UserRateThrottle, anon"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q172",
+          "explanation": "Correct answer: AnonRateThrottle, UserRateThrottle, anon."
+        },
+        {
+          "id": 14036,
+          "sourceNumber": 173,
+          "type": "fill_blank",
+          "question": "FBV with permissions",
+          "context": "Restrict an @api_view function to logged-in users.\n\nfrom rest_framework.decorators import api_view, [____1____]\nfrom rest_framework.permissions import IsAuthenticated\n@api_view(['GET'])\n@[____1____]([[____2____]])\ndef my_profile(request):\n    user = request.[____3____]\n    return Response({'username': user.username})",
+          "answers": [
+            "permission_classes, IsAuthenticated, user"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q173",
+          "explanation": "Correct answer: permission_classes, IsAuthenticated, user."
+        },
+        {
+          "id": 14037,
+          "sourceNumber": 174,
+          "type": "fill_blank",
+          "question": "APIView with permission_classes",
+          "context": "Protect a class-based view and check authentication.\n\nfrom rest_framework.permissions import [____1____]\nfrom rest_framework import status\nclass ProtectedView(APIView):\n    [____2____] = [[____1____]]\n    def get(self, request):\n        if not request.user.[____3____]:\n            return Response(status=status.HTTP_401_UNAUTHORIZED)\n        return Response({'username': request.user.username})",
+          "answers": [
+            "IsAuthenticated, permission_classes, is_authenticated"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q174",
+          "explanation": "Correct answer: IsAuthenticated, permission_classes, is_authenticated."
+        },
+        {
+          "id": 14038,
+          "sourceNumber": 175,
+          "type": "fill_blank",
+          "question": "Router URL inclusion",
+          "context": "Mount the router-generated URLs and register two ViewSets.\n\nfrom django.urls import path, [____1____]\nfrom rest_framework import routers\nfrom .views import ProductViewSet, CategoryViewSet\nrouter = routers.[____2____]()\nrouter.register(r'products', ProductViewSet)\nrouter.register(r'categories', [____3____])\nurlpatterns = [\n    path('', include(router.urls)),\n]",
+          "answers": [
+            "include, DefaultRouter, CategoryViewSet"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q175",
+          "explanation": "Correct answer: include, DefaultRouter, CategoryViewSet."
+        },
+        {
+          "id": 14039,
+          "sourceNumber": 197,
+          "type": "fill_blank",
+          "question": "urls.py with admin and re_path",
+          "context": "Wire the admin and a regex URL pattern in the project urls.py.\n\nfrom django.[____1____] import admin\nfrom django.urls import path, [____2____]\nurlpatterns = [\n    path('admin/', admin.[____3____].urls),\n    [____2____](r'^time/plus/\\\\d+/$', hours_ahead),\n]",
+          "answers": [
+            "contrib, re_path, site"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q197",
+          "explanation": "Correct answer: contrib, re_path, site."
+        },
+        {
+          "id": 14040,
+          "sourceNumber": 198,
+          "type": "fill_blank",
+          "question": "HttpResponse view function",
+          "context": "Recreate a simple 'hello' view that returns an HttpResponse.\n\nfrom django.[____1____] import HttpResponse\ndef hello(request):\n    return [____2____]('<h1>Hello, world!</h1>')\nurlpatterns = [\n    path('[____3____]', hello),\n]",
+          "answers": [
+            "http, HttpResponse, hello/"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q198",
+          "explanation": "Correct answer: http, HttpResponse, hello/."
+        },
+        {
+          "id": 14041,
+          "sourceNumber": 200,
+          "type": "fill_blank",
+          "question": "Pretty URL with capture group",
+          "context": "Reproduce the hours_ahead pretty-URL pattern with a captured group.\n\nfrom django.urls import [____1____]\nfrom django.http import HttpResponse\ndef hours_ahead([____2____], hour):\n    return HttpResponse(f'hours ahead: {hour}')\nurlpatterns = [\n    [____1____](r'^time/plus/(\\\\d+)/[____3____]', hours_ahead),\n]",
+          "answers": [
+            "re_path, request, $"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q200",
+          "explanation": "Correct answer: re_path, request, $."
+        },
+        {
+          "id": 14042,
+          "sourceNumber": 201,
+          "type": "fill_blank",
+          "question": "render() with a template",
+          "context": "Use the Django template system to render an HTML response.\n\nfrom django.[____1____] import render\ndef home(request):\n    context = {'title': 'Welcome'}\n    return [____2____](request, '[____3____]', context)",
+          "answers": [
+            "shortcuts, render, home.html"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q201",
+          "explanation": "Correct answer: shortcuts, render, home.html."
+        },
+        {
+          "id": 14043,
+          "sourceNumber": 202,
+          "type": "fill_blank",
+          "question": "Category model with Meta",
+          "context": "Mirror the Category class structure with verbose names in Meta.\n\nfrom django.db import [____1____]\nclass Category([____1____].Model):\n    name = [____1____].CharField(max_length=300)\n    class [____2____]:\n        verbose_name = 'Category'\n        verbose_name_plural = '[____3____]'\n    def __str__(self):\n        return f'{self.id} - {self.name}'",
+          "answers": [
+            "models, Meta, Categories"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q202",
+          "explanation": "Correct answer: models, Meta, Categories."
+        },
+        {
+          "id": 14044,
+          "sourceNumber": 203,
+          "type": "fill_blank",
+          "question": "JWT authentication settings",
+          "context": "Configure Simple JWT in INSTALLED_APPS and DEFAULT_AUTHENTICATION_CLASSES.\n\nINSTALLED_APPS = [\n    'rest_framework',\n    '[____1____]',\n]\nREST_FRAMEWORK = {\n    '[____2____]': (\n        'rest_framework_simplejwt.authentication.[____3____]',\n    ),\n}",
+          "answers": [
+            "rest_framework_simplejwt, DEFAULT_AUTHENTICATION_CLASSES, JWTAuthentication"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q203",
+          "explanation": "Correct answer: rest_framework_simplejwt, DEFAULT_AUTHENTICATION_CLASSES, JWTAuthentication."
+        },
+        {
+          "id": 14045,
+          "sourceNumber": 204,
+          "type": "fill_blank",
+          "question": "DjangoFilterBackend with filterset_class",
+          "context": "Wire DjangoFilterBackend and a custom FilterSet on a list view.\n\nfrom django_filters.rest_framework import [____1____]\nfrom rest_framework.permissions import IsAuthenticated\nfrom rest_framework import generics\nclass ProductListAPIView(generics.ListAPIView):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    filter_backends = ([____1____],)\n    [____2____] = ProductFilter\n    [____3____] = (IsAuthenticated,)",
+          "answers": [
+            "DjangoFilterBackend, filterset_class, permission_classes"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q204",
+          "explanation": "Correct answer: DjangoFilterBackend, filterset_class, permission_classes."
+        },
+        {
+          "id": 14046,
+          "sourceNumber": 205,
+          "type": "fill_blank",
+          "question": "Mount api urls and JWT login",
+          "context": "Add a sub-app urls.py and a Simple JWT login endpoint.\n\nfrom django.contrib import admin\nfrom django.urls import path, [____1____]\nfrom rest_framework_simplejwt.views import [____2____]\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api/', [____1____]('api.urls')),\n    path('login/', [____2____].[____3____]()),\n]",
+          "answers": [
+            "include, TokenObtainPairView, as_view"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q205",
+          "explanation": "Correct answer: include, TokenObtainPairView, as_view."
+        },
+        {
+          "id": 14047,
+          "sourceNumber": 206,
+          "type": "fill_blank",
+          "question": "Level 0: raw Django POST handler",
+          "context": "Recreate the manual POST handler used in the raw-Django 'Level 0' code (no DRF yet).\n\nfrom django.views.decorators.csrf import [____1____]\nfrom django.http import JsonResponse\nimport json\n@[____1____]\ndef products_list(request):\n    if request.method == 'POST':\n        data = [____2____].loads(request.[____3____])\n        product = Product.objects.create(**data)\n        return JsonResponse(product.to_json(), status=201)",
+          "answers": [
+            "csrf_exempt, json, body"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q206",
+          "explanation": "Correct answer: csrf_exempt, json, body."
+        },
+        {
+          "id": 14048,
+          "sourceNumber": 207,
+          "type": "fill_blank",
+          "question": "Level 2: DRF FBV GET branch",
+          "context": "Fill in the GET branch of a DRF function-based view.\n\n@api_view(['GET', 'POST'])\ndef products_list(request):\n    if request.method == 'GET':\n        products = Product.objects.[____1____]()\n        serializer = ProductSerializer(products, [____2____]=True)\n        return Response(serializer.[____3____])",
+          "answers": [
+            "all, many, data"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q207",
+          "explanation": "Correct answer: all, many, data."
+        },
+        {
+          "id": 14049,
+          "sourceNumber": 208,
+          "type": "fill_blank",
+          "question": "Level 4: ListCreate via mixins",
+          "context": "Combine the list and create mixins on a GenericAPIView.\n\nfrom rest_framework import mixins, [____1____]\nclass ProductListAPIView(mixins.ListModelMixin,\n                         mixins.[____2____],\n                         [____1____].GenericAPIView):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    def post(self, request, *args, **kwargs):\n        return self.[____3____](request, *args, **kwargs)",
+          "answers": [
+            "generics, CreateModelMixin, create"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q208",
+          "explanation": "Correct answer: generics, CreateModelMixin, create."
+        },
+        {
+          "id": 14050,
+          "sourceNumber": 209,
+          "type": "fill_blank",
+          "question": "Concrete RetrieveAPIView",
+          "context": "Use the GET-only concrete generic view.\n\nfrom rest_framework import generics\nclass ProductDetailAPIView(generics.[____1____]):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    [____2____] = '[____3____]'",
+          "answers": [
+            "RetrieveAPIView, lookup_url_kwarg, product_id"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q209",
+          "explanation": "Correct answer: RetrieveAPIView, lookup_url_kwarg, product_id."
+        },
+        {
+          "id": 14051,
+          "sourceNumber": 210,
+          "type": "fill_blank",
+          "question": "RetrieveUpdateDestroy via mixins",
+          "context": "Combine the retrieve / update / destroy mixins on a detail view.\n\nclass ProductDetailAPIView(mixins.RetrieveModelMixin,\n                           mixins.[____1____],\n                           mixins.[____2____],\n                           generics.GenericAPIView):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    def delete(self, request, *args, **kwargs):\n        return self.[____3____](request, *args, **kwargs)",
+          "answers": [
+            "UpdateModelMixin, DestroyModelMixin, destroy"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q210",
+          "explanation": "Correct answer: UpdateModelMixin, DestroyModelMixin, destroy."
+        },
+        {
+          "id": 14052,
+          "sourceNumber": 211,
+          "type": "fill_blank",
+          "question": "DRF status constants \\227 read flow",
+          "context": "Pick the right status constants for the read-list, validation-error and not-found responses.\n\nfrom rest_framework import status\n# success on read\nreturn Response(serializer.data, status=status.HTTP_[____1____]_OK)\n# validation error\nreturn Response(serializer.errors, status=status.HTTP_[____2____]_BAD_REQUEST)\n# missing object\nreturn Response(status=status.HTTP_[____3____]_NOT_FOUND)",
+          "answers": [
+            "200, 400, 404"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q211",
+          "explanation": "Correct answer: 200, 400, 404."
+        },
+        {
+          "id": 14053,
+          "sourceNumber": 212,
+          "type": "fill_blank",
+          "question": "Enable CORS app and middleware",
+          "context": "Wire django-cors-headers into INSTALLED_APPS and MIDDLEWARE.\n\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    # ...\n    'rest_framework',\n    '[____1____]',\n]\nMIDDLEWARE = [\n    '[____1____].[____2____].[____3____]',\n    'django.middleware.common.CommonMiddleware',\n]",
+          "answers": [
+            "corsheaders, middleware, CorsMiddleware"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q212",
+          "explanation": "Correct answer: corsheaders, middleware, CorsMiddleware."
+        },
+        {
+          "id": 14054,
+          "sourceNumber": 213,
+          "type": "fill_blank",
+          "question": "Pagination settings",
+          "context": "Configure DRF pagination via the REST_FRAMEWORK dict.\n\nREST_FRAMEWORK = {\n    '[____1____]': 'rest_framework.pagination.[____2____]',\n    '[____3____]': 10,\n}",
+          "answers": [
+            "DEFAULT_PAGINATION_CLASS, PageNumberPagination, PAGE_SIZE"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q213",
+          "explanation": "Correct answer: DEFAULT_PAGINATION_CLASS, PageNumberPagination, PAGE_SIZE."
+        },
+        {
+          "id": 14055,
+          "sourceNumber": 214,
+          "type": "fill_blank",
+          "question": "SearchFilter + OrderingFilter view",
+          "context": "Enable both the search filter and the ordering filter on a list view.\n\nfrom rest_framework import filters, generics\nclass ProductListAPIView(generics.ListAPIView):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer\n    filter_backends = (filters.[____1____], filters.[____2____])\n    search_fields = ('name',)\n    [____3____] = ('name',)",
+          "answers": [
+            "SearchFilter, OrderingFilter, ordering_fields"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q214",
+          "explanation": "Correct answer: SearchFilter, OrderingFilter, ordering_fields."
+        },
+        {
+          "id": 14056,
+          "sourceNumber": 215,
+          "type": "fill_blank",
+          "question": "Filter URL params reference",
+          "context": "Match each DRF filter backend with its ?param=... URL parameter.\n\n# DjangoFilterBackend with filterset_fields = ('name',)\nhttp://url?[____1____]=text\n# filters.SearchFilter\nhttp://url?[____2____]=text\n# filters.OrderingFilter\nhttp://url?[____3____]=name",
+          "answers": [
+            "name, search, ordering"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q215",
+          "explanation": "Correct answer: name, search, ordering."
+        },
+        {
+          "id": 14057,
+          "sourceNumber": 1253,
+          "type": "fill_blank",
+          "question": "Angular Component Decorator",
+          "context": "import { Component } from '@angular/core';\n\n@[____1____]({\n  [____2____]: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.css'\n})\nexport class AppComponent {\n  title = 'My App';\n}",
+          "answers": [
+            "Component, selector"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1253",
+          "explanation": "Correct answer: Component, selector."
+        },
+        {
+          "id": 14058,
+          "sourceNumber": 1254,
+          "type": "fill_blank",
+          "question": "Angular @for Loop with Track",
+          "context": "<ul> @{{1}} (student of students; {{2}} student.id) { <li>\n\n{{ student.name }}\n</li> } </ul>",
+          "answers": [
+            "for, track"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1254",
+          "explanation": "Correct answer: for, track."
+        },
+        {
+          "id": 14059,
+          "sourceNumber": 1255,
+          "type": "fill_blank",
+          "question": "Angular @if / @else Conditional Rendering",
+          "context": "@{{1}} (isLoggedIn) { <p>\n\nWelcome back!\n</p> } @{{2}} { <p>\nPlease log in.\n</p> }",
+          "answers": [
+            "if, else"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1255",
+          "explanation": "Correct answer: if, else."
+        },
+        {
+          "id": 14060,
+          "sourceNumber": 1256,
+          "type": "fill_blank",
+          "question": "Two-way Data Binding with ngModel",
+          "context": "import { FormsModule } from '@angular/forms';\n\n@Component({\n  imports: [[____1____]],\n  template: `\n    <input [____2____]=\"searchTerm\" placeholder=\"Search...\">\n  `\n})\nexport class SearchComponent {\n  searchTerm: string = '';\n}",
+          "answers": [
+            "FormsModule, [(ngModel)]"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1256",
+          "explanation": "Correct answer: FormsModule, [(ngModel)]."
+        },
+        {
+          "id": 14061,
+          "sourceNumber": 1257,
+          "type": "fill_blank",
+          "question": "Signal-based Input and Output",
+          "context": "export class StudentCardComponent { name = {{1}}\n\n<string>\n(); delete = {{2}}\n<number>\n();\nonDelete() {\n    this.delete.emit(1);\n  }\n}",
+          "answers": [
+            "input(), output()"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1257",
+          "explanation": "Correct answer: input(), output()."
+        },
+        {
+          "id": 14062,
+          "sourceNumber": 1258,
+          "type": "fill_blank",
+          "question": "Component Lifecycle - ngOnInit",
+          "context": "import { Component, {{1}} } from '@angular/core';\n\n@Component({ selector: 'app-student-list', templateUrl: './student-list.html' })\nexport class StudentListComponent implements [____2____] {\n  students: Student[] = [];\n  [____3____](): void {\n    this.students = this.loadStudents();\n  }\n}",
+          "answers": [
+            "OnInit, OnInit, ngOnInit"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1258",
+          "explanation": "Correct answer: OnInit, OnInit, ngOnInit."
+        },
+        {
+          "id": 14063,
+          "sourceNumber": 1259,
+          "type": "fill_blank",
+          "question": "Injectable Service with providedIn",
+          "context": "import { {{1}} } from '@angular/core';\n\n@[____2____]({\n  providedIn: '[____3____]'\n})\nexport class PostsService {\n  private posts: Post[] = [];\n}",
+          "answers": [
+            "Injectable, Injectable, root"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1259",
+          "explanation": "Correct answer: Injectable, Injectable, root."
+        },
+        {
+          "id": 14064,
+          "sourceNumber": 1260,
+          "type": "fill_blank",
+          "question": "Angular Route Configuration",
+          "context": "export const routes: Routes = [ { path: '', {{1}}: 'home', pathMatch: '{{2}}' }, { path: 'home', {{3}}: HomeComponent }, {\n\npath: 'posts/:id', component: PostDetailComponent }, { path: '**', component: NotFoundComponent } ];",
+          "answers": [
+            "redirectTo, full, component"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1260",
+          "explanation": "Correct answer: redirectTo, full, component."
+        },
+        {
+          "id": 14065,
+          "sourceNumber": 1261,
+          "type": "fill_blank",
+          "question": "Signals and inject() for Async Data",
+          "context": "export class PostsComponent implements OnInit { private postService = {{1}}(PostsService);\n\nposts = [____2____]<Post[]>([]);\n  loading = signal(true);\n  ngOnInit(): void {\n    this.postService.getPosts().subscribe({\n      next: (posts) => {\n        this.posts.[____3____](posts);\n        this.loading.set(false);\n      }\n    });\n  }\n}",
+          "answers": [
+            "inject, signal, set"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1261",
+          "explanation": "Correct answer: inject, signal, set."
+        },
+        {
+          "id": 14066,
+          "sourceNumber": 1262,
+          "type": "fill_blank",
+          "question": "Router Outlet and Navigation Links",
+          "context": "<nav> <\n\na {{1}}=\"/home\" {{2}}=\"active\"\n>\nHome\n</a> <\na routerLink=\"/posts\" routerLinkActive=\"active\"\n>\nPosts\n</a>\n</nav>\n<[____3____] />",
+          "answers": [
+            "routerLink, routerLinkActive, router-outlet"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1262",
+          "explanation": "Correct answer: routerLink, routerLinkActive, router-outlet."
+        },
+        {
+          "id": 14067,
+          "sourceNumber": 1263,
+          "type": "fill_blank",
+          "question": "Event binding on button",
+          "context": "<\n\nbutton {{1}}=\"incClicked()\"\n>\nIncrement\n</button> <p>\nCount: {{ count }}\n</p>",
+          "answers": [
+            "(click)"
+          ],
+          "blankLabel": "Missing answer",
+          "placeholder": "Type the answer",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1263",
+          "explanation": "Correct answer: (click)."
+        },
+        {
+          "id": 14068,
+          "sourceNumber": 1264,
+          "type": "fill_blank",
+          "question": "@for with track and @empty",
+          "context": "@{{1}} (student of students; {{2}} student.id) { <li>\n\n{{ student.name }}\n</li> } @{{3}} { <li>\nNo students yet\n</li> }",
+          "answers": [
+            "for, track, empty"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1264",
+          "explanation": "Correct answer: for, track, empty."
+        },
+        {
+          "id": 14069,
+          "sourceNumber": 1265,
+          "type": "fill_blank",
+          "question": "Two-way binding import and usage",
+          "context": "import { {{1}} } from '@angular/forms';\n\n@Component({\n  imports: [[____2____]],\n  template: `\n    <input [____3____]=\"newTask\">\n    <button (click)=\"addTask()\">Add</button>\n  `\n})",
+          "answers": [
+            "FormsModule, FormsModule, [(ngModel)]"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1265",
+          "explanation": "Correct answer: FormsModule, FormsModule, [(ngModel)]."
+        },
+        {
+          "id": 14070,
+          "sourceNumber": 1266,
+          "type": "fill_blank",
+          "question": "Interpolation and expression",
+          "context": "<h1>\n\nHello {{ {{1}} }}\n</h1>",
+          "answers": [
+            "title"
+          ],
+          "blankLabel": "Missing answer",
+          "placeholder": "Type the answer",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1266",
+          "explanation": "Correct answer: title."
+        },
+        {
+          "id": 14071,
+          "sourceNumber": 1267,
+          "type": "fill_blank",
+          "question": "@if and @else",
+          "context": "@{{1}} (isLoggedIn) { <p>\n\nWelcome back!\n</p> <\nbutton (click)=\"logout()\"\n>\nLogout\n</button> } @{{2}} { <p>\nPlease log\nin\n</p> <\nbutton (click)=\"login()\"\n>\nLogin\n</button> }",
+          "answers": [
+            "if, else"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1267",
+          "explanation": "Correct answer: if, else."
+        },
+        {
+          "id": 14072,
+          "sourceNumber": 1268,
+          "type": "fill_blank",
+          "question": "Component class with properties",
+          "context": "import { {{1}} } from '@angular/core';\n\n@Component({\n  [____2____]: 'app-counter',\n  templateUrl: './counter.html'\n})\nexport class CounterComponent {\n  count = 0;\n}",
+          "answers": [
+            "Component, selector"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1268",
+          "explanation": "Correct answer: Component, selector."
+        },
+        {
+          "id": 14073,
+          "sourceNumber": 1269,
+          "type": "fill_blank",
+          "question": "Property binding on element",
+          "context": "<\n\nimg {{1}}=\"imageUrl\" alt=\"Photo\"\n> <\nbutton {{2}}=\"isDisabled\"\n>\nSubmit\n</button>",
+          "answers": [
+            "[src], [disabled]"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1269",
+          "explanation": "Correct answer: [src], [disabled]."
+        },
+        {
+          "id": 14074,
+          "sourceNumber": 1270,
+          "type": "fill_blank",
+          "question": "Child component with input and output",
+          "context": "export class TaskItemComponent { task = {{1}}\n\n<string>\n(); index = {{2}}\n<number>\n(); delete = {{3}}\n<number>\n();\nonDelete() {\n    this.delete.[____4____](this.index());\n  }\n}",
+          "answers": [
+            "input, input, output, emit"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1270",
+          "explanation": "Correct answer: input, input, output, emit."
+        },
+        {
+          "id": 14075,
+          "sourceNumber": 1271,
+          "type": "fill_blank",
+          "question": "Parent template using child component",
+          "context": "@for (task of tasks; track task) { <\n\napp-task-item {{1}}=\"task\" {{2}}=\"$index\" {{3}}=\"deleteTask($event)\" /\n> }",
+          "answers": [
+            "[task], [index], (delete)"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1271",
+          "explanation": "Correct answer: [task], [index], (delete)."
+        },
+        {
+          "id": 14076,
+          "sourceNumber": 1272,
+          "type": "fill_blank",
+          "question": "Lifecycle hooks implementation",
+          "context": "export class MyComponent implements OnInit, OnChanges, OnDestroy { {{1}}() { console.log('Component\n\ninitialized'); }\n[____2____](changes: SimpleChanges) {\n    console.log('Input changed');\n  }\n  [____3____]() {\n    console.log('Component destroyed');\n  }\n}",
+          "answers": [
+            "ngOnInit, ngOnChanges, ngOnDestroy"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1272",
+          "explanation": "Correct answer: ngOnInit, ngOnChanges, ngOnDestroy."
+        },
+        {
+          "id": 14077,
+          "sourceNumber": 1273,
+          "type": "fill_blank",
+          "question": "Standalone component imports",
+          "context": "@Component({ selector: 'app-root', {{1}}: [RouterOutlet, FormsModule, StudentCard], templateUrl: './app.html' })\n\n@Component({ selector: 'app-root', {{1}}: [RouterOutlet, FormsModule, StudentCard], templateUrl: './app.html' })",
+          "answers": [
+            "imports"
+          ],
+          "blankLabel": "Missing answer",
+          "placeholder": "Type the answer",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1273",
+          "explanation": "Correct answer: imports."
+        },
+        {
+          "id": 14078,
+          "sourceNumber": 1274,
+          "type": "fill_blank",
+          "question": "Input signal access in template",
+          "context": "<\n\ndiv class=\"student-card\"\n> <h4>\n{{ student{{1}}.name }}\n</h4> <p>\nEmail: {{ student{{2}}.email }}\n</p> </div>",
+          "answers": [
+            "(), ()"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1274",
+          "explanation": "Correct answer: (), ()."
+        },
+        {
+          "id": 14079,
+          "sourceNumber": 1275,
+          "type": "fill_blank",
+          "question": "Output event emitter",
+          "context": "delete = {{1}}\n\n<number>\n();\nonDelete() {\n  this.delete.[____2____](this.student().id);\n}",
+          "answers": [
+            "output, emit"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1275",
+          "explanation": "Correct answer: output, emit."
+        },
+        {
+          "id": 14080,
+          "sourceNumber": 1276,
+          "type": "fill_blank",
+          "question": "Service with dependency injection",
+          "context": "import { {{1}}, inject } from '@angular/core'; import { HttpClient } from '@angular/common/http';\n\n@[____2____]({\n  providedIn: '[____3____]'\n})\nexport class PostService {\n  private http = [____4____](HttpClient);\n}",
+          "answers": [
+            "Injectable, Injectable, root, inject"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1276",
+          "explanation": "Correct answer: Injectable, Injectable, root, inject."
+        },
+        {
+          "id": 14081,
+          "sourceNumber": 1277,
+          "type": "fill_blank",
+          "question": "HTTP GET with Observable",
+          "context": "getPosts(): {{1}}\n\n<\nPost[]\n> { return this.http.{{2}}\n<\nPost[]\n>\n(`${this.BASE_URL}/posts`); }",
+          "answers": [
+            "Observable, get"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1277",
+          "explanation": "Correct answer: Observable, get."
+        },
+        {
+          "id": 14082,
+          "sourceNumber": 1278,
+          "type": "fill_blank",
+          "question": "Subscribe to Observable",
+          "context": "ngOnInit() { this.postService.getPosts().{{1}}({ {{2}}: (posts) => { this.posts.set(posts); }, {{3}}: (err) => {\n\nthis.error.set(err); } }); }",
+          "answers": [
+            "subscribe, next, error"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1278",
+          "explanation": "Correct answer: subscribe, next, error."
+        },
+        {
+          "id": 14083,
+          "sourceNumber": 1279,
+          "type": "fill_blank",
+          "question": "Route with parameter",
+          "context": "export const routes: Routes = [ { path: '', {{1}}: 'home', pathMatch: 'full' }, { path: 'home', {{2}}: Home }, { path:\n\n'posts/{{3}}', component: PostDetail }, { path: '{{4}}', component: NotFound } ];",
+          "answers": [
+            "redirectTo, component, :id, **"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1279",
+          "explanation": "Correct answer: redirectTo, component, :id, **."
+        },
+        {
+          "id": 14084,
+          "sourceNumber": 1280,
+          "type": "fill_blank",
+          "question": "Reading route parameters",
+          "context": "private route = inject({{1}});\n\nngOnInit() {\n  const id = Number(this.route.[____2____].paramMap.[____3____]('id'));\n}",
+          "answers": [
+            "ActivatedRoute, snapshot, get"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1280",
+          "explanation": "Correct answer: ActivatedRoute, snapshot, get."
+        },
+        {
+          "id": 14085,
+          "sourceNumber": 1281,
+          "type": "fill_blank",
+          "question": "Navigation template",
+          "context": "<nav> <\n\na {{1}}=\"/home\" routerLinkActive=\"active\"\n>\nHome\n</a> <\na {{2}}=\"/posts\"\nrouterLinkActive=\"active\"\n>\nPosts\n</a> </nav>\n<main>\n  <[____3____] />\n</main>",
+          "answers": [
+            "routerLink, routerLink, router-outlet"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1281",
+          "explanation": "Correct answer: routerLink, routerLink, router-outlet."
+        },
+        {
+          "id": 14086,
+          "sourceNumber": 1282,
+          "type": "fill_blank",
+          "question": "Signal state management",
+          "context": "posts = {{1}}\n\n<\nPost[]\n>\n([]); loading = {{2}}(false); error = {{3}}('');\nngOnInit() {\n  this.loading.[____4____](true);\n  this.postService.getPosts().subscribe({\n    next: (data) => {\n      this.posts.[____5____](data);\n      this.loading.[____6____](false);\n    }\n  });\n}",
+          "answers": [
+            "signal, signal, signal, set, set, set"
+          ],
+          "blankLabel": "Answers in order",
+          "placeholder": "answer1, answer2, answer3",
+          "slide": null,
+          "reference": "web/quiz_fill_blank-2.pdf - Q1282",
+          "explanation": "Correct answer: signal, signal, signal, set, set, set."
+        }
+      ]
     }
   ]
 }

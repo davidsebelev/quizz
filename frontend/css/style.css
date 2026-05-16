@@ -493,9 +493,32 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.5;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: var(--text);
   white-space: pre-wrap;
+}
+
+.q-context,
+.lecture-question-context {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-base);
+  color: var(--text2);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.q-context {
+  margin: 0 0 1.5rem;
+  padding: 1rem;
+}
+
+.lecture-question-context {
+  margin: 0.85rem 0 0;
+  padding: 0.85rem;
 }
 
 /* ===== OPTIONS ===== */
